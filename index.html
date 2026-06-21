@@ -165,7 +165,7 @@
 
     <div class="row">
       <div class="cell">
-        <div class="lab">Weather</div>
+        <div class="lab">Current weather</div>
         <div class="big" id="wx-temp">—</div>
         <div class="small" id="wx-desc"></div>
       </div>
@@ -1539,11 +1539,14 @@ function sunUpIntervals(){return upIntervals(sunriseH,sunsetH,sun.alwaysUp,sun.a
   // moon-up bar along the bottom
   let moonbar="";moonUpIntervals().forEach(w=>{moonbar+=`<rect x="${x(w[0]).toFixed(1)}" y="115" width="${(x(w[1])-x(w[0])).toFixed(1)}" height="5" rx="2.5" fill="#5d7d8e" opacity="0.85"/>`;});
   const nowH=now.getHours()+now.getMinutes()/60, nx=x(nowH).toFixed(1), ny=y(heightAt(nowH,exFull)).toFixed(1);
+  // extremum dots — anchor points the cosine interpolation runs through, so the curve reads as data + interp not a hand-drawn squiggle
+  let extremaDots="";ex.forEach(e=>{extremaDots+=`<circle cx="${x(e.t).toFixed(1)}" cy="${y(e.h).toFixed(1)}" r="2.8" fill="#efe7d6" stroke="#1d3d43" stroke-width="1.4"/>`;});
   document.getElementById("curve").innerHTML=
     bands+
     `<path d="${fill}" fill="#2f5a60" opacity="0.16"/>`+
     `<line x1="0" y1="${y(thr).toFixed(1)}" x2="${W}" y2="${y(thr).toFixed(1)}" stroke="#9a7b3a" stroke-width="1" stroke-dasharray="4 4" opacity="0.7"/>`+
     `<path d="${path}" fill="none" stroke="#1d3d43" stroke-width="2.4" stroke-linecap="round"/>`+
+    extremaDots+
     sunbar+moonbar+
     `<line x1="${nx}" y1="${top}" x2="${nx}" y2="${bot}" stroke="#20302f" stroke-width="1" opacity="0.35"/>`+
     `<circle cx="${nx}" cy="${ny}" r="3.6" fill="#1d3d43"/>`;
