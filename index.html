@@ -60,6 +60,8 @@
   .curve-icons{display:flex;flex-direction:column;justify-content:space-between;width:14px;flex-shrink:0;height:122px;padding:2px 0;}
   .curve-icons svg{width:14px;height:14px;display:block;}
   .curve-body{flex:1;min-width:0;}
+  .curve-wrap{position:relative;}
+  .curve-wrap .hi-label,.curve-wrap .lo-label{position:absolute;right:4px;font-size:10.5px;color:var(--ink-soft);transform:translateY(-50%);pointer-events:none;font-variant-numeric:tabular-nums;background:rgba(245,240,230,0.7);padding:0 4px;border-radius:2px;letter-spacing:.2px;}
   .wx-strip{display:flex;height:20px;margin:4px 0 0;align-items:center;}
   .wx-strip i{flex:1;display:flex;align-items:center;justify-content:center;}
   .wx-strip i svg{width:15px;height:15px;display:block;}
@@ -137,7 +139,11 @@
           <svg id="chart-moon-icon" viewBox="-8 -8 16 16" aria-hidden="true"></svg>
         </div>
         <div class="curve-body">
-          <svg class="curve" id="curve" viewBox="0 0 400 122" preserveAspectRatio="none" aria-hidden="true"></svg>
+          <div class="curve-wrap">
+            <svg class="curve" id="curve" viewBox="0 0 400 122" preserveAspectRatio="none" aria-hidden="true"></svg>
+            <span class="hi-label" id="high-label"></span>
+            <span class="lo-label" id="low-label"></span>
+          </div>
           <div class="axis">
             <span class="start">12am</span>
             <span style="left:25%">6am</span>
@@ -1569,6 +1575,13 @@ function sunUpIntervals(){return upIntervals(sunriseH,sunsetH,sun.alwaysUp,sun.a
     sunbar+moonbar+
     `<line x1="${nx}" y1="${top}" x2="${nx}" y2="${bot}" stroke="#20302f" stroke-width="1" opacity="0.35"/>`+
     `<circle cx="${nx}" cy="${ny}" r="3.6" fill="#1d3d43"/>`;
+  // height labels overlaid on the right edge at the y-positions of dayHigh / dayLow.
+  // Use viewBox y/total to position as a percentage since the SVG stretches to fill curve-wrap.
+  const hi=document.getElementById("high-label"), lo=document.getElementById("low-label");
+  hi.textContent=`↑ ${dayHigh.toFixed(1)} m`;
+  hi.style.top=`${(y(dayHigh)/122)*100}%`;
+  lo.textContent=`↓ ${dayLow.toFixed(1)} m`;
+  lo.style.top=`${(y(dayLow)/122)*100}%`;
 })();
 
 // --- tide window sentence + extremes + light line ---
@@ -1648,13 +1661,15 @@ function buildHeadline(d){
   const wt = d.windowText || "";
 
   // 1. Full moon over an evening HW
-  const eveningHW = ex.find(e=>e.type==="HW" && e.t>17.5 && e.t<22.5);
+  const eveningHWs = ex.filter(e=>e.type==="HW" && e.t>17.5 && e.t<22.5);
+  const eveningHW = eveningHWs[0];
   const moonUpAtHW = eveningHW && moonUpIntervals().some(w=>eveningHW.t>=w[0]&&eveningHW.t<=w[1]);
   if(nearFull && (d.kind==="clear"||d.kind==="cloud") && eveningHW && moonUpAtHW){
+    const eveTimes = eveningHWs.map(e=>fmtClock(e.t)).join(" and ");
     return pickFrom("fullmoon",[
-      {h:`Full moon over an evening HW. ${fmtClock(eveningHW.t)} at the top.`, s:`Moonrise ${fmtClock(moonriseH)}.`},
-      {h:`Full moon tonight, HW ${fmtClock(eveningHW.t)}.`, s:`Moonrise ${fmtClock(moonriseH)}.`},
-      {h:`Moon and tide together. ${dayHigh.toFixed(1)} m at ${fmtClock(eveningHW.t)}.`, s:`Moonrise ${fmtClock(moonriseH)}.`}
+      {h:`Full moon tonight. High water in the evening, ${eveTimes}.`, s:`Moonrise ${fmtClock(moonriseH)}.`},
+      {h:`Full moon over the evening tide.`, s:`High water ${eveTimes}. Moonrise ${fmtClock(moonriseH)}.`},
+      {h:`Moon and tide together.`, s:`High water ${eveTimes}, ${dayHigh.toFixed(1)} m. Moonrise ${fmtClock(moonriseH)}.`}
     ]);
   }
   // 2. Heavy rain
@@ -1692,7 +1707,7 @@ function buildHeadline(d){
   // 6. King tide
   if(range>4.7){
     return pickFrom("king",[
-      {h:`Top of the springs. ${dayHigh.toFixed(1)} m at HW.`, s:wt},
+      {h:`Top of the springs. ${dayHigh.toFixed(1)} m at the high.`, s:wt},
       {h:`Biggest tide of the cycle. ${range.toFixed(1)} m range.`, s:wt}
     ]);
   }
@@ -1707,24 +1722,28 @@ function buildHeadline(d){
   if(range>4.2){
     return pickFrom("spring",[
       {h:`Springs. ${range.toFixed(1)} m range.`, s:wt},
-      {h:`Spring tide. HW ${dayHigh.toFixed(1)} m, LW ${dayLow.toFixed(1)} m.`, s:wt},
+      {h:`Spring tide. ${dayHigh.toFixed(1)} m at the high, ${dayLow.toFixed(1)} m at the low.`, s:wt},
       {h:`Big water today. ${dayHigh.toFixed(1)} m at the top.`, s:wt}
     ]);
   }
-  // 9. Dawn HW under fair weather
-  const dawnHW = ex.find(e=>e.type==="HW" && e.t>=sunriseH-0.5 && e.t<=sunriseH+2);
-  if(dawnHW && (d.kind==="clear"||d.kind==="cloud") && d.wind<18){
+  // 9. Dawn HW under fair weather (Southampton double HW means there may be two highs in this window)
+  const dawnHWs = ex.filter(e=>e.type==="HW" && e.t>=sunriseH-0.5 && e.t<=sunriseH+2);
+  if(dawnHWs.length && (d.kind==="clear"||d.kind==="cloud") && d.wind<18){
+    const dawnTimes = dawnHWs.map(e=>fmtClock(e.t)).join(" and ");
     return pickFrom("dawnhw",[
-      {h:`HW at first light. ${fmtClock(dawnHW.t)}.`, s:wt},
-      {h:`Dawn HW: ${fmtClock(dawnHW.t)} at ${dawnHW.h.toFixed(1)} m.`, s:wt}
+      {h:`High water at first light, ${dawnTimes}.`, s:wt},
+      {h:`Tide on top through the dawn.`, s:`${dawnTimes}, ${dayHigh.toFixed(1)} m at the highest.`},
+      {h:`Dawn brings high water. ${dawnTimes}.`, s:wt}
     ]);
   }
   // 10. Sunset HW under fair weather (skip if full-moon branch could fire — caught above)
-  const sunsetHW = ex.find(e=>e.type==="HW" && e.t>=sunsetH-1.5 && e.t<=sunsetH+0.5);
-  if(sunsetHW && (d.kind==="clear"||d.kind==="cloud") && d.wind<18){
+  const sunsetHWs = ex.filter(e=>e.type==="HW" && e.t>=sunsetH-1.5 && e.t<=sunsetH+0.5);
+  if(sunsetHWs.length && (d.kind==="clear"||d.kind==="cloud") && d.wind<18){
+    const sunsetTimes = sunsetHWs.map(e=>fmtClock(e.t)).join(" and ");
     return pickFrom("sunsethw",[
-      {h:`HW at sunset. ${fmtClock(sunsetHW.t)}, sun down ${fmtClock(sunsetH)}.`, s:wt},
-      {h:`Tide tops as the sun goes. ${fmtClock(sunsetHW.t)}.`, s:wt}
+      {h:`High water as the sun gets low, ${sunsetTimes}.`, s:wt},
+      {h:`Tide tops at dusk.`, s:`${sunsetTimes}. Sun down ${fmtClock(sunsetH)}.`},
+      {h:`Tide on top through the evening.`, s:`${sunsetTimes}, ${dayHigh.toFixed(1)} m at the highest.`}
     ]);
   }
   // 11. Float window exists but falls outside daylight
