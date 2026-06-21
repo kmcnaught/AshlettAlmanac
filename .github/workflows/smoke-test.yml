@@ -7,13 +7,13 @@ name: Smoke test
 on:
   push:
     paths:
-      - 'ashlett-almanac.html'
+      - 'index.html'
       - 'tides.json'
       - 'verses.json'
       - 'scripts/smoke_test_html.*'
   pull_request:
     paths:
-      - 'ashlett-almanac.html'
+      - 'index.html'
       - 'tides.json'
       - 'verses.json'
       - 'scripts/smoke_test_html.*'

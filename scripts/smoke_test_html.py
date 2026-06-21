@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Smoke-test ashlett-almanac.html — verifies the tide-split refactor still
+Smoke-test index.html — verifies the tide-split refactor still
 renders correctly in both paths:
   1. tides.json fetch succeeds → uses real data for today (or sample if no entry)
   2. tides.json fetch fails    → falls back to inlined TIDE_FALLBACK ("__sample__")
@@ -17,7 +17,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-HTML = ROOT / "ashlett-almanac.html"
+HTML = ROOT / "index.html"
 TIDES = ROOT / "tides.json"
 VERSES = ROOT / "verses.json"
 

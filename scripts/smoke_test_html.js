@@ -1,4 +1,4 @@
-// Headless smoke test for ashlett-almanac.html.
+// Headless smoke test for index.html.
 // Invoked by scripts/smoke_test_html.py with HTML path + tides.json path + verses.json path as argv.
 const fs = require('fs');
 
