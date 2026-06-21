@@ -1,0 +1,48 @@
+name: Scrape Calshot tides
+
+# Refreshes tides.json with the rolling 7-day window from tidetimes.org.uk.
+# GitHub Pages auto-deploys on the resulting push.
+
+on:
+  schedule:
+    # 06:10 UTC daily — comfortably after midnight wherever, before he checks the page.
+    # GitHub Actions cron is UTC and only fires on the default branch.
+    - cron: '10 6 * * *'
+  workflow_dispatch:  # manual trigger from the Actions tab
+
+permissions:
+  contents: write  # needed to commit tides.json back to the repo
+
+concurrency:
+  group: scrape-tides
+  cancel-in-progress: false
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Scrape today + 6 days
+        run: |
+          python3 scripts/scrape_calshot_tides.py \
+            --start "$(date -I)" \
+            --end   "$(date -I -d '+6 days')" \
+            --out   tides.json
+
+      - name: Commit if changed
+        run: |
+          if git diff --quiet -- tides.json; then
+            echo "tides.json unchanged — nothing to commit"
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add tides.json
+          git commit -m "chore: refresh tides.json ($(date -I))"
+          git push
