@@ -1,0 +1,1969 @@
+[
+  {
+    "id": "longfellow-tide-rises",
+    "title": "The Tide Rises, the Tide Falls",
+    "poet": "Henry Wadsworth Longfellow",
+    "year": 1882,
+    "url": "https://poets.org/poem/tide-rises-tide-falls",
+    "lines": [
+      {"text": "The tide rises, the tide falls,", "tags": ["tide", "water"]},
+      {"text": "The twilight darkens, the curlew calls;", "tags": ["evening", "wader", "tide"]},
+      {"text": "Along the sea-sands damp and brown", "tags": ["sea", "marsh", "tide"]}
+    ],
+    "tags": ["tide", "sea", "evening", "wader", "marsh", "water", "quiet"]
+  },
+  {
+    "id": "yeats-innisfree",
+    "title": "The Lake Isle of Innisfree",
+    "poet": "W. B. Yeats",
+    "year": 1939,
+    "url": "https://en.wikisource.org/wiki/The_Lake_Isle_of_Innisfree",
+    "lines": [
+      {"text": "And I shall have some peace there, for peace comes dropping slow,", "tags": ["quiet"]},
+      {"text": "And evening full of the linnet's wings.", "tags": ["evening", "bird"]},
+      {"text": "I hear lake water lapping with low sounds by the shore;", "tags": ["water", "quiet"]}
+    ],
+    "tags": ["water", "evening", "bird", "quiet", "folk"]
+  },
+  {
+    "id": "arnold-dover-beach",
+    "title": "Dover Beach",
+    "poet": "Matthew Arnold",
+    "year": 1888,
+    "url": "https://en.wikisource.org/wiki/Dover_Beach",
+    "lines": [
+      {"text": "The sea is calm to-night.", "tags": ["sea", "night", "quiet"]},
+      {"text": "The tide is full, the moon lies fair", "tags": ["tide", "moon"]},
+      {"text": "Upon the straits; on the French coast, the light", "tags": ["sea", "evening"]}
+    ],
+    "tags": ["sea", "tide", "moon", "night", "evening", "quiet"]
+  },
+  {
+    "id": "tennyson-crossing-bar",
+    "title": "Crossing the Bar",
+    "poet": "Alfred, Lord Tennyson",
+    "year": 1892,
+    "url": "https://en.wikisource.org/wiki/Demeter_and_other_poems/Crossing_the_Bar",
+    "lines": [
+      {"text": "Sunset and evening star,", "tags": ["evening", "sky", "sun"]},
+      {"text": "But such a tide as moving seems asleep,", "tags": ["tide", "quiet"]},
+      {"text": "Too full for sound and foam,", "tags": ["tide", "water", "quiet"]},
+      {"text": "Twilight and evening bell,", "tags": ["evening", "night"]}
+    ],
+    "tags": ["evening", "tide", "sea", "water", "sky", "quiet", "night"]
+  },
+  {
+    "id": "tennyson-break",
+    "title": "Break, Break, Break",
+    "poet": "Alfred, Lord Tennyson",
+    "year": 1892,
+    "url": "https://poets.org/poem/break-break-break",
+    "lines": [
+      {"text": "Break, break, break,", "tags": ["sea", "wind"]},
+      {"text": "On thy cold gray stones, O Sea!", "tags": ["sea", "winter"]},
+      {"text": "And the stately ships go on", "tags": ["sea"]}
+    ],
+    "tags": ["sea", "wind", "winter", "water"]
+  },
+  {
+    "id": "yeats-wandering-aengus",
+    "title": "The Song of Wandering Aengus",
+    "poet": "W. B. Yeats",
+    "year": 1939,
+    "url": "https://www.poetryfoundation.org/poems/55687/the-song-of-wandering-aengus",
+    "lines": [
+      {"text": "I went out to the hazel wood,", "tags": ["folk", "quiet"]},
+      {"text": "And caught a little silver trout.", "tags": ["fish", "river"]},
+      {"text": "The silver apples of the moon,", "tags": ["moon", "folk", "night"]}
+    ],
+    "tags": ["water", "folk", "bird", "moon", "night", "fish", "river"]
+  },
+  {
+    "id": "hopkins-pied-beauty",
+    "title": "Pied Beauty",
+    "poet": "Gerard Manley Hopkins",
+    "year": 1889,
+    "url": "https://en.wikisource.org/wiki/Poems_of_Gerard_Manley_Hopkins/Pied_Beauty",
+    "lines": [
+      {"text": "Glory be to God for dappled things —", "tags": ["sky", "summer", "sun"]},
+      {"text": "For skies of couple-colour as a brinded cow;", "tags": ["sky", "sun"]},
+      {"text": "For rose-moles all in stipple upon trout that swim;", "tags": ["fish", "river"]}
+    ],
+    "tags": ["sky", "summer", "sun", "fish", "flora", "quiet"]
+  },
+  {
+    "id": "rossetti-who-wind",
+    "title": "Who Has Seen the Wind?",
+    "poet": "Christina Rossetti",
+    "year": 1894,
+    "url": "https://poets.org/poem/who-has-seen-wind",
+    "lines": [
+      {"text": "Who has seen the wind?", "tags": ["wind"]},
+      {"text": "But when the leaves hang trembling,", "tags": ["wind", "autumn"]},
+      {"text": "But when the trees bow down their heads,", "tags": ["wind"]}
+    ],
+    "tags": ["wind", "autumn", "sky"]
+  },
+  {
+    "id": "thomas-adlestrop",
+    "title": "Adlestrop",
+    "poet": "Edward Thomas",
+    "year": 1917,
+    "url": "https://poets.org/poem/adlestrop",
+    "lines": [
+      {"text": "Yes. I remember Adlestrop —", "tags": ["quiet", "summer"]},
+      {"text": "And willows, willow-herb, and grass,", "tags": ["flora", "summer"]},
+      {"text": "And for that minute a blackbird sang", "tags": ["bird", "summer", "quiet"]}
+    ],
+    "tags": ["bird", "summer", "flora", "quiet"]
+  },
+  {
+    "id": "bishop-fishhouses",
+    "title": "At the Fishhouses",
+    "poet": "Elizabeth Bishop",
+    "year": 1979,
+    "url": "https://poets.org/poem/fishhouses",
+    "lines": [
+      {"text": "All is silver: the heavy surface of the sea,", "tags": ["sea", "moon", "evening"]},
+      {"text": "swelling slowly as if considering spilling over,", "tags": ["tide", "quiet"]},
+      {"text": "Cold dark deep and absolutely clear,", "tags": ["sea", "winter", "quiet"]}
+    ],
+    "tags": ["sea", "tide", "water", "evening", "fish", "winter", "quiet"]
+  },
+  {
+    "id": "browning-meeting-night",
+    "title": "Meeting at Night",
+    "poet": "Robert Browning",
+    "year": 1889,
+    "url": "https://poets.org/poem/meeting-night",
+    "lines": [
+      {"text": "The gray sea and the long black land;", "tags": ["sea", "night"]},
+      {"text": "And the yellow half-moon large and low:", "tags": ["moon", "night", "evening"]},
+      {"text": "And the startled little waves that leap", "tags": ["sea", "water"]}
+    ],
+    "tags": ["sea", "moon", "night", "water", "evening"]
+  },
+  {
+    "id": "hopkins-sea-skylark",
+    "title": "The Sea and the Skylark",
+    "poet": "Gerard Manley Hopkins",
+    "year": 1889,
+    "url": "https://en.wikisource.org/wiki/Poems_of_Gerard_Manley_Hopkins/The_Sea_and_the_Skylark",
+    "lines": [
+      {"text": "Trench — right, the tide that ramps against the shore;", "tags": ["tide", "sea"]},
+      {"text": "With a flood or a fall, low lull-off or all roar,", "tags": ["tide", "water"]},
+      {"text": "Frequenting there while moon shall wear and wend.", "tags": ["moon", "tide"]}
+    ],
+    "tags": ["tide", "sea", "moon", "bird", "sky"]
+  },
+  {
+    "id": "hopkins-inversnaid",
+    "title": "Inversnaid",
+    "poet": "Gerard Manley Hopkins",
+    "year": 1889,
+    "url": "https://en.wikisource.org/wiki/Poems_of_Gerard_Manley_Hopkins/Inversnaid",
+    "lines": [
+      {"text": "This darksome burn, horseback brown,", "tags": ["river", "water"]},
+      {"text": "Wiry heathpacks, flitches of fern,", "tags": ["flora", "quiet"]},
+      {"text": "Long live the weeds and the wilderness yet.", "tags": ["flora", "quiet", "folk"]}
+    ],
+    "tags": ["water", "river", "flora", "rain", "folk", "quiet"]
+  },
+  {
+    "id": "maccaig-basking-shark",
+    "title": "Basking Shark",
+    "poet": "Norman MacCaig",
+    "year": 1996,
+    "url": "https://www.scottishpoetrylibrary.org.uk/poem/basking-shark/",
+    "lines": [
+      {"text": "To stub an oar on a rock where none should be,", "tags": ["sea", "water"]},
+      {"text": "To have it rise with a slounge out of the sea", "tags": ["sea", "fish"]},
+      {"text": "That once I met, on a sea tin-tacked with rain,", "tags": ["rain", "sea"]}
+    ],
+    "tags": ["sea", "fish", "rain", "water"]
+  },
+  {
+    "id": "lanier-marshes-glynn",
+    "title": "The Marshes of Glynn",
+    "poet": "Sidney Lanier",
+    "year": 1881,
+    "url": "https://poets.org/poem/marshes-glynn",
+    "lines": [
+      {"text": "A league and a league of marsh-grass, waist-high, broad in the blade,", "tags": ["marsh", "flora", "summer"]},
+      {"text": "The tide is in his ecstasy.", "tags": ["tide", "marsh"]},
+      {"text": "And the sea and the marsh are one.", "tags": ["sea", "marsh", "tide"]}
+    ],
+    "tags": ["marsh", "tide", "sea", "flora", "summer", "bird"]
+  },
+  {
+    "id": "hd-sea-rose",
+    "title": "Sea Rose",
+    "poet": "H. D.",
+    "year": 1961,
+    "url": "https://poets.org/poem/sea-rose",
+    "lines": [
+      {"text": "you are caught in the drift.", "tags": ["sea", "tide"]},
+      {"text": "you are flung on the sand,", "tags": ["sea", "wind"]},
+      {"text": "in the crisp sand", "tags": ["sea", "flora"]}
+    ],
+    "tags": ["sea", "flora", "wind", "quiet"]
+  },
+  {
+    "id": "kingsley-sands-dee",
+    "title": "The Sands of Dee",
+    "poet": "Charles Kingsley",
+    "year": 1875,
+    "url": "https://en.wikisource.org/wiki/The_Sands_of_Dee",
+    "lines": [
+      {"text": "The western tide crept up along the sand,", "tags": ["tide", "sea"]},
+      {"text": "And o'er and o'er the sand,", "tags": ["tide", "marsh"]},
+      {"text": "The rolling mist came down and hid the land;", "tags": ["mist", "sea"]}
+    ],
+    "tags": ["tide", "sea", "mist", "folk", "marsh"]
+  },
+  {
+    "id": "masefield-sea-fever",
+    "title": "Sea-Fever",
+    "poet": "John Masefield",
+    "year": 1967,
+    "url": "https://rpo.library.utoronto.ca/content/sea-fever",
+    "lines": [
+      {"text": "I must go down to the seas again, for the call of the running tide", "tags": ["sea", "tide"]},
+      {"text": "Is a wild call and a clear call that may not be denied;", "tags": ["sea", "wind"]},
+      {"text": "And a grey mist on the sea's face, and a grey dawn breaking.", "tags": ["mist", "dawn", "sea"]}
+    ],
+    "tags": ["sea", "tide", "mist", "dawn", "wind"]
+  },
+  {
+    "id": "larkin-sad-steps",
+    "title": "Sad Steps",
+    "poet": "Philip Larkin",
+    "year": 1985,
+    "url": "https://www.poetryfoundation.org/poems/48418/sad-steps",
+    "lines": [
+      {"text": "I part thick curtains, and am startled by", "tags": ["night", "moon"]},
+      {"text": "The rapid clouds, the moon's cleanliness.", "tags": ["moon", "sky", "wind"]},
+      {"text": "One shivers slightly, looking up there.", "tags": ["moon", "night", "winter"]}
+    ],
+    "tags": ["moon", "night", "sky", "wind", "winter", "quiet"]
+  },
+  {
+    "id": "plath-moon-yew",
+    "title": "The Moon and the Yew Tree",
+    "poet": "Sylvia Plath",
+    "year": 1963,
+    "url": "https://www.poetryfoundation.org/poems/58441/the-moon-and-the-yew-tree-56d23ccfed82f",
+    "lines": [
+      {"text": "This is the light of the mind, cold and planetary.", "tags": ["moon", "winter", "night"]},
+      {"text": "The moon is no door. It is a face in its own right,", "tags": ["moon", "night"]},
+      {"text": "The moon is my mother. She is not sweet like Mary.", "tags": ["moon", "folk"]}
+    ],
+    "tags": ["moon", "night", "winter", "quiet", "folk"]
+  },
+  {
+    "id": "hopkins-moonrise",
+    "title": "Moonrise",
+    "poet": "Gerard Manley Hopkins",
+    "year": 1889,
+    "url": "https://poets.org/poem/moonrise-1",
+    "lines": [
+      {"text": "I awoke in the Midsummer not to call night, in the white and the walk of the morning:", "tags": ["dawn", "summer", "night"]},
+      {"text": "The moon, dwindled and thinned to the fringe of a finger-nail held to the candle,", "tags": ["moon", "dawn"]},
+      {"text": "Or paring of paradisaïcal fruit, lovely in waning but lustreless,", "tags": ["moon"]}
+    ],
+    "tags": ["moon", "dawn", "summer", "night"]
+  },
+  {
+    "id": "teasdale-stars",
+    "title": "Stars",
+    "poet": "Sara Teasdale",
+    "year": 1933,
+    "url": "https://en.wikisource.org/wiki/Flame_and_Shadow/Stars",
+    "lines": [
+      {"text": "Alone in the night", "tags": ["night", "quiet"]},
+      {"text": "On a dark hill", "tags": ["night"]},
+      {"text": "And a heaven full of stars", "tags": ["night", "sky"]}
+    ],
+    "tags": ["night", "sky", "quiet"]
+  },
+  {
+    "id": "dickinson-moon-chin-gold",
+    "title": "The Moon was but a Chin of Gold",
+    "poet": "Emily Dickinson",
+    "year": 1886,
+    "url": "https://en.wikisource.org/wiki/The_Moon_was_but_a_Chin_of_Gold",
+    "lines": [
+      {"text": "The Moon was but a Chin of Gold", "tags": ["moon"]},
+      {"text": "A Night or two ago —", "tags": ["moon", "night"]},
+      {"text": "Her Bonnet is the Firmament —", "tags": ["moon", "sky", "night"]}
+    ],
+    "tags": ["moon", "night", "sky"]
+  },
+  {
+    "id": "frost-acquainted-night",
+    "title": "Acquainted with the Night",
+    "poet": "Robert Frost",
+    "year": 1963,
+    "url": "https://poets.org/poem/acquainted-night",
+    "lines": [
+      {"text": "I have been one acquainted with the night.", "tags": ["night", "quiet"]},
+      {"text": "I have walked out in rain — and back in rain.", "tags": ["rain", "night"]},
+      {"text": "I have outwalked the furthest city light.", "tags": ["night", "quiet"]}
+    ],
+    "tags": ["night", "rain", "quiet"]
+  },
+  {
+    "id": "stevenson-escape-bedtime",
+    "title": "Escape at Bedtime",
+    "poet": "Robert Louis Stevenson",
+    "year": 1894,
+    "url": "https://www.scottishpoetrylibrary.org.uk/poem/escape-bedtime/",
+    "lines": [
+      {"text": "And high overhead and all moving about,", "tags": ["night", "sky"]},
+      {"text": "There were thousands of millions of stars.", "tags": ["night", "sky"]},
+      {"text": "Would be half full of water and stars.", "tags": ["water", "night", "sky"]}
+    ],
+    "tags": ["night", "sky", "water", "quiet"]
+  },
+  {
+    "id": "shelley-to-moon",
+    "title": "To the Moon (fragment)",
+    "poet": "Percy Bysshe Shelley",
+    "year": 1822,
+    "url": "https://poets.org/poem/moon-fragment-0",
+    "lines": [
+      {"text": "Art thou pale for weariness", "tags": ["moon", "mist"]},
+      {"text": "Of climbing Heaven, and gazing on the earth,", "tags": ["moon", "sky"]},
+      {"text": "Wandering companionless", "tags": ["moon", "quiet"]}
+    ],
+    "tags": ["moon", "night", "sky", "mist", "quiet"]
+  },
+  {
+    "id": "yeats-cloths-heaven",
+    "title": "He wishes for the Cloths of Heaven",
+    "poet": "W. B. Yeats",
+    "year": 1939,
+    "url": "https://www.scottishpoetrylibrary.org.uk/poem/he-wishes-cloths-heaven/",
+    "lines": [
+      {"text": "Had I the heavens' embroidered cloths,", "tags": ["sky", "folk"]},
+      {"text": "Enwrought with golden and silver light,", "tags": ["sky", "sun", "evening"]},
+      {"text": "The blue and the dim and the dark cloths", "tags": ["sky", "evening", "night"]}
+    ],
+    "tags": ["evening", "night", "sky", "folk"]
+  },
+  {
+    "id": "keats-bright-star",
+    "title": "Bright Star",
+    "poet": "John Keats",
+    "year": 1821,
+    "url": "https://poets.org/poem/bright-star",
+    "lines": [
+      {"text": "Bright star! would I were steadfast as thou art —", "tags": ["night", "sky"]},
+      {"text": "Not in lone splendour hung aloft the night,", "tags": ["night", "sky"]},
+      {"text": "The moving waters at their priestlike task", "tags": ["tide", "sea", "water"]}
+    ],
+    "tags": ["night", "sky", "sea", "tide", "water", "quiet"]
+  },
+  {
+    "id": "whitman-learned-astronomer",
+    "title": "When I Heard the Learn'd Astronomer",
+    "poet": "Walt Whitman",
+    "year": 1892,
+    "url": "https://poets.org/poem/when-i-heard-learnd-astronomer",
+    "lines": [
+      {"text": "Till rising and gliding out I wander'd off by myself,", "tags": ["night", "quiet"]},
+      {"text": "In the mystical moist night-air, and from time to time,", "tags": ["night", "mist"]},
+      {"text": "Look'd up in perfect silence at the stars.", "tags": ["night", "sky", "quiet"]}
+    ],
+    "tags": ["night", "sky", "mist", "quiet"]
+  },
+  {
+    "id": "whitman-beach-night-alone",
+    "title": "On the Beach at Night Alone",
+    "poet": "Walt Whitman",
+    "year": 1892,
+    "url": "https://poets.org/poem/beach-night-alone",
+    "lines": [
+      {"text": "On the beach at night alone,", "tags": ["sea", "night", "quiet"]},
+      {"text": "As the old mother sways her to and fro, singing her husky song,", "tags": ["sea", "folk"]},
+      {"text": "As I watch the bright stars shining,", "tags": ["night", "sky"]}
+    ],
+    "tags": ["night", "sea", "water", "sky", "quiet", "folk"]
+  },
+  {
+    "id": "white-night-death",
+    "title": "Night and Death",
+    "poet": "Joseph Blanco White",
+    "year": 1841,
+    "url": "https://en.wikisource.org/wiki/Night_and_Death",
+    "lines": [
+      {"text": "Mysterious Night, when the first man but knew", "tags": ["night", "folk"]},
+      {"text": "Thee by report, unseen, and heard thy name,", "tags": ["night"]},
+      {"text": "Hesperus with the Host of Heaven came,", "tags": ["evening", "night", "sky"]}
+    ],
+    "tags": ["night", "evening", "sky", "folk"]
+  },
+  {
+    "id": "maccaig-stars-planets",
+    "title": "Stars and Planets",
+    "poet": "Norman MacCaig",
+    "year": 1996,
+    "url": "https://www.scottishpoetrylibrary.org.uk/poem/stars-and-planets/",
+    "lines": [
+      {"text": "Trees are cages for them: water holds its breath", "tags": ["night", "water", "quiet"]},
+      {"text": "To balance them without smudging on its delicate meniscus.", "tags": ["water", "quiet"]},
+      {"text": "Attended only by the loveless moon.", "tags": ["moon", "night"]}
+    ],
+    "tags": ["moon", "night", "sky", "water", "quiet"]
+  },
+  {
+    "id": "blake-evening-star",
+    "title": "To the Evening Star",
+    "poet": "William Blake",
+    "year": 1827,
+    "url": "https://en.wikisource.org/wiki/Poetical_sketches_by_William_Blake_now_first_reprinted_from_the_original_edition_of_1783/To_the_Evening_Star",
+    "lines": [
+      {"text": "Thou fair-hair'd angel of the evening,", "tags": ["evening", "sky"]},
+      {"text": "Blue curtains of the sky, scatter thy silver dew", "tags": ["evening", "sky"]},
+      {"text": "And wash the dusk with silver. Soon, full soon,", "tags": ["evening", "night"]}
+    ],
+    "tags": ["evening", "sky", "folk", "night"]
+  },
+  {
+    "id": "frost-stopping-snowy",
+    "title": "Stopping by Woods on a Snowy Evening",
+    "poet": "Robert Frost",
+    "year": 1963,
+    "url": "https://poets.org/poem/stopping-woods-snowy-evening",
+    "lines": [
+      {"text": "Between the woods and frozen lake", "tags": ["winter", "water"]},
+      {"text": "The darkest evening of the year.", "tags": ["winter", "evening", "night"]},
+      {"text": "The only other sound's the sweep", "tags": ["winter", "wind", "quiet"]}
+    ],
+    "tags": ["winter", "evening", "night", "water", "quiet"]
+  },
+  {
+    "id": "thomas-rain",
+    "title": "Rain",
+    "poet": "Edward Thomas",
+    "year": 1917,
+    "url": "https://en.wikisource.org/wiki/Page:Poems_(Edward_Thomas,_1917).djvu/60",
+    "lines": [
+      {"text": "Rain, midnight rain, nothing but the wild rain", "tags": ["rain", "night"]},
+      {"text": "On this bleak hut, and solitude, and me", "tags": ["rain", "quiet"]},
+      {"text": "Blessed are the dead that the rain rains upon", "tags": ["rain"]}
+    ],
+    "tags": ["rain", "night", "quiet"]
+  },
+  {
+    "id": "sandburg-fog",
+    "title": "Fog",
+    "poet": "Carl Sandburg",
+    "year": 1967,
+    "url": "https://poets.org/poem/fog",
+    "lines": [
+      {"text": "The fog comes", "tags": ["mist"]},
+      {"text": "on little cat feet.", "tags": ["mist", "quiet"]},
+      {"text": "on silent haunches", "tags": ["mist", "quiet"]}
+    ],
+    "tags": ["mist", "sea", "quiet"]
+  },
+  {
+    "id": "heaney-postscript",
+    "title": "Postscript",
+    "poet": "Seamus Heaney",
+    "year": 2013,
+    "url": "https://poems.com/poem/postscript/",
+    "lines": [
+      {"text": "And some time make the time to drive out west", "tags": ["sea", "autumn"]},
+      {"text": "As big soft buffetings come at the car sideways", "tags": ["wind"]},
+      {"text": "And catch the heart off guard and blow it open.", "tags": ["wind", "sea"]}
+    ],
+    "tags": ["wind", "sea", "autumn", "folk"]
+  },
+  {
+    "id": "hopkins-windhover",
+    "title": "The Windhover",
+    "poet": "Gerard Manley Hopkins",
+    "year": 1889,
+    "url": "https://www.poetryfoundation.org/poems/44402/the-windhover",
+    "lines": [
+      {"text": "I caught this morning morning's minion, king —", "tags": ["dawn", "bird"]},
+      {"text": "dom of daylight's dauphin, dapple-dawn-drawn Falcon, in his riding", "tags": ["dawn", "bird", "sky"]},
+      {"text": "Rebuffed the big wind. My heart in hiding", "tags": ["wind", "bird"]}
+    ],
+    "tags": ["wind", "bird", "dawn", "sun", "sky"]
+  },
+  {
+    "id": "stevenson-windy-nights",
+    "title": "Windy Nights",
+    "poet": "Robert Louis Stevenson",
+    "year": 1894,
+    "url": "https://www.scottishpoetrylibrary.org.uk/poem/windy-nights/",
+    "lines": [
+      {"text": "Whenever the moon and stars are set,", "tags": ["night", "wind"]},
+      {"text": "Whenever the wind is high,", "tags": ["wind", "night"]},
+      {"text": "Whenever the trees are crying aloud,", "tags": ["wind"]}
+    ],
+    "tags": ["wind", "night", "moon"]
+  },
+  {
+    "id": "stevenson-the-wind",
+    "title": "The Wind",
+    "poet": "Robert Louis Stevenson",
+    "year": 1894,
+    "url": "https://en.wikisource.org/wiki/A_Child%27s_Garden_of_Verses/The_Wind",
+    "lines": [
+      {"text": "I saw you toss the kites on high", "tags": ["wind", "sky", "sun"]},
+      {"text": "And blow the birds about the sky;", "tags": ["wind", "bird", "sky"]},
+      {"text": "O wind, a-blowing all day long,", "tags": ["wind"]}
+    ],
+    "tags": ["wind", "sky", "bird", "sun"]
+  },
+  {
+    "id": "hardy-weathers",
+    "title": "Weathers",
+    "poet": "Thomas Hardy",
+    "year": 1928,
+    "url": "https://en.wikisource.org/wiki/Late_Lyrics_and_Earlier,_With_Many_Other_Verses/Weathers",
+    "lines": [
+      {"text": "This is the weather the cuckoo likes,", "tags": ["spring", "bird"]},
+      {"text": "When showers betumble the chestnut spikes,", "tags": ["rain", "spring"]},
+      {"text": "And drops on gate-bars hang in a row,", "tags": ["rain"]}
+    ],
+    "tags": ["rain", "spring", "summer", "bird", "sun"]
+  },
+  {
+    "id": "dickinson-storm",
+    "title": "The Storm",
+    "poet": "Emily Dickinson",
+    "year": 1886,
+    "url": "https://en.wikisource.org/wiki/Poems:_Second_Series_(Dickinson)/The_Storm",
+    "lines": [
+      {"text": "There came a wind like a bugle;", "tags": ["wind"]},
+      {"text": "It quivered through the grass,", "tags": ["wind", "summer"]},
+      {"text": "And a green chill upon the heat", "tags": ["summer", "wind"]}
+    ],
+    "tags": ["wind", "summer"]
+  },
+  {
+    "id": "whitman-patroling-barnegat",
+    "title": "Patroling Barnegat",
+    "poet": "Walt Whitman",
+    "year": 1892,
+    "url": "https://en.wikisource.org/wiki/Leaves_of_Grass_(1882)/Sea-Drift/Patroling_Barnegat",
+    "lines": [
+      {"text": "Wild, wild the storm, and the sea high running,", "tags": ["wind", "sea"]},
+      {"text": "Steady the roar of the gale, with incessant undertone muttering,", "tags": ["wind"]},
+      {"text": "Waves, air, midnight, their savagest trinity lashing,", "tags": ["wind", "sea", "night"]}
+    ],
+    "tags": ["wind", "sea", "night"]
+  },
+  {
+    "id": "whitman-after-sea-ship",
+    "title": "After the Sea-Ship",
+    "poet": "Walt Whitman",
+    "year": 1892,
+    "url": "https://en.wikisource.org/wiki/Leaves_of_Grass_(1882)/Sea-Drift/After_the_Sea-Ship",
+    "lines": [
+      {"text": "After the sea-ship, after the whistling winds,", "tags": ["wind", "sea"]},
+      {"text": "After the white-gray sails taut to their spars and ropes,", "tags": ["wind", "sea"]},
+      {"text": "Waves of the ocean bubbling and gurgling, blithely prying,", "tags": ["sea", "water"]}
+    ],
+    "tags": ["wind", "sea", "water"]
+  },
+  {
+    "id": "shelley-cloud",
+    "title": "The Cloud",
+    "poet": "Percy Bysshe Shelley",
+    "year": 1822,
+    "url": "https://en.wikisource.org/wiki/Prometheus_Unbound;_a_lyrical_drama_in_four_acts_with_other_poems/The_Cloud",
+    "lines": [
+      {"text": "I bring fresh showers for the thirsting flowers,", "tags": ["rain", "flora"]},
+      {"text": "From the seas and the streams;", "tags": ["sea", "river"]},
+      {"text": "And the winds and sunbeams with their convex gleams,", "tags": ["wind", "sun", "sky"]}
+    ],
+    "tags": ["rain", "sky", "water", "sun", "wind"]
+  },
+  {
+    "id": "kipling-way-through-woods",
+    "title": "The Way Through the Woods",
+    "poet": "Rudyard Kipling",
+    "year": 1936,
+    "url": "https://poets.org/poem/way-through-woods",
+    "lines": [
+      {"text": "Weather and rain have undone it again,", "tags": ["rain"]},
+      {"text": "When the night-air cools on the trout-ringed pools", "tags": ["evening", "fish"]},
+      {"text": "The misty solitudes,", "tags": ["mist", "quiet"]}
+    ],
+    "tags": ["rain", "mist", "evening", "quiet"]
+  },
+  {
+    "id": "jamie-springs",
+    "title": "Springs",
+    "poet": "Kathleen Jamie",
+    "year": null,
+    "url": "https://www.scottishpoetrylibrary.org.uk/poem/springs/",
+    "lines": [
+      {"text": "Full March moon and gale-force easters, the pair of them", "tags": ["moon", "wind", "spring"]},
+      {"text": "sucking and shoving the river", "tags": ["river", "tide"]},
+      {"text": "back into its closet in the hills — or trying to.", "tags": ["river", "wind"]}
+    ],
+    "tags": ["wind", "tide", "river", "moon", "spring"]
+  },
+  {
+    "id": "maccaig-aunt-julia",
+    "title": "Aunt Julia",
+    "poet": "Norman MacCaig",
+    "year": 1996,
+    "url": "https://www.scottishpoetrylibrary.org.uk/poem/aunt-julia/",
+    "lines": [
+      {"text": "She was buckets", "tags": ["water", "folk"]},
+      {"text": "and water flouncing into them.", "tags": ["water"]},
+      {"text": "She was winds pouring wetly", "tags": ["wind", "rain"]}
+    ],
+    "tags": ["wind", "water", "rain", "folk"]
+  },
+  {
+    "id": "jamie-dipper",
+    "title": "The Dipper",
+    "poet": "Kathleen Jamie",
+    "year": null,
+    "url": "https://poetryarchive.org/poem/dipper/",
+    "lines": [
+      {"text": "It was winter, near freezing,", "tags": ["winter"]},
+      {"text": "wrung from its own throat", "tags": ["bird", "quiet"]},
+      {"text": "supple, undammable song.", "tags": ["bird", "river"]}
+    ],
+    "tags": ["winter", "bird", "river", "water", "quiet"]
+  },
+  {
+    "id": "stevenson-requiem",
+    "title": "Requiem",
+    "poet": "Robert Louis Stevenson",
+    "year": 1894,
+    "url": "https://www.scottishpoetrylibrary.org.uk/poem/requiem/",
+    "lines": [
+      {"text": "Under the wide and starry sky,", "tags": ["night", "sky"]},
+      {"text": "Home is the sailor, home from sea,", "tags": ["sea", "evening"]},
+      {"text": "And the hunter home from the hill.", "tags": ["quiet"]}
+    ],
+    "tags": ["night", "sky", "sea", "quiet", "evening"]
+  },
+  {
+    "id": "brown-beachcomber",
+    "title": "Beachcomber",
+    "poet": "George Mackay Brown",
+    "year": 1996,
+    "url": "https://www.scottishpoetrylibrary.org.uk/poem/beachcomber/",
+    "lines": [
+      {"text": "Monday I found a boot —", "tags": ["sea", "tide"]},
+      {"text": "Rust and salt leather.", "tags": ["sea", "marsh"]},
+      {"text": "I gave it back to the sea, to dance in.", "tags": ["sea", "folk"]}
+    ],
+    "tags": ["sea", "tide", "folk", "winter"]
+  },
+  {
+    "id": "young-culbin-sands",
+    "title": "Culbin Sands",
+    "poet": "Andrew Young",
+    "year": 1971,
+    "url": "https://www.scottishpoetrylibrary.org.uk/poem/culbin-sands/",
+    "lines": [
+      {"text": "Here lay a fair fat land;", "tags": ["marsh", "folk"]},
+      {"text": "But now its townships, kirks, graveyards", "tags": ["marsh", "folk"]},
+      {"text": "Beneath bald hills of sand", "tags": ["wind", "marsh"]}
+    ],
+    "tags": ["wind", "marsh", "folk", "sea"]
+  },
+  {
+    "id": "paterson-rain",
+    "title": "Rain",
+    "poet": "Don Paterson",
+    "year": null,
+    "url": "https://www.scottishpoetrylibrary.org.uk/poem/rain-2/",
+    "lines": [
+      {"text": "I love all films that start with rain:", "tags": ["rain"]},
+      {"text": "rain, braiding a windowpane", "tags": ["rain", "quiet"]},
+      {"text": "we rose up from the falling waters", "tags": ["rain", "water"]}
+    ],
+    "tags": ["rain", "water", "quiet"]
+  },
+  {
+    "id": "hardy-darkling-thrush",
+    "title": "The Darkling Thrush",
+    "poet": "Thomas Hardy",
+    "year": 1928,
+    "url": "https://en.wikisource.org/wiki/The_Darkling_Thrush",
+    "lines": [
+      {"text": "I leant upon a coppice gate", "tags": ["winter", "quiet"]},
+      {"text": "When Frost was spectre-gray,", "tags": ["winter"]},
+      {"text": "An aged thrush, frail, gaunt, and small,", "tags": ["bird", "winter"]}
+    ],
+    "tags": ["winter", "bird", "evening", "quiet"]
+  },
+  {
+    "id": "keats-to-autumn",
+    "title": "To Autumn",
+    "poet": "John Keats",
+    "year": 1821,
+    "url": "https://en.wikisource.org/wiki/The_Poetical_Works_of_John_Keats/To_Autumn",
+    "lines": [
+      {"text": "Season of mists and mellow fruitfulness!", "tags": ["autumn", "mist"]},
+      {"text": "Close bosom-friend of the maturing sun;", "tags": ["autumn", "sun"]},
+      {"text": "And gathering swallows twitter in the skies.", "tags": ["bird", "autumn", "migration"]}
+    ],
+    "tags": ["autumn", "mist", "sun", "bird", "migration", "flora"]
+  },
+  {
+    "id": "hopkins-spring",
+    "title": "Spring",
+    "poet": "Gerard Manley Hopkins",
+    "year": 1889,
+    "url": "https://poets.org/poem/spring",
+    "lines": [
+      {"text": "Nothing is so beautiful as spring —", "tags": ["spring"]},
+      {"text": "When weeds, in wheels, shoot long and lovely and lush;", "tags": ["spring", "flora"]},
+      {"text": "Thrush's eggs look little low heavens, and thrush", "tags": ["spring", "bird"]}
+    ],
+    "tags": ["spring", "bird", "sky", "flora", "sun"]
+  },
+  {
+    "id": "hopkins-harvest",
+    "title": "Hurrahing in Harvest",
+    "poet": "Gerard Manley Hopkins",
+    "year": 1889,
+    "url": "https://en.wikisource.org/wiki/Poems_of_Gerard_Manley_Hopkins/Hurrahing_in_Harvest",
+    "lines": [
+      {"text": "Summer ends now; now, barbarous in beauty, the stooks rise", "tags": ["autumn", "summer"]},
+      {"text": "Around; up above, what wind-walks! what lovely behaviour", "tags": ["wind", "sky"]},
+      {"text": "Of silk-sack clouds!", "tags": ["sky", "wind"]}
+    ],
+    "tags": ["autumn", "summer", "sky", "wind", "sun"]
+  },
+  {
+    "id": "housman-loveliest-trees",
+    "title": "Loveliest of trees, the cherry now",
+    "poet": "A. E. Housman",
+    "year": 1936,
+    "url": "https://en.wikisource.org/wiki/A_Shropshire_Lad/Loveliest_of_trees,_the_cherry_now",
+    "lines": [
+      {"text": "Loveliest of trees, the cherry now", "tags": ["spring", "flora"]},
+      {"text": "Is hung with bloom along the bough,", "tags": ["spring", "flora"]},
+      {"text": "Wearing white for Eastertide.", "tags": ["spring", "quiet"]}
+    ],
+    "tags": ["spring", "flora", "quiet"]
+  },
+  {
+    "id": "thomas-thaw",
+    "title": "Thaw",
+    "poet": "Edward Thomas",
+    "year": 1917,
+    "url": "https://en.wikisource.org/wiki/Poems_(Edward_Thomas,_1917)/Thaw",
+    "lines": [
+      {"text": "Over the land freckled with snow half-thawed", "tags": ["winter", "spring"]},
+      {"text": "The speculating rooks at their nests cawed", "tags": ["bird", "spring"]},
+      {"text": "What we below could not see, Winter pass.", "tags": ["winter", "spring", "migration"]}
+    ],
+    "tags": ["winter", "spring", "bird", "migration"]
+  },
+  {
+    "id": "thomas-tall-nettles",
+    "title": "Tall Nettles",
+    "poet": "Edward Thomas",
+    "year": 1917,
+    "url": "https://poetryarchive.org/poem/tall-nettles/",
+    "lines": [
+      {"text": "Tall nettles cover up, as they have done", "tags": ["summer", "flora"]},
+      {"text": "These many springs, the rusty harrow, the plough", "tags": ["spring", "flora"]},
+      {"text": "I like the dust on the nettles, never lost", "tags": ["summer", "quiet"]},
+      {"text": "Except to prove the sweetness of a shower.", "tags": ["rain", "summer"]}
+    ],
+    "tags": ["summer", "spring", "flora", "rain", "quiet"]
+  },
+  {
+    "id": "clare-autumn",
+    "title": "Autumn",
+    "poet": "John Clare",
+    "year": 1864,
+    "url": "https://en.wikisource.org/wiki/John_Clare,_Poems_Chiefly_from_Manuscript/Autumn_(4)",
+    "lines": [
+      {"text": "I love the fitful gust that shakes", "tags": ["wind", "autumn"]},
+      {"text": "The casement all the day,", "tags": ["wind"]},
+      {"text": "And from the glossy elm tree takes", "tags": ["autumn", "wind", "flora"]}
+    ],
+    "tags": ["autumn", "wind", "bird", "flora"]
+  },
+  {
+    "id": "clare-winter-walk",
+    "title": "Winter Walk",
+    "poet": "John Clare",
+    "year": 1864,
+    "url": "https://poets.org/poem/winter-walk",
+    "lines": [
+      {"text": "The holly bush, a sober lump of green,", "tags": ["winter", "flora"]},
+      {"text": "Shines through the leafless shrubs all brown and grey,", "tags": ["winter", "flora"]},
+      {"text": "And smiles at winter be it eer so keen", "tags": ["winter", "quiet"]}
+    ],
+    "tags": ["winter", "flora", "quiet"]
+  },
+  {
+    "id": "rossetti-spring",
+    "title": "Spring",
+    "poet": "Christina Rossetti",
+    "year": 1894,
+    "url": "https://www.gutenberg.org/files/19188/19188-h/19188-h.htm",
+    "lines": [
+      {"text": "Frost-locked all the winter,", "tags": ["winter", "spring"]},
+      {"text": "Blows the thaw-wind pleasantly,", "tags": ["wind", "spring"]},
+      {"text": "Before cleft swallows speed their journey back", "tags": ["spring", "bird", "migration"]}
+    ],
+    "tags": ["spring", "wind", "rain", "migration", "bird"]
+  },
+  {
+    "id": "rossetti-bleak-midwinter",
+    "title": "A Christmas Carol",
+    "poet": "Christina Rossetti",
+    "year": 1894,
+    "url": "https://poets.org/poem/christmas-carol",
+    "lines": [
+      {"text": "In the bleak mid-winter", "tags": ["winter"]},
+      {"text": "Frosty wind made moan,", "tags": ["winter", "wind"]},
+      {"text": "Earth stood hard as iron,", "tags": ["winter", "quiet"]},
+      {"text": "Water like a stone;", "tags": ["winter", "water"]}
+    ],
+    "tags": ["winter", "wind", "quiet", "water"]
+  },
+  {
+    "id": "frost-onset",
+    "title": "The Onset",
+    "poet": "Robert Frost",
+    "year": 1963,
+    "url": "https://poets.org/poem/onset",
+    "lines": [
+      {"text": "Always the same, when on a fated night", "tags": ["winter", "night"]},
+      {"text": "At last the gathered snow lets down as white", "tags": ["winter"]},
+      {"text": "And I shall see the snow all go down hill", "tags": ["winter", "spring"]},
+      {"text": "In water of a slender April rill", "tags": ["spring", "river", "water"]}
+    ],
+    "tags": ["winter", "spring", "water", "night"]
+  },
+  {
+    "id": "wordsworth-written-march",
+    "title": "Written in March",
+    "poet": "William Wordsworth",
+    "year": 1850,
+    "url": "https://en.wikisource.org/wiki/Poems_(Wordsworth,_1815)/Volume_2/The_Cock_is_crowing",
+    "lines": [
+      {"text": "The cock is crowing,", "tags": ["dawn", "spring"]},
+      {"text": "The stream is flowing,", "tags": ["river", "water", "spring"]},
+      {"text": "The small birds twitter,", "tags": ["bird", "spring"]},
+      {"text": "The rain is over and gone!", "tags": ["spring", "sun"]}
+    ],
+    "tags": ["spring", "dawn", "water", "bird", "rain", "sun"]
+  },
+  {
+    "id": "dickinson-morns-meeker",
+    "title": "Autumn (The morns are meeker)",
+    "poet": "Emily Dickinson",
+    "year": 1886,
+    "url": "https://en.wikisource.org/wiki/Poems_(Dickinson)/Autumn",
+    "lines": [
+      {"text": "The morns are meeker than they were,", "tags": ["autumn", "dawn"]},
+      {"text": "The nuts are getting brown;", "tags": ["autumn", "flora"]},
+      {"text": "The maple wears a gayer scarf,", "tags": ["autumn", "flora"]}
+    ],
+    "tags": ["autumn", "flora", "quiet"]
+  },
+  {
+    "id": "shakespeare-winter-icicles",
+    "title": "Winter (When icicles hang by the wall)",
+    "poet": "William Shakespeare",
+    "year": 1616,
+    "url": "https://poets.org/poem/loves-labours-lost-act-v-scene-2-winter",
+    "lines": [
+      {"text": "When icicles hang by the wall", "tags": ["winter"]},
+      {"text": "And milk comes frozen home in pail,", "tags": ["winter"]},
+      {"text": "Then nightly sings the staring owl,", "tags": ["winter", "night", "bird"]}
+    ],
+    "tags": ["winter", "night", "bird", "folk"]
+  },
+  {
+    "id": "millay-gods-world",
+    "title": "God's World",
+    "poet": "Edna St. Vincent Millay",
+    "year": 1950,
+    "url": "https://poets.org/poem/gods-world-0",
+    "lines": [
+      {"text": "O world, I cannot hold thee close enough!", "tags": ["sky", "quiet"]},
+      {"text": "Thy winds, thy wide grey skies!", "tags": ["wind", "sky", "autumn"]},
+      {"text": "Thy mists, that roll and rise!", "tags": ["mist", "autumn"]}
+    ],
+    "tags": ["autumn", "wind", "mist", "sky"]
+  },
+  {
+    "id": "jacob-wild-geese",
+    "title": "The Wild Geese",
+    "poet": "Violet Jacob",
+    "year": 1946,
+    "url": "https://www.scottishpoetrylibrary.org.uk/poem/wild-geese-0/",
+    "lines": [
+      {"text": "And far abune the Angus straths I saw the wild geese flee,", "tags": ["geese", "migration", "autumn"]},
+      {"text": "A lang, lang skein o' beatin' wings, wi' their heids towards the sea,", "tags": ["geese", "sea", "migration"]},
+      {"text": "And aye their cryin' voices trailed ahint them on the air —", "tags": ["geese", "wind", "folk"]}
+    ],
+    "tags": ["geese", "migration", "autumn", "winter", "wind", "folk"]
+  },
+  {
+    "id": "yeats-wild-swans",
+    "title": "The Wild Swans at Coole",
+    "poet": "W. B. Yeats",
+    "year": 1939,
+    "url": "https://www.poetryfoundation.org/poems/43288/the-wild-swans-at-coole",
+    "lines": [
+      {"text": "Upon the brimming water among the stones", "tags": ["water", "quiet"]},
+      {"text": "Are nine-and-fifty swans.", "tags": ["bird", "water"]},
+      {"text": "The bell-beat of their wings above my head,", "tags": ["bird", "wind"]}
+    ],
+    "tags": ["bird", "water", "autumn", "evening", "quiet"]
+  },
+  {
+    "id": "oliver-wild-geese",
+    "title": "Wild Geese",
+    "poet": "Mary Oliver",
+    "year": 2019,
+    "url": "https://www.poetry-chaikhana.com/Poets/O/OliverMary/WildGeese/index.html",
+    "lines": [
+      {"text": "Meanwhile the wild geese, high in the clean blue air,", "tags": ["geese", "migration", "sky"]},
+      {"text": "are heading home again.", "tags": ["geese", "migration"]},
+      {"text": "calls to you like the wild geese, harsh and exciting —", "tags": ["geese", "migration", "folk"]}
+    ],
+    "tags": ["geese", "migration", "sky", "bird", "autumn", "winter"]
+  },
+  {
+    "id": "field-something-told",
+    "title": "Something Told the Wild Geese",
+    "poet": "Rachel Field",
+    "year": 1942,
+    "url": "https://www.poetrybyheart.org.uk/poems/something-told-the-wild-geese",
+    "lines": [
+      {"text": "Something told the wild geese", "tags": ["geese", "migration"]},
+      {"text": "It was time to go,", "tags": ["migration", "autumn"]},
+      {"text": "Summer sun was on their wings,", "tags": ["summer", "geese", "sun"]}
+    ],
+    "tags": ["geese", "migration", "autumn", "summer", "bird"]
+  },
+  {
+    "id": "davies-kingfisher",
+    "title": "The Kingfisher",
+    "poet": "W. H. Davies",
+    "year": 1940,
+    "url": "https://rpo.library.utoronto.ca/content/kingfisher",
+    "lines": [
+      {"text": "It was the Rainbow gave thee birth,", "tags": ["bird", "folk"]},
+      {"text": "For haunts the lonely pools, and keep", "tags": ["bird", "water", "quiet"]},
+      {"text": "In company with trees that weep.", "tags": ["quiet", "river"]}
+    ],
+    "tags": ["bird", "water", "river", "quiet"]
+  },
+  {
+    "id": "bryant-waterfowl",
+    "title": "To a Waterfowl",
+    "poet": "William Cullen Bryant",
+    "year": 1878,
+    "url": "https://americanliterature.com/author/william-cullen-bryant/poem/to-a-waterfowl",
+    "lines": [
+      {"text": "Seek'st thou the plashy brink", "tags": ["wader", "marsh"]},
+      {"text": "Of weedy lake, or marge of river wide,", "tags": ["river", "marsh"]},
+      {"text": "Lone wandering, but not lost.", "tags": ["migration", "bird"]}
+    ],
+    "tags": ["bird", "geese", "wader", "evening", "sky", "migration", "marsh"]
+  },
+  {
+    "id": "tennyson-eagle",
+    "title": "The Eagle",
+    "poet": "Alfred Tennyson",
+    "year": 1892,
+    "url": "https://en.wikisource.org/wiki/The_Eagle_(Tennyson)",
+    "lines": [
+      {"text": "He clasps the crag with crooked hands;", "tags": ["bird"]},
+      {"text": "The wrinkled sea beneath him crawls;", "tags": ["sea", "bird"]},
+      {"text": "And like a thunderbolt he falls.", "tags": ["bird", "sky"]}
+    ],
+    "tags": ["bird", "sea", "sun", "sky"]
+  },
+  {
+    "id": "wordsworth-cuckoo",
+    "title": "To the Cuckoo",
+    "poet": "William Wordsworth",
+    "year": 1850,
+    "url": "https://en.wikisource.org/wiki/Poems,_in_Two_Volumes_(Wordsworth,_1807)/Volume_2/To_the_Cuckoo",
+    "lines": [
+      {"text": "O blithe New-comer! I have heard,", "tags": ["bird", "spring", "migration"]},
+      {"text": "I hear thee and rejoice:", "tags": ["bird", "spring"]},
+      {"text": "O Cuckoo! shall I call thee Bird,", "tags": ["bird", "spring"]}
+    ],
+    "tags": ["bird", "spring", "sky", "folk", "migration"]
+  },
+  {
+    "id": "oliver-summer-day",
+    "title": "The Summer Day",
+    "poet": "Mary Oliver",
+    "year": 2019,
+    "url": "https://poets.org/poem/summer-day",
+    "lines": [
+      {"text": "Who made the world?", "tags": ["summer", "quiet"]},
+      {"text": "I don't know exactly what a prayer is.", "tags": ["quiet"]},
+      {"text": "Tell me, what is it you plan to do with your one wild and precious life?", "tags": ["summer", "quiet"]}
+    ],
+    "tags": ["summer", "flora", "sun", "quiet"]
+  },
+  {
+    "id": "teasdale-soft-rains",
+    "title": "There Will Come Soft Rains",
+    "poet": "Sara Teasdale",
+    "year": 1933,
+    "url": "https://poets.org/poem/there-will-come-soft-rains",
+    "lines": [
+      {"text": "There will come soft rains and the smell of the ground,", "tags": ["rain", "spring"]},
+      {"text": "And swallows circling with their shimmering sound;", "tags": ["bird", "spring", "migration"]}
+    ],
+    "tags": ["rain", "spring", "bird", "migration"]
+  },
+  {
+    "id": "mew-sea-love",
+    "title": "Sea Love",
+    "poet": "Charlotte Mew",
+    "year": 1928,
+    "url": "https://poets.org/poem/sea-love",
+    "lines": [
+      {"text": "Tide be runnin' the great world over:", "tags": ["tide", "sea"]},
+      {"text": "T'was only last June month I mind that we", "tags": ["summer"]},
+      {"text": "Wi' the moon's old glim on the grey, wet sand;", "tags": ["moon", "sea", "night"]}
+    ],
+    "tags": ["tide", "sea", "summer", "moon", "folk"]
+  },
+  {
+    "id": "millay-low-tide",
+    "title": "Low-Tide",
+    "poet": "Edna St. Vincent Millay",
+    "year": 1950,
+    "url": "https://poets.org/poem/low-tide",
+    "lines": [
+      {"text": "These wet rocks where the tide has been,", "tags": ["tide", "water"]},
+      {"text": "Will show again when the tide is high", "tags": ["tide"]},
+      {"text": "The bottom of the sea once more.", "tags": ["sea", "marsh"]}
+    ],
+    "tags": ["tide", "sea", "water", "marsh"]
+  },
+  {
+    "id": "millay-afternoon-hill",
+    "title": "Afternoon on a Hill",
+    "poet": "Edna St. Vincent Millay",
+    "year": 1950,
+    "url": "https://poets.org/poem/afternoon-hill",
+    "lines": [
+      {"text": "I will be the gladdest thing", "tags": ["summer", "sun"]},
+      {"text": "Under the sun!", "tags": ["sun", "summer"]},
+      {"text": "I will look at cliffs and clouds", "tags": ["sky", "sun"]}
+    ],
+    "tags": ["summer", "sun", "sky", "quiet"]
+  },
+  {
+    "id": "teasdale-august-moonrise",
+    "title": "August Moonrise",
+    "poet": "Sara Teasdale",
+    "year": 1933,
+    "url": "https://poets.org/poem/august-moonrise",
+    "lines": [
+      {"text": "The sun was gone, and the moon was coming", "tags": ["evening", "moon", "sun"]},
+      {"text": "Over the blue Connecticut hills;", "tags": ["evening", "summer"]}
+    ],
+    "tags": ["moon", "evening", "summer"]
+  },
+  {
+    "id": "teasdale-falling-star",
+    "title": "The Falling Star",
+    "poet": "Sara Teasdale",
+    "year": 1933,
+    "url": "https://poets.org/poem/falling-star",
+    "lines": [
+      {"text": "I saw a star slide down the sky,", "tags": ["night", "sky"]},
+      {"text": "Blinding the north as it went by,", "tags": ["night", "sky"]},
+      {"text": "Too lovely to be bought or sold,", "tags": ["quiet", "night"]}
+    ],
+    "tags": ["night", "sky", "quiet"]
+  },
+  {
+    "id": "jamie-crossing-loch",
+    "title": "Crossing the Loch",
+    "poet": "Kathleen Jamie",
+    "year": null,
+    "url": "https://www.scottishpoetrylibrary.org.uk/poem/crossing-the-loch/",
+    "lines": [
+      {"text": "the cold shawl of breeze,", "tags": ["wind", "water"]},
+      {"text": "the magic dart of our bow wave?", "tags": ["water", "folk"]}
+    ],
+    "tags": ["water", "night", "wind", "folk"]
+  },
+  {
+    "id": "kay-old-tongue",
+    "title": "Old Tongue",
+    "poet": "Jackie Kay",
+    "year": null,
+    "url": "https://www.scottishpoetrylibrary.org.uk/poem/old-tongue/",
+    "lines": [
+      {"text": "I lost my Scottish accent.", "tags": ["folk", "migration"]},
+      {"text": "Words disappeared in the dead of night,", "tags": ["night", "migration"]},
+      {"text": "my old tongue.", "tags": ["folk"]}
+    ],
+    "tags": ["migration", "folk", "night"]
+  },
+  {
+    "id": "dunmore-wild-strawberries",
+    "title": "Wild Strawberries",
+    "poet": "Helen Dunmore",
+    "year": 2017,
+    "url": "https://poetryarchive.org/poem/wild-strawberries/",
+    "lines": [
+      {"text": "a dark handful, sweet-edged,", "tags": ["summer", "flora"]},
+      {"text": "I lipped at your palm —", "tags": ["summer", "quiet"]}
+    ],
+    "tags": ["summer", "flora", "quiet"]
+  },
+  {
+    "id": "berry-birmingham-roller",
+    "title": "Birmingham Roller",
+    "poet": "Liz Berry",
+    "year": null,
+    "url": "https://poetryarchive.org/poem/birmingham-roller/",
+    "lines": [
+      {"text": "Wench, yowm the colour of ower town:", "tags": ["bird", "folk"]},
+      {"text": "ower factory chimdeys plumes on yer chest,", "tags": ["bird"]},
+      {"text": "rolling back up like a babby's yo-yo", "tags": ["bird", "sky"]}
+    ],
+    "tags": ["bird", "folk", "sky"]
+  },
+  {
+    "id": "robertson-roane-head",
+    "title": "At Roane Head",
+    "poet": "Robin Robertson",
+    "year": null,
+    "url": "https://www.lrb.co.uk/the-paper/v30/n16/robin-robertson/at-roane-head",
+    "lines": [
+      {"text": "You'd know her house by the drawn blinds —", "tags": ["folk", "quiet"]},
+      {"text": "by the cormorants pitched on the boundary wall,", "tags": ["bird", "sea"]}
+    ],
+    "tags": ["sea", "folk", "bird"]
+  },
+  {
+    "id": "clare-autumn-birds",
+    "title": "Autumn Birds",
+    "poet": "John Clare",
+    "year": 1864,
+    "url": "https://en.wikisource.org/wiki/Autumn_Birds",
+    "lines": [
+      {"text": "The wild duck startles like a sudden thought,", "tags": ["bird", "autumn"]},
+      {"text": "And heron slow as if it might be caught.", "tags": ["bird", "wader"]},
+      {"text": "The wild swan hurries hight and noises loud", "tags": ["bird", "wind"]}
+    ],
+    "tags": ["bird", "wader", "autumn", "evening", "sky"]
+  },
+  {
+    "id": "bishop-sandpiper",
+    "title": "Sandpiper",
+    "poet": "Elizabeth Bishop",
+    "year": 1979,
+    "url": "https://www.brinkerhoffpoetry.org/poems/sandpiper",
+    "lines": [
+      {"text": "The roaring alongside he takes for granted,", "tags": ["sea", "wader"]},
+      {"text": "and that every so often the world is bound to shake.", "tags": ["wader"]},
+      {"text": "He runs, he runs to the south, finical, awkward,", "tags": ["wader", "tide"]}
+    ],
+    "tags": ["bird", "wader", "sea", "tide", "quiet"]
+  },
+  {
+    "id": "thaxter-sandpiper",
+    "title": "The Sandpiper",
+    "poet": "Celia Thaxter",
+    "year": 1894,
+    "url": "https://www.familyfriendpoems.com/poem/the-sandpiper-by-celia-thaxter",
+    "lines": [
+      {"text": "Across the lonely beach we flit,", "tags": ["wader", "quiet"]},
+      {"text": "One little sandpiper and I,", "tags": ["wader"]},
+      {"text": "The wild wind raves, the tide runs high,", "tags": ["wind", "tide"]}
+    ],
+    "tags": ["bird", "wader", "sea", "tide", "wind"]
+  },
+  {
+    "id": "longfellow-daybreak",
+    "title": "Daybreak",
+    "poet": "Henry Wadsworth Longfellow",
+    "year": 1882,
+    "url": "https://en.wikisource.org/wiki/The_Atlantic_Monthly/Volume_1/Number_4/Daybreak",
+    "lines": [
+      {"text": "A wind came up out of the sea,", "tags": ["dawn", "sea", "wind"]},
+      {"text": "And said, \"O mists, make room for me!\"", "tags": ["dawn", "mist"]},
+      {"text": "It touched the wood-bird's folded wing,", "tags": ["dawn", "bird"]}
+    ],
+    "tags": ["dawn", "sea", "wind", "mist", "bird"]
+  },
+  {
+    "id": "thomas-owl",
+    "title": "The Owl",
+    "poet": "Edward Thomas",
+    "year": 1917,
+    "url": "https://poets.org/poem/owl-0",
+    "lines": [
+      {"text": "An owl's cry, a most melancholy cry", "tags": ["bird", "night"]},
+      {"text": "Shaken out long and clear upon the hill,", "tags": ["night", "wind"]},
+      {"text": "Speaking for all who lay under the stars,", "tags": ["night", "sky"]}
+    ],
+    "tags": ["bird", "night", "quiet", "wind"]
+  },
+  {
+    "id": "yeats-reproves-curlew",
+    "title": "He Reproves the Curlew",
+    "poet": "W. B. Yeats",
+    "year": 1939,
+    "url": "https://www.poetryfoundation.org/poems/43286/he-reproves-the-curlew",
+    "lines": [
+      {"text": "O Curlew, cry no more in the air,", "tags": ["wader", "wind"]},
+      {"text": "Or only to the water in the West;", "tags": ["wader", "water", "evening"]},
+      {"text": "There is enough evil in the crying of wind.", "tags": ["wind", "evening"]}
+    ],
+    "tags": ["wader", "bird", "wind", "water", "evening"]
+  },
+  {
+    "id": "jamie-ospreys",
+    "title": "Ospreys",
+    "poet": "Kathleen Jamie",
+    "year": null,
+    "url": "https://www.scottishpoetrylibrary.org.uk/poem/ospreys/",
+    "lines": [
+      {"text": "up from Senegal, just to hit a teuchit storm —", "tags": ["bird", "migration", "spring"]},
+      {"text": "late March blizzards and raw winds — before the tilt", "tags": ["wind", "spring", "winter"]}
+    ],
+    "tags": ["bird", "migration", "spring", "wind"]
+  },
+  {
+    "id": "mitchison-loch-fyne",
+    "title": "Up Loch Fyne",
+    "poet": "Naomi Mitchison",
+    "year": 1999,
+    "url": "https://www.scottishpoetrylibrary.org.uk/poem/loch-fyne/",
+    "lines": [
+      {"text": "The humped grey fish-watcher has become with one wingflap", "tags": ["wader", "water"]},
+      {"text": "The elegant trailing heron that Hokusai dreamed up,", "tags": ["wader", "folk"]}
+    ],
+    "tags": ["bird", "wader", "water", "folk", "quiet"]
+  },
+  {
+    "id": "marvell-mowers-song",
+    "title": "The Mower's Song",
+    "poet": "Andrew Marvell",
+    "year": 1678,
+    "url": "https://en.wikisource.org/wiki/The_Mower's_Song",
+    "lines": [
+      {"text": "My mind was once the true survey", "tags": ["summer", "quiet"]},
+      {"text": "Of all these meadows fresh and gay,", "tags": ["summer", "flora"]},
+      {"text": "And in the greenness of the grass", "tags": ["summer", "flora"]}
+    ],
+    "tags": ["flora", "summer", "quiet"]
+  },
+  {
+    "id": "blunt-sea-lavender",
+    "title": "Sea-Lavender",
+    "poet": "Wilfrid Scawen Blunt",
+    "year": 1922,
+    "url": "https://www.poemhunter.com/poem/sea-lavender/",
+    "lines": [
+      {"text": "Lavender, sea lavender!", "tags": ["flora", "marsh", "summer"]},
+      {"text": "Pale sweet flower how full of her!", "tags": ["flora", "marsh"]}
+    ],
+    "tags": ["flora", "marsh", "summer"]
+  },
+  {
+    "id": "whitman-as-i-ebbd",
+    "title": "As I Ebb'd with the Ocean of Life",
+    "poet": "Walt Whitman",
+    "year": 1892,
+    "url": "https://en.wikisource.org/wiki/Leaves_of_Grass_(1882)/Sea-Drift/As_I_Ebb%27d_with_the_Ocean_of_Life",
+    "lines": [
+      {"text": "Fascinated, my eyes reverting from the south, dropt, to follow those slender windrows,", "tags": ["tide", "sea"]},
+      {"text": "Chaff, straw, splinters of wood, weeds, and the sea-gluten,", "tags": ["flora", "tide"]},
+      {"text": "Scum, scales from shining rocks, leaves of salt-lettuce, left by the tide,", "tags": ["flora", "tide", "marsh"]}
+    ],
+    "tags": ["flora", "tide", "sea", "marsh", "quiet"]
+  },
+  {
+    "id": "frost-mowing",
+    "title": "Mowing",
+    "poet": "Robert Frost",
+    "year": 1963,
+    "url": "https://www.poetryfoundation.org/poems/53001/mowing-56d231eca88cd",
+    "lines": [
+      {"text": "There was never a sound beside the wood but one,", "tags": ["summer", "quiet"]},
+      {"text": "And that was my long scythe whispering to the ground.", "tags": ["summer", "flora", "quiet"]}
+    ],
+    "tags": ["flora", "summer", "quiet", "sun"]
+  },
+  {
+    "id": "rossetti-goblin-market",
+    "title": "Goblin Market",
+    "poet": "Christina Rossetti",
+    "year": 1894,
+    "url": "https://poets.org/poem/goblin-market",
+    "lines": [
+      {"text": "Evening by evening", "tags": ["evening", "folk"]},
+      {"text": "Among the brookside rushes,", "tags": ["river", "flora", "evening"]}
+    ],
+    "tags": ["flora", "evening", "water", "folk"]
+  },
+  {
+    "id": "masefield-cargoes",
+    "title": "Cargoes",
+    "poet": "John Masefield",
+    "year": 1967,
+    "url": "https://en.wikisource.org/wiki/Salt-Water_Poems_and_Ballads/Cargoes",
+    "lines": [
+      {"text": "Dirty British coaster with a salt-caked smoke stack,", "tags": ["sea"]},
+      {"text": "Butting through the channel in the mad March days,", "tags": ["spring", "sea", "wind"]}
+    ],
+    "tags": ["sea", "wind", "spring"]
+  },
+  {
+    "id": "brown-hamnavoe",
+    "title": "Hamnavoe",
+    "poet": "George Mackay Brown",
+    "year": 1996,
+    "url": "https://poetryarchive.org/poem/hamnavoe/",
+    "lines": [
+      {"text": "When barbarous with gulls", "tags": ["dawn", "bird"]},
+      {"text": "Hamnavoe's morning broke", "tags": ["dawn"]},
+      {"text": "On the salt and tar steps. Herring boats,", "tags": ["dawn", "sea"]}
+    ],
+    "tags": ["sea", "dawn", "bird", "folk"]
+  },
+  {
+    "id": "kipling-harp-song",
+    "title": "Harp Song of the Dane Women",
+    "poet": "Rudyard Kipling",
+    "year": 1936,
+    "url": "https://www.poetryfoundation.org/poems/47691/harp-song-of-the-dane-women",
+    "lines": [
+      {"text": "What is a woman that you forsake her,", "tags": ["folk"]},
+      {"text": "And the hearth-fire and the home-acre,", "tags": ["folk"]},
+      {"text": "To go with the old grey Widow-maker?", "tags": ["sea", "wind", "folk"]}
+    ],
+    "tags": ["sea", "folk", "wind"]
+  },
+  {
+    "id": "yeats-fisherman",
+    "title": "The Fisherman",
+    "poet": "W. B. Yeats",
+    "year": 1939,
+    "url": "https://www.poetryverse.com/william-butler-yeats-poems/the-fisherman",
+    "lines": [
+      {"text": "The freckled man who goes", "tags": ["dawn", "folk"]},
+      {"text": "To a grey place on a hill", "tags": ["quiet"]},
+      {"text": "At dawn to cast his flies,", "tags": ["dawn", "fish"]}
+    ],
+    "tags": ["dawn", "quiet", "folk", "fish"]
+  },
+  {
+    "id": "newbolt-drakes-drum",
+    "title": "Drake's Drum",
+    "poet": "Henry Newbolt",
+    "year": 1938,
+    "url": "https://rpo.library.utoronto.ca/content/drakes-drum",
+    "lines": [
+      {"text": "Drake he's in his hammock an' a thousand mile away,", "tags": ["sea", "folk"]},
+      {"text": "An' dreamin' arl the time o' Plymouth Hoe.", "tags": ["sea", "folk"]}
+    ],
+    "tags": ["sea", "folk"]
+  },
+  {
+    "id": "anon-sir-patrick-spens",
+    "title": "Sir Patrick Spens",
+    "poet": "Anonymous",
+    "year": 1700,
+    "url": "https://en.wikisource.org/wiki/Oxford_Book_of_English_Verse_1250-1900/Sir_Patrick_Spens",
+    "lines": [
+      {"text": "The king sits in Dunfermline town", "tags": ["folk"]},
+      {"text": "Drinking the blude-red wine;", "tags": ["folk"]},
+      {"text": "'O whare will I get a skeely skipper", "tags": ["sea", "folk"]}
+    ],
+    "tags": ["sea", "folk", "winter"]
+  },
+  {
+    "id": "cunningham-wet-sheet",
+    "title": "A Wet Sheet and a Flowing Sea",
+    "poet": "Allan Cunningham",
+    "year": 1842,
+    "url": "https://en.wikiquote.org/wiki/Allan_Cunningham",
+    "lines": [
+      {"text": "A wet sheet and a flowing sea,", "tags": ["sea", "wind"]},
+      {"text": "A wind that follows fast,", "tags": ["wind", "sea"]},
+      {"text": "And fills the white and rustling sail,", "tags": ["wind", "sea"]}
+    ],
+    "tags": ["sea", "wind", "sky", "migration"]
+  },
+  {
+    "id": "dharker-bloom",
+    "title": "Bloom",
+    "poet": "Imtiaz Dharker",
+    "year": null,
+    "url": "https://www.scottishpoetrylibrary.org.uk/poem/bloom/",
+    "lines": [
+      {"text": "like the sea or the smallest of its creatures,", "tags": ["sea", "quiet"]},
+      {"text": "and see a star waking in your eyes", "tags": ["night", "sky", "quiet"]},
+      {"text": "like sap-rise to a leaf, tide-rush to the moon.", "tags": ["tide", "moon"]}
+    ],
+    "tags": ["sea", "moon", "tide", "quiet"]
+  },
+  {
+    "id": "nichols-hurricane",
+    "title": "Hurricane Hits England",
+    "poet": "Grace Nichols",
+    "year": null,
+    "url": "https://poetryarchive.org/poem/hurricane-hits-england/",
+    "lines": [
+      {"text": "Half the night she lay awake,", "tags": ["night", "wind"]},
+      {"text": "The howling ship of the wind,", "tags": ["wind"]},
+      {"text": "Its gathering rage,", "tags": ["wind", "autumn"]}
+    ],
+    "tags": ["wind", "sky", "autumn", "folk", "night"]
+  },
+  {
+    "id": "clifton-blessing-boats",
+    "title": "blessing the boats",
+    "poet": "Lucille Clifton",
+    "year": 2010,
+    "url": "https://poets.org/poem/blessing-boats",
+    "lines": [
+      {"text": "may the tide", "tags": ["tide"]},
+      {"text": "that is entering even now", "tags": ["tide", "dawn"]},
+      {"text": "carry you out", "tags": ["tide", "migration"]}
+    ],
+    "tags": ["tide", "water", "migration", "dawn"]
+  },
+  {
+    "id": "harjo-eagle-poem",
+    "title": "Eagle Poem",
+    "poet": "Joy Harjo",
+    "year": null,
+    "url": "https://poets.org/poem/eagle-poem",
+    "lines": [
+      {"text": "Like eagle that Sunday morning", "tags": ["dawn", "bird"]},
+      {"text": "Over Salt River. Circled in blue sky", "tags": ["river", "sky", "bird"]},
+      {"text": "In wind, swept our hearts clean", "tags": ["wind", "quiet"]}
+    ],
+    "tags": ["sky", "wind", "bird", "river", "quiet", "dawn"]
+  },
+  {
+    "id": "lorca-romance-sonambulo",
+    "title": "Romance Sonámbulo",
+    "poet": "Federico García Lorca",
+    "year": 1936,
+    "url": "https://poets.org/poem/romance-sonambulo",
+    "lines": [
+      {"text": "Green, how I want you green.", "tags": ["folk"]},
+      {"text": "Green wind. Green branches.", "tags": ["wind", "folk"]},
+      {"text": "The ship out on the sea", "tags": ["sea"]}
+    ],
+    "tags": ["sea", "wind", "moon", "folk"]
+  },
+  {
+    "id": "cavafy-ithaka",
+    "title": "Ithaka",
+    "poet": "Constantine P. Cavafy",
+    "year": 1933,
+    "url": "https://www.onassis.org/initiatives/cavafy-archive/the-canon/ithaka",
+    "lines": [
+      {"text": "As you set out for Ithaka", "tags": ["sea", "migration"]},
+      {"text": "hope the voyage is a long one,", "tags": ["migration"]},
+      {"text": "full of adventure, full of discovery.", "tags": ["migration"]}
+    ],
+    "tags": ["sea", "summer", "migration", "folk"]
+  },
+  {
+    "id": "cavafy-morning-sea",
+    "title": "Morning Sea",
+    "poet": "Constantine P. Cavafy",
+    "year": 1933,
+    "url": "https://www.onassis.org/initiatives/cavafy-archive/the-canon/morning-sea",
+    "lines": [
+      {"text": "Let me stop here. Let me, too, look at nature awhile.", "tags": ["dawn", "quiet"]},
+      {"text": "The brilliant blue of the morning sea, of the cloudless sky,", "tags": ["dawn", "sea", "sun", "sky"]},
+      {"text": "the yellow shore; all lovely,", "tags": ["dawn", "summer"]}
+    ],
+    "tags": ["sea", "sky", "dawn", "summer", "sun", "quiet"]
+  },
+  {
+    "id": "wang-wei-autumn-evening",
+    "title": "An Autumn Evening in the Mountains",
+    "poet": "Wang Wei",
+    "year": 761,
+    "url": "https://allpoetry.com/An-Evening-in-the-Mountains",
+    "lines": [
+      {"text": "After rain the empty mountain", "tags": ["rain", "autumn", "quiet"]},
+      {"text": "Stands autumnal in the evening,", "tags": ["autumn", "evening"]},
+      {"text": "Moonlight in its groves of pine,", "tags": ["moon", "evening"]},
+      {"text": "Stones of crystal in its brooks.", "tags": ["river", "water"]}
+    ],
+    "tags": ["autumn", "evening", "rain", "moon", "water", "quiet"]
+  },
+  {
+    "id": "szymborska-clouds",
+    "title": "Clouds",
+    "poet": "Wisława Szymborska",
+    "year": 2012,
+    "url": "https://www.szymborska.org.pl/en/wislawa/selected-poems/clouds/",
+    "lines": [
+      {"text": "I'd have to be really quick", "tags": ["sky"]},
+      {"text": "to describe clouds —", "tags": ["sky", "mist"]},
+      {"text": "a split second's enough", "tags": ["sky", "wind"]}
+    ],
+    "tags": ["sky", "mist", "quiet", "wind"]
+  },
+  {
+    "id": "kay-dee-don",
+    "title": "Between the Dee and the Don",
+    "poet": "Jackie Kay",
+    "year": null,
+    "url": "https://www.scottishpoetrylibrary.org.uk/poem/between-dee-and-don/",
+    "lines": [
+      {"text": "I come from the old world and the new.", "tags": ["folk", "migration"]},
+      {"text": "I live between laughter and sorrow.", "tags": ["quiet"]},
+      {"text": "I live between the land and the sea.", "tags": ["sea", "river", "marsh"]}
+    ],
+    "tags": ["sea", "river", "marsh", "quiet", "migration"]
+  },
+  {
+    "id": "sappho-tonight-watched",
+    "title": "Tonight I've watched",
+    "poet": "Sappho",
+    "year": -570,
+    "url": "https://wordsfromotherpeople.blogspot.com/2009/02/tonight-ive-watched-sappho-translated.html",
+    "lines": [
+      {"text": "Tonight I've watched", "tags": ["night"]},
+      {"text": "The moon and then", "tags": ["moon", "night"]},
+      {"text": "the Pleiades", "tags": ["night", "sky"]},
+      {"text": "go down", "tags": ["evening", "night"]}
+    ],
+    "tags": ["moon", "night", "sky", "quiet", "evening"]
+  },
+  {
+    "id": "basho-summer-grasses",
+    "title": "The summer grasses",
+    "poet": "Matsuo Bashō",
+    "year": 1694,
+    "url": "https://en.wikiquote.org/wiki/Matsuo_Bash%C5%8D",
+    "lines": [
+      {"text": "The summer grasses —", "tags": ["summer", "flora"]},
+      {"text": "For many brave warriors", "tags": ["folk"]},
+      {"text": "The aftermath of dreams.", "tags": ["summer", "quiet"]}
+    ],
+    "tags": ["summer", "flora", "quiet", "folk"]
+  },
+  {
+    "id": "shakespeare-lear-samphire",
+    "title": "King Lear, Act IV Scene VI",
+    "poet": "William Shakespeare",
+    "year": 1616,
+    "url": "https://shakespeare.mit.edu/lear/lear.4.6.html",
+    "lines": [
+      {"text": "The crows and choughs that wing the midway air", "tags": ["bird", "sky"]},
+      {"text": "Hangs one that gathers samphire, dreadful trade!", "tags": ["flora", "marsh", "summer"]}
+    ],
+    "tags": ["flora", "marsh", "sea", "summer", "bird"]
+  },
+  {
+    "id": "betjeman-trebetherick",
+    "title": "Trebetherick",
+    "poet": "John Betjeman",
+    "year": 1984,
+    "url": "https://poetryconnection.net/poets/john-betjeman/trebetherick/",
+    "lines": [
+      {"text": "We used to picnic where the thrift", "tags": ["flora", "summer"]},
+      {"text": "Grew deep and tufted to the edge;", "tags": ["flora", "summer"]},
+      {"text": "We saw the yellow foam flakes drift", "tags": ["sea", "tide"]}
+    ],
+    "tags": ["flora", "sea", "summer", "quiet"]
+  },
+  {
+    "id": "murphy-sea-holly",
+    "title": "Sea Holly",
+    "poet": "Richard Murphy",
+    "year": 2018,
+    "url": "https://wfupress.wfu.edu/poem-of-the-week/sea-holly-richard-murphy-poem-of-the-week/",
+    "lines": [
+      {"text": "Thrives upon sand where no other plant can live", "tags": ["flora", "marsh"]},
+      {"text": "Close to high water mark on haggard shores,", "tags": ["flora", "tide", "marsh"]},
+      {"text": "And crops up briefly in summer wearing stiff", "tags": ["flora", "summer"]}
+    ],
+    "tags": ["flora", "sea", "tide", "summer", "marsh"]
+  },
+  {
+    "id": "mahon-achill",
+    "title": "Achill",
+    "poet": "Derek Mahon",
+    "year": 2020,
+    "url": "https://poets.org/poem/achill",
+    "lines": [
+      {"text": "Croagh Patrick towers like Naxos over the water", "tags": ["sea", "water"]},
+      {"text": "Wild thyme and sea-thrift, to lift the weight from my heart.", "tags": ["flora", "marsh"]}
+    ],
+    "tags": ["flora", "sea", "marsh", "bird", "quiet"]
+  },
+  {
+    "id": "eliot-prufrock",
+    "title": "The Love Song of J. Alfred Prufrock",
+    "poet": "T. S. Eliot",
+    "year": 1965,
+    "url": "https://www.poetryfoundation.org/poetrymagazine/poems/44212/the-love-song-of-j-alfred-prufrock",
+    "lines": [
+      {"text": "The yellow fog that rubs its back upon the window-panes,", "tags": ["mist", "evening"]},
+      {"text": "Licked its tongue into the corners of the evening,", "tags": ["mist", "evening"]},
+      {"text": "Lingered upon the pools that stand in drains,", "tags": ["mist", "evening", "rain"]}
+    ],
+    "tags": ["mist", "evening", "quiet"]
+  },
+  {
+    "id": "frost-spring-pools",
+    "title": "Spring Pools",
+    "poet": "Robert Frost",
+    "year": 1963,
+    "url": "https://www.poetryverse.com/robert-frost-poems/spring-pools",
+    "lines": [
+      {"text": "These pools that, though in forests, still reflect", "tags": ["water", "spring", "quiet"]},
+      {"text": "The total sky almost without defect,", "tags": ["sky", "water"]},
+      {"text": "And like the flowers beside them, chill and shiver,", "tags": ["spring", "flora"]}
+    ],
+    "tags": ["water", "spring", "flora", "sky", "quiet"]
+  },
+  {
+    "id": "hardy-beeny-cliff",
+    "title": "Beeny Cliff",
+    "poet": "Thomas Hardy",
+    "year": 1928,
+    "url": "https://www.lieder.net/lieder/get_text.html?TextId=27644",
+    "lines": [
+      {"text": "The pale mews plained below us, and the waves seemed far away", "tags": ["bird", "sea"]},
+      {"text": "A little cloud then cloaked us, and there flew an irised rain,", "tags": ["mist", "rain"]},
+      {"text": "And the Atlantic dyed its levels with a dull misfeatured stain", "tags": ["mist", "sea"]}
+    ],
+    "tags": ["mist", "sea", "bird", "rain"]
+  },
+  {
+    "id": "transtromer-after-death",
+    "title": "After a Death",
+    "poet": "Tomas Tranströmer",
+    "year": 2015,
+    "url": "https://poets.org/poem/after-death",
+    "lines": [
+      {"text": "Once there was a shock", "tags": ["winter", "quiet"]},
+      {"text": "that left behind a long, shimmering comet tail.", "tags": ["night", "sky"]},
+      {"text": "It settles in cold drops on the telephone wires.", "tags": ["winter", "rain"]}
+    ],
+    "tags": ["winter", "quiet", "night", "sun"]
+  },
+  {
+    "id": "transtromer-allegro",
+    "title": "Allegro",
+    "poet": "Tomas Tranströmer",
+    "year": 2015,
+    "url": "https://modernpoetryintranslation.com/poem/allegro/",
+    "lines": [
+      {"text": "I play Haydn after a dark day", "tags": ["evening", "quiet"]},
+      {"text": "and sense an honest warmth in my hands.", "tags": ["quiet"]},
+      {"text": "The tone is green, lively and still.", "tags": ["quiet"]}
+    ],
+    "tags": ["quiet", "evening"]
+  },
+  {
+    "id": "akhmatova-wild-honey",
+    "title": "Wild Honey",
+    "poet": "Anna Akhmatova",
+    "year": 1966,
+    "url": "https://modernpoetryintranslation.com/poem/wild-honey/",
+    "lines": [
+      {"text": "Wild honey smells like freedom,", "tags": ["summer", "flora"]},
+      {"text": "dust — like a ray of sun.", "tags": ["sun", "summer"]},
+      {"text": "Honeysuckle smells like water,", "tags": ["water", "summer", "flora"]}
+    ],
+    "tags": ["summer", "sun", "water", "flora"]
+  },
+  {
+    "id": "amichai-room-by-sea",
+    "title": "A Room by the Sea",
+    "poet": "Yehuda Amichai",
+    "year": 2000,
+    "url": "https://modernpoetryintranslation.com/poem/a-room-by-the-sea/",
+    "lines": [
+      {"text": "The sea outside. And a shoe filled with nothing,", "tags": ["sea", "quiet"]},
+      {"text": "And suddenly a seawind feels me", "tags": ["sea", "wind"]}
+    ],
+    "tags": ["sea", "wind", "quiet"]
+  },
+  {
+    "id": "amichai-summer-or-ending",
+    "title": "Summer Or Its Ending",
+    "poet": "Yehuda Amichai",
+    "year": 2000,
+    "url": "https://modernpoetryintranslation.com/poem/summer-or-its-ending/",
+    "lines": [
+      {"text": "It was a summer", "tags": ["summer"]},
+      {"text": "or its ending.", "tags": ["summer", "autumn"]},
+      {"text": "because of the printed flowers on its cloth.", "tags": ["flora", "summer"]}
+    ],
+    "tags": ["summer", "autumn", "flora", "quiet"]
+  },
+  {
+    "id": "arshi-song",
+    "title": "Song",
+    "poet": "Mona Arshi",
+    "year": null,
+    "url": "https://poetryarchive.org/poem/song-mona-arshi/",
+    "lines": [
+      {"text": "And silence didn't speak —", "tags": ["quiet"]},
+      {"text": "it perched on a low branch and a song flowed", "tags": ["bird", "quiet"]},
+      {"text": "the ferns unrolled", "tags": ["flora", "spring"]}
+    ],
+    "tags": ["quiet", "flora", "rain", "bird"]
+  },
+  {
+    "id": "ehin-cows-from-sea",
+    "title": "Cows come from the sea",
+    "poet": "Kristiina Ehin",
+    "year": null,
+    "url": "https://modernpoetryintranslation.com/poem/cows-come-from-the-sea/",
+    "lines": [
+      {"text": "Cows come from the sea", "tags": ["sea", "folk"]},
+      {"text": "on this morning at the beginning of time", "tags": ["dawn", "sea", "folk"]},
+      {"text": "with a switch of sea-grass", "tags": ["flora", "marsh"]}
+    ],
+    "tags": ["sea", "dawn", "folk", "flora", "marsh"]
+  },
+  {
+    "id": "grech-ganado-wave",
+    "title": "The Wave",
+    "poet": "Maria Grech Ganado",
+    "year": 2022,
+    "url": "https://modernpoetryintranslation.com/poem/the-wave/",
+    "lines": [
+      {"text": "and on tiptoe under the moon", "tags": ["moon", "night"]},
+      {"text": "whispered to you between our kisses", "tags": ["night", "quiet"]},
+      {"text": "of a salt door within the wave.", "tags": ["sea", "tide"]}
+    ],
+    "tags": ["sea", "moon", "night", "tide"]
+  },
+  {
+    "id": "heraud-river",
+    "title": "The River",
+    "poet": "Javier Heraud",
+    "year": 1963,
+    "url": "https://modernpoetryintranslation.com/poem/the-river-2/",
+    "lines": [
+      {"text": "I am a river, going down over wide stones,", "tags": ["river", "water"]},
+      {"text": "my path drawn by the wind.", "tags": ["river", "wind"]},
+      {"text": "The trees around me are shrouded with rain.", "tags": ["rain", "river"]}
+    ],
+    "tags": ["river", "rain", "wind", "migration", "water"]
+  },
+  {
+    "id": "ko-un-spring-days",
+    "title": "Spring days are passing",
+    "poet": "Ko Un",
+    "year": null,
+    "url": "https://modernpoetryintranslation.com/poem/spring-days-are-passing/",
+    "lines": [
+      {"text": "Surrender everything like this:", "tags": ["spring", "quiet"]},
+      {"text": "flowers are falling.", "tags": ["spring", "flora"]},
+      {"text": "the evening tide holds nobody back.", "tags": ["tide", "evening"]}
+    ],
+    "tags": ["spring", "tide", "evening", "quiet", "flora"]
+  },
+  {
+    "id": "han-kang-winter-mirror",
+    "title": "Winter Through a Mirror",
+    "poet": "Han Kang",
+    "year": null,
+    "url": "https://modernpoetryintranslation.com/poem/winter-through-a-mirror-parts-1-3/",
+    "lines": [
+      {"text": "Inside the mirror winter is waiting", "tags": ["winter"]},
+      {"text": "An utterly cold place", "tags": ["winter", "quiet"]}
+    ],
+    "tags": ["winter", "quiet"]
+  },
+  {
+    "id": "saunders-porthpean",
+    "title": "Porthpean",
+    "poet": "Tim Saunders",
+    "year": null,
+    "url": "https://modernpoetryintranslation.com/poem/porthpean/",
+    "lines": [
+      {"text": "the echoing voice of the ocean's waves", "tags": ["sea"]},
+      {"text": "the whispers of the sea in the time of dusk", "tags": ["sea", "evening"]},
+      {"text": "flowing tide gives perfect voice", "tags": ["tide"]}
+    ],
+    "tags": ["sea", "tide", "evening"]
+  },
+  {
+    "id": "anon-dear-fahimeh",
+    "title": "Dear Fahimeh",
+    "poet": "Anonymous",
+    "year": null,
+    "url": "https://modernpoetryintranslation.com/poem/dear-fahimeh/",
+    "lines": [
+      {"text": "In the long sea-silence,", "tags": ["sea", "quiet"]},
+      {"text": "a wave lifts, oars clip at the water.", "tags": ["sea", "water"]},
+      {"text": "A young fisherman bringing his boat to land,", "tags": ["sea", "fish"]}
+    ],
+    "tags": ["sea", "water", "quiet", "fish"]
+  },
+  {
+    "id": "williamson-tarka-glasswort-pools",
+    "title": "Tarka the Otter",
+    "poet": "Henry Williamson",
+    "year": 1927,
+    "url": "https://www.gutenberg.org/files/75899/75899-h/75899-h.htm",
+    "isProse": true,
+    "source": "Tarka the Otter, 1927",
+    "lines": [
+      {"text": "Tarka fished the pools and guts of the Branton pill, eating what he caught among the feathery and aromatic leaves of the sea-wormwood plants which grew in the mudded cracks of the sloping stone wall with the sea-beet, the scentless sea-lavender, and the glasswort.", "tags": ["creek", "marsh", "flora", "autumn"]}
+    ],
+    "tags": ["creek", "marsh", "flora", "autumn", "fish"]
+  },
+  {
+    "id": "williamson-tarka-glasswort-ice",
+    "title": "Tarka the Otter",
+    "poet": "Henry Williamson",
+    "year": 1927,
+    "url": "https://www.gutenberg.org/files/75899/75899-h/75899-h.htm",
+    "isProse": true,
+    "source": "Tarka the Otter, 1927",
+    "lines": [
+      {"text": "The tide was ebbing when he crawled over the white sea-wall, and down the dark and hard mud to the water, crackling the brittle ice-forms of the glasswort.", "tags": ["flora", "tide", "marsh", "winter"]}
+    ],
+    "tags": ["flora", "tide", "marsh", "winter", "creek"]
+  },
+  {
+    "id": "williamson-tarka-wildfowl",
+    "title": "Tarka the Otter",
+    "poet": "Henry Williamson",
+    "year": 1927,
+    "url": "https://www.gutenberg.org/files/75899/75899-h/75899-h.htm",
+    "isProse": true,
+    "source": "Tarka the Otter, 1927",
+    "lines": [
+      {"text": "Old Nog fished these waters, and at night many kinds of wildfowl flapped and quacked besides the reeds; mallard, wigeon, teal, coot, dabchick, and strays of the duck family — shoveller, pochard, and golden eye.", "tags": ["bird", "marsh", "night", "winter"]}
+    ],
+    "tags": ["bird", "marsh", "night", "winter", "water"]
+  },
+  {
+    "id": "williamson-tarka-redshank",
+    "title": "Tarka the Otter",
+    "poet": "Henry Williamson",
+    "year": 1927,
+    "url": "https://www.gutenberg.org/files/75899/75899-h/75899-h.htm",
+    "isProse": true,
+    "source": "Tarka the Otter, 1927",
+    "lines": [
+      {"text": "The treble whistle of the redshank was piped from shore to shore, the ring plover sped over the water, turning and wheeling as one bird.", "tags": ["wader", "tide", "creek"]}
+    ],
+    "tags": ["wader", "bird", "tide", "creek", "water"]
+  },
+  {
+    "id": "williamson-tarka-oystercatcher",
+    "title": "Tarka the Otter",
+    "poet": "Henry Williamson",
+    "year": 1927,
+    "url": "https://www.gutenberg.org/files/75899/75899-h/75899-h.htm",
+    "isProse": true,
+    "source": "Tarka the Otter, 1927",
+    "lines": [
+      {"text": "He was a swift flyer, and soon mounted to where his mate waited at her pitch in the sky above the precipice, scanning the lower airs for rock-dove, oystercatcher, finch, or guillemot.", "tags": ["bird", "wader", "sky", "sea"]}
+    ],
+    "tags": ["bird", "wader", "sky", "sea"]
+  },
+  {
+    "id": "williamson-tarka-thrift",
+    "title": "Tarka the Otter",
+    "poet": "Henry Williamson",
+    "year": 1927,
+    "url": "https://www.gutenberg.org/files/75899/75899-h/75899-h.htm",
+    "isProse": true,
+    "source": "Tarka the Otter, 1927",
+    "lines": [
+      {"text": "Greymuzzle came to the end of Wreckers' Path, and climbed up springy clumps of sea-thrift, among gull-feathers and mussel-shells and fish-bones, and ran along another path to the top of the precipice.", "tags": ["flora", "sea", "spring"]}
+    ],
+    "tags": ["flora", "sea", "wind", "spring", "summer"]
+  },
+  {
+    "id": "williamson-tarka-thrift-spurred",
+    "title": "Tarka the Otter",
+    "poet": "Henry Williamson",
+    "year": 1927,
+    "url": "https://www.gutenberg.org/files/75899/75899-h/75899-h.htm",
+    "isProse": true,
+    "source": "Tarka the Otter, 1927",
+    "lines": [
+      {"text": "Three rootlets of sea-thrift were dropped on the spurred sand.", "tags": ["flora", "sea", "quiet"]}
+    ],
+    "tags": ["flora", "sea", "quiet", "summer"]
+  },
+  {
+    "id": "williamson-tarka-widgeon-frost",
+    "title": "Tarka the Otter",
+    "poet": "Henry Williamson",
+    "year": 1927,
+    "url": "https://www.gutenberg.org/files/75899/75899-h/75899-h.htm",
+    "isProse": true,
+    "source": "Tarka the Otter, 1927",
+    "lines": [
+      {"text": "Tarka met White-tip with her mate by an overturned hulk one night; she was scratching at the webmark of a widgeon, frozen in the mud with its scent.", "tags": ["bird", "marsh", "night", "winter"]}
+    ],
+    "tags": ["bird", "marsh", "night", "winter", "creek"]
+  },
+  {
+    "id": "baker-peregrine-shelduck",
+    "title": "The Peregrine",
+    "poet": "J. A. Baker",
+    "year": 1987,
+    "url": "https://www.idler.co.uk/article/book-of-the-week-the-peregrine/",
+    "isProse": true,
+    "source": "The Peregrine, 1967",
+    "lines": [
+      {"text": "A shelduck lay on the mud, shining like a broken vase; green-black and white, chestnut-bronze, vermilion.", "tags": ["bird", "marsh", "tide", "quiet"]}
+    ],
+    "tags": ["bird", "marsh", "tide", "quiet", "spring"]
+  },
+  {
+    "id": "baker-peregrine-godwits",
+    "title": "The Peregrine",
+    "poet": "J. A. Baker",
+    "year": 1987,
+    "url": "https://litres.com/book/j-a-baker/the-peregrine-50th-anniversary-edition-63175445/read/",
+    "isProse": true,
+    "source": "The Peregrine, 1967",
+    "lines": [
+      {"text": "Bar-tailed godwits flying with curlew, with knot, with plover; seldom alone, seldom settling; snuffling eccentrics; long-nosed, loud-calling sea-rejoicers.", "tags": ["wader", "sky", "migration"]}
+    ],
+    "tags": ["wader", "bird", "sky", "migration", "marsh"]
+  },
+  {
+    "id": "baker-peregrine-wigeon-zostera",
+    "title": "The Peregrine",
+    "poet": "J. A. Baker",
+    "year": 1987,
+    "url": "https://www.idler.co.uk/article/book-of-the-week-the-peregrine/",
+    "isProse": true,
+    "source": "The Peregrine, 1967",
+    "lines": [
+      {"text": "Tide going out, wigeon cropping zostera, herons lanky in shallows.", "tags": ["bird", "flora", "tide", "wader"]}
+    ],
+    "tags": ["bird", "flora", "tide", "wader", "marsh", "autumn", "winter"]
+  }
+]

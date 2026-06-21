@@ -1,0 +1,1606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ashlett Creek — a day on the water</title>
+<style>
+  :root{
+    --ink:#20302f; --ink-soft:#4a5a57;
+    --parchment:#efe7d6; --parchment-2:#e6dcc6;
+    --line:#b9ad93; --water:#2f5a60; --water-deep:#1d3d43;
+    --moon:#ecd49a; --rule:rgba(32,48,47,.18); --radius:14px;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:#3a4341;background-image:radial-gradient(120% 80% at 50% -10%, #4a5350 0%, #2c3331 70%);
+    min-height:100vh;display:flex;align-items:flex-start;justify-content:center;padding:24px 14px 40px;
+    font-family:"Iowan Old Style","Palatino Linotype","Palatino","Georgia",serif;color:var(--ink);
+    -webkit-font-smoothing:antialiased;
+  }
+  .card{width:100%;max-width:430px;background:var(--parchment);border-radius:var(--radius);overflow:hidden;
+    box-shadow:0 18px 50px rgba(0,0,0,.42),0 2px 0 rgba(255,255,255,.25) inset;position:relative;}
+  .card::after{content:"";position:absolute;inset:0;pointer-events:none;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/></svg>");
+    mix-blend-mode:multiply;border-radius:var(--radius);}
+
+  .sky{position:relative;height:248px;overflow:hidden;transition:background 1.2s ease;}
+  .sky-fade{opacity:0;animation:fadein 1.4s ease .15s forwards;}
+  @keyframes fadein{to{opacity:1;}}
+  .water-band{position:absolute;left:0;right:0;bottom:0;height:78px;
+    background:linear-gradient(to bottom,rgba(255,255,255,.10),rgba(0,0,0,.18));mix-blend-mode:soft-light;}
+  .shimmer{position:absolute;left:-20%;right:-20%;bottom:8px;height:60px;opacity:.5;
+    background:repeating-linear-gradient(90deg,transparent 0,transparent 7px,rgba(255,255,255,.22) 8px,transparent 10px);
+    animation:drift 9s linear infinite;}
+  @keyframes drift{from{transform:translateX(0)}to{transform:translateX(40px)}}
+  .mist{position:absolute;inset:0;opacity:0;
+    background:radial-gradient(60% 40% at 30% 70%,rgba(255,255,255,.55),transparent 70%),
+               radial-gradient(50% 35% at 75% 60%,rgba(255,255,255,.45),transparent 70%);
+    animation:mistdrift 26s ease-in-out infinite alternate;}
+  @keyframes mistdrift{from{transform:translateX(-14px)}to{transform:translateX(14px)}}
+  .orb{position:absolute;border-radius:50%;}
+  .sun{width:78px;height:78px;top:46px;left:62px;
+    background:radial-gradient(circle at 50% 50%,#fff6df 0%,#f6dd9a 45%,rgba(246,221,154,0) 72%);filter:blur(.4px);}
+  .moon{width:54px;height:54px;top:40px;right:64px;
+    background:radial-gradient(circle at 38% 38%,#fdf6e6 0%,var(--moon) 60%,#c9b478 100%);
+    box-shadow:0 0 34px 8px rgba(236,212,154,.35);}
+  .stars{position:absolute;inset:0;opacity:0;}
+  .rain{position:absolute;inset:0;opacity:0;overflow:hidden;}
+  .rain i{position:absolute;top:-12%;width:1px;height:42px;background:linear-gradient(transparent,rgba(255,255,255,.5));animation:fall linear infinite;}
+  @keyframes fall{to{transform:translateY(280px)}}
+  .birds{position:absolute;top:70px;left:0;right:0;text-align:center;color:rgba(20,30,28,.5);font-size:14px;letter-spacing:6px;opacity:0;animation:fadein 2s ease 1s forwards;}
+  .place{position:absolute;left:0;right:0;bottom:0;padding:16px 22px 14px;
+    background:linear-gradient(to top,rgba(20,30,28,.55),transparent);color:#f6f2e6;}
+  .place h1{margin:0;font-weight:600;font-size:25px;letter-spacing:.3px;text-shadow:0 1px 6px rgba(0,0,0,.45);}
+  .place .date{margin:2px 0 0;font-size:13.5px;letter-spacing:1.6px;text-transform:uppercase;opacity:.9;font-variant:small-caps;}
+
+  .headline{padding:20px 24px 16px;text-align:center;border-bottom:1px solid var(--rule);}
+  .headline p{margin:0;font-size:19.5px;line-height:1.45;font-style:italic;color:var(--ink);font-weight:500;}
+  .headline .sub{margin-top:8px;font-style:normal;font-size:14.5px;color:var(--ink-soft);line-height:1.4;}
+
+  .verse{margin:0;padding:18px 24px 16px;background:var(--parchment-2);border-bottom:1px solid var(--rule);}
+  .verse .eyebrow{font-size:11px;letter-spacing:2.4px;text-transform:uppercase;color:var(--ink-soft);margin-bottom:7px;font-variant:small-caps;}
+  .verse blockquote{margin:0;font-size:17.5px;line-height:1.5;color:var(--ink);}
+  .verse .by{margin-top:8px;font-size:13.5px;color:var(--ink-soft);}
+  .verse a{color:var(--water);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:1px;}
+  .verse a:hover{color:var(--water-deep);border-color:var(--water-deep);}
+
+  .tide{padding:18px 20px 6px;}
+  .tide h2{margin:0 0 2px;font-size:12px;letter-spacing:2.4px;text-transform:uppercase;color:var(--ink-soft);font-variant:small-caps;}
+  .tide .window{font-size:15px;color:var(--ink);margin:0 0 10px;}
+  .tide .window b{color:var(--water-deep);}
+  svg.curve{width:100%;height:122px;display:block;}
+  .extremes{display:flex;flex-wrap:wrap;gap:6px 16px;margin:8px 2px 2px;font-size:13.5px;color:var(--ink-soft);}
+  .axis{position:relative;height:14px;margin:1px 0 0;font-size:10.5px;color:var(--ink-soft);letter-spacing:.3px;}
+  .axis span{position:absolute;transform:translateX(-50%);white-space:nowrap;}
+  .axis span.start{left:0;transform:none;}
+  .axis span.end{left:auto;right:0;transform:none;}
+  .legend{display:flex;flex-wrap:wrap;gap:5px 14px;margin:10px 2px 2px;font-size:11.5px;color:var(--ink-soft);align-items:center;}
+  .legend span{display:inline-flex;align-items:center;}
+  .legend i{display:inline-block;width:12px;height:11px;border-radius:3px;margin-right:5px;}
+  .legend i.ln{height:0;border-top:2px solid #1d3d43;border-radius:0;}
+  .legend i.thr{height:0;border-top:2px dashed #9a7b3a;border-radius:0;}
+  .extremes span b{color:var(--ink);font-variant-numeric:tabular-nums;}
+  .light{font-size:13px;color:var(--ink-soft);margin:6px 2px 2px;font-variant-numeric:tabular-nums;letter-spacing:.2px;}
+  .light .g{opacity:.75;}
+  .sample-note{font-size:11.5px;color:#9a7b3a;margin:6px 2px 0;font-style:italic;}
+
+  .marsh{margin:0;padding:14px 24px 16px;font-size:14.5px;line-height:1.5;color:var(--ink-soft);
+    border-top:1px solid var(--rule);}
+  .marsh .eyebrow{font-size:11px;letter-spacing:2.4px;text-transform:uppercase;color:var(--ink-soft);font-variant:small-caps;display:block;margin-bottom:5px;}
+  .marsh em{color:var(--ink);font-style:italic;}
+
+  .row{display:flex;border-top:1px solid var(--rule);}
+  .cell{flex:1;padding:14px 16px;}
+  .cell + .cell{border-left:1px solid var(--rule);}
+  .cell .lab{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--ink-soft);font-variant:small-caps;margin-bottom:6px;}
+  .cell .big{font-size:20px;color:var(--ink);}
+  .cell .small{font-size:13px;color:var(--ink-soft);margin-top:3px;line-height:1.35;}
+  .moonglyph{display:inline-block;width:15px;height:15px;border-radius:50%;vertical-align:-2px;margin-right:7px;background:var(--ink);box-shadow:inset 0 0 0 1px var(--line);}
+
+  .foot{padding:11px 22px 16px;text-align:center;font-size:11.5px;color:var(--ink-soft);letter-spacing:.4px;}
+  .err{padding:8px 22px;font-size:12px;color:#9a5b3a;text-align:center;}
+  @media (prefers-reduced-motion: reduce){*{animation:none !important;}.sky-fade{opacity:1;}}
+</style>
+</head>
+<body>
+  <main class="card">
+    <div class="sky sky-fade" id="sky">
+      <div class="mist" id="mist"></div><div class="stars" id="stars"></div>
+      <div class="orb sun" id="sun" style="display:none"></div>
+      <div class="orb moon" id="moonorb" style="display:none"></div>
+      <div class="birds" id="birds">⌄&nbsp;&nbsp;⌄&nbsp;&nbsp;&nbsp;⌄</div>
+      <div class="rain" id="rain"></div>
+      <div class="water-band"></div><div class="shimmer"></div>
+      <div class="place"><h1>Ashlett Creek</h1><p class="date" id="date">—</p></div>
+    </div>
+
+    <div class="headline">
+      <p id="headline">Reading the water…</p>
+      <div class="sub" id="subline"></div>
+    </div>
+
+    <figure class="verse">
+      <div class="eyebrow" id="verse-eyebrow">A verse for today</div>
+      <blockquote id="verse-line">—</blockquote>
+      <div class="by" id="verse-by"></div>
+    </figure>
+
+    <section class="tide">
+      <h2>The tide at Ashlett</h2>
+      <p class="window" id="tide-window">—</p>
+      <svg class="curve" id="curve" viewBox="0 0 400 122" preserveAspectRatio="none" aria-hidden="true"></svg>
+      <div class="axis">
+        <span class="start">12am</span>
+        <span style="left:25%">6am</span>
+        <span style="left:50%">noon</span>
+        <span style="left:75%">6pm</span>
+        <span class="end">12am</span>
+      </div>
+      <div class="legend">
+        <span><i class="ln"></i>tide height</span>
+        <span><i style="background:#3a7c83;opacity:.55"></i>creek floats</span>
+        <span><i style="background:#22384a;opacity:.4"></i>night</span>
+        <span><i style="background:#caa84e"></i>moon up</span>
+        <span><i class="thr"></i>float level</span>
+      </div>
+      <div class="extremes" id="extremes"></div>
+      <div class="light" id="light"></div>
+      <p class="sample-note" id="sample-note" style="display:none">Tide figures are sample data — paste real predictions for accuracy before relying on them.</p>
+      <p class="sample-note" id="abridged-note" style="display:none">Principal tides only for this date — Solent secondary high waters not available.</p>
+    </section>
+
+    <p class="marsh"><span class="eyebrow">In the saltmarsh now</span><span id="marsh"></span></p>
+
+    <div class="row">
+      <div class="cell">
+        <div class="lab">Weather</div>
+        <div class="big" id="wx-temp">—</div>
+        <div class="small" id="wx-desc"></div>
+      </div>
+      <div class="cell">
+        <div class="lab">Moon</div>
+        <div class="big"><span class="moonglyph" id="moonglyph"></span><span id="moon-name">—</span></div>
+        <div class="small" id="moon-sub"></div>
+      </div>
+    </div>
+
+    <div class="err" id="err" style="display:none"></div>
+    <div class="foot">Ashlett Creek · Southampton Water — paddle with the tide, not against it.</div>
+  </main>
+
+<script>
+(function(global, factory) {
+	typeof exports === "object" && typeof module !== "undefined" ? factory(exports) : typeof define === "function" && define.amd ? define(["exports"], factory) : (global = typeof globalThis !== "undefined" ? globalThis : global || self, factory(global.SunCalc = {}));
+})(this, function(exports) {
+	Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
+	//#region index.js
+	const { PI, sin, cos, tan, asin, atan2: atan, acos, sqrt, abs, round } = Math;
+	const rad = PI / 180;
+	const dayMs = 1e3 * 60 * 60 * 24;
+	const J1970 = 2440588;
+	const J2000 = 2451545;
+	const earthRadius = 6378.14;
+	function fromJulian(j) {
+		return /* @__PURE__ */ new Date((j + .5 - J1970) * dayMs);
+	}
+	function toDays(date) {
+		return date.valueOf() / dayMs - .5 + J1970 - J2000;
+	}
+	function deltaT(d) {
+		const y = 2e3 + d / 365.2425;
+		let t;
+		if (y < 1920) {
+			t = y - 1900;
+			return -2.79 + t * (1.494119 + t * (-.0598939 + t * (.0061966 - t * 197e-6)));
+		}
+		if (y < 1941) {
+			t = y - 1920;
+			return 21.2 + t * (.84493 + t * (-.0761 + t * .0020936));
+		}
+		if (y < 1961) {
+			t = y - 1950;
+			return 29.07 + t * (.407 + t * (-1 / 233 + t / 2547));
+		}
+		if (y < 1986) {
+			t = y - 1975;
+			return 45.45 + t * (1.067 + t * (-1 / 260 - t / 718));
+		}
+		if (y < 2005) {
+			t = y - 2e3;
+			return 63.86 + t * (.3345 + t * (-.060374 + t * (.0017275 + t * (651814e-9 + t * 2373599e-11))));
+		}
+		if (y < 2050) {
+			t = y - 2e3;
+			return 62.92 + t * (.32217 + t * .005589);
+		}
+		t = (y - 1820) / 100;
+		return -20 + 32 * t * t - .5628 * (2150 - y);
+	}
+	function toDaysTT(d) {
+		return d + deltaT(d) / 86400;
+	}
+	function azimuth(H, phi, dec) {
+		return (atan(sin(H), cos(H) * sin(phi) - tan(dec) * cos(phi)) / rad + 540) % 360;
+	}
+	function altitude(H, phi, dec) {
+		return asin(sin(phi) * sin(dec) + cos(phi) * cos(dec) * cos(H));
+	}
+	function siderealTime(d, lw) {
+		return rad * (280.46061837 + 360.98564736629 * d) - lw;
+	}
+	function astroRefraction(h) {
+		if (h < 0) h = 0;
+		return 2967e-7 / tan(h + .00312536 / (h + .08901179));
+	}
+	function sunCoords(d) {
+		const t = d / 36525;
+		const L0 = rad * (280.46646 + t * (36000.76983 + t * 3032e-7));
+		const M = rad * (357.52911 + t * (35999.05029 - t * 1537e-7));
+		const sinM = sin(M);
+		const cosM = cos(M);
+		const C = rad * ((1.914602 - t * (.004817 + t * 14e-6)) * sinM + (.019993 - 101e-6 * t) * 2 * sinM * cosM + 289e-6 * sinM * (3 - 4 * sinM * sinM));
+		const Om = rad * (125.04 - 1934.136 * t);
+		const L = L0 + C - rad * (.00569 + .00478 * sin(Om));
+		const e = rad * (23.439291 - t * (.0130042 + t * (16e-8 - t * 504e-9))) + rad * .00256 * cos(Om);
+		return {
+			ra: atan(cos(e) * sin(L), cos(L)),
+			dec: asin(sin(e) * sin(L))
+		};
+	}
+	function getPosition(date, lat, lng) {
+		const lw = rad * -lng;
+		const phi = rad * lat;
+		const d = toDays(date);
+		const c = sunCoords(toDaysTT(d));
+		const H = siderealTime(d, lw) - c.ra;
+		const h = altitude(H, phi, c.dec);
+		return {
+			azimuth: azimuth(H, phi, c.dec),
+			altitude: (h + astroRefraction(h)) / rad
+		};
+	}
+	const times = [
+		[
+			-.833,
+			"sunrise",
+			"sunset"
+		],
+		[
+			-.3,
+			"sunriseEnd",
+			"sunsetStart"
+		],
+		[
+			-6,
+			"dawn",
+			"dusk"
+		],
+		[
+			-12,
+			"nauticalDawn",
+			"nauticalDusk"
+		],
+		[
+			-18,
+			"nightEnd",
+			"night"
+		],
+		[
+			6,
+			"goldenHourEnd",
+			"goldenHour"
+		]
+	];
+	function addTime(angle, riseName, setName) {
+		times.push([
+			angle,
+			riseName,
+			setName
+		]);
+	}
+	const J0 = 9e-4;
+	function observerAngle(height) {
+		return -2.076 * sqrt(height) / 60;
+	}
+	function wrapPi(a) {
+		return a - 2 * PI * round(a / (2 * PI));
+	}
+	function solarTransit(dt, lw) {
+		for (let i = 0; i < 3; i++) {
+			const H = wrapPi(siderealTime(dt, lw) - sunCoords(toDaysTT(dt)).ra);
+			dt -= H / (2 * PI);
+		}
+		return dt;
+	}
+	function getSetJ(h0, dt, sign, lw, phi, decT) {
+		const cosH0 = (sin(h0) - sin(phi) * sin(decT)) / (cos(phi) * cos(decT));
+		if (cosH0 < -1 || cosH0 > 1) return NaN;
+		let d = dt + sign * acos(cosH0) / (2 * PI);
+		for (let i = 0; i < 2; i++) {
+			const c = sunCoords(toDaysTT(d));
+			const H = wrapPi(siderealTime(d, lw) - c.ra);
+			const h = altitude(H, phi, c.dec);
+			const sinH = cos(phi) * cos(c.dec) * sin(H);
+			if (abs(sinH) < 1e-6) break;
+			d += (h - h0) / (2 * PI * sinH);
+		}
+		return d;
+	}
+	function getTimes(date, lat, lng, height = 0) {
+		const lw = rad * -lng;
+		const phi = rad * lat;
+		const dh = observerAngle(height);
+		const dt = solarTransit(round(round(toDays(date)) - J0 - lw / (2 * PI)) + J0 + lw / (2 * PI), lw);
+		const dec = sunCoords(toDaysTT(dt)).dec;
+		const result = {
+			solarNoon: fromJulian(dt + J2000),
+			nadir: fromJulian(dt + J2000 - .5)
+		};
+		for (const [angle, riseName, setName] of times) {
+			const h0 = (angle + dh) * rad;
+			const jrise = getSetJ(h0, dt, -1, lw, phi, dec);
+			const jset = getSetJ(h0, dt, 1, lw, phi, dec);
+			result[riseName] = Number.isNaN(jrise) ? null : fromJulian(jrise + J2000);
+			result[setName] = Number.isNaN(jset) ? null : fromJulian(jset + J2000);
+		}
+		if (result.sunrise === null) {
+			const noonAlt = altitude(0, phi, dec);
+			const riseSetAlt = (times[0][0] + dh) * rad;
+			result.alwaysUp = noonAlt > riseSetAlt;
+			result.alwaysDown = noonAlt <= riseSetAlt;
+		}
+		return result;
+	}
+	function nutationObliquity(t) {
+		const om = rad * (125.04452 - 1934.136261 * t);
+		const ls = rad * (280.4665 + 36000.7698 * t);
+		const lm = rad * (218.3165 + 481267.8813 * t);
+		const dpsi = (-17.2 * sin(om) - 1.32 * sin(2 * ls) - .23 * sin(2 * lm) + .21 * sin(2 * om)) / 3600;
+		const deps = (9.2 * cos(om) + .57 * cos(2 * ls) + .1 * cos(2 * lm) - .09 * cos(2 * om)) / 3600;
+		return {
+			dpsi,
+			eps: rad * (23.439291 - t * (.0130042 + t * (16e-8 - t * 504e-9)) + deps)
+		};
+	}
+	const moonLon = new Int32Array([
+		0,
+		0,
+		1,
+		0,
+		6288774,
+		-20905355,
+		2,
+		0,
+		-1,
+		0,
+		1274027,
+		-3699111,
+		2,
+		0,
+		0,
+		0,
+		658314,
+		-2955968,
+		0,
+		0,
+		2,
+		0,
+		213618,
+		-569925,
+		0,
+		1,
+		0,
+		0,
+		-185116,
+		48888,
+		0,
+		0,
+		0,
+		2,
+		-114332,
+		-3149,
+		2,
+		0,
+		-2,
+		0,
+		58793,
+		246158,
+		2,
+		-1,
+		-1,
+		0,
+		57066,
+		-152138,
+		2,
+		0,
+		1,
+		0,
+		53322,
+		-170733,
+		2,
+		-1,
+		0,
+		0,
+		45758,
+		-204586,
+		0,
+		1,
+		-1,
+		0,
+		-40923,
+		-129620,
+		1,
+		0,
+		0,
+		0,
+		-34720,
+		108743,
+		0,
+		1,
+		1,
+		0,
+		-30383,
+		104755,
+		2,
+		0,
+		0,
+		-2,
+		15327,
+		10321,
+		0,
+		0,
+		1,
+		2,
+		-12528,
+		0,
+		0,
+		0,
+		1,
+		-2,
+		10980,
+		79661,
+		4,
+		0,
+		-1,
+		0,
+		10675,
+		-34782,
+		0,
+		0,
+		3,
+		0,
+		10034,
+		-23210,
+		4,
+		0,
+		-2,
+		0,
+		8548,
+		-21636,
+		2,
+		1,
+		-1,
+		0,
+		-7888,
+		24208,
+		2,
+		1,
+		0,
+		0,
+		-6766,
+		30824,
+		1,
+		0,
+		-1,
+		0,
+		-5163,
+		-8379,
+		1,
+		1,
+		0,
+		0,
+		4987,
+		-16675,
+		2,
+		-1,
+		1,
+		0,
+		4036,
+		-12831,
+		2,
+		0,
+		2,
+		0,
+		3994,
+		-10445,
+		4,
+		0,
+		0,
+		0,
+		3861,
+		-11650,
+		2,
+		0,
+		-3,
+		0,
+		3665,
+		14403,
+		0,
+		1,
+		-2,
+		0,
+		-2689,
+		-7003,
+		2,
+		0,
+		-1,
+		2,
+		-2602,
+		0,
+		2,
+		-1,
+		-2,
+		0,
+		2390,
+		10056,
+		1,
+		0,
+		1,
+		0,
+		-2348,
+		6322,
+		2,
+		-2,
+		0,
+		0,
+		2236,
+		-9884,
+		0,
+		1,
+		2,
+		0,
+		-2120,
+		5751,
+		0,
+		2,
+		0,
+		0,
+		-2069,
+		0,
+		2,
+		-2,
+		-1,
+		0,
+		2048,
+		-4950,
+		2,
+		0,
+		1,
+		-2,
+		-1773,
+		4130,
+		2,
+		0,
+		0,
+		2,
+		-1595,
+		0,
+		4,
+		-1,
+		-1,
+		0,
+		1215,
+		-3958,
+		0,
+		0,
+		2,
+		2,
+		-1110,
+		0,
+		3,
+		0,
+		-1,
+		0,
+		-892,
+		3258,
+		2,
+		1,
+		1,
+		0,
+		-810,
+		2616,
+		4,
+		-1,
+		-2,
+		0,
+		759,
+		-1897,
+		0,
+		2,
+		-1,
+		0,
+		-713,
+		-2117,
+		2,
+		2,
+		-1,
+		0,
+		-700,
+		2354,
+		2,
+		1,
+		-2,
+		0,
+		691,
+		0,
+		2,
+		-1,
+		0,
+		-2,
+		596,
+		0,
+		4,
+		0,
+		1,
+		0,
+		549,
+		-1423,
+		0,
+		0,
+		4,
+		0,
+		537,
+		-1117,
+		4,
+		-1,
+		0,
+		0,
+		520,
+		-1571,
+		1,
+		0,
+		-2,
+		0,
+		-487,
+		-1739,
+		2,
+		1,
+		0,
+		-2,
+		-399,
+		0,
+		0,
+		0,
+		2,
+		-2,
+		-381,
+		-4421,
+		1,
+		1,
+		1,
+		0,
+		351,
+		0,
+		3,
+		0,
+		-2,
+		0,
+		-340,
+		0,
+		4,
+		0,
+		-3,
+		0,
+		330,
+		0,
+		2,
+		-1,
+		2,
+		0,
+		327,
+		0,
+		0,
+		2,
+		1,
+		0,
+		-323,
+		1165,
+		1,
+		1,
+		-1,
+		0,
+		299,
+		0,
+		2,
+		0,
+		3,
+		0,
+		294,
+		0,
+		2,
+		0,
+		-1,
+		-2,
+		0,
+		8752
+	]);
+	const moonLat = new Int32Array([
+		0,
+		0,
+		0,
+		1,
+		5128122,
+		0,
+		0,
+		1,
+		1,
+		280602,
+		0,
+		0,
+		1,
+		-1,
+		277693,
+		2,
+		0,
+		0,
+		-1,
+		173237,
+		2,
+		0,
+		-1,
+		1,
+		55413,
+		2,
+		0,
+		-1,
+		-1,
+		46271,
+		2,
+		0,
+		0,
+		1,
+		32573,
+		0,
+		0,
+		2,
+		1,
+		17198,
+		2,
+		0,
+		1,
+		-1,
+		9266,
+		0,
+		0,
+		2,
+		-1,
+		8822,
+		2,
+		-1,
+		0,
+		-1,
+		8216,
+		2,
+		0,
+		-2,
+		-1,
+		4324,
+		2,
+		0,
+		1,
+		1,
+		4200,
+		2,
+		1,
+		0,
+		-1,
+		-3359,
+		2,
+		-1,
+		-1,
+		1,
+		2463,
+		2,
+		-1,
+		0,
+		1,
+		2211,
+		2,
+		-1,
+		-1,
+		-1,
+		2065,
+		0,
+		1,
+		-1,
+		-1,
+		-1870,
+		4,
+		0,
+		-1,
+		-1,
+		1828,
+		0,
+		1,
+		0,
+		1,
+		-1794,
+		0,
+		0,
+		0,
+		3,
+		-1749,
+		0,
+		1,
+		-1,
+		1,
+		-1565,
+		1,
+		0,
+		0,
+		1,
+		-1491,
+		0,
+		1,
+		1,
+		1,
+		-1475,
+		0,
+		1,
+		1,
+		-1,
+		-1410,
+		0,
+		1,
+		0,
+		-1,
+		-1344,
+		1,
+		0,
+		0,
+		-1,
+		-1335,
+		0,
+		0,
+		3,
+		1,
+		1107,
+		4,
+		0,
+		0,
+		-1,
+		1021,
+		4,
+		0,
+		-1,
+		1,
+		833,
+		0,
+		0,
+		1,
+		-3,
+		777,
+		4,
+		0,
+		-2,
+		1,
+		671,
+		2,
+		0,
+		0,
+		-3,
+		607,
+		2,
+		0,
+		2,
+		-1,
+		596,
+		2,
+		-1,
+		1,
+		-1,
+		491,
+		2,
+		0,
+		-2,
+		1,
+		-451,
+		0,
+		0,
+		3,
+		-1,
+		439,
+		2,
+		0,
+		2,
+		1,
+		422,
+		2,
+		0,
+		-3,
+		-1,
+		421,
+		2,
+		1,
+		-1,
+		1,
+		-366,
+		2,
+		1,
+		0,
+		1,
+		-351,
+		4,
+		0,
+		0,
+		1,
+		331,
+		2,
+		-1,
+		1,
+		1,
+		315,
+		2,
+		-2,
+		0,
+		-1,
+		302,
+		0,
+		0,
+		1,
+		3,
+		-283,
+		2,
+		1,
+		1,
+		-1,
+		-229,
+		1,
+		1,
+		0,
+		-1,
+		223,
+		1,
+		1,
+		0,
+		1,
+		223,
+		0,
+		1,
+		-2,
+		-1,
+		-220,
+		2,
+		1,
+		-1,
+		-1,
+		-220,
+		1,
+		0,
+		1,
+		1,
+		-185,
+		2,
+		-1,
+		-2,
+		-1,
+		181,
+		0,
+		1,
+		2,
+		1,
+		-177,
+		4,
+		0,
+		-2,
+		-1,
+		176,
+		4,
+		-1,
+		-1,
+		-1,
+		166,
+		1,
+		0,
+		1,
+		-1,
+		-164,
+		4,
+		0,
+		1,
+		-1,
+		132,
+		1,
+		0,
+		-1,
+		-1,
+		-119,
+		4,
+		-1,
+		0,
+		-1,
+		115,
+		2,
+		-2,
+		0,
+		1,
+		107
+	]);
+	function moonCoords(d) {
+		const t = d / 36525;
+		const Lp = 218.3164477 + t * (481267.88123421 + t * (-.0015786 + t * (1 / 538841 - t / 65194e3)));
+		const D = 297.8501921 + t * (445267.1114034 + t * (-.0018819 + t * (1 / 545868 - t / 113065e3)));
+		const M = 357.5291092 + t * (35999.0502909 + t * (-1536e-7 + t / 2449e4));
+		const Mp = 134.9633964 + t * (477198.8675055 + t * (.0087414 + t * (1 / 69699 - t / 14712e3)));
+		const F = 93.272095 + t * (483202.0175233 + t * (-.0036539 + t * (-1 / 3526e3 + t / 86331e4)));
+		const A1 = 119.75 + 131.849 * t;
+		const A2 = 53.09 + 479264.29 * t;
+		const A3 = 313.45 + 481266.484 * t;
+		const E = 1 - t * (.002516 + t * 74e-7);
+		const Dr = rad * D, Mr = rad * M, Mpr = rad * Mp, Fr = rad * F;
+		let sl = 0, sr = 0, sb = 0;
+		for (let i = 0; i < moonLon.length; i += 6) {
+			const m = moonLon[i + 1];
+			const arg = moonLon[i] * Dr + m * Mr + moonLon[i + 2] * Mpr + moonLon[i + 3] * Fr;
+			const f = m === 1 || m === -1 ? E : m === 2 || m === -2 ? E * E : 1;
+			sl += moonLon[i + 4] * f * sin(arg);
+			sr += moonLon[i + 5] * f * cos(arg);
+		}
+		for (let i = 0; i < moonLat.length; i += 5) {
+			const m = moonLat[i + 1];
+			const arg = moonLat[i] * Dr + m * Mr + moonLat[i + 2] * Mpr + moonLat[i + 3] * Fr;
+			const f = m === 1 || m === -1 ? E : m === 2 || m === -2 ? E * E : 1;
+			sb += moonLat[i + 4] * f * sin(arg);
+		}
+		const A1r = rad * A1, Lpr = rad * Lp;
+		sl += 3958 * sin(A1r) + 1962 * sin(Lpr - Fr) + 318 * sin(rad * A2);
+		sb += -2235 * sin(Lpr) + 382 * sin(rad * A3) + 175 * sin(A1r - Fr) + 175 * sin(A1r + Fr) + 127 * sin(Lpr - Mpr) - 115 * sin(Lpr + Mpr);
+		const { dpsi, eps } = nutationObliquity(t);
+		const l = rad * (Lp + sl / 1e6 + dpsi);
+		const b = rad * (sb / 1e6);
+		return {
+			ra: atan(sin(l) * cos(eps) - tan(b) * sin(eps), cos(l)),
+			dec: asin(sin(b) * cos(eps) + cos(b) * sin(eps) * sin(l)),
+			dist: 385000.56 + sr / 1e3
+		};
+	}
+	function getMoonPosition(date, lat, lng) {
+		const lw = rad * -lng;
+		const phi = rad * lat;
+		const d = toDays(date);
+		const c = moonCoords(toDaysTT(d));
+		const H = siderealTime(d, lw) - c.ra;
+		const hGeo = altitude(H, phi, c.dec);
+		const h = hGeo - asin(earthRadius / c.dist * cos(hGeo));
+		const pa = atan(sin(H), tan(phi) * cos(c.dec) - sin(c.dec) * cos(H));
+		return {
+			azimuth: azimuth(H, phi, c.dec),
+			altitude: (h + astroRefraction(h)) / rad,
+			distance: c.dist,
+			parallacticAngle: pa / rad
+		};
+	}
+	function getMoonIllumination(date = /* @__PURE__ */ new Date()) {
+		const d = toDaysTT(toDays(date));
+		const s = sunCoords(d);
+		const m = moonCoords(d);
+		const sdist = 149598e3;
+		const phi = acos(sin(s.dec) * sin(m.dec) + cos(s.dec) * cos(m.dec) * cos(s.ra - m.ra));
+		const inc = atan(sdist * sin(phi), m.dist - sdist * cos(phi));
+		const angle = atan(cos(s.dec) * sin(s.ra - m.ra), sin(s.dec) * cos(m.dec) - cos(s.dec) * sin(m.dec) * cos(s.ra - m.ra));
+		const waxing = angle < 0;
+		return {
+			fraction: (1 + cos(inc)) / 2,
+			phase: .5 + .5 * inc * (waxing ? -1 : 1) / PI,
+			angle: angle / rad,
+			waxing
+		};
+	}
+	function hoursLater(date, h) {
+		return new Date(date.valueOf() + h * dayMs / 24);
+	}
+	function moonHeight(date, lat, lng) {
+		const p = getMoonPosition(date, lat, lng);
+		return p.altitude + .2725 * asin(earthRadius / p.distance) / rad + .09;
+	}
+	function refineMoonCross(tMs, lat, lng) {
+		for (let i = 0; i < 2; i++) {
+			const h = moonHeight(new Date(tMs), lat, lng);
+			const dh = (moonHeight(new Date(tMs + 3e4), lat, lng) - moonHeight(/* @__PURE__ */ new Date(tMs - 3e4), lat, lng)) / 6e4;
+			tMs -= h / dh;
+		}
+		return tMs;
+	}
+	function getMoonTimes(date, lat, lng) {
+		const t = new Date(date);
+		t.setUTCHours(0, 0, 0, 0);
+		let h0 = moonHeight(t, lat, lng);
+		let rise, set, ye;
+		for (let i = 1; i <= 24; i += 2) {
+			const h1 = moonHeight(hoursLater(t, i), lat, lng);
+			const h2 = moonHeight(hoursLater(t, i + 1), lat, lng);
+			const a = (h0 + h2) / 2 - h1;
+			const b = (h2 - h0) / 2;
+			const xe = -b / (2 * a);
+			const d = b * b - 4 * a * h1;
+			let roots = 0, x1 = 0, x2 = 0;
+			ye = (a * xe + b) * xe + h1;
+			if (d >= 0) {
+				const dx = sqrt(d) / (abs(a) * 2);
+				x1 = xe - dx;
+				x2 = xe + dx;
+				if (abs(x1) <= 1) roots++;
+				if (abs(x2) <= 1) roots++;
+				if (x1 < -1) x1 = x2;
+			}
+			if (roots === 1) if (h0 < 0) rise = i + x1;
+			else set = i + x1;
+			else if (roots === 2) {
+				rise = i + (ye < 0 ? x2 : x1);
+				set = i + (ye < 0 ? x1 : x2);
+			}
+			if (rise !== void 0 && set !== void 0) break;
+			h0 = h2;
+		}
+		const result = {};
+		if (rise !== void 0) result.rise = new Date(refineMoonCross(hoursLater(t, rise).valueOf(), lat, lng));
+		if (set !== void 0) result.set = new Date(refineMoonCross(hoursLater(t, set).valueOf(), lat, lng));
+		if (rise === void 0 && set === void 0) {
+			result.alwaysUp = ye > 0;
+			result.alwaysDown = ye <= 0;
+		}
+		return result;
+	}
+	//#endregion
+	exports.addTime = addTime;
+	exports.getMoonIllumination = getMoonIllumination;
+	exports.getMoonPosition = getMoonPosition;
+	exports.getMoonTimes = getMoonTimes;
+	exports.getPosition = getPosition;
+	exports.getTimes = getTimes;
+	exports.times = times;
+});
+
+</script>
+<script>
+/* ============================================================
+   CONFIG
+   ============================================================ */
+const CONFIG = {
+  lat: 50.812, lon: -1.333, tz:"Europe/London",
+  floatThreshold: 2.4   // metres (chart datum) at which the creek floats a kayak — TUNE THIS
+};
+
+/* ============================================================
+   TIDE TABLE — REPLACE WITH REAL PREDICTIONS (keyed by ISO date)
+   Source: an official Southampton / Calshot table (Admiralty EasyTide /
+   tidetimes.org.uk per-day pages; see scraping.md).
+   List the two highs to show the Solent double high water (~2h apart).
+   Per-day flags:
+     verified:true  — real predictions, hides the "sample data" warning
+     abridged:true  — only principal extrema (2H+2L); shows a footnote
+                      noting the secondary Solent highs are unavailable.
+   ============================================================ */
+// Inlined fallback so the page still renders if tides.json is unreachable
+// (offline, file:// open, scraper down). Real per-date entries come from
+// tides.json — fetched at runtime by loadTideTable() below.
+const TIDE_FALLBACK = {
+  "__sample__": { verified:false, extrema:[
+    {t:"01:10", h:0.9, type:"LW"}, {t:"06:20", h:4.3, type:"HW"},
+    {t:"08:10", h:3.9, type:"LW"}, {t:"09:40", h:4.4, type:"HW"},
+    {t:"14:05", h:1.1, type:"LW"}, {t:"18:45", h:4.2, type:"HW"},
+    {t:"20:30", h:3.8, type:"LW"}, {t:"22:00", h:4.3, type:"HW"}
+  ]}
+};
+async function loadTideTable(){
+  try{
+    const r = await fetch('tides.json', {cache:'no-store'});
+    if(!r.ok) return TIDE_FALLBACK;
+    const data = await r.json();
+    return Object.assign({}, TIDE_FALLBACK, data);
+  }catch(e){
+    return TIDE_FALLBACK;
+  }
+}
+
+/* ============================================================
+   VERSES — poems and short nature-prose excerpts, tagged at the
+   *entry* level (for filtering by today's reason) and at the *line*
+   level (so a multi-line entry can show its "high tide" line on
+   spring days and its "winter" line on cold days). Real catalogue
+   lives in verses.json — fetched at runtime by loadVerses(). This
+   inline fallback covers offline / file:// / verses.json missing.
+   See HANDOFF.md §7 for the sourcing rules + tag vocabulary.
+   ============================================================ */
+const VERSES_FALLBACK = [
+  {id:"longfellow-tide-rises", title:"The Tide Rises, the Tide Falls", poet:"Henry Wadsworth Longfellow", year:1882, url:"https://poets.org/poem/tide-rises-tide-falls",
+    lines:[{text:"The tide rises, the tide falls,", tags:["tide","water"]},{text:"The twilight darkens, the curlew calls;", tags:["evening","wader","tide"]},{text:"Along the sea-sands damp and brown", tags:["sea","marsh"]}],
+    tags:["tide","sea","evening","wader","marsh","water","quiet"]},
+  {id:"arnold-dover-beach", title:"Dover Beach", poet:"Matthew Arnold", year:1888, url:"https://en.wikisource.org/wiki/Dover_Beach",
+    lines:[{text:"The sea is calm to-night.", tags:["sea","night","quiet"]},{text:"The tide is full, the moon lies fair", tags:["tide","moon"]}],
+    tags:["sea","tide","moon","night","evening","quiet"]},
+  {id:"tennyson-crossing-bar", title:"Crossing the Bar", poet:"Alfred, Lord Tennyson", year:1892, url:"https://en.wikisource.org/wiki/Demeter_and_other_poems/Crossing_the_Bar",
+    lines:[{text:"Sunset and evening star,", tags:["evening","sky","sun"]},{text:"But such a tide as moving seems asleep,", tags:["tide","quiet"]},{text:"Twilight and evening bell,", tags:["evening","night"]}],
+    tags:["evening","tide","sea","water","sky","quiet","night"]},
+  {id:"yeats-wandering-aengus", title:"The Song of Wandering Aengus", poet:"W. B. Yeats", year:1939, url:"https://www.poetryfoundation.org/poems/55687/the-song-of-wandering-aengus",
+    lines:[{text:"And caught a little silver trout.", tags:["fish","river"]},{text:"The silver apples of the moon,", tags:["moon","folk","night"]}],
+    tags:["water","folk","bird","moon","night","fish","river"]},
+  {id:"hopkins-pied-beauty", title:"Pied Beauty", poet:"Gerard Manley Hopkins", year:1889, url:"https://en.wikisource.org/wiki/Poems_of_Gerard_Manley_Hopkins/Pied_Beauty",
+    lines:[{text:"Glory be to God for dappled things —", tags:["sky","summer","sun"]},{text:"For rose-moles all in stipple upon trout that swim;", tags:["fish","river"]}],
+    tags:["sky","summer","sun","fish","flora","quiet"]},
+  {id:"thomas-adlestrop", title:"Adlestrop", poet:"Edward Thomas", year:1917, url:"https://poets.org/poem/adlestrop",
+    lines:[{text:"Yes. I remember Adlestrop —", tags:["quiet","summer"]},{text:"And for that minute a blackbird sang", tags:["bird","summer","quiet"]}],
+    tags:["bird","summer","flora","quiet"]},
+  {id:"yeats-innisfree", title:"The Lake Isle of Innisfree", poet:"W. B. Yeats", year:1939, url:"https://en.wikisource.org/wiki/The_Lake_Isle_of_Innisfree",
+    lines:[{text:"And evening full of the linnet's wings.", tags:["evening","bird"]},{text:"I hear lake water lapping with low sounds by the shore;", tags:["water","quiet"]}],
+    tags:["water","evening","bird","quiet","folk"]},
+  {id:"hopkins-inversnaid", title:"Inversnaid", poet:"Gerard Manley Hopkins", year:1889, url:"https://en.wikisource.org/wiki/Poems_of_Gerard_Manley_Hopkins/Inversnaid",
+    lines:[{text:"This darksome burn, horseback brown,", tags:["river","water"]},{text:"Long live the weeds and the wilderness yet.", tags:["flora","quiet","folk"]}],
+    tags:["water","river","flora","rain","folk","quiet"]},
+  {id:"blunt-sea-lavender", title:"Sea-Lavender", poet:"Wilfrid Scawen Blunt", year:1922, url:"https://www.poemhunter.com/poem/sea-lavender/",
+    lines:[{text:"Lavender, sea lavender!", tags:["flora","marsh","summer"]},{text:"Pale sweet flower how full of her!", tags:["flora","marsh"]}],
+    tags:["flora","marsh","summer"]},
+  {id:"hardy-darkling-thrush", title:"The Darkling Thrush", poet:"Thomas Hardy", year:1928, url:"https://en.wikisource.org/wiki/The_Darkling_Thrush",
+    lines:[{text:"When Frost was spectre-gray,", tags:["winter"]},{text:"An aged thrush, frail, gaunt, and small,", tags:["bird","winter"]}],
+    tags:["winter","bird","evening","quiet"]},
+  {id:"hopkins-spring", title:"Spring", poet:"Gerard Manley Hopkins", year:1889, url:"https://poets.org/poem/spring",
+    lines:[{text:"Nothing is so beautiful as spring —", tags:["spring"]},{text:"Thrush's eggs look little low heavens, and thrush", tags:["spring","bird"]}],
+    tags:["spring","bird","sky","flora","sun"]},
+  {id:"keats-to-autumn", title:"To Autumn", poet:"John Keats", year:1821, url:"https://en.wikisource.org/wiki/The_Poetical_Works_of_John_Keats/To_Autumn",
+    lines:[{text:"Season of mists and mellow fruitfulness!", tags:["autumn","mist"]},{text:"And gathering swallows twitter in the skies.", tags:["bird","autumn","migration"]}],
+    tags:["autumn","mist","sun","bird","migration","flora"]},
+  {id:"oliver-wild-geese", title:"Wild Geese", poet:"Mary Oliver", year:2019, url:"https://www.poetry-chaikhana.com/Poets/O/OliverMary/WildGeese/index.html",
+    lines:[{text:"Meanwhile the wild geese, high in the clean blue air,", tags:["geese","migration","sky"]},{text:"calls to you like the wild geese, harsh and exciting —", tags:["geese","migration","folk"]}],
+    tags:["geese","migration","sky","bird","autumn","winter"]},
+  {id:"williamson-tarka-glasswort-pools", title:"Tarka the Otter", poet:"Henry Williamson", year:1927, url:"https://www.gutenberg.org/files/75899/75899-h/75899-h.htm", isProse:true, source:"Tarka the Otter, 1927",
+    lines:[{text:"Tarka fished the pools and guts of the Branton pill, eating what he caught among the feathery and aromatic leaves of the sea-wormwood plants which grew in the mudded cracks of the sloping stone wall with the sea-beet, the scentless sea-lavender, and the glasswort.", tags:["creek","marsh","flora","autumn"]}],
+    tags:["creek","marsh","flora","autumn","fish"]},
+  {id:"baker-peregrine-shelduck", title:"The Peregrine", poet:"J. A. Baker", year:1987, url:"https://www.idler.co.uk/article/book-of-the-week-the-peregrine/", isProse:true, source:"The Peregrine, 1967",
+    lines:[{text:"A shelduck lay on the mud, shining like a broken vase; green-black and white, chestnut-bronze, vermilion.", tags:["bird","marsh","tide","quiet"]}],
+    tags:["bird","marsh","tide","quiet","spring"]}
+];
+async function loadVerses(){
+  try{
+    const r = await fetch('verses.json', {cache:'no-store'});
+    if(!r.ok) return VERSES_FALLBACK;
+    const data = await r.json();
+    return Array.isArray(data) && data.length ? data : VERSES_FALLBACK;
+  }catch(e){
+    return VERSES_FALLBACK;
+  }
+}
+// month (0-11) -> tag the verse rotation should prefer when nothing stronger fires.
+// Picker has access to every other tag too; this is just the fallback bias.
+const SEASON_TAG = ["winter","winter","spring","spring","spring","summer","summer","summer","autumn","autumn","autumn","winter"];
+
+/* ============================================================
+   LOCAL WILDLIFE & FLORA — Ashlett / Solent saltmarsh, by month (0-11)
+   These are seasonal sketches — he knows the creek, so they're his to correct.
+   ============================================================ */
+const MARSH = [
+  "<em>Dark-bellied brent geese</em> graze the mudflats at low water; wigeon whistle off the channel; the marsh stands bare and silver.",
+  "Brent geese still in numbers; <em>curlew and redshank</em> probe the ebb; the first stirrings before spring.",
+  "Brent geese gathering to leave for the Arctic; <em>little egrets</em> stalk the gutways; sea purslane begins to green.",
+  "<em>Shelduck</em> pairing on the flats; swallows back over the water; the saltmarsh greening at last.",
+  "<em>Common terns</em> returned and fishing; whitethroat in the scrub; sea aster and cord-grass coming on.",
+  "<em>Sea lavender</em> budding; mullet rising in the warm shallows; little-egret weather — still, white, patient.",
+  "<em>Sea lavender</em> hazing the marsh purple; terns diving; samphire fattening along the creek edge.",
+  "The marsh at its lushest; <em>bass and mullet</em> working the creek; sea aster opening for the bees.",
+  "First returning <em>brent geese</em> any day now; waders building on the ebb; glasswort flushing red.",
+  "Brent geese back on the eelgrass; <em>godwit and dunlin</em> in wheeling flocks; the marsh turning gold.",
+  "Full winter wildfowl — <em>wigeon, teal, brent</em>; the creek quiet and cold under low light.",
+  "Brent geese on the mud at the ebb; <em>curlew</em> calling across the flats; short days, long light off the water."
+];
+// occasional local-history note (one of the creek's true curiosities)
+const NUGGET = "The cord-grass lining the creek, <em>Spartina anglica</em>, first arose right here in Southampton Water around the 1870s — then spread to estuaries the world over.";
+
+/* ============================================================
+   helpers
+   ============================================================ */
+const pad=n=>String(n).padStart(2,"0");
+function toHours(s){const[a,b]=s.split(":").map(Number);return a+b/60;}
+function fmtClock(h){if(h==null)return"—";let m=Math.round(h*60);let H=Math.floor(m/60)%24,M=m%60;const ap=H<12?"am":"pm";let hr=H%12;if(hr===0)hr=12;return hr+":"+pad(M)+ap;}
+function hod(d){return d&&!isNaN(d.getTime())? d.getHours()+d.getMinutes()/60 : null;}
+
+/* ---- tide curve maths ---- */
+function heightAt(hour,ex){
+  if(hour<=ex[0].t)return ex[0].h;
+  if(hour>=ex[ex.length-1].t)return ex[ex.length-1].h;
+  for(let i=0;i<ex.length-1;i++){
+    if(hour>=ex[i].t&&hour<=ex[i+1].t){
+      const f=(hour-ex[i].t)/(ex[i+1].t-ex[i].t);const c=(1-Math.cos(Math.PI*f))/2;
+      return ex[i].h+(ex[i+1].h-ex[i].h)*c;}
+  }
+  return ex[ex.length-1].h;
+}
+function openWindows(ex,thr){const out=[];let s=null;
+  for(let h=0;h<=24;h+=1/12){const o=heightAt(h,ex)>=thr;if(o&&s===null)s=h;if(!o&&s!==null){out.push([s,h]);s=null;}}
+  if(s!==null)out.push([s,24]);return out;}
+
+/* ============================================================
+   compute (all offline-safe)
+   ============================================================ */
+const now=new Date();
+const iso=now.toISOString().slice(0,10);
+const month=now.getMonth();
+const monthName=now.toLocaleString("en-GB",{month:"long"});
+const dayIdx=Math.floor((now-new Date(now.getFullYear(),0,0))/864e5);
+document.getElementById("date").textContent=now.toLocaleDateString("en-GB",{weekday:"long",day:"numeric",month:"long"});
+
+// --- sun & moon via SunCalc ---
+const sun=SunCalc.getTimes(now,CONFIG.lat,CONFIG.lon);
+const mIll=SunCalc.getMoonIllumination(now);
+const mTimes=SunCalc.getMoonTimes(now,CONFIG.lat,CONFIG.lon);
+const sunriseH=hod(sun.sunrise), sunsetH=hod(sun.sunset);
+const moonriseH=hod(mTimes.rise), moonsetH=hod(mTimes.set);
+const illum=mIll.fraction, phase=mIll.phase, waxing=phase<0.5;
+const nearFull=Math.abs(phase-0.5)<0.06;
+let moonName;
+if(phase<.03||phase>.97)moonName="New moon";
+else if(phase<.22)moonName="Waxing crescent";
+else if(phase<.28)moonName="First quarter";
+else if(phase<.47)moonName="Waxing gibbous";
+else if(phase<.53)moonName="Full moon";
+else if(phase<.72)moonName="Waning gibbous";
+else if(phase<.78)moonName="Last quarter";
+else moonName="Waning crescent";
+
+document.getElementById("moon-name").textContent=moonName;
+document.getElementById("moon-sub").textContent=Math.round(illum*100)+"% lit";
+(function(g){const lit=Math.round(illum*100);
+  g.style.background=waxing
+    ?`linear-gradient(90deg, var(--ink) ${100-lit}%, var(--moon) ${100-lit}%)`
+    :`linear-gradient(90deg, var(--moon) ${lit}%, var(--ink) ${lit}%)`;})(document.getElementById("moonglyph"));
+
+// --- marsh line (wildlife, with an occasional history nugget) ---
+document.getElementById("marsh").innerHTML = (dayIdx%9===0) ? NUGGET : MARSH[month];
+
+// --- tides + everything that depends on them (verse pick, curve, headline, weather) ---
+// Wrapped in an async IIFE so we can await loadTideTable(). Sun/moon/marsh above
+// are already rendered synchronously. Verse helpers live inside this IIFE because
+// they close over `range` (computed from the loaded tide data).
+(async function(){
+const TIDE_TABLE = await loadTideTable();
+const tideKey=TIDE_TABLE[iso]?iso:"__sample__";
+const tide=TIDE_TABLE[tideKey];
+const ex=tide.extrema.map(e=>({...e,t:toHours(e.t)}));
+const thr=CONFIG.floatThreshold;
+const windows=openWindows(ex,thr);
+const dayHigh=Math.max(...ex.map(e=>e.h)), dayLow=Math.min(...ex.map(e=>e.h)), range=dayHigh-dayLow;
+if(!tide.verified)document.getElementById("sample-note").style.display="block";
+if(tide.abridged)document.getElementById("abridged-note").style.display="block";
+
+// --- verse of the day: chosen to fit the day's signals ---
+// VERSES is async-loaded (verses.json with inline fallback). The picker
+// scores entries against the day's reasons in priority order; among the
+// matching pool it prefers the least-recently-shown (tracked in localStorage,
+// `verseSeen` key). Within the chosen entry, the line with the most overlap
+// with all of today's signals wins — so a multi-line poem can show its
+// "high tide" line on spring days and its "winter" line on cold days.
+const VERSES = await loadVerses();
+
+function todaySignals(weather){
+  const s = new Set();
+  if(nearFull) s.add("moon");
+  else if(phase<.04 || phase>.96) s.add("night");
+  if(weather){
+    if(weather.kind==="rain") s.add("rain");
+    if(weather.kind==="fog") s.add("mist");
+    if(weather.kind==="clear") s.add("sun");
+    if(weather.wind>=22) s.add("wind");
+  }
+  if(range>4.2) s.add("tide");
+  else if(range<2.6) s.add("water");
+  s.add(SEASON_TAG[month]);
+  const h = now.getHours();
+  if(h>=5 && h<8) s.add("dawn");
+  else if(h>=18 && h<21) s.add("evening");
+  if(h>=21 || h<5) s.add("night");
+  return s;
+}
+
+function pickLine(v, signals){
+  let best = v.lines[0], bestScore = -1;
+  for(const l of v.lines){
+    const score = (l.tags||[]).filter(t => signals.has(t)).length;
+    if(score > bestScore){ best = l; bestScore = score; }
+  }
+  return best;
+}
+
+function renderVerse(v, line, label){
+  document.getElementById("verse-eyebrow").textContent = (v.isProse ? "A passage " : "A verse ") + label;
+  document.getElementById("verse-line").textContent = "“" + line.text + "”";
+  let by;
+  if(v.isProse){
+    by = "from <em>" + v.title + "</em> by " + v.poet + " · <a href='" + v.url + "' target='_blank' rel='noopener'>read more →</a>";
+  } else {
+    const year = v.year ? " (" + v.year + ")" : "";
+    by = v.poet + year + " · <a href='" + v.url + "' target='_blank' rel='noopener'>read the full poem →</a>";
+  }
+  document.getElementById("verse-by").innerHTML = by;
+}
+
+function activeReasons(weather){
+  const r = [];
+  if(nearFull) r.push({tag:"moon", label:"for the full moon"});
+  else if(phase<.04 || phase>.96) r.push({tag:"night", label:"for the new-moon dark"});
+  if(weather){
+    if(weather.kind==="rain") r.push({tag:"rain", label:"for the rain"});
+    else if(weather.wind>=22) r.push({tag:"wind", label:"for a blowy day"});
+    else if(weather.kind==="fog") r.push({tag:"mist", label:"for the mist"});
+  }
+  if(range>4.2) r.push({tag:"tide", label:"for the spring tide"});
+  else if(range<2.6) r.push({tag:"water", label:"for the quiet neap"});
+  if(weather && weather.kind==="clear" && weather.wind<14) r.push({tag:"sun", label:"for a bright, still day"});
+  r.push({tag:SEASON_TAG[month], label:"for "+monthName});
+  return r;
+}
+
+function readSeen(){
+  try{ return JSON.parse(localStorage.getItem("verseSeen") || "{}"); }
+  catch(e){ return {}; }
+}
+function writeSeen(s){
+  try{ localStorage.setItem("verseSeen", JSON.stringify(s)); }
+  catch(e){ /* private mode, quota, no storage — ignore */ }
+}
+
+function pickVerse(weather){
+  const reasons = activeReasons(weather);
+  const signals = todaySignals(weather);
+  const seen = readSeen();
+  const dayKey = now.getFullYear()*1000 + dayIdx;
+  for(const re of reasons){
+    const pool = VERSES.filter(v => v.tags && v.tags.includes(re.tag));
+    if(!pool.length) continue;
+    // least-recently-shown; deterministic tiebreak by id so the same condition
+    // on the same day always lands on the same verse (avoids flicker between
+    // the offline pick and the weather-refined pick).
+    pool.sort((a,b) => ((seen[a.id]??-1) - (seen[b.id]??-1)) || (a.id<b.id?-1:1));
+    const v = pool[0];
+    const line = pickLine(v, signals);
+    renderVerse(v, line, re.label);
+    seen[v.id] = dayKey;
+    writeSeen(seen);
+    return;
+  }
+  // fallback — shouldn't fire, every SEASON_TAG value has matches
+  const v = VERSES[dayKey % VERSES.length];
+  renderVerse(v, v.lines[0], "for today");
+}
+pickVerse(null);  // first pick from moon/tide/season; weather refines it below
+
+// moon-up intervals within [0,24]
+function moonUpIntervals(){
+  if(mTimes.alwaysUp)return[[0,24]];
+  if(mTimes.alwaysDown)return[];
+  const r=moonriseH,s=moonsetH;
+  if(r!=null&&s!=null)return r<s?[[r,s]]:[[0,s],[r,24]];
+  if(r!=null)return[[r,24]];
+  if(s!=null)return[[0,s]];
+  return[];
+}
+
+// --- draw curve ---
+(function(){
+  const W=400,H=122,top=14,bot=106;
+  const hMax=Math.max(dayHigh,thr)+0.4, hMin=Math.min(dayLow,0)-0.2;
+  const x=h=>h/24*W, y=v=>bot-(v-hMin)/(hMax-hMin)*(bot-top);
+  let path="",fill="M0 "+bot;
+  for(let h=0;h<=24;h+=1/12){const vv=heightAt(h,ex);path+=(h===0?"M":"L")+x(h).toFixed(1)+" "+y(vv).toFixed(1)+" ";fill+="L"+x(h).toFixed(1)+" "+y(vv).toFixed(1)+" ";}
+  fill+="L"+W+" "+bot+" Z";
+  // night wash (before sunrise / after sunset)
+  let night="";
+  if(sunriseH!=null)night+=`<rect x="0" y="${top}" width="${x(sunriseH).toFixed(1)}" height="${bot-top}" fill="#22384a" opacity="0.10"/>`;
+  if(sunsetH!=null)night+=`<rect x="${x(sunsetH).toFixed(1)}" y="${top}" width="${(W-x(sunsetH)).toFixed(1)}" height="${bot-top}" fill="#22384a" opacity="0.10"/>`;
+  // open-window bands
+  let bands="";windows.forEach(w=>{bands+=`<rect x="${x(w[0]).toFixed(1)}" y="${top}" width="${(x(w[1])-x(w[0])).toFixed(1)}" height="${bot-top}" fill="#3a7c83" opacity="0.16"/>`;});
+  // moon-up bar along the top
+  let moonbar="";moonUpIntervals().forEach(w=>{moonbar+=`<rect x="${x(w[0]).toFixed(1)}" y="2" width="${(x(w[1])-x(w[0])).toFixed(1)}" height="5" rx="2.5" fill="#caa84e" opacity="0.85"/>`;});
+  const nowH=now.getHours()+now.getMinutes()/60, nx=x(nowH).toFixed(1), ny=y(heightAt(nowH,ex)).toFixed(1);
+  document.getElementById("curve").innerHTML=
+    night+bands+
+    `<path d="${fill}" fill="#2f5a60" opacity="0.16"/>`+
+    `<line x1="0" y1="${y(thr).toFixed(1)}" x2="${W}" y2="${y(thr).toFixed(1)}" stroke="#9a7b3a" stroke-width="1" stroke-dasharray="4 4" opacity="0.7"/>`+
+    `<path d="${path}" fill="none" stroke="#1d3d43" stroke-width="2.4" stroke-linecap="round"/>`+
+    moonbar+
+    `<line x1="${nx}" y1="${top}" x2="${nx}" y2="${bot}" stroke="#20302f" stroke-width="1" opacity="0.35"/>`+
+    `<circle cx="${nx}" cy="${ny}" r="3.6" fill="#1d3d43"/>`;
+})();
+
+// --- tide window sentence + extremes + light line ---
+(function(){
+  const daylit=windows.filter(w=>w[1]>6&&w[0]<21.5);
+  const el=document.getElementById("tide-window");
+  if(daylit.length){
+    const parts=daylit.map(w=>`<b>${fmtClock(Math.max(w[0],6))}–${fmtClock(Math.min(w[1],21.5))}</b>`).join(" and ");
+    el.innerHTML=`Creek floats in daylight around ${parts}.`;
+  }else if(windows.length){el.innerHTML=`The creek only fills after dark today — a torch-and-moon job.`;}
+  else{el.innerHTML=`The creek stays low today. A walking-and-whistle day.`;}
+  document.getElementById("extremes").innerHTML=ex.map(e=>`<span>${e.type==="HW"?"High":"Low"} <b>${fmtClock(e.t)}</b> · <b>${e.h.toFixed(1)}m</b></span>`).join("");
+
+  let moonStr;
+  if(mTimes.alwaysUp)moonStr="up all night";
+  else if(mTimes.alwaysDown)moonStr="below the horizon";
+  else moonStr=[moonriseH!=null?"↑ "+fmtClock(moonriseH):null, moonsetH!=null?"↓ "+fmtClock(moonsetH):null].filter(Boolean).join("  ")||"—";
+  document.getElementById("light").innerHTML=
+    `<span class="g">☀</span> ${fmtClock(sunriseH)} – ${fmtClock(sunsetH)} &nbsp;·&nbsp; <span class="g">☾</span> ${moonStr}`;
+})();
+
+/* ============================================================
+   WEATHER + scene + headline
+   ============================================================ */
+const WMO={0:["Clear","clear"],1:["Mostly clear","clear"],2:["Partly cloudy","cloud"],3:["Overcast","cloud"],
+  45:["Mist","fog"],48:["Freezing fog","fog"],51:["Light drizzle","rain"],53:["Drizzle","rain"],55:["Heavy drizzle","rain"],
+  61:["Light rain","rain"],63:["Rain","rain"],65:["Heavy rain","rain"],71:["Light snow","cloud"],73:["Snow","cloud"],75:["Heavy snow","cloud"],
+  80:["Showers","rain"],81:["Showers","rain"],82:["Heavy showers","rain"],95:["Thunderstorm","rain"],96:["Thunderstorm","rain"]};
+
+function scene(kind,isDay){
+  const sky=document.getElementById("sky"),set=(id,on)=>document.getElementById(id).style.display=on?"":"none";
+  document.getElementById("mist").style.opacity=0;document.getElementById("stars").style.opacity=0;document.getElementById("rain").style.opacity=0;
+  let bg;
+  if(!isDay){
+    bg="linear-gradient(180deg,#16243a 0%,#22384a 55%,#34403f 100%)";set("moonorb",true);set("sun",false);
+    document.getElementById("stars").style.opacity=1;
+    let s="";for(let i=0;i<46;i++)s+=`<div style="position:absolute;width:2px;height:2px;border-radius:50%;background:#fff;opacity:${(Math.random()*.7+.2).toFixed(2)};top:${(Math.random()*150).toFixed(0)}px;left:${(Math.random()*100).toFixed(0)}%"></div>`;
+    document.getElementById("stars").innerHTML=s;
+    if(kind==="rain"){bg="linear-gradient(180deg,#1b2530 0%,#28333a 60%,#313a38 100%)";set("moonorb",false);}
+  }else if(kind==="clear"){bg="linear-gradient(180deg,#bcd6e0 0%,#dce6dc 45%,#cdd2b6 100%)";set("sun",true);set("moonorb",false);}
+  else if(kind==="cloud"){bg="linear-gradient(180deg,#c4ccca 0%,#cfd3c9 55%,#b9bca6 100%)";set("sun",false);set("moonorb",false);}
+  else if(kind==="fog"){bg="linear-gradient(180deg,#d7dcd6 0%,#dfe2da 60%,#c9cbbb 100%)";set("sun",false);set("moonorb",false);document.getElementById("mist").style.opacity=1;}
+  else{bg="linear-gradient(180deg,#7e8a8c 0%,#8d9590 55%,#7d8275 100%)";set("sun",false);set("moonorb",false);
+    document.getElementById("rain").style.opacity=1;
+    let r="";for(let i=0;i<60;i++)r+=`<i style="left:${(Math.random()*100).toFixed(0)}%;animation-duration:${(0.5+Math.random()*0.5).toFixed(2)}s;animation-delay:${(Math.random()).toFixed(2)}s"></i>`;
+    document.getElementById("rain").innerHTML=r;}
+  sky.style.background=bg;
+}
+
+function buildHeadline(d){
+  const lines=[];
+  const eveningHW=ex.find(e=>e.type==="HW"&&e.t>17.5&&e.t<22.5);
+  const upDuringEvening=eveningHW && moonUpIntervals().some(w=>eveningHW.t>=w[0]&&eveningHW.t<=w[1]);
+  if(nearFull && (d.kind==="clear"||d.kind==="cloud") && eveningHW && upDuringEvening){
+    lines.push({h:`A full-moon paddle — high water about ${fmtClock(eveningHW.t)}, moon up from ${fmtClock(moonriseH)}, the creek brimming under it.`,
+                s:"Clear-ish evening with water enough to float. Take a torch anyway."});
+  }
+  if(!lines.length&&d.dryToday&&d.wetAhead)lines.push({h:`Last dry day before the wet sets in — if you're going, go now.`,s:d.windowText});
+  if(!lines.length&&range>4.2)lines.push({h:`A big spring tide — the marsh fills right up; you can glide over ground that's usually grass.`,s:d.windowText});
+  if(!lines.length&&range<2.6)lines.push({h:`A gentle neap — easy water, but a muddy landing. Pub boots advised.`,s:d.windowText});
+  if(!lines.length&&d.wind>=22)lines.push({h:`A blowy one — ${Math.round(d.wind)} km/h across the water. Maybe a shore-and-whistle day.`,s:d.windowText});
+  if(!lines.length&&d.kind!=="rain"&&d.wind<14&&d.windowText)lines.push({h:`Glassy and quiet — ${d.windowText.replace(/^Creek floats /,"the creek floats ")}`,s:"Low wind, no rain in it. A mirror kind of morning."});
+  if(!lines.length)lines.push({h:d.windowText||"A still day on the water.",s:""});
+  return lines[0];
+}
+
+async function loadWeather(){
+  const url=`https://api.open-meteo.com/v1/forecast?latitude=${CONFIG.lat}&longitude=${CONFIG.lon}`
+    +`&current=temperature_2m,weather_code,wind_speed_10m,is_day`
+    +`&daily=precipitation_sum&forecast_days=5&timezone=${encodeURIComponent(CONFIG.tz)}`;
+  const wText=document.getElementById("tide-window").textContent;
+  try{
+    const j=await(await fetch(url)).json();const c=j.current;
+    const code=c.weather_code,kind=(WMO[code]||["—","cloud"])[1],isDay=c.is_day===1;
+    document.getElementById("wx-temp").textContent=Math.round(c.temperature_2m)+"°";
+    document.getElementById("wx-desc").textContent=(WMO[code]||["—"])[0]+" · "+Math.round(c.wind_speed_10m)+" km/h wind";
+    scene(kind,isDay);
+    pickVerse({kind, wind:c.wind_speed_10m});
+    const p=j.daily.precipitation_sum;
+    const h=buildHeadline({wind:c.wind_speed_10m,kind,isDay,dryToday:p[0]<1,wetAhead:(p[1]>=2&&p[2]>=2),windowText:wText});
+    document.getElementById("headline").textContent=h.h;document.getElementById("subline").textContent=h.s;
+  }catch(e){
+    scene("cloud",true);
+    document.getElementById("wx-temp").textContent="—";document.getElementById("wx-desc").textContent="weather offline";
+    const h=buildHeadline({wind:8,kind:"cloud",isDay:true,dryToday:true,wetAhead:false,windowText:wText});
+    document.getElementById("headline").textContent=h.h;document.getElementById("subline").textContent=h.s;
+    document.getElementById("err").style.display="block";
+    document.getElementById("err").textContent="Couldn't reach the weather service — showing tide, sun and moon only.";
+  }
+}
+loadWeather();
+})();  // end async tide+weather IIFE
+</script>
+</body>
+</html>
