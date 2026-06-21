@@ -71,6 +71,13 @@
   .tide .window{font-size:15px;color:var(--ink);margin:0 0 10px;}
   .tide .window b{color:var(--water-deep);}
   svg.curve{width:100%;height:122px;display:block;}
+  .curve-frame{display:flex;align-items:stretch;gap:6px;}
+  .curve-icons{display:flex;flex-direction:column;justify-content:space-between;width:14px;flex-shrink:0;padding:2px 0;}
+  .curve-icons svg{width:14px;height:14px;display:block;}
+  .curve-body{flex:1;min-width:0;}
+  .wx-strip{display:flex;height:10px;margin:3px 0 0;border-radius:3px;overflow:hidden;background:var(--parchment-2);}
+  .wx-strip i{flex:1;display:block;position:relative;}
+  .wx-strip i.wind::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(45deg,rgba(32,48,47,.30) 0 1px,transparent 1px 3px);}
   .extremes{display:flex;flex-wrap:wrap;gap:6px 16px;margin:8px 2px 2px;font-size:13.5px;color:var(--ink-soft);}
   .axis{position:relative;height:14px;margin:1px 0 0;font-size:10.5px;color:var(--ink-soft);letter-spacing:.3px;}
   .axis span{position:absolute;transform:translateX(-50%);white-space:nowrap;}
@@ -130,19 +137,40 @@
     <section class="tide">
       <h2>The tide at Ashlett</h2>
       <p class="window" id="tide-window">—</p>
-      <svg class="curve" id="curve" viewBox="0 0 400 122" preserveAspectRatio="none" aria-hidden="true"></svg>
-      <div class="axis">
-        <span class="start">12am</span>
-        <span style="left:25%">6am</span>
-        <span style="left:50%">noon</span>
-        <span style="left:75%">6pm</span>
-        <span class="end">12am</span>
+      <div class="curve-frame">
+        <div class="curve-icons">
+          <svg viewBox="-8 -8 16 16" aria-hidden="true">
+            <circle r="3.6" fill="#caa84e"/>
+            <g stroke="#caa84e" stroke-width="1.1" stroke-linecap="round">
+              <line x1="0" y1="-7" x2="0" y2="-5"/>
+              <line x1="0" y1="5" x2="0" y2="7"/>
+              <line x1="-7" y1="0" x2="-5" y2="0"/>
+              <line x1="5" y1="0" x2="7" y2="0"/>
+              <line x1="-5" y1="-5" x2="-3.6" y2="-3.6"/>
+              <line x1="3.6" y1="3.6" x2="5" y2="5"/>
+              <line x1="-5" y1="5" x2="-3.6" y2="3.6"/>
+              <line x1="3.6" y1="-3.6" x2="5" y2="-5"/>
+            </g>
+          </svg>
+          <svg id="chart-moon-icon" viewBox="-8 -8 16 16" aria-hidden="true"></svg>
+        </div>
+        <div class="curve-body">
+          <svg class="curve" id="curve" viewBox="0 0 400 122" preserveAspectRatio="none" aria-hidden="true"></svg>
+          <div class="wx-strip" id="wx-strip" aria-hidden="true"></div>
+          <div class="axis">
+            <span class="start">12am</span>
+            <span style="left:25%">6am</span>
+            <span style="left:50%">noon</span>
+            <span style="left:75%">6pm</span>
+            <span class="end">12am</span>
+          </div>
+        </div>
       </div>
       <div class="legend">
         <span><i class="ln"></i>tide height</span>
         <span><i style="background:#3a7c83;opacity:.55"></i>creek floats</span>
-        <span><i style="background:#22384a;opacity:.4"></i>night</span>
-        <span><i style="background:#caa84e"></i>moon up</span>
+        <span><i style="background:#caa84e"></i>sun up</span>
+        <span><i style="background:#5d7d8e"></i>moon up</span>
         <span><i class="thr"></i>float level</span>
       </div>
       <div class="extremes" id="extremes"></div>
@@ -1366,8 +1394,22 @@ const TIDE_TABLE = await loadTideTable();
 const tideKey=TIDE_TABLE[iso]?iso:"__sample__";
 const tide=TIDE_TABLE[tideKey];
 const ex=tide.extrema.map(e=>({...e,t:toHours(e.t)}));
+// Extend with the previous day's last extremum and the next day's first so the
+// cosine interpolation has anchor points either side of midnight — otherwise
+// heightAt() flatlines for the hours before ex[0].t and after ex[last].t.
+function isoOffset(days){const d=new Date(now);d.setDate(d.getDate()+days);return d.toISOString().slice(0,10);}
+const yData=TIDE_TABLE[isoOffset(-1)], tData=TIDE_TABLE[isoOffset(1)];
+const exFull=[...ex];
+if(yData && yData.extrema && yData.extrema.length){
+  const last=yData.extrema[yData.extrema.length-1];
+  exFull.unshift({...last,t:toHours(last.t)-24});
+}
+if(tData && tData.extrema && tData.extrema.length){
+  const first=tData.extrema[0];
+  exFull.push({...first,t:toHours(first.t)+24});
+}
 const thr=CONFIG.floatThreshold;
-const windows=openWindows(ex,thr);
+const windows=openWindows(exFull,thr);
 const dayHigh=Math.max(...ex.map(e=>e.h)), dayLow=Math.min(...ex.map(e=>e.h)), range=dayHigh-dayLow;
 if(!tide.verified)document.getElementById("sample-note").style.display="block";
 if(tide.abridged)document.getElementById("abridged-note").style.display="block";
@@ -1473,16 +1515,32 @@ function pickVerse(weather){
 }
 pickVerse(null);  // first pick from moon/tide/season; weather refines it below
 
-// moon-up intervals within [0,24]
-function moonUpIntervals(){
-  if(mTimes.alwaysUp)return[[0,24]];
-  if(mTimes.alwaysDown)return[];
-  const r=moonriseH,s=moonsetH;
-  if(r!=null&&s!=null)return r<s?[[r,s]]:[[0,s],[r,24]];
-  if(r!=null)return[[r,24]];
-  if(s!=null)return[[0,s]];
+// up-intervals within [0,24] for an arbitrary rise/set pair
+function upIntervals(riseH,setH,alwaysUp,alwaysDown){
+  if(alwaysUp)return[[0,24]];
+  if(alwaysDown)return[];
+  if(riseH!=null&&setH!=null)return riseH<setH?[[riseH,setH]]:[[0,setH],[riseH,24]];
+  if(riseH!=null)return[[riseH,24]];
+  if(setH!=null)return[[0,setH]];
   return[];
 }
+function moonUpIntervals(){return upIntervals(moonriseH,moonsetH,mTimes.alwaysUp,mTimes.alwaysDown);}
+function sunUpIntervals(){return upIntervals(sunriseH,sunsetH,sun.alwaysUp,sun.alwaysDown);}
+
+// phase-shaped icon for the chart's moon glyph (sliver / quarter / gibbous / full)
+(function renderChartMoonIcon(){
+  const el=document.getElementById("chart-moon-icon");if(!el)return;
+  const r=6.4, color="#5d7d8e";
+  if(illum>=0.99){el.innerHTML=`<circle r="${r}" fill="${color}"/>`;return;}
+  if(illum<=0.01){el.innerHTML=`<circle r="${r}" fill="none" stroke="${color}" stroke-width="0.9"/>`;return;}
+  const rx=Math.abs(2*illum-1)*r;
+  const outerSweep=waxing?1:0;
+  const innerSweep=waxing?(illum<0.5?1:0):(illum<0.5?0:1);
+  const path=`M 0 ${-r} A ${r} ${r} 0 0 ${outerSweep} 0 ${r} A ${rx.toFixed(2)} ${r} 0 0 ${innerSweep} 0 ${-r} Z`;
+  el.innerHTML=
+    `<circle r="${r}" fill="none" stroke="${color}" stroke-width="0.6" opacity="0.5"/>`+
+    `<path d="${path}" fill="${color}"/>`;
+})();
 
 // --- draw curve ---
 (function(){
@@ -1490,23 +1548,21 @@ function moonUpIntervals(){
   const hMax=Math.max(dayHigh,thr)+0.4, hMin=Math.min(dayLow,0)-0.2;
   const x=h=>h/24*W, y=v=>bot-(v-hMin)/(hMax-hMin)*(bot-top);
   let path="",fill="M0 "+bot;
-  for(let h=0;h<=24;h+=1/12){const vv=heightAt(h,ex);path+=(h===0?"M":"L")+x(h).toFixed(1)+" "+y(vv).toFixed(1)+" ";fill+="L"+x(h).toFixed(1)+" "+y(vv).toFixed(1)+" ";}
+  for(let h=0;h<=24;h+=1/12){const vv=heightAt(h,exFull);path+=(h===0?"M":"L")+x(h).toFixed(1)+" "+y(vv).toFixed(1)+" ";fill+="L"+x(h).toFixed(1)+" "+y(vv).toFixed(1)+" ";}
   fill+="L"+W+" "+bot+" Z";
-  // night wash (before sunrise / after sunset)
-  let night="";
-  if(sunriseH!=null)night+=`<rect x="0" y="${top}" width="${x(sunriseH).toFixed(1)}" height="${bot-top}" fill="#22384a" opacity="0.10"/>`;
-  if(sunsetH!=null)night+=`<rect x="${x(sunsetH).toFixed(1)}" y="${top}" width="${(W-x(sunsetH)).toFixed(1)}" height="${bot-top}" fill="#22384a" opacity="0.10"/>`;
-  // open-window bands
+  // open-window bands (creek floats — the only background band now)
   let bands="";windows.forEach(w=>{bands+=`<rect x="${x(w[0]).toFixed(1)}" y="${top}" width="${(x(w[1])-x(w[0])).toFixed(1)}" height="${bot-top}" fill="#3a7c83" opacity="0.16"/>`;});
-  // moon-up bar along the top
-  let moonbar="";moonUpIntervals().forEach(w=>{moonbar+=`<rect x="${x(w[0]).toFixed(1)}" y="2" width="${(x(w[1])-x(w[0])).toFixed(1)}" height="5" rx="2.5" fill="#caa84e" opacity="0.85"/>`;});
-  const nowH=now.getHours()+now.getMinutes()/60, nx=x(nowH).toFixed(1), ny=y(heightAt(nowH,ex)).toFixed(1);
+  // sun-up bar along the top
+  let sunbar="";sunUpIntervals().forEach(w=>{sunbar+=`<rect x="${x(w[0]).toFixed(1)}" y="2" width="${(x(w[1])-x(w[0])).toFixed(1)}" height="5" rx="2.5" fill="#caa84e" opacity="0.85"/>`;});
+  // moon-up bar along the bottom
+  let moonbar="";moonUpIntervals().forEach(w=>{moonbar+=`<rect x="${x(w[0]).toFixed(1)}" y="115" width="${(x(w[1])-x(w[0])).toFixed(1)}" height="5" rx="2.5" fill="#5d7d8e" opacity="0.85"/>`;});
+  const nowH=now.getHours()+now.getMinutes()/60, nx=x(nowH).toFixed(1), ny=y(heightAt(nowH,exFull)).toFixed(1);
   document.getElementById("curve").innerHTML=
-    night+bands+
+    bands+
     `<path d="${fill}" fill="#2f5a60" opacity="0.16"/>`+
     `<line x1="0" y1="${y(thr).toFixed(1)}" x2="${W}" y2="${y(thr).toFixed(1)}" stroke="#9a7b3a" stroke-width="1" stroke-dasharray="4 4" opacity="0.7"/>`+
     `<path d="${path}" fill="none" stroke="#1d3d43" stroke-width="2.4" stroke-linecap="round"/>`+
-    moonbar+
+    sunbar+moonbar+
     `<line x1="${nx}" y1="${top}" x2="${nx}" y2="${bot}" stroke="#20302f" stroke-width="1" opacity="0.35"/>`+
     `<circle cx="${nx}" cy="${ny}" r="3.6" fill="#1d3d43"/>`;
 })();
@@ -1575,9 +1631,28 @@ function buildHeadline(d){
   return lines[0];
 }
 
+// hourly weather strip — colored cell per hour of today, aligned under the tide curve
+const WX_BG={clear:["#dce6dc","#22384a"],cloud:["#cfd3c9","#28333a"],fog:["#dfe2da","#2a3438"],rain:["#8d9590","#313a38"]};
+function renderWxStrip(hourly){
+  const t=hourly.time, codes=hourly.weather_code, winds=hourly.wind_speed_10m, days=hourly.is_day;
+  // today's 24 entries — slice by matching the iso date prefix in case forecast_days returned more
+  const start=t.findIndex(s=>s.startsWith(iso)); if(start<0) return;
+  let html="";
+  for(let i=0;i<24;i++){
+    const h=start+i; if(h>=t.length) break;
+    const code=codes[h], kind=(WMO[code]||["—","cloud"])[1], isDay=days[h]===1, wind=winds[h];
+    const bg=(WX_BG[kind]||WX_BG.cloud)[isDay?0:1];
+    const label=(WMO[code]||["—"])[0];
+    const tt=`${pad(i)}:00 — ${label}${wind>=18?`, ${Math.round(wind)} km/h wind`:""}`;
+    html+=`<i style="background:${bg}" class="${wind>=18?"wind":""}" title="${tt}"></i>`;
+  }
+  document.getElementById("wx-strip").innerHTML=html;
+}
+
 async function loadWeather(){
   const url=`https://api.open-meteo.com/v1/forecast?latitude=${CONFIG.lat}&longitude=${CONFIG.lon}`
     +`&current=temperature_2m,weather_code,wind_speed_10m,is_day`
+    +`&hourly=weather_code,wind_speed_10m,is_day`
     +`&daily=precipitation_sum&forecast_days=5&timezone=${encodeURIComponent(CONFIG.tz)}`;
   const wText=document.getElementById("tide-window").textContent;
   try{
@@ -1586,6 +1661,7 @@ async function loadWeather(){
     document.getElementById("wx-temp").textContent=Math.round(c.temperature_2m)+"°";
     document.getElementById("wx-desc").textContent=(WMO[code]||["—"])[0]+" · "+Math.round(c.wind_speed_10m)+" km/h wind";
     scene(kind,isDay);
+    if(j.hourly) renderWxStrip(j.hourly);
     pickVerse({kind, wind:c.wind_speed_10m});
     const p=j.daily.precipitation_sum;
     const h=buildHeadline({wind:c.wind_speed_10m,kind,isDay,dryToday:p[0]<1,wetAhead:(p[1]>=2&&p[2]>=2),windowText:wText});
