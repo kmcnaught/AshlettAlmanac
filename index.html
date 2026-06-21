@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ashlett Creek — a day on the water</title>
+<title>Ashlett Creek almanac</title>
 <style>
   :root{
     --ink:#20302f; --ink-soft:#4a5a57;
@@ -157,7 +157,7 @@
       </div>
       <div class="extremes" id="extremes"></div>
       <div class="light" id="light"></div>
-      <p class="sample-note" id="abridged-note" style="display:none">Principal tides only for this date — Solent secondary high waters not available.</p>
+      <p class="sample-note" id="abridged-note" style="display:none">Principal tides only. Solent secondary highs not in the data.</p>
       <p class="sample-note">Reference: <a href="https://www.tidetimes.org.uk/calshot-castle-tide-times" target="_blank" rel="noopener">Calshot Castle tide times →</a></p>
     </section>
 
@@ -177,7 +177,7 @@
     </div>
 
     <div class="err" id="err" style="display:none"></div>
-    <div class="foot">Ashlett Creek · Southampton Water — paddle with the tide, not against it.</div>
+    <div class="foot">Ashlett Creek · Southampton Water</div>
   </main>
 
 <script>
@@ -1291,21 +1291,21 @@ const SEASON_TAG = ["winter","winter","spring","spring","spring","summer","summe
    These are seasonal sketches — he knows the creek, so they're his to correct.
    ============================================================ */
 const MARSH = [
-  "<em>Dark-bellied brent geese</em> graze the mudflats at low water; wigeon whistle off the channel; the marsh stands bare and silver.",
-  "Brent geese still in numbers; <em>curlew and redshank</em> probe the ebb; the first stirrings before spring.",
-  "Brent geese gathering to leave for the Arctic; <em>little egrets</em> stalk the gutways; sea purslane begins to green.",
-  "<em>Shelduck</em> pairing on the flats; swallows back over the water; the saltmarsh greening at last.",
-  "<em>Common terns</em> returned and fishing; whitethroat in the scrub; sea aster and cord-grass coming on.",
-  "<em>Sea lavender</em> budding; mullet rising in the warm shallows; little-egret weather — still, white, patient.",
-  "<em>Sea lavender</em> hazing the marsh purple; terns diving; samphire fattening along the creek edge.",
-  "The marsh at its lushest; <em>bass and mullet</em> working the creek; sea aster opening for the bees.",
-  "First returning <em>brent geese</em> any day now; waders building on the ebb; glasswort flushing red.",
-  "Brent geese back on the eelgrass; <em>godwit and dunlin</em> in wheeling flocks; the marsh turning gold.",
-  "Full winter wildfowl — <em>wigeon, teal, brent</em>; the creek quiet and cold under low light.",
-  "Brent geese on the mud at the ebb; <em>curlew</em> calling across the flats; short days, long light off the water."
+  "<em>Dark-bellied brent</em> on the mud at low water. Wigeon whistling off the channel. The marsh silver and bare.",
+  "Brent still here in numbers. <em>Curlew and redshank</em> probing the ebb. First stirrings before spring.",
+  "Brent gathering for the Arctic. <em>Little egrets</em> in the gutways. Sea purslane greening.",
+  "<em>Shelduck</em> pairing on the flats. Swallows back over the water. The saltmarsh greening at last.",
+  "<em>Common terns</em> back and fishing. Whitethroat in the scrub, sea aster coming on.",
+  "<em>Sea lavender</em> budding. Mullet rising in the warm shallows. Little-egret weather, still and patient.",
+  "<em>Sea lavender</em> hazing the marsh purple. Terns diving. Samphire fattening at the creek edge.",
+  "The marsh at its lushest. <em>Bass and mullet</em> working the creek. Sea aster opening for the bees.",
+  "First returning <em>brent geese</em> any day. Waders building on the ebb. Glasswort flushing red.",
+  "Brent back on the eelgrass. <em>Godwit and dunlin</em> in wheeling flocks. The marsh turning gold.",
+  "Full winter wildfowl: <em>wigeon, teal, brent</em>. The creek quiet and cold under low light.",
+  "Brent on the mud at the ebb, <em>curlew</em> calling across the flats. Short days, long light off the water."
 ];
 // occasional local-history note (one of the creek's true curiosities)
-const NUGGET = "The cord-grass lining the creek, <em>Spartina anglica</em>, first arose right here in Southampton Water around the 1870s — then spread to estuaries the world over.";
+const NUGGET = "The cord-grass lining the creek, <em>Spartina anglica</em>, first arose right here in Southampton Water around the 1870s. From here it spread to estuaries the world over.";
 
 /* ============================================================
    helpers
@@ -1471,12 +1471,31 @@ function writeSeen(s){
   try{ localStorage.setItem("verseSeen", JSON.stringify(s)); }
   catch(e){ /* private mode, quota, no storage — ignore */ }
 }
+function readHeadlineSeen(){
+  try{ return JSON.parse(localStorage.getItem("headlineSeen") || "{}"); }
+  catch(e){ return {}; }
+}
+function writeHeadlineSeen(s){
+  try{ localStorage.setItem("headlineSeen", JSON.stringify(s)); }
+  catch(e){ /* ignore */ }
+}
 
 function pickVerse(weather){
   const reasons = activeReasons(weather);
   const signals = todaySignals(weather);
   const seen = readSeen();
   const dayKey = now.getFullYear()*1000 + dayIdx;
+  // Stable across reloads: once a verse has been picked today, keep it.
+  // The line within the verse can still refine as weather/time signals shift.
+  const todayId = Object.keys(seen).find(id => seen[id] === dayKey);
+  if(todayId){
+    const v = VERSES.find(x => x.id === todayId);
+    if(v){
+      const re = reasons.find(r => v.tags && v.tags.includes(r.tag));
+      renderVerse(v, pickLine(v, signals), re ? re.label : "for today");
+      return;
+    }
+  }
   for(const re of reasons){
     const pool = VERSES.filter(v => v.tags && v.tags.includes(re.tag));
     if(!pool.length) continue;
@@ -1558,9 +1577,9 @@ function sunUpIntervals(){return upIntervals(sunriseH,sunsetH,sun.alwaysUp,sun.a
   const el=document.getElementById("tide-window");
   if(daylit.length){
     const parts=daylit.map(w=>`<b>${fmtClock(Math.max(w[0],6))}–${fmtClock(Math.min(w[1],21.5))}</b>`).join(" and ");
-    el.innerHTML=`Creek floats in daylight around ${parts}.`;
-  }else if(windows.length){el.innerHTML=`The creek only fills after dark today — a torch-and-moon job.`;}
-  else{el.innerHTML=`The creek stays low today. A walking-and-whistle day.`;}
+    el.innerHTML=`Creek floats ${parts}.`;
+  }else if(windows.length){el.innerHTML=`Creek fills after dark today.`;}
+  else{el.innerHTML=`Creek stays low today.`;}
   document.getElementById("extremes").innerHTML=ex.map(e=>`<span>${e.type==="HW"?"High":"Low"} <b>${fmtClock(e.t)}</b> · <b>${e.h.toFixed(1)}m</b></span>`).join("");
 
   let moonStr;
@@ -1616,20 +1635,133 @@ function scene(kind,isDay){
 }
 
 function buildHeadline(d){
-  const lines=[];
-  const eveningHW=ex.find(e=>e.type==="HW"&&e.t>17.5&&e.t<22.5);
-  const upDuringEvening=eveningHW && moonUpIntervals().some(w=>eveningHW.t>=w[0]&&eveningHW.t<=w[1]);
-  if(nearFull && (d.kind==="clear"||d.kind==="cloud") && eveningHW && upDuringEvening){
-    lines.push({h:`A full-moon paddle — high water about ${fmtClock(eveningHW.t)}, moon up from ${fmtClock(moonriseH)}, the creek brimming under it.`,
-                s:"Clear-ish evening with water enough to float. Take a torch anyway."});
+  const seen = readHeadlineSeen();
+  const dayKey = now.getFullYear()*1000 + dayIdx;
+  function pickFrom(branchId, pool){
+    const sorted = pool.map((p,i)=>({p, key:`${branchId}:${i}`}))
+                       .sort((a,b)=>((seen[a.key]??-1) - (seen[b.key]??-1)));
+    const winner = sorted[0];
+    seen[winner.key] = dayKey;
+    writeHeadlineSeen(seen);
+    return winner.p;
   }
-  if(!lines.length&&d.dryToday&&d.wetAhead)lines.push({h:`Last dry day before the wet sets in — if you're going, go now.`,s:d.windowText});
-  if(!lines.length&&range>4.2)lines.push({h:`A big spring tide — the marsh fills right up; you can glide over ground that's usually grass.`,s:d.windowText});
-  if(!lines.length&&range<2.6)lines.push({h:`A gentle neap — easy water, but a muddy landing. Pub boots advised.`,s:d.windowText});
-  if(!lines.length&&d.wind>=22)lines.push({h:`A blowy one — ${Math.round(d.wind)} km/h across the water. Maybe a shore-and-whistle day.`,s:d.windowText});
-  if(!lines.length&&d.kind!=="rain"&&d.wind<14&&d.windowText)lines.push({h:`Glassy and quiet — ${d.windowText.replace(/^Creek floats /,"the creek floats ")}`,s:"Low wind, no rain in it. A mirror kind of morning."});
-  if(!lines.length)lines.push({h:d.windowText||"A still day on the water.",s:""});
-  return lines[0];
+  const wt = d.windowText || "";
+
+  // 1. Full moon over an evening HW
+  const eveningHW = ex.find(e=>e.type==="HW" && e.t>17.5 && e.t<22.5);
+  const moonUpAtHW = eveningHW && moonUpIntervals().some(w=>eveningHW.t>=w[0]&&eveningHW.t<=w[1]);
+  if(nearFull && (d.kind==="clear"||d.kind==="cloud") && eveningHW && moonUpAtHW){
+    return pickFrom("fullmoon",[
+      {h:`Full moon over an evening HW. ${fmtClock(eveningHW.t)} at the top.`, s:`Moonrise ${fmtClock(moonriseH)}.`},
+      {h:`Full moon tonight, HW ${fmtClock(eveningHW.t)}.`, s:`Moonrise ${fmtClock(moonriseH)}.`},
+      {h:`Moon and tide together. ${dayHigh.toFixed(1)} m at ${fmtClock(eveningHW.t)}.`, s:`Moonrise ${fmtClock(moonriseH)}.`}
+    ]);
+  }
+  // 2. Heavy rain
+  if(d.kind==="rain" && d.precipToday>=8){
+    return pickFrom("heavyrain",[
+      {h:`Heavy rain through the day. ${Math.round(d.precipToday)} mm.`, s:wt},
+      {h:`Wet one. ${Math.round(d.precipToday)} mm forecast.`, s:wt},
+      {h:`Rain settled in.`, s:wt}
+    ]);
+  }
+  // 3. Showers / light rain
+  if(d.kind==="rain"){
+    return pickFrom("rain",[
+      {h:`Showers about.`, s:wt},
+      {h:`Rain on and off today.`, s:wt},
+      {h:`Wet patches in the forecast.`, s:wt}
+    ]);
+  }
+  // 4. Fog / mist
+  if(d.kind==="fog"){
+    return pickFrom("fog",[
+      {h:`Fog on the water.`, s:wt},
+      {h:`Mist sitting low.`, s:wt},
+      {h:`White morning. Visibility short.`, s:wt}
+    ]);
+  }
+  // 5. Blowy
+  if(d.wind>=22){
+    return pickFrom("wind",[
+      {h:`${Math.round(d.wind)} km/h on the water.`, s:wt},
+      {h:`Wind up. ${Math.round(d.wind)} km/h.`, s:wt},
+      {h:`Blowing ${Math.round(d.wind)} today.`, s:wt}
+    ]);
+  }
+  // 6. King tide
+  if(range>4.7){
+    return pickFrom("king",[
+      {h:`Top of the springs. ${dayHigh.toFixed(1)} m at HW.`, s:wt},
+      {h:`Biggest tide of the cycle. ${range.toFixed(1)} m range.`, s:wt}
+    ]);
+  }
+  // 7. Last dry day before a wet stretch
+  if(d.dryToday && d.wetAhead){
+    return pickFrom("lastdry",[
+      {h:`Dry today. Rain in tomorrow.`, s:wt},
+      {h:`Last dry day for a stretch.`, s:wt}
+    ]);
+  }
+  // 8. Big spring tide
+  if(range>4.2){
+    return pickFrom("spring",[
+      {h:`Springs. ${range.toFixed(1)} m range.`, s:wt},
+      {h:`Spring tide. HW ${dayHigh.toFixed(1)} m, LW ${dayLow.toFixed(1)} m.`, s:wt},
+      {h:`Big water today. ${dayHigh.toFixed(1)} m at the top.`, s:wt}
+    ]);
+  }
+  // 9. Dawn HW under fair weather
+  const dawnHW = ex.find(e=>e.type==="HW" && e.t>=sunriseH-0.5 && e.t<=sunriseH+2);
+  if(dawnHW && (d.kind==="clear"||d.kind==="cloud") && d.wind<18){
+    return pickFrom("dawnhw",[
+      {h:`HW at first light. ${fmtClock(dawnHW.t)}.`, s:wt},
+      {h:`Dawn HW: ${fmtClock(dawnHW.t)} at ${dawnHW.h.toFixed(1)} m.`, s:wt}
+    ]);
+  }
+  // 10. Sunset HW under fair weather (skip if full-moon branch could fire — caught above)
+  const sunsetHW = ex.find(e=>e.type==="HW" && e.t>=sunsetH-1.5 && e.t<=sunsetH+0.5);
+  if(sunsetHW && (d.kind==="clear"||d.kind==="cloud") && d.wind<18){
+    return pickFrom("sunsethw",[
+      {h:`HW at sunset. ${fmtClock(sunsetHW.t)}, sun down ${fmtClock(sunsetH)}.`, s:wt},
+      {h:`Tide tops as the sun goes. ${fmtClock(sunsetHW.t)}.`, s:wt}
+    ]);
+  }
+  // 11. Float window exists but falls outside daylight
+  const daylightWindows = windows.filter(w=>w[1]>sunriseH && w[0]<sunsetH);
+  if(windows.length && !daylightWindows.length){
+    return pickFrom("nightonly",[
+      {h:`Water in the dark today.`, s:`Creek fills after sunset.`},
+      {h:`Night-tide only.`, s:`Float window outside daylight.`}
+    ]);
+  }
+  // 12. Tide never reaches float threshold
+  if(!windows.length){
+    return pickFrom("low",[
+      {h:`Tide stays low. Top of ${dayHigh.toFixed(1)} m.`, s:``},
+      {h:`No float window today. ${dayHigh.toFixed(1)} m at the high.`, s:``}
+    ]);
+  }
+  // 13. Neap tide
+  if(range<2.6){
+    return pickFrom("neap",[
+      {h:`Neaps. Range ${range.toFixed(1)} m.`, s:wt},
+      {h:`Small tides. ${dayHigh.toFixed(1)} m at the top.`, s:wt},
+      {h:`Neap tide. Quiet water either way.`, s:wt}
+    ]);
+  }
+  // 14. Glassy / still
+  if(d.kind!=="rain" && d.wind<14 && wt){
+    return pickFrom("glassy",[
+      {h:`Glassy. Wind ${Math.round(d.wind)} km/h.`, s:wt},
+      {h:`Flat water today.`, s:wt},
+      {h:`Still day on the water.`, s:wt}
+    ]);
+  }
+  // 15. Default
+  return pickFrom("default",[
+    {h: wt || `Today on the water.`, s:``}
+  ]);
 }
 
 // hourly weather strip — a weather symbol per 2-hour block, aligned under the tide curve
@@ -1660,7 +1792,7 @@ function renderWxStrip(hourly){
     if(h>=t.length) break;
     const code=codes[h], kind=(WMO[code]||["—","cloud"])[1], isDay=days[h]===1, wind=winds[h];
     const label=(WMO[code]||["—"])[0];
-    const tt=`${pad(blk*2)}:00–${pad(blk*2+2)}:00 — ${label}${wind>=18?`, ${Math.round(wind)} km/h wind`:""}`;
+    const tt=`${pad(blk*2)}:00–${pad(blk*2+2)}:00 · ${label}${wind>=18?`, ${Math.round(wind)} km/h wind`:""}`;
     html+=`<i title="${tt}" class="${wind>=18?"wind":""}">${wxSymbol(kind, isDay)}</i>`;
   }
   document.getElementById("wx-strip").innerHTML=html;
@@ -1681,15 +1813,15 @@ async function loadWeather(){
     if(j.hourly) renderWxStrip(j.hourly);
     pickVerse({kind, wind:c.wind_speed_10m});
     const p=j.daily.precipitation_sum;
-    const h=buildHeadline({wind:c.wind_speed_10m,kind,isDay,dryToday:p[0]<1,wetAhead:(p[1]>=2&&p[2]>=2),windowText:wText});
+    const h=buildHeadline({wind:c.wind_speed_10m,kind,isDay,dryToday:p[0]<1,wetAhead:(p[1]>=2&&p[2]>=2),precipToday:p[0],windowText:wText});
     document.getElementById("headline").textContent=h.h;document.getElementById("subline").textContent=h.s;
   }catch(e){
     scene("cloud",true);
     document.getElementById("wx-temp").textContent="—";document.getElementById("wx-desc").textContent="weather offline";
-    const h=buildHeadline({wind:8,kind:"cloud",isDay:true,dryToday:true,wetAhead:false,windowText:wText});
+    const h=buildHeadline({wind:8,kind:"cloud",isDay:true,dryToday:true,wetAhead:false,precipToday:0,windowText:wText});
     document.getElementById("headline").textContent=h.h;document.getElementById("subline").textContent=h.s;
     document.getElementById("err").style.display="block";
-    document.getElementById("err").textContent="Couldn't reach the weather service — showing tide, sun and moon only.";
+    document.getElementById("err").textContent="Couldn't reach the weather service. Tide, sun and moon only.";
   }
 }
 loadWeather();
