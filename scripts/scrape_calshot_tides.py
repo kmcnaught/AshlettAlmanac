@@ -8,7 +8,9 @@ water). We need the full pattern for upper-Southampton-Water navigation.
 
 The site only serves dates from 2022-01-01 up to ~6 days ahead of today;
 beyond that, the URL silently falls back to today's data, so we verify the
-date heading on each response and skip mismatches.
+date heading on each response and skip mismatches. The dated URL for *today*
+itself serves the "current day" landing page with no date heading at all —
+we accept that page only when the requested date is today.
 
 Args: --start YYYY-MM-DD --end YYYY-MM-DD [--out FILE]
 Example:
@@ -57,11 +59,14 @@ def fetch(d):
 
 def parse(html, expected):
     m = HEADING_RE.search(html)
-    if not m:
+    if m:
+        served = date(int(m.group(3)), MONTHS[m.group(2).title()], int(m.group(1)))
+        if served != expected:
+            return None, f"served {served.isoformat()}, not {expected.isoformat()} (paywall fall-back)"
+    elif expected != date.today():
+        # The dated URL for today serves the "current day" landing page, whose
+        # <h1> drops the "for <date>" suffix. Accept it only when we asked for today.
         return None, "no date heading"
-    served = date(int(m.group(3)), MONTHS[m.group(2).title()], int(m.group(1)))
-    if served != expected:
-        return None, f"served {served.isoformat()}, not {expected.isoformat()} (paywall fall-back)"
     rows = ROW_RE.findall(html)
     extrema = [{"t": t, "h": float(h), "type": "HW" if k == "High" else "LW"}
                for k, t, h in rows]
