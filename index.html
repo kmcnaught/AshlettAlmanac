@@ -25,7 +25,8 @@
     background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/></svg>");
     mix-blend-mode:multiply;border-radius:var(--radius);}
 
-  .sky{position:relative;height:248px;overflow:hidden;transition:background 1.2s ease;}
+  .sky{position:relative;height:248px;overflow:hidden;transition:background 1.2s ease;
+    background:linear-gradient(180deg,#c2cac8 0%,#d0d2c8 55%,#cdc6b4 100%);}
   .sky-fade{opacity:0;animation:fadein 1.4s ease .15s forwards;}
   @keyframes fadein{to{opacity:1;}}
   .water-band{position:absolute;left:0;right:0;bottom:0;height:78px;
@@ -34,22 +35,6 @@
     background:repeating-linear-gradient(90deg,transparent 0,transparent 7px,rgba(255,255,255,.22) 8px,transparent 10px);
     animation:drift 9s linear infinite;}
   @keyframes drift{from{transform:translateX(0)}to{transform:translateX(40px)}}
-  .mist{position:absolute;inset:0;opacity:0;
-    background:radial-gradient(60% 40% at 30% 70%,rgba(255,255,255,.55),transparent 70%),
-               radial-gradient(50% 35% at 75% 60%,rgba(255,255,255,.45),transparent 70%);
-    animation:mistdrift 26s ease-in-out infinite alternate;}
-  @keyframes mistdrift{from{transform:translateX(-14px)}to{transform:translateX(14px)}}
-  .orb{position:absolute;border-radius:50%;}
-  .sun{width:78px;height:78px;top:46px;left:62px;
-    background:radial-gradient(circle at 50% 50%,#fff6df 0%,#f6dd9a 45%,rgba(246,221,154,0) 72%);filter:blur(.4px);}
-  .moon{width:54px;height:54px;top:40px;right:64px;
-    background:radial-gradient(circle at 38% 38%,#fdf6e6 0%,var(--moon) 60%,#c9b478 100%);
-    box-shadow:0 0 34px 8px rgba(236,212,154,.35);}
-  .stars{position:absolute;inset:0;opacity:0;}
-  .rain{position:absolute;inset:0;opacity:0;overflow:hidden;}
-  .rain i{position:absolute;top:-12%;width:1px;height:42px;background:linear-gradient(transparent,rgba(255,255,255,.5));animation:fall linear infinite;}
-  @keyframes fall{to{transform:translateY(280px)}}
-  .birds{position:absolute;top:70px;left:0;right:0;text-align:center;color:rgba(20,30,28,.5);font-size:14px;letter-spacing:6px;opacity:0;animation:fadein 2s ease 1s forwards;}
   .place{position:absolute;left:0;right:0;bottom:0;padding:16px 22px 14px;
     background:linear-gradient(to top,rgba(20,30,28,.55),transparent);color:#f6f2e6;}
   .place h1{margin:0;font-weight:600;font-size:25px;letter-spacing:.3px;text-shadow:0 1px 6px rgba(0,0,0,.45);}
@@ -71,15 +56,17 @@
   .tide .window{font-size:15px;color:var(--ink);margin:0 0 10px;}
   .tide .window b{color:var(--water-deep);}
   svg.curve{width:100%;height:122px;display:block;}
-  .curve-frame{display:flex;align-items:stretch;gap:6px;}
-  .curve-icons{display:flex;flex-direction:column;justify-content:space-between;width:14px;flex-shrink:0;padding:2px 0;}
+  .curve-frame{display:flex;align-items:flex-start;gap:6px;}
+  .curve-icons{display:flex;flex-direction:column;justify-content:space-between;width:14px;flex-shrink:0;height:122px;padding:2px 0;}
   .curve-icons svg{width:14px;height:14px;display:block;}
   .curve-body{flex:1;min-width:0;}
-  .wx-strip{display:flex;height:10px;margin:3px 0 0;border-radius:3px;overflow:hidden;background:var(--parchment-2);}
-  .wx-strip i{flex:1;display:block;position:relative;}
-  .wx-strip i.wind::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(45deg,rgba(32,48,47,.30) 0 1px,transparent 1px 3px);}
+  .wx-strip{display:flex;height:20px;margin:4px 0 0;align-items:center;}
+  .wx-strip i{flex:1;display:flex;align-items:center;justify-content:center;}
+  .wx-strip i svg{width:15px;height:15px;display:block;}
+  .wx-strip i.wind{position:relative;}
+  .wx-strip i.wind::after{content:"";position:absolute;left:50%;bottom:-1px;width:8px;height:1px;transform:translateX(-50%);background:repeating-linear-gradient(90deg,rgba(32,48,47,.55) 0 1px,transparent 1px 2px);}
   .extremes{display:flex;flex-wrap:wrap;gap:6px 16px;margin:8px 2px 2px;font-size:13.5px;color:var(--ink-soft);}
-  .axis{position:relative;height:14px;margin:1px 0 0;font-size:10.5px;color:var(--ink-soft);letter-spacing:.3px;}
+  .axis{position:relative;height:14px;margin:2px 0 0;font-size:10.5px;color:var(--ink-soft);letter-spacing:.3px;}
   .axis span{position:absolute;transform:translateX(-50%);white-space:nowrap;}
   .axis span.start{left:0;transform:none;}
   .axis span.end{left:auto;right:0;transform:none;}
@@ -114,11 +101,6 @@
 <body>
   <main class="card">
     <div class="sky sky-fade" id="sky">
-      <div class="mist" id="mist"></div><div class="stars" id="stars"></div>
-      <div class="orb sun" id="sun" style="display:none"></div>
-      <div class="orb moon" id="moonorb" style="display:none"></div>
-      <div class="birds" id="birds">⌄&nbsp;&nbsp;⌄&nbsp;&nbsp;&nbsp;⌄</div>
-      <div class="rain" id="rain"></div>
       <div class="water-band"></div><div class="shimmer"></div>
       <div class="place"><h1>Ashlett Creek</h1><p class="date" id="date">—</p></div>
     </div>
@@ -156,7 +138,6 @@
         </div>
         <div class="curve-body">
           <svg class="curve" id="curve" viewBox="0 0 400 122" preserveAspectRatio="none" aria-hidden="true"></svg>
-          <div class="wx-strip" id="wx-strip" aria-hidden="true"></div>
           <div class="axis">
             <span class="start">12am</span>
             <span style="left:25%">6am</span>
@@ -164,6 +145,7 @@
             <span style="left:75%">6pm</span>
             <span class="end">12am</span>
           </div>
+          <div class="wx-strip" id="wx-strip" aria-hidden="true"></div>
         </div>
       </div>
       <div class="legend">
@@ -175,8 +157,8 @@
       </div>
       <div class="extremes" id="extremes"></div>
       <div class="light" id="light"></div>
-      <p class="sample-note" id="sample-note" style="display:none">Tide figures are sample data — paste real predictions for accuracy before relying on them.</p>
       <p class="sample-note" id="abridged-note" style="display:none">Principal tides only for this date — Solent secondary high waters not available.</p>
+      <p class="sample-note">Reference: <a href="https://www.tidetimes.org.uk/calshot-castle-tide-times" target="_blank" rel="noopener">Calshot Castle tide times →</a></p>
     </section>
 
     <p class="marsh"><span class="eyebrow">In the saltmarsh now</span><span id="marsh"></span></p>
@@ -1206,10 +1188,11 @@ const CONFIG = {
    Source: an official Southampton / Calshot table (Admiralty EasyTide /
    tidetimes.org.uk per-day pages; see scraping.md).
    List the two highs to show the Solent double high water (~2h apart).
-   Per-day flags:
-     verified:true  — real predictions, hides the "sample data" warning
+   Per-day flag:
      abridged:true  — only principal extrema (2H+2L); shows a footnote
                       noting the secondary Solent highs are unavailable.
+   (`verified` is still read by the scraper but no longer toggles a warning —
+   the page just shows the Calshot tide-times reference link permanently.)
    ============================================================ */
 // Inlined fallback so the page still renders if tides.json is unreachable
 // (offline, file:// open, scraper down). Real per-date entries come from
@@ -1411,7 +1394,6 @@ if(tData && tData.extrema && tData.extrema.length){
 const thr=CONFIG.floatThreshold;
 const windows=openWindows(exFull,thr);
 const dayHigh=Math.max(...ex.map(e=>e.h)), dayLow=Math.min(...ex.map(e=>e.h)), range=dayHigh-dayLow;
-if(!tide.verified)document.getElementById("sample-note").style.display="block";
 if(tide.abridged)document.getElementById("abridged-note").style.display="block";
 
 // --- verse of the day: chosen to fit the day's signals ---
@@ -1594,24 +1576,40 @@ const WMO={0:["Clear","clear"],1:["Mostly clear","clear"],2:["Partly cloudy","cl
   61:["Light rain","rain"],63:["Rain","rain"],65:["Heavy rain","rain"],71:["Light snow","cloud"],73:["Snow","cloud"],75:["Heavy snow","cloud"],
   80:["Showers","rain"],81:["Showers","rain"],82:["Heavy showers","rain"],95:["Thunderstorm","rain"],96:["Thunderstorm","rain"]};
 
+// Watercolor sky — pure stacked gradients per (kind × isDay). No glyphs, no overlays.
+// Layer convention: light-source radial (top) over horizon-haze radial (bottom) over base linear.
+const SCENE={
+  "clear-day":
+    "radial-gradient(ellipse 55% 45% at 72% 22%, rgba(255,238,196,0.55), transparent 65%),"+
+    "radial-gradient(ellipse 90% 28% at 50% 96%, rgba(214,196,154,0.38), transparent 70%),"+
+    "linear-gradient(180deg, #c6d6d6 0%, #dfe6d6 50%, #ead7b4 100%)",
+  "clear-night":
+    "radial-gradient(ellipse 42% 32% at 28% 24%, rgba(220,212,178,0.34), transparent 70%),"+
+    "radial-gradient(ellipse 90% 28% at 50% 96%, rgba(80,90,108,0.45), transparent 70%),"+
+    "linear-gradient(180deg, #1c2940 0%, #2c3c54 55%, #3b4860 100%)",
+  "cloud-day":
+    "radial-gradient(ellipse 70% 32% at 50% 16%, rgba(255,250,230,0.22), transparent 75%),"+
+    "radial-gradient(ellipse 100% 32% at 50% 100%, rgba(190,176,144,0.30), transparent 70%),"+
+    "linear-gradient(180deg, #c2cac8 0%, #d0d2c8 55%, #cdc6b4 100%)",
+  "cloud-night":
+    "radial-gradient(ellipse 70% 32% at 50% 22%, rgba(120,135,150,0.28), transparent 75%),"+
+    "linear-gradient(180deg, #283038 0%, #353e48 55%, #3c4448 100%)",
+  "fog-day":
+    "radial-gradient(ellipse 90% 55% at 50% 48%, rgba(255,255,255,0.55), transparent 80%),"+
+    "linear-gradient(180deg, #d4d8d2 0%, #e3e4dc 50%, #c5c8b8 100%)",
+  "fog-night":
+    "radial-gradient(ellipse 90% 55% at 50% 48%, rgba(210,220,225,0.40), transparent 80%),"+
+    "linear-gradient(180deg, #515c63 0%, #6a7479 50%, #565d59 100%)",
+  "rain-day":
+    "radial-gradient(ellipse 100% 38% at 50% 0%, rgba(48,58,68,0.35), transparent 70%),"+
+    "linear-gradient(180deg, #6d7a7e 0%, #889092 55%, #7a807a 100%)",
+  "rain-night":
+    "radial-gradient(ellipse 100% 32% at 50% 0%, rgba(0,0,0,0.45), transparent 70%),"+
+    "linear-gradient(180deg, #161e26 0%, #232c34 55%, #2a3338 100%)",
+};
 function scene(kind,isDay){
-  const sky=document.getElementById("sky"),set=(id,on)=>document.getElementById(id).style.display=on?"":"none";
-  document.getElementById("mist").style.opacity=0;document.getElementById("stars").style.opacity=0;document.getElementById("rain").style.opacity=0;
-  let bg;
-  if(!isDay){
-    bg="linear-gradient(180deg,#16243a 0%,#22384a 55%,#34403f 100%)";set("moonorb",true);set("sun",false);
-    document.getElementById("stars").style.opacity=1;
-    let s="";for(let i=0;i<46;i++)s+=`<div style="position:absolute;width:2px;height:2px;border-radius:50%;background:#fff;opacity:${(Math.random()*.7+.2).toFixed(2)};top:${(Math.random()*150).toFixed(0)}px;left:${(Math.random()*100).toFixed(0)}%"></div>`;
-    document.getElementById("stars").innerHTML=s;
-    if(kind==="rain"){bg="linear-gradient(180deg,#1b2530 0%,#28333a 60%,#313a38 100%)";set("moonorb",false);}
-  }else if(kind==="clear"){bg="linear-gradient(180deg,#bcd6e0 0%,#dce6dc 45%,#cdd2b6 100%)";set("sun",true);set("moonorb",false);}
-  else if(kind==="cloud"){bg="linear-gradient(180deg,#c4ccca 0%,#cfd3c9 55%,#b9bca6 100%)";set("sun",false);set("moonorb",false);}
-  else if(kind==="fog"){bg="linear-gradient(180deg,#d7dcd6 0%,#dfe2da 60%,#c9cbbb 100%)";set("sun",false);set("moonorb",false);document.getElementById("mist").style.opacity=1;}
-  else{bg="linear-gradient(180deg,#7e8a8c 0%,#8d9590 55%,#7d8275 100%)";set("sun",false);set("moonorb",false);
-    document.getElementById("rain").style.opacity=1;
-    let r="";for(let i=0;i<60;i++)r+=`<i style="left:${(Math.random()*100).toFixed(0)}%;animation-duration:${(0.5+Math.random()*0.5).toFixed(2)}s;animation-delay:${(Math.random()).toFixed(2)}s"></i>`;
-    document.getElementById("rain").innerHTML=r;}
-  sky.style.background=bg;
+  const variant=kind+(isDay?"-day":"-night");
+  document.getElementById("sky").style.background = SCENE[variant] || SCENE["cloud-day"];
 }
 
 function buildHeadline(d){
@@ -1631,20 +1629,36 @@ function buildHeadline(d){
   return lines[0];
 }
 
-// hourly weather strip — colored cell per hour of today, aligned under the tide curve
-const WX_BG={clear:["#dce6dc","#22384a"],cloud:["#cfd3c9","#28333a"],fog:["#dfe2da","#2a3438"],rain:["#8d9590","#313a38"]};
+// hourly weather strip — a weather symbol per 2-hour block, aligned under the tide curve
+function wxSymbol(kind, isDay){
+  if(kind==="clear" && isDay){
+    return `<svg viewBox="-8 -8 16 16"><circle r="2.8" fill="#caa84e"/><g stroke="#caa84e" stroke-width="0.9" stroke-linecap="round"><line x1="0" y1="-6.5" x2="0" y2="-4.5"/><line x1="0" y1="4.5" x2="0" y2="6.5"/><line x1="-6.5" y1="0" x2="-4.5" y2="0"/><line x1="4.5" y1="0" x2="6.5" y2="0"/><line x1="-4.6" y1="-4.6" x2="-3.2" y2="-3.2"/><line x1="3.2" y1="3.2" x2="4.6" y2="4.6"/><line x1="-4.6" y1="4.6" x2="-3.2" y2="3.2"/><line x1="3.2" y1="-3.2" x2="4.6" y2="-4.6"/></g></svg>`;
+  }
+  if(kind==="clear"){
+    return `<svg viewBox="-8 -8 16 16"><path d="M 2.5 -5.5 A 5.5 5.5 0 1 0 2.5 5.5 A 4 5.5 0 1 1 2.5 -5.5 Z" fill="#5d7d8e"/></svg>`;
+  }
+  if(kind==="cloud"){
+    const fill = isDay ? "#7a8580" : "#5d6b72";
+    return `<svg viewBox="-8 -8 16 16"><path d="M -5 3 Q -7 3 -7 1 Q -7 -1 -5 -1 Q -5 -3.5 -2 -3.5 Q 2 -4.5 3 -1 Q 6 -1 6 1 Q 6 3 4 3 Z" fill="${fill}" opacity="0.85"/></svg>`;
+  }
+  if(kind==="fog"){
+    return `<svg viewBox="-8 -8 16 16"><g stroke="#7a8580" stroke-width="1.1" stroke-linecap="round" fill="none"><path d="M -6 -3 Q -3 -4.2 0 -3 T 6 -3"/><path d="M -6 0 Q -3 -1.2 0 0 T 6 0"/><path d="M -6 3 Q -3 1.8 0 3 T 6 3"/></g></svg>`;
+  }
+  // rain
+  return `<svg viewBox="-8 -8 16 16"><path d="M -5 -1 Q -7 -1 -7 -3 Q -7 -5 -5 -5 Q -5 -7 -2 -7 Q 2 -8 3 -5 Q 6 -5 6 -3 Q 6 -1 4 -1 Z" fill="#4a5a57" opacity="0.85"/><g stroke="#3a5a60" stroke-width="1.1" stroke-linecap="round"><line x1="-3" y1="1.5" x2="-4" y2="4.5"/><line x1="0" y1="1.5" x2="-1" y2="4.5"/><line x1="3" y1="1.5" x2="2" y2="4.5"/></g></svg>`;
+}
 function renderWxStrip(hourly){
   const t=hourly.time, codes=hourly.weather_code, winds=hourly.wind_speed_10m, days=hourly.is_day;
   // today's 24 entries — slice by matching the iso date prefix in case forecast_days returned more
   const start=t.findIndex(s=>s.startsWith(iso)); if(start<0) return;
   let html="";
-  for(let i=0;i<24;i++){
-    const h=start+i; if(h>=t.length) break;
+  for(let blk=0; blk<12; blk++){
+    const h=start + blk*2 + 1;  // middle of the 2-hour block
+    if(h>=t.length) break;
     const code=codes[h], kind=(WMO[code]||["—","cloud"])[1], isDay=days[h]===1, wind=winds[h];
-    const bg=(WX_BG[kind]||WX_BG.cloud)[isDay?0:1];
     const label=(WMO[code]||["—"])[0];
-    const tt=`${pad(i)}:00 — ${label}${wind>=18?`, ${Math.round(wind)} km/h wind`:""}`;
-    html+=`<i style="background:${bg}" class="${wind>=18?"wind":""}" title="${tt}"></i>`;
+    const tt=`${pad(blk*2)}:00–${pad(blk*2+2)}:00 — ${label}${wind>=18?`, ${Math.round(wind)} km/h wind`:""}`;
+    html+=`<i title="${tt}" class="${wind>=18?"wind":""}">${wxSymbol(kind, isDay)}</i>`;
   }
   document.getElementById("wx-strip").innerHTML=html;
 }
