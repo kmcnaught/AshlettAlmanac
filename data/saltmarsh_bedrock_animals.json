@@ -1,0 +1,242 @@
+{
+  "_meta": {
+    "purpose": "Curated bedrock list of characteristic Solent saltmarsh / mudflat / intertidal ANIMALS — independent of iNaturalist coverage. Parallel to data/saltmarsh_bedrock.json (plants). These are species that the saltmarsh ecosystem is built around but that show up sparsely or not at all in iNat's casual-observer record (moths flown at night, marine inverts, hidden specialists).",
+    "references": [
+      "Doody, J.P. (2008) Saltmarsh Conservation, Management and Restoration. Springer.",
+      "JNCC UK BAP Priority Habitat: Coastal Saltmarsh — https://jncc.gov.uk/our-work/uk-bap-priority-habitats/",
+      "Buglife — Invertebrates of UK saltmarshes."
+    ],
+    "monthsAre": "1=January .. 12=December. 'active' = months when the species is on the wing / above the mud / visible to a kayaker.",
+    "ecologyZones": "saltmarsh-surface (between and on the plants), mudflat (bare drying mud at low tide), creek-channel (the running water), strandline (drift line above HW), intertidal-hard (rocks/pilings/breakwaters), open-water (Solent itself)",
+    "taxonGroupNote": "iNat's 'iconicTaxon' lumps non-bird/non-mammal/non-plant animals under 'Animalia'; we keep a 'taxonGroup' field for the actual lineage (Annelida, Crustacea, Cnidaria, etc.) so the picker can talk about a worm/crab/jelly correctly."
+  },
+  "species": [
+    {
+      "canonical": "Sandhill Rustic moth",
+      "scientificName": "Luperina nickerlii",
+      "iconicTaxon": "Insecta",
+      "taxonGroup": "Lepidoptera",
+      "ecologyZone": "saltmarsh-surface",
+      "characteristicOf": "upper saltmarsh and coastal dune grasses",
+      "season": {"active": [7, 8, 9], "peakLabel": "mid August"},
+      "notes": [
+        "Scarce specialist whose caterpillars feed inside the stems of Sea Couch and other saltmarsh grasses. Adults fly July to September and come to light — the saltmarsh moth most worth a midsummer trap on the upper marsh."
+      ],
+      "links": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Luperina_nickerlii",
+        "ukmoths": "https://ukmoths.org.uk/species/luperina-nickerlii/",
+        "inat": "https://www.inaturalist.org/taxa/search?q=Luperina+nickerlii"
+      }
+    },
+    {
+      "canonical": "Saltmarsh Plume moth",
+      "scientificName": "Agdistis bennetii",
+      "iconicTaxon": "Insecta",
+      "taxonGroup": "Lepidoptera",
+      "ecologyZone": "saltmarsh-surface",
+      "characteristicOf": "Sea-lavender (Limonium) stands",
+      "season": {"active": [6, 7, 8, 9], "peakLabel": "mid August"},
+      "notes": [
+        "Tiny T-shaped plume moth whose caterpillars feed only on Sea Lavender — the moth's flight peaks while the lavender is in flower. A walking match to the host."
+      ],
+      "links": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Agdistis_bennetii",
+        "ukmoths": "https://ukmoths.org.uk/species/agdistis-bennetii/",
+        "inat": "https://www.inaturalist.org/taxa/search?q=Agdistis+bennetii"
+      }
+    },
+    {
+      "canonical": "Ground Lackey",
+      "scientificName": "Malacosoma castrense",
+      "iconicTaxon": "Insecta",
+      "taxonGroup": "Lepidoptera",
+      "ecologyZone": "saltmarsh-surface",
+      "characteristicOf": "upper marsh and strandline herbs",
+      "season": {"active": [7, 8], "peakLabel": "mid July"},
+      "notes": [
+        "Coastal-saltmarsh moth whose stripey caterpillars spin a communal silk tent in spring and feed on saltmarsh and strandline plants — the adult flies July to August."
+      ],
+      "links": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Malacosoma_castrense",
+        "ukmoths": "https://ukmoths.org.uk/species/malacosoma-castrense/",
+        "inat": "https://www.inaturalist.org/taxa/search?q=Malacosoma+castrense"
+      }
+    },
+    {
+      "canonical": "Saltmarsh Mining Bee",
+      "scientificName": "Colletes halophilus",
+      "iconicTaxon": "Insecta",
+      "taxonGroup": "Hymenoptera",
+      "ecologyZone": "saltmarsh-surface",
+      "characteristicOf": "Sea Aster flowers; nests in soft sandy ground above HW",
+      "season": {"active": [8, 9, 10], "peakLabel": "mid September"},
+      "notes": [
+        "Late-season specialist that emerges only as the Sea Aster comes into flower. Nests in soft sandy ground above the high-tide line and is still on the wing into October when most other bees have gone."
+      ],
+      "links": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Colletes_halophilus",
+        "inat": "https://www.inaturalist.org/taxa/search?q=Colletes+halophilus"
+      }
+    },
+    {
+      "canonical": "Wall",
+      "scientificName": "Lasiommata megera",
+      "iconicTaxon": "Insecta",
+      "taxonGroup": "Lepidoptera",
+      "ecologyZone": "saltmarsh-surface",
+      "characteristicOf": "sun-warmed paths and walls along the upper marsh and strandline",
+      "season": {"active": [4, 5, 6, 8, 9], "peakLabel": "late August"},
+      "notes": [
+        "Coastal grassland butterfly in two broods — April-to-June and August-to-September — basking with wings half open on hard substrate. In national decline but holding on along the Solent's warm coastal strip."
+      ],
+      "links": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Lasiommata_megera",
+        "inat": "https://www.inaturalist.org/taxa/search?q=Lasiommata+megera"
+      }
+    },
+    {
+      "canonical": "Mud Snail",
+      "scientificName": "Peringia ulvae",
+      "iconicTaxon": "Mollusca",
+      "taxonGroup": "Gastropoda",
+      "ecologyZone": "mudflat",
+      "characteristicOf": "bare drying mud across the whole creek",
+      "season": {"active": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "peakLabel": "year-round"},
+      "notes": [
+        "Tiny brown snails by the hundred thousand per square metre on the bare mud — the foundational food source for Shelduck, Wigeon, and the wintering waders. Older books and most older records use the genus name Hydrobia."
+      ],
+      "links": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Peringia_ulvae",
+        "inat": "https://www.inaturalist.org/taxa/search?q=Peringia+ulvae"
+      }
+    },
+    {
+      "canonical": "Lugworm",
+      "scientificName": "Arenicola marina",
+      "iconicTaxon": "Animalia",
+      "taxonGroup": "Annelida (Polychaeta)",
+      "ecologyZone": "mudflat",
+      "characteristicOf": "lower mudflat, soft sand-mud mixtures",
+      "season": {"active": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "peakLabel": "year-round"},
+      "notes": [
+        "Marks itself for you twice a tide: a spiralled cast of digested sand at one end of the U-shaped burrow, and a small depression where the worm draws breath at the other."
+      ],
+      "links": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Arenicola_marina",
+        "inat": "https://www.inaturalist.org/taxa/search?q=Arenicola+marina"
+      }
+    },
+    {
+      "canonical": "Ragworm",
+      "scientificName": "Hediste diversicolor",
+      "iconicTaxon": "Animalia",
+      "taxonGroup": "Annelida (Polychaeta)",
+      "ecologyZone": "mudflat",
+      "characteristicOf": "soft creek mud, throughout the inter-tidal",
+      "season": {"active": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "peakLabel": "year-round"},
+      "notes": [
+        "Iridescent green-bronze segmented worm in soft mud — the staple of Curlew, Redshank and the godwits. Most of Ashlett's winter wader population is ultimately a ragworm forecast."
+      ],
+      "links": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Hediste_diversicolor",
+        "inat": "https://www.inaturalist.org/taxa/search?q=Hediste+diversicolor"
+      }
+    },
+    {
+      "canonical": "Common Cockle",
+      "scientificName": "Cerastoderma edule",
+      "iconicTaxon": "Mollusca",
+      "taxonGroup": "Bivalvia",
+      "ecologyZone": "mudflat",
+      "characteristicOf": "sandy-mud flats and lower-marsh edge",
+      "season": {"active": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "peakLabel": "year-round"},
+      "notes": [
+        "Filter-feeds buried in the upper mud — siphon-pairs leave faint stars on the surface as the tide returns. Empty shells form the white sand of the strandline above HW."
+      ],
+      "links": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Cerastoderma_edule",
+        "inat": "https://www.inaturalist.org/taxa/search?q=Cerastoderma+edule"
+      }
+    },
+    {
+      "canonical": "Shore Crab",
+      "scientificName": "Carcinus maenas",
+      "iconicTaxon": "Animalia",
+      "taxonGroup": "Crustacea (Decapoda)",
+      "ecologyZone": "creek-channel",
+      "characteristicOf": "creek mud at low water; under wrack at the strandline",
+      "season": {"active": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "peakLabel": "year-round"},
+      "notes": [
+        "Ubiquitous in the creek and at low water, dark green to brown. The pale-bellied juveniles and moulting females hide under tide-cast wrack at the strandline. iNat records this as 'European Green Crab' (it is invasive in the Americas, native here)."
+      ],
+      "links": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Carcinus_maenas",
+        "inat": "https://www.inaturalist.org/taxa/search?q=Carcinus+maenas"
+      }
+    },
+    {
+      "canonical": "Sea Slater",
+      "scientificName": "Ligia oceanica",
+      "iconicTaxon": "Animalia",
+      "taxonGroup": "Crustacea (Isopoda)",
+      "ecologyZone": "strandline",
+      "characteristicOf": "upper strandline, sea walls, breakwaters at and above HW",
+      "season": {"active": [3, 4, 5, 6, 7, 8, 9, 10], "peakLabel": "mid August"},
+      "notes": [
+        "Big nocturnal isopod of the upper strandline — sometimes called the rock slater. Walk a Solent tideline at dusk and they will run over your boots."
+      ],
+      "links": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Ligia_oceanica",
+        "inat": "https://www.inaturalist.org/taxa/search?q=Ligia+oceanica"
+      }
+    },
+    {
+      "canonical": "Common Periwinkle",
+      "scientificName": "Littorina littorea",
+      "iconicTaxon": "Mollusca",
+      "taxonGroup": "Gastropoda",
+      "ecologyZone": "intertidal-hard",
+      "characteristicOf": "rocks, breakwaters and pier pilings at the lower edge of the marsh",
+      "season": {"active": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "peakLabel": "year-round"},
+      "notes": [
+        "Plain dark snail of rocks, breakwaters and pier-pilings — eaten in Britain since Roman times. The Solent population is at the southern edge of the species' UK abundance peak."
+      ],
+      "links": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Littorina_littorea",
+        "inat": "https://www.inaturalist.org/taxa/search?q=Littorina+littorea"
+      }
+    },
+    {
+      "canonical": "Compass Jellyfish",
+      "scientificName": "Chrysaora hysoscella",
+      "iconicTaxon": "Animalia",
+      "taxonGroup": "Cnidaria (Scyphozoa)",
+      "ecologyZone": "open-water",
+      "characteristicOf": "the channel in the Solent itself",
+      "season": {"active": [6, 7, 8, 9], "peakLabel": "mid August"},
+      "notes": [
+        "Brown radial 'compass' markings on a pale bell, working the Solent channel from June through September. Usually well below the swim from a kayak, but stranded in numbers along the strandline after onshore winds."
+      ],
+      "links": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Chrysaora_hysoscella",
+        "inat": "https://www.inaturalist.org/taxa/search?q=Chrysaora+hysoscella"
+      }
+    },
+    {
+      "canonical": "Common Seal",
+      "scientificName": "Phoca vitulina",
+      "iconicTaxon": "Mammalia",
+      "taxonGroup": "Pinnipedia",
+      "ecologyZone": "open-water",
+      "characteristicOf": "Solent open water and Calshot Spit haul-outs",
+      "season": {"active": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "peakLabel": "year-round"},
+      "notes": [
+        "Resident in the Solent — most often hauled out on the eastern bar at Calshot, or sleeping in the shingle south of the spit. A V-shaped pair of nostrils and a 'dog-faced' profile distinguishes Phoca from the Roman-nosed Grey Seal."
+      ],
+      "links": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Harbor_seal",
+        "inat": "https://www.inaturalist.org/taxa/search?q=Phoca+vitulina"
+      }
+    }
+  ]
+}

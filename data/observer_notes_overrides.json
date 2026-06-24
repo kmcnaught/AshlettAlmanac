@@ -1,0 +1,25 @@
+{
+  "_meta": {
+    "purpose": "Manual overrides for the observer-note miner in scripts/build_species_notes.py. The regex passes are aggressive on purpose; this file is the persistence layer for human judgement. Edits here survive re-runs.",
+    "excludesShape": "Each entry drops one auto-observer note. Match is case-insensitive prefix on the quote text (i.e. how the quote starts after stripping). 'species' is the canonical name.",
+    "manualQuotesShape": "Each entry pins a quote to a species — for cases where the regex misses something worth surfacing. Same shape as auto-observer notes."
+  },
+  "excludes": [
+    {
+      "species": "Common Firecrest",
+      "quotePrefix": "By first toilet block",
+      "reason": "Location reference, not a first-observation."
+    },
+    {
+      "species": "Slavonian Grebe",
+      "quotePrefix": "On sea in front of the the first numbered beach huts",
+      "reason": "Location reference ('first numbered beach huts'), not a first-observation."
+    },
+    {
+      "species": "Great Crested Grebe",
+      "quotePrefix": "Not as numerous as they usually are lately",
+      "reason": "The 'first' refers to GND and cormorants, not Grebe — the note is logged against Grebe but the rare-observation is about other species."
+    }
+  ],
+  "manualQuotes": []
+}

@@ -1,0 +1,2082 @@
+{
+  "_meta": {
+    "generated": "2026-06-24T14:54:26Z",
+    "rule": "British-formal 'fancier' naming. Defaults to eBird's IOC name; UK form kept for the Anglo-American clashes (Skua/Jaeger, Guillemot/Murre, Diver/Loon, Brent/Brant, Goosander/Common Merganser, Grey Plover/Black-bellied Plover, Slavonian Grebe/Horned Grebe, Sand Martin/Bank Swallow, Great White Egret/Great Egret, Grey/Gray, Greylag/Graylag, Common Starling).",
+    "totalSpecies": 116,
+    "excluded": 1
+  },
+  "species": [
+    {
+      "canonical": "Arctic Skua",
+      "scientificName": "Stercorarius parasiticus",
+      "family": "Skuas and Jaegers",
+      "exclude": false,
+      "feral": false,
+      "note": "UK 'Skua' kept over American 'Jaeger'",
+      "goingbirding": {
+        "name": "Arctic Skua",
+        "id": 4,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=4"
+      },
+      "ebird": {
+        "name": "Parasitic Jaeger",
+        "speciesCode": "parjae",
+        "url": "https://ebird.org/species/parjae"
+      }
+    },
+    {
+      "canonical": "Arctic Tern",
+      "scientificName": "Sterna paradisaea",
+      "family": "Gulls, Terns, and Skimmers",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Arctic Tern",
+        "id": 5,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=5"
+      },
+      "ebird": {
+        "name": "Arctic Tern",
+        "speciesCode": "arcter",
+        "url": "https://ebird.org/species/arcter"
+      }
+    },
+    {
+      "canonical": "Boat-tailed Grackle",
+      "scientificName": null,
+      "family": null,
+      "exclude": true,
+      "feral": false,
+      "note": "Escaped/feral — Holbury garden bird",
+      "goingbirding": {
+        "name": "BOAT-TAILED GRACKLE",
+        "id": 676,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=676"
+      },
+      "ebird": null
+    },
+    {
+      "canonical": "Bar-tailed Godwit",
+      "scientificName": "Limosa lapponica",
+      "family": "Sandpipers and Allies",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Bar-tailed Godwit",
+        "id": 10,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=10"
+      },
+      "ebird": {
+        "name": "Bar-tailed Godwit",
+        "speciesCode": "batgod",
+        "url": "https://ebird.org/species/batgod"
+      }
+    },
+    {
+      "canonical": "Barnacle Goose",
+      "scientificName": "Branta leucopsis",
+      "family": "Ducks, Geese, and Waterfowl",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Barnacle Goose",
+        "id": 9,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=9"
+      },
+      "ebird": {
+        "name": "Barnacle Goose",
+        "speciesCode": "bargoo",
+        "url": "https://ebird.org/species/bargoo"
+      }
+    },
+    {
+      "canonical": "Black Redstart",
+      "scientificName": "Phoenicurus ochruros",
+      "family": "Old World Flycatchers",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Black Redstart",
+        "id": 16,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=16"
+      },
+      "ebird": {
+        "name": "Black Redstart",
+        "speciesCode": "blared1",
+        "url": "https://ebird.org/species/blared1"
+      }
+    },
+    {
+      "canonical": "Black Swan",
+      "scientificName": "Cygnus atratus",
+      "family": "Ducks, Geese, and Waterfowl",
+      "exclude": false,
+      "feral": true,
+      "note": "Feral in UK but recordable — escapee population, not a true wild bird",
+      "goingbirding": {
+        "name": "Black Swan",
+        "id": 644,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=644"
+      },
+      "ebird": {
+        "name": "Black Swan",
+        "speciesCode": "blkswa",
+        "url": "https://ebird.org/species/blkswa"
+      }
+    },
+    {
+      "canonical": "Black-tailed Godwit",
+      "scientificName": "Limosa limosa",
+      "family": "Sandpipers and Allies",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Black-tailed Godwit",
+        "id": 22,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=22"
+      },
+      "ebird": {
+        "name": "Black-tailed Godwit",
+        "speciesCode": "bktgod",
+        "url": "https://ebird.org/species/bktgod"
+      }
+    },
+    {
+      "canonical": "Eurasian Blackcap",
+      "scientificName": "Sylvia atricapilla",
+      "family": "Sylviid Warblers and Allies",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Blackcap",
+        "id": 19,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=19"
+      },
+      "ebird": {
+        "name": "Eurasian Blackcap",
+        "speciesCode": "blackc1",
+        "url": "https://ebird.org/species/blackc1"
+      }
+    },
+    {
+      "canonical": "Common Buzzard",
+      "scientificName": "Buteo buteo",
+      "family": "Hawks, Eagles, and Kites",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Buzzard",
+        "id": 44,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=44"
+      },
+      "ebird": {
+        "name": "Common Buzzard",
+        "speciesCode": "combuz1",
+        "url": "https://ebird.org/species/combuz1"
+      }
+    },
+    {
+      "canonical": "Cetti's Warbler",
+      "scientificName": "Cettia cetti",
+      "family": "Bush Warblers and Allies",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Cetti's Warbler",
+        "id": 38,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=38"
+      },
+      "ebird": {
+        "name": "Cetti's Warbler",
+        "speciesCode": "cetwar1",
+        "url": "https://ebird.org/species/cetwar1"
+      }
+    },
+    {
+      "canonical": "Common Chiffchaff",
+      "scientificName": "Phylloscopus collybita",
+      "family": "Leaf Warblers",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Chiffchaff",
+        "id": 40,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=40"
+      },
+      "ebird": {
+        "name": "Common Chiffchaff",
+        "speciesCode": "comchi1",
+        "url": "https://ebird.org/species/comchi1"
+      }
+    },
+    {
+      "canonical": "Common Guillemot",
+      "scientificName": "Uria aalge",
+      "family": "Auks, Murres, and Puffins",
+      "exclude": false,
+      "feral": false,
+      "note": "UK 'Guillemot' kept over American 'Murre'",
+      "goingbirding": {
+        "name": "Common Guillemot",
+        "id": 108,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=108"
+      },
+      "ebird": {
+        "name": "Common Murre",
+        "speciesCode": "commur",
+        "url": "https://ebird.org/species/commur"
+      }
+    },
+    {
+      "canonical": "Common Gull",
+      "scientificName": "Larus canus",
+      "family": "Gulls, Terns, and Skimmers",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Common Gull",
+        "id": 45,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=45"
+      },
+      "ebird": {
+        "name": "Common Gull",
+        "speciesCode": "mewgul",
+        "url": "https://ebird.org/species/mewgul"
+      }
+    },
+    {
+      "canonical": "Common Sandpiper",
+      "scientificName": "Actitis hypoleucos",
+      "family": "Sandpipers and Allies",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Common Sandpiper",
+        "id": 47,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=47"
+      },
+      "ebird": {
+        "name": "Common Sandpiper",
+        "speciesCode": "comsan",
+        "url": "https://ebird.org/species/comsan"
+      }
+    },
+    {
+      "canonical": "Common Tern",
+      "scientificName": "Sterna hirundo",
+      "family": "Gulls, Terns, and Skimmers",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Common Tern",
+        "id": 49,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=49"
+      },
+      "ebird": {
+        "name": "Common Tern",
+        "speciesCode": "comter",
+        "url": "https://ebird.org/species/comter"
+      }
+    },
+    {
+      "canonical": "Greater Whitethroat",
+      "scientificName": "Curruca communis",
+      "family": "Sylviid Warblers and Allies",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Common Whitethroat",
+        "id": 289,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=289"
+      },
+      "ebird": {
+        "name": "Greater Whitethroat",
+        "speciesCode": "grewhi1",
+        "url": "https://ebird.org/species/grewhi1"
+      }
+    },
+    {
+      "canonical": "Great Cormorant",
+      "scientificName": "Phalacrocorax carbo",
+      "family": "Cormorants and Shags",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Cormorant",
+        "id": 51,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=51"
+      },
+      "ebird": {
+        "name": "Great Cormorant",
+        "speciesCode": "grecor",
+        "url": "https://ebird.org/species/grecor"
+      }
+    },
+    {
+      "canonical": "Red Crossbill",
+      "scientificName": "Loxia curvirostra",
+      "family": "Finches, Euphonias, and Allies",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Crossbill",
+        "id": 55,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=55"
+      },
+      "ebird": {
+        "name": "Red Crossbill",
+        "speciesCode": "redcro",
+        "url": "https://ebird.org/species/redcro"
+      }
+    },
+    {
+      "canonical": "Common Cuckoo",
+      "scientificName": "Cuculus canorus",
+      "family": "Cuckoos",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Cuckoo",
+        "id": 56,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=56"
+      },
+      "ebird": {
+        "name": "Common Cuckoo",
+        "speciesCode": "comcuc",
+        "url": "https://ebird.org/species/comcuc"
+      }
+    },
+    {
+      "canonical": "Eurasian Curlew",
+      "scientificName": "Numenius arquata",
+      "family": "Sandpipers and Allies",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Curlew",
+        "id": 57,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=57"
+      },
+      "ebird": {
+        "name": "Eurasian Curlew",
+        "speciesCode": "eurcur",
+        "url": "https://ebird.org/species/eurcur"
+      }
+    },
+    {
+      "canonical": "Dark-bellied Brent Goose",
+      "scientificName": "Branta bernicla",
+      "family": "Ducks, Geese, and Waterfowl",
+      "exclude": false,
+      "feral": false,
+      "note": "UK subspecies-level kept over eBird's generic 'Brant'",
+      "goingbirding": {
+        "name": "Dark-bellied Brent Goose",
+        "id": 650,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=650"
+      },
+      "ebird": {
+        "name": "Brant",
+        "speciesCode": "brant",
+        "url": "https://ebird.org/species/brant"
+      }
+    },
+    {
+      "canonical": "Dartford Warbler",
+      "scientificName": null,
+      "family": null,
+      "exclude": false,
+      "feral": false,
+      "note": "No eBird record in our hotspots",
+      "goingbirding": {
+        "name": "Dartford Warbler",
+        "id": 59,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=59"
+      },
+      "ebird": null
+    },
+    {
+      "canonical": "Dunlin",
+      "scientificName": "Calidris alpina",
+      "family": "Sandpipers and Allies",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Dunlin",
+        "id": 62,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=62"
+      },
+      "ebird": {
+        "name": "Dunlin",
+        "speciesCode": "dunlin",
+        "url": "https://ebird.org/species/dunlin"
+      }
+    },
+    {
+      "canonical": "Egyptian Goose",
+      "scientificName": "Alopochen aegyptiaca",
+      "family": "Ducks, Geese, and Waterfowl",
+      "exclude": false,
+      "feral": true,
+      "note": "Feral in UK but recordable — established escapee population, originally from Africa",
+      "goingbirding": {
+        "name": "Egyptian Goose",
+        "id": 64,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=64"
+      },
+      "ebird": {
+        "name": "Egyptian Goose",
+        "speciesCode": "egygoo",
+        "url": "https://ebird.org/species/egygoo"
+      }
+    },
+    {
+      "canonical": "Common Eider",
+      "scientificName": "Somateria mollissima",
+      "family": "Ducks, Geese, and Waterfowl",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Eider",
+        "id": 65,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=65"
+      },
+      "ebird": {
+        "name": "Common Eider",
+        "speciesCode": "comeid",
+        "url": "https://ebird.org/species/comeid"
+      }
+    },
+    {
+      "canonical": "Eurasian Whimbrel",
+      "scientificName": "Numenius phaeopus",
+      "family": "Sandpipers and Allies",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Eurasian Whimbrel",
+        "id": 284,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=284"
+      },
+      "ebird": {
+        "name": "Eurasian Whimbrel",
+        "speciesCode": "whimbr5",
+        "url": "https://ebird.org/species/whimbr5"
+      }
+    },
+    {
+      "canonical": "Eurasian Wigeon",
+      "scientificName": "Mareca penelope",
+      "family": "Ducks, Geese, and Waterfowl",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Eurasian Wigeon",
+        "id": 292,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=292"
+      },
+      "ebird": {
+        "name": "Eurasian Wigeon",
+        "speciesCode": "eurwig",
+        "url": "https://ebird.org/species/eurwig"
+      }
+    },
+    {
+      "canonical": "European Stonechat",
+      "scientificName": "Saxicola rubicola",
+      "family": "Old World Flycatchers",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "European Stonechat",
+        "id": 262,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=262"
+      },
+      "ebird": {
+        "name": "European Stonechat",
+        "speciesCode": "stonec4",
+        "url": "https://ebird.org/species/stonec4"
+      }
+    },
+    {
+      "canonical": "Fieldfare",
+      "scientificName": "Turdus pilaris",
+      "family": "Thrushes and Allies",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Fieldfare",
+        "id": 69,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=69"
+      },
+      "ebird": {
+        "name": "Fieldfare",
+        "speciesCode": "fieldf",
+        "url": "https://ebird.org/species/fieldf"
+      }
+    },
+    {
+      "canonical": "Common Firecrest",
+      "scientificName": "Regulus ignicapilla",
+      "family": "Kinglets",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Firecrest",
+        "id": 70,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=70"
+      },
+      "ebird": {
+        "name": "Common Firecrest",
+        "speciesCode": "firecr1",
+        "url": "https://ebird.org/species/firecr1"
+      }
+    },
+    {
+      "canonical": "Gadwall",
+      "scientificName": "Mareca strepera",
+      "family": "Ducks, Geese, and Waterfowl",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Gadwall",
+        "id": 72,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=72"
+      },
+      "ebird": {
+        "name": "Gadwall",
+        "speciesCode": "gadwal",
+        "url": "https://ebird.org/species/gadwal"
+      }
+    },
+    {
+      "canonical": "Northern Gannet",
+      "scientificName": "Morus bassanus",
+      "family": "Boobies and Gannets",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Gannet",
+        "id": 73,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=73"
+      },
+      "ebird": {
+        "name": "Northern Gannet",
+        "speciesCode": "norgan",
+        "url": "https://ebird.org/species/norgan"
+      }
+    },
+    {
+      "canonical": "Garden Warbler",
+      "scientificName": "Sylvia borin",
+      "family": "Sylviid Warblers and Allies",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Garden Warbler",
+        "id": 74,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=74"
+      },
+      "ebird": {
+        "name": "Garden Warbler",
+        "speciesCode": "garwar1",
+        "url": "https://ebird.org/species/garwar1"
+      }
+    },
+    {
+      "canonical": "Goosander",
+      "scientificName": "Mergus merganser",
+      "family": "Ducks, Geese, and Waterfowl",
+      "exclude": false,
+      "feral": false,
+      "note": "UK 'Goosander' kept over American 'Common Merganser'",
+      "goingbirding": {
+        "name": "Goosander",
+        "id": 84,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=84"
+      },
+      "ebird": {
+        "name": "Common Merganser",
+        "speciesCode": "commer",
+        "url": "https://ebird.org/species/commer"
+      }
+    },
+    {
+      "canonical": "Northern Goshawk",
+      "scientificName": null,
+      "family": null,
+      "exclude": false,
+      "feral": false,
+      "note": "No eBird record in our hotspots",
+      "goingbirding": {
+        "name": "Goshawk",
+        "id": 85,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=85"
+      },
+      "ebird": null
+    },
+    {
+      "canonical": "Common Grasshopper Warbler",
+      "scientificName": "Locustella naevia",
+      "family": "Grassbirds and Allies",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Grasshopper Warbler",
+        "id": 86,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=86"
+      },
+      "ebird": {
+        "name": "Common Grasshopper Warbler",
+        "speciesCode": "cogwar1",
+        "url": "https://ebird.org/species/cogwar1"
+      }
+    },
+    {
+      "canonical": "Great Crested Grebe",
+      "scientificName": "Podiceps cristatus",
+      "family": "Grebes",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Great Crested Grebe",
+        "id": 89,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=89"
+      },
+      "ebird": {
+        "name": "Great Crested Grebe",
+        "speciesCode": "grcgre1",
+        "url": "https://ebird.org/species/grcgre1"
+      }
+    },
+    {
+      "canonical": "Great Northern Diver",
+      "scientificName": "Gavia immer",
+      "family": "Loons",
+      "exclude": false,
+      "feral": false,
+      "note": "UK 'Diver' kept over American 'Loon'",
+      "goingbirding": {
+        "name": "Great Northern Diver",
+        "id": 91,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=91"
+      },
+      "ebird": {
+        "name": "Common Loon",
+        "speciesCode": "comloo",
+        "url": "https://ebird.org/species/comloo"
+      }
+    },
+    {
+      "canonical": "Great White Egret",
+      "scientificName": "Ardea alba",
+      "family": "Herons, Egrets, and Bitterns",
+      "exclude": false,
+      "feral": false,
+      "note": "UK 'Great White Egret' kept",
+      "goingbirding": {
+        "name": "Great White Egret",
+        "id": 346,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=346"
+      },
+      "ebird": {
+        "name": "Great Egret",
+        "speciesCode": "greegr",
+        "url": "https://ebird.org/species/greegr"
+      }
+    },
+    {
+      "canonical": "Eurasian Green Woodpecker",
+      "scientificName": "Picus viridis",
+      "family": "Woodpeckers",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Green Woodpecker",
+        "id": 98,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=98"
+      },
+      "ebird": {
+        "name": "Eurasian Green Woodpecker",
+        "speciesCode": "eugwoo2",
+        "url": "https://ebird.org/species/eugwoo2"
+      }
+    },
+    {
+      "canonical": "Common Greenshank",
+      "scientificName": "Tringa nebularia",
+      "family": "Sandpipers and Allies",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Greenshank",
+        "id": 100,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=100"
+      },
+      "ebird": {
+        "name": "Common Greenshank",
+        "speciesCode": "comgre",
+        "url": "https://ebird.org/species/comgre"
+      }
+    },
+    {
+      "canonical": "Grey Plover",
+      "scientificName": "Pluvialis squatarola",
+      "family": "Plovers and Lapwings",
+      "exclude": false,
+      "feral": false,
+      "note": "UK 'Grey Plover' kept over American 'Black-bellied Plover'",
+      "goingbirding": {
+        "name": "Grey Plover",
+        "id": 105,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=105"
+      },
+      "ebird": {
+        "name": "Black-bellied Plover",
+        "speciesCode": "bkbplo",
+        "url": "https://ebird.org/species/bkbplo"
+      }
+    },
+    {
+      "canonical": "Grey Wagtail",
+      "scientificName": "Motacilla cinerea",
+      "family": "Wagtails and Pipits",
+      "exclude": false,
+      "feral": false,
+      "note": "UK 'Grey' spelling kept",
+      "goingbirding": {
+        "name": "Grey Wagtail",
+        "id": 106,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=106"
+      },
+      "ebird": {
+        "name": "Gray Wagtail",
+        "speciesCode": "grywag",
+        "url": "https://ebird.org/species/grywag"
+      }
+    },
+    {
+      "canonical": "Greylag Goose",
+      "scientificName": "Anser anser",
+      "family": "Ducks, Geese, and Waterfowl",
+      "exclude": false,
+      "feral": false,
+      "note": "UK 'Greylag' spelling kept",
+      "goingbirding": {
+        "name": "Greylag Goose",
+        "id": 107,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=107"
+      },
+      "ebird": {
+        "name": "Graylag Goose",
+        "speciesCode": "gragoo",
+        "url": "https://ebird.org/species/gragoo"
+      }
+    },
+    {
+      "canonical": "Western House-Martin",
+      "scientificName": "Delichon urbicum",
+      "family": "Swallows",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "House Martin",
+        "id": 116,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=116"
+      },
+      "ebird": {
+        "name": "Western House-Martin",
+        "speciesCode": "comhom1",
+        "url": "https://ebird.org/species/comhom1"
+      }
+    },
+    {
+      "canonical": "Eurasian Jay",
+      "scientificName": "Garrulus glandarius",
+      "family": "Crows, Jays, and Magpies",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Jay",
+        "id": 122,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=122"
+      },
+      "ebird": {
+        "name": "Eurasian Jay",
+        "speciesCode": "eurjay1",
+        "url": "https://ebird.org/species/eurjay1"
+      }
+    },
+    {
+      "canonical": "Eurasian Kestrel",
+      "scientificName": "Falco tinnunculus",
+      "family": "Falcons and Caracaras",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Kestrel",
+        "id": 124,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=124"
+      },
+      "ebird": {
+        "name": "Eurasian Kestrel",
+        "speciesCode": "eurkes",
+        "url": "https://ebird.org/species/eurkes"
+      }
+    },
+    {
+      "canonical": "Common Kingfisher",
+      "scientificName": "Alcedo atthis",
+      "family": "Kingfishers",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Kingfisher",
+        "id": 126,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=126"
+      },
+      "ebird": {
+        "name": "Common Kingfisher",
+        "speciesCode": "comkin1",
+        "url": "https://ebird.org/species/comkin1"
+      }
+    },
+    {
+      "canonical": "Black-legged Kittiwake",
+      "scientificName": "Rissa tridactyla",
+      "family": "Gulls, Terns, and Skimmers",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Kittiwake",
+        "id": 127,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=127"
+      },
+      "ebird": {
+        "name": "Black-legged Kittiwake",
+        "speciesCode": "bklkit",
+        "url": "https://ebird.org/species/bklkit"
+      }
+    },
+    {
+      "canonical": "Red Knot",
+      "scientificName": "Calidris canutus",
+      "family": "Sandpipers and Allies",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Knot",
+        "id": 128,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=128"
+      },
+      "ebird": {
+        "name": "Red Knot",
+        "speciesCode": "redkno",
+        "url": "https://ebird.org/species/redkno"
+      }
+    },
+    {
+      "canonical": "Northern Lapwing",
+      "scientificName": "Vanellus vanellus",
+      "family": "Plovers and Lapwings",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Lapwing",
+        "id": 130,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=130"
+      },
+      "ebird": {
+        "name": "Northern Lapwing",
+        "speciesCode": "norlap",
+        "url": "https://ebird.org/species/norlap"
+      }
+    },
+    {
+      "canonical": "Lesser Black-backed Gull",
+      "scientificName": "Larus fuscus",
+      "family": "Gulls, Terns, and Skimmers",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Lesser Black-backed Gull",
+        "id": 133,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=133"
+      },
+      "ebird": {
+        "name": "Lesser Black-backed Gull",
+        "speciesCode": "lbbgul",
+        "url": "https://ebird.org/species/lbbgul"
+      }
+    },
+    {
+      "canonical": "Lesser Redpoll",
+      "scientificName": null,
+      "family": null,
+      "exclude": false,
+      "feral": false,
+      "note": "Treated as subsp of Redpoll by eBird",
+      "goingbirding": {
+        "name": "Lesser Redpoll",
+        "id": 134,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=134"
+      },
+      "ebird": null
+    },
+    {
+      "canonical": "Lesser Whitethroat",
+      "scientificName": "Curruca curruca",
+      "family": "Sylviid Warblers and Allies",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Lesser Whitethroat",
+        "id": 136,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=136"
+      },
+      "ebird": {
+        "name": "Lesser Whitethroat",
+        "speciesCode": "leswhi4",
+        "url": "https://ebird.org/species/leswhi4"
+      }
+    },
+    {
+      "canonical": "Light-bellied Brent Goose",
+      "scientificName": "Branta bernicla",
+      "family": "Ducks, Geese, and Waterfowl",
+      "exclude": false,
+      "feral": false,
+      "note": "UK subspecies-level kept over eBird's generic 'Brant'",
+      "goingbirding": {
+        "name": "Light-bellied Brent Goose",
+        "id": 649,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=649"
+      },
+      "ebird": {
+        "name": "Brant",
+        "speciesCode": "brant",
+        "url": "https://ebird.org/species/brant"
+      }
+    },
+    {
+      "canonical": "Little Egret",
+      "scientificName": "Egretta garzetta",
+      "family": "Herons, Egrets, and Bitterns",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Little Egret",
+        "id": 143,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=143"
+      },
+      "ebird": {
+        "name": "Little Egret",
+        "speciesCode": "litegr",
+        "url": "https://ebird.org/species/litegr"
+      }
+    },
+    {
+      "canonical": "Little Grebe",
+      "scientificName": "Tachybaptus ruficollis",
+      "family": "Grebes",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Little Grebe",
+        "id": 144,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=144"
+      },
+      "ebird": {
+        "name": "Little Grebe",
+        "speciesCode": "litgre1",
+        "url": "https://ebird.org/species/litgre1"
+      }
+    },
+    {
+      "canonical": "Little Gull",
+      "scientificName": "Hydrocoloeus minutus",
+      "family": "Gulls, Terns, and Skimmers",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Little Gull",
+        "id": 145,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=145"
+      },
+      "ebird": {
+        "name": "Little Gull",
+        "speciesCode": "litgul",
+        "url": "https://ebird.org/species/litgul"
+      }
+    },
+    {
+      "canonical": "Little Ringed Plover",
+      "scientificName": "Thinornis dubius",
+      "family": "Plovers and Lapwings",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Little Ringed Plover",
+        "id": 147,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=147"
+      },
+      "ebird": {
+        "name": "Little Ringed Plover",
+        "speciesCode": "lirplo",
+        "url": "https://ebird.org/species/lirplo"
+      }
+    },
+    {
+      "canonical": "Eurasian Magpie",
+      "scientificName": "Pica pica",
+      "family": "Crows, Jays, and Magpies",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Magpie",
+        "id": 154,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=154"
+      },
+      "ebird": {
+        "name": "Eurasian Magpie",
+        "speciesCode": "eurmag1",
+        "url": "https://ebird.org/species/eurmag1"
+      }
+    },
+    {
+      "canonical": "Western Marsh Harrier",
+      "scientificName": "Circus aeruginosus",
+      "family": "Hawks, Eagles, and Kites",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Marsh Harrier",
+        "id": 158,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=158"
+      },
+      "ebird": {
+        "name": "Western Marsh Harrier",
+        "speciesCode": "wemhar1",
+        "url": "https://ebird.org/species/wemhar1"
+      }
+    },
+    {
+      "canonical": "Marsh Tit",
+      "scientificName": "Poecile palustris",
+      "family": "Tits, Chickadees, and Titmice",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Marsh Tit",
+        "id": 159,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=159"
+      },
+      "ebird": {
+        "name": "Marsh Tit",
+        "speciesCode": "martit2",
+        "url": "https://ebird.org/species/martit2"
+      }
+    },
+    {
+      "canonical": "Meadow Pipit",
+      "scientificName": "Anthus pratensis",
+      "family": "Wagtails and Pipits",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Meadow Pipit",
+        "id": 161,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=161"
+      },
+      "ebird": {
+        "name": "Meadow Pipit",
+        "speciesCode": "meapip1",
+        "url": "https://ebird.org/species/meapip1"
+      }
+    },
+    {
+      "canonical": "Mediterranean Gull",
+      "scientificName": "Ichthyaetus melanocephalus",
+      "family": "Gulls, Terns, and Skimmers",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Mediterranean Gull",
+        "id": 163,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=163"
+      },
+      "ebird": {
+        "name": "Mediterranean Gull",
+        "speciesCode": "medgul1",
+        "url": "https://ebird.org/species/medgul1"
+      }
+    },
+    {
+      "canonical": "Merlin",
+      "scientificName": "Falco columbarius",
+      "family": "Falcons and Caracaras",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Merlin",
+        "id": 165,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=165"
+      },
+      "ebird": {
+        "name": "Merlin",
+        "speciesCode": "merlin",
+        "url": "https://ebird.org/species/merlin"
+      }
+    },
+    {
+      "canonical": "Mistle Thrush",
+      "scientificName": "Turdus viscivorus",
+      "family": "Thrushes and Allies",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Mistle Thrush",
+        "id": 166,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=166"
+      },
+      "ebird": {
+        "name": "Mistle Thrush",
+        "speciesCode": "misthr1",
+        "url": "https://ebird.org/species/misthr1"
+      }
+    },
+    {
+      "canonical": "Osprey",
+      "scientificName": "Pandion haliaetus",
+      "family": "Osprey",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Osprey",
+        "id": 177,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=177"
+      },
+      "ebird": {
+        "name": "Osprey",
+        "speciesCode": "osprey",
+        "url": "https://ebird.org/species/osprey"
+      }
+    },
+    {
+      "canonical": "Eurasian Oystercatcher",
+      "scientificName": "Haematopus ostralegus",
+      "family": "Oystercatchers",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Oystercatcher",
+        "id": 178,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=178"
+      },
+      "ebird": {
+        "name": "Eurasian Oystercatcher",
+        "speciesCode": "euroys1",
+        "url": "https://ebird.org/species/euroys1"
+      }
+    },
+    {
+      "canonical": "Peregrine Falcon",
+      "scientificName": "Falco peregrinus",
+      "family": "Falcons and Caracaras",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Peregrine",
+        "id": 184,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=184"
+      },
+      "ebird": {
+        "name": "Peregrine Falcon",
+        "speciesCode": "perfal",
+        "url": "https://ebird.org/species/perfal"
+      }
+    },
+    {
+      "canonical": "Northern Pintail",
+      "scientificName": "Anas acuta",
+      "family": "Ducks, Geese, and Waterfowl",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Pintail",
+        "id": 190,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=190"
+      },
+      "ebird": {
+        "name": "Northern Pintail",
+        "speciesCode": "norpin",
+        "url": "https://ebird.org/species/norpin"
+      }
+    },
+    {
+      "canonical": "Common Raven",
+      "scientificName": "Corvus corax",
+      "family": "Crows, Jays, and Magpies",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Raven",
+        "id": 197,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=197"
+      },
+      "ebird": {
+        "name": "Common Raven",
+        "speciesCode": "comrav",
+        "url": "https://ebird.org/species/comrav"
+      }
+    },
+    {
+      "canonical": "Razorbill",
+      "scientificName": "Alca torda",
+      "family": "Auks, Murres, and Puffins",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Razorbill",
+        "id": 198,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=198"
+      },
+      "ebird": {
+        "name": "Razorbill",
+        "speciesCode": "razorb",
+        "url": "https://ebird.org/species/razorb"
+      }
+    },
+    {
+      "canonical": "Red Kite",
+      "scientificName": "Milvus milvus",
+      "family": "Hawks, Eagles, and Kites",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Red Kite",
+        "id": 199,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=199"
+      },
+      "ebird": {
+        "name": "Red Kite",
+        "speciesCode": "redkit1",
+        "url": "https://ebird.org/species/redkit1"
+      }
+    },
+    {
+      "canonical": "Red-legged Partridge",
+      "scientificName": "Alectoris rufa",
+      "family": "Pheasants, Grouse, and Allies",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Red-legged Partridge",
+        "id": 204,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=204"
+      },
+      "ebird": {
+        "name": "Red-legged Partridge",
+        "speciesCode": "relpar1",
+        "url": "https://ebird.org/species/relpar1"
+      }
+    },
+    {
+      "canonical": "Red-throated Diver",
+      "scientificName": "Gavia stellata",
+      "family": "Loons",
+      "exclude": false,
+      "feral": false,
+      "note": "UK 'Diver' kept over American 'Loon'",
+      "goingbirding": {
+        "name": "Red-throated Diver",
+        "id": 210,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=210"
+      },
+      "ebird": {
+        "name": "Red-throated Loon",
+        "speciesCode": "retloo",
+        "url": "https://ebird.org/species/retloo"
+      }
+    },
+    {
+      "canonical": "Common Redshank",
+      "scientificName": "Tringa totanus",
+      "family": "Sandpipers and Allies",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Redshank",
+        "id": 208,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=208"
+      },
+      "ebird": {
+        "name": "Common Redshank",
+        "speciesCode": "comred1",
+        "url": "https://ebird.org/species/comred1"
+      }
+    },
+    {
+      "canonical": "Common Redstart",
+      "scientificName": "Phoenicurus phoenicurus",
+      "family": "Old World Flycatchers",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Redstart",
+        "id": 209,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=209"
+      },
+      "ebird": {
+        "name": "Common Redstart",
+        "speciesCode": "comred2",
+        "url": "https://ebird.org/species/comred2"
+      }
+    },
+    {
+      "canonical": "Redwing",
+      "scientificName": "Turdus iliacus",
+      "family": "Thrushes and Allies",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Redwing",
+        "id": 212,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=212"
+      },
+      "ebird": {
+        "name": "Redwing",
+        "speciesCode": "redwin",
+        "url": "https://ebird.org/species/redwin"
+      }
+    },
+    {
+      "canonical": "Reed Bunting",
+      "scientificName": "Emberiza schoeniclus",
+      "family": "Old World Buntings",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Reed Bunting",
+        "id": 213,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=213"
+      },
+      "ebird": {
+        "name": "Reed Bunting",
+        "speciesCode": "reebun",
+        "url": "https://ebird.org/species/reebun"
+      }
+    },
+    {
+      "canonical": "Common Reed Warbler",
+      "scientificName": "Acrocephalus scirpaceus",
+      "family": "Reed Warblers and Allies",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Reed Warbler",
+        "id": 214,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=214"
+      },
+      "ebird": {
+        "name": "Common Reed Warbler",
+        "speciesCode": "eurwar1",
+        "url": "https://ebird.org/species/eurwar1"
+      }
+    },
+    {
+      "canonical": "Common Ringed Plover",
+      "scientificName": "Charadrius hiaticula",
+      "family": "Plovers and Lapwings",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Ringed Plover",
+        "id": 218,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=218"
+      },
+      "ebird": {
+        "name": "Common Ringed Plover",
+        "speciesCode": "corplo",
+        "url": "https://ebird.org/species/corplo"
+      }
+    },
+    {
+      "canonical": "Rock Pipit",
+      "scientificName": "Anthus petrosus",
+      "family": "Wagtails and Pipits",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Rock Pipit",
+        "id": 222,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=222"
+      },
+      "ebird": {
+        "name": "Rock Pipit",
+        "speciesCode": "rocpip1",
+        "url": "https://ebird.org/species/rocpip1"
+      }
+    },
+    {
+      "canonical": "Sand Martin",
+      "scientificName": "Riparia riparia",
+      "family": "Swallows",
+      "exclude": false,
+      "feral": false,
+      "note": "UK 'Sand Martin' kept over American 'Bank Swallow'",
+      "goingbirding": {
+        "name": "Sand Martin",
+        "id": 231,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=231"
+      },
+      "ebird": {
+        "name": "Bank Swallow",
+        "speciesCode": "banswa",
+        "url": "https://ebird.org/species/banswa"
+      }
+    },
+    {
+      "canonical": "Sanderling",
+      "scientificName": "Calidris alba",
+      "family": "Sandpipers and Allies",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Sanderling",
+        "id": 232,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=232"
+      },
+      "ebird": {
+        "name": "Sanderling",
+        "speciesCode": "sander",
+        "url": "https://ebird.org/species/sander"
+      }
+    },
+    {
+      "canonical": "Sandwich Tern",
+      "scientificName": "Thalasseus sandvicensis",
+      "family": "Gulls, Terns, and Skimmers",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Sandwich Tern",
+        "id": 233,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=233"
+      },
+      "ebird": {
+        "name": "Sandwich Tern",
+        "speciesCode": "santer1",
+        "url": "https://ebird.org/species/santer1"
+      }
+    },
+    {
+      "canonical": "Sedge Warbler",
+      "scientificName": "Acrocephalus schoenobaenus",
+      "family": "Reed Warblers and Allies",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Sedge Warbler",
+        "id": 236,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=236"
+      },
+      "ebird": {
+        "name": "Sedge Warbler",
+        "speciesCode": "sedwar1",
+        "url": "https://ebird.org/species/sedwar1"
+      }
+    },
+    {
+      "canonical": "European Shag",
+      "scientificName": "Gulosus aristotelis",
+      "family": "Cormorants and Shags",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Shag",
+        "id": 238,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=238"
+      },
+      "ebird": {
+        "name": "European Shag",
+        "speciesCode": "eursha1",
+        "url": "https://ebird.org/species/eursha1"
+      }
+    },
+    {
+      "canonical": "Common Shelduck",
+      "scientificName": "Tadorna tadorna",
+      "family": "Ducks, Geese, and Waterfowl",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Shelduck",
+        "id": 240,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=240"
+      },
+      "ebird": {
+        "name": "Common Shelduck",
+        "speciesCode": "comshe",
+        "url": "https://ebird.org/species/comshe"
+      }
+    },
+    {
+      "canonical": "Northern Shoveler",
+      "scientificName": "Spatula clypeata",
+      "family": "Ducks, Geese, and Waterfowl",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Shoveler",
+        "id": 244,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=244"
+      },
+      "ebird": {
+        "name": "Northern Shoveler",
+        "speciesCode": "norsho",
+        "url": "https://ebird.org/species/norsho"
+      }
+    },
+    {
+      "canonical": "Eurasian Siskin",
+      "scientificName": "Spinus spinus",
+      "family": "Finches, Euphonias, and Allies",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Siskin",
+        "id": 245,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=245"
+      },
+      "ebird": {
+        "name": "Eurasian Siskin",
+        "speciesCode": "eursis",
+        "url": "https://ebird.org/species/eursis"
+      }
+    },
+    {
+      "canonical": "Eurasian Skylark",
+      "scientificName": "Alauda arvensis",
+      "family": "Larks",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Skylark",
+        "id": 246,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=246"
+      },
+      "ebird": {
+        "name": "Eurasian Skylark",
+        "speciesCode": "skylar",
+        "url": "https://ebird.org/species/skylar"
+      }
+    },
+    {
+      "canonical": "Slavonian Grebe",
+      "scientificName": "Podiceps auritus",
+      "family": "Grebes",
+      "exclude": false,
+      "feral": false,
+      "note": "UK 'Slavonian Grebe' kept over American 'Horned Grebe'",
+      "goingbirding": {
+        "name": "Slavonian Grebe",
+        "id": 247,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=247"
+      },
+      "ebird": {
+        "name": "Horned Grebe",
+        "speciesCode": "horgre",
+        "url": "https://ebird.org/species/horgre"
+      }
+    },
+    {
+      "canonical": "Common Snipe",
+      "scientificName": "Gallinago gallinago",
+      "family": "Sandpipers and Allies",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Snipe",
+        "id": 249,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=249"
+      },
+      "ebird": {
+        "name": "Common Snipe",
+        "speciesCode": "comsni",
+        "url": "https://ebird.org/species/comsni"
+      }
+    },
+    {
+      "canonical": "Song Thrush",
+      "scientificName": "Turdus philomelos",
+      "family": "Thrushes and Allies",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Song Thrush",
+        "id": 252,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=252"
+      },
+      "ebird": {
+        "name": "Song Thrush",
+        "speciesCode": "sonthr1",
+        "url": "https://ebird.org/species/sonthr1"
+      }
+    },
+    {
+      "canonical": "Eurasian Sparrowhawk",
+      "scientificName": "Accipiter nisus",
+      "family": "Hawks, Eagles, and Kites",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Sparrowhawk",
+        "id": 254,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=254"
+      },
+      "ebird": {
+        "name": "Eurasian Sparrowhawk",
+        "speciesCode": "eurspa1",
+        "url": "https://ebird.org/species/eurspa1"
+      }
+    },
+    {
+      "canonical": "Eurasian Spoonbill",
+      "scientificName": "Platalea leucorodia",
+      "family": "Ibises and Spoonbills",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Spoonbill",
+        "id": 255,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=255"
+      },
+      "ebird": {
+        "name": "Eurasian Spoonbill",
+        "speciesCode": "eurspo1",
+        "url": "https://ebird.org/species/eurspo1"
+      }
+    },
+    {
+      "canonical": "Spotted Flycatcher",
+      "scientificName": "Muscicapa striata",
+      "family": "Old World Flycatchers",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Spotted Flycatcher",
+        "id": 258,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=258"
+      },
+      "ebird": {
+        "name": "Spotted Flycatcher",
+        "speciesCode": "spofly1",
+        "url": "https://ebird.org/species/spofly1"
+      }
+    },
+    {
+      "canonical": "Common Starling",
+      "scientificName": "Sturnus vulgaris",
+      "family": "Starlings",
+      "exclude": false,
+      "feral": false,
+      "note": "UK 'Common Starling' preferred over eBird's 'European Starling'",
+      "goingbirding": {
+        "name": "Starling",
+        "id": 260,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=260"
+      },
+      "ebird": {
+        "name": "European Starling",
+        "speciesCode": "eursta",
+        "url": "https://ebird.org/species/eursta"
+      }
+    },
+    {
+      "canonical": "Stock Dove",
+      "scientificName": "Columba oenas",
+      "family": "Pigeons and Doves",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Stock Dove",
+        "id": 261,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=261"
+      },
+      "ebird": {
+        "name": "Stock Dove",
+        "speciesCode": "stodov1",
+        "url": "https://ebird.org/species/stodov1"
+      }
+    },
+    {
+      "canonical": "Barn Swallow",
+      "scientificName": "Hirundo rustica",
+      "family": "Swallows",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Swallow",
+        "id": 264,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=264"
+      },
+      "ebird": {
+        "name": "Barn Swallow",
+        "speciesCode": "barswa",
+        "url": "https://ebird.org/species/barswa"
+      }
+    },
+    {
+      "canonical": "Common Swift",
+      "scientificName": "Apus apus",
+      "family": "Swifts",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Swift",
+        "id": 265,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=265"
+      },
+      "ebird": {
+        "name": "Common Swift",
+        "speciesCode": "comswi",
+        "url": "https://ebird.org/species/comswi"
+      }
+    },
+    {
+      "canonical": "Tawny Owl",
+      "scientificName": "Strix aluco",
+      "family": "Owls",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Tawny Owl",
+        "id": 266,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=266"
+      },
+      "ebird": {
+        "name": "Tawny Owl",
+        "speciesCode": "tawowl1",
+        "url": "https://ebird.org/species/tawowl1"
+      }
+    },
+    {
+      "canonical": "Eurasian Teal",
+      "scientificName": "Anas crecca",
+      "family": "Ducks, Geese, and Waterfowl",
+      "exclude": false,
+      "feral": false,
+      "note": "UK 'Eurasian Teal' preferred; eBird species page uses 'Green-winged Teal' (same Anas crecca)",
+      "goingbirding": {
+        "name": "Teal",
+        "id": 268,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=268"
+      },
+      "ebird": {
+        "name": "Green-winged Teal",
+        "speciesCode": "gnwtea",
+        "url": "https://ebird.org/species/gnwtea"
+      }
+    },
+    {
+      "canonical": "Tree Pipit",
+      "scientificName": "Anthus trivialis",
+      "family": "Wagtails and Pipits",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Tree Pipit",
+        "id": 271,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=271"
+      },
+      "ebird": {
+        "name": "Tree Pipit",
+        "speciesCode": "trepip",
+        "url": "https://ebird.org/species/trepip"
+      }
+    },
+    {
+      "canonical": "Ruddy Turnstone",
+      "scientificName": "Arenaria interpres",
+      "family": "Sandpipers and Allies",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Turnstone",
+        "id": 275,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=275"
+      },
+      "ebird": {
+        "name": "Ruddy Turnstone",
+        "speciesCode": "rudtur",
+        "url": "https://ebird.org/species/rudtur"
+      }
+    },
+    {
+      "canonical": "Water Rail",
+      "scientificName": "Rallus aquaticus",
+      "family": "Rails, Gallinules, and Coots",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Water Rail",
+        "id": 281,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=281"
+      },
+      "ebird": {
+        "name": "Water Rail",
+        "speciesCode": "watrai1",
+        "url": "https://ebird.org/species/watrai1"
+      }
+    },
+    {
+      "canonical": "Northern Wheatear",
+      "scientificName": "Oenanthe oenanthe",
+      "family": "Old World Flycatchers",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Wheatear",
+        "id": 283,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=283"
+      },
+      "ebird": {
+        "name": "Northern Wheatear",
+        "speciesCode": "norwhe",
+        "url": "https://ebird.org/species/norwhe"
+      }
+    },
+    {
+      "canonical": "Whinchat",
+      "scientificName": "Saxicola rubetra",
+      "family": "Old World Flycatchers",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Whinchat",
+        "id": 285,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=285"
+      },
+      "ebird": {
+        "name": "Whinchat",
+        "speciesCode": "whinch1",
+        "url": "https://ebird.org/species/whinch1"
+      }
+    },
+    {
+      "canonical": "White Wagtail",
+      "scientificName": "Motacilla alba",
+      "family": "Wagtails and Pipits",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "White Wagtail",
+        "id": 633,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=633"
+      },
+      "ebird": {
+        "name": "White Wagtail",
+        "speciesCode": "whiwag",
+        "url": "https://ebird.org/species/whiwag"
+      }
+    },
+    {
+      "canonical": "White-tailed Eagle",
+      "scientificName": "Haliaeetus albicilla",
+      "family": "Hawks, Eagles, and Kites",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "White-tailed Eagle",
+        "id": 288,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=288"
+      },
+      "ebird": {
+        "name": "White-tailed Eagle",
+        "speciesCode": "whteag",
+        "url": "https://ebird.org/species/whteag"
+      }
+    },
+    {
+      "canonical": "Willow Warbler",
+      "scientificName": "Phylloscopus trochilus",
+      "family": "Leaf Warblers",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Willow Warbler",
+        "id": 294,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=294"
+      },
+      "ebird": {
+        "name": "Willow Warbler",
+        "speciesCode": "wlwwar",
+        "url": "https://ebird.org/species/wlwwar"
+      }
+    },
+    {
+      "canonical": "Eurasian Woodcock",
+      "scientificName": "Scolopax rusticola",
+      "family": "Sandpipers and Allies",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Woodcock",
+        "id": 299,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=299"
+      },
+      "ebird": {
+        "name": "Eurasian Woodcock",
+        "speciesCode": "eurwoo",
+        "url": "https://ebird.org/species/eurwoo"
+      }
+    },
+    {
+      "canonical": "Woodlark",
+      "scientificName": "Lullula arborea",
+      "family": "Larks",
+      "exclude": false,
+      "feral": false,
+      "note": "UK one-word 'Woodlark' kept",
+      "goingbirding": {
+        "name": "Woodlark",
+        "id": 300,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=300"
+      },
+      "ebird": {
+        "name": "Wood Lark",
+        "speciesCode": "woolar1",
+        "url": "https://ebird.org/species/woolar1"
+      }
+    },
+    {
+      "canonical": "Western Yellow Wagtail",
+      "scientificName": "Motacilla flava",
+      "family": "Wagtails and Pipits",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Yellow Wagtail",
+        "id": 304,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=304"
+      },
+      "ebird": {
+        "name": "Western Yellow Wagtail",
+        "speciesCode": "eaywag1",
+        "url": "https://ebird.org/species/eaywag1"
+      }
+    },
+    {
+      "canonical": "Yellow-legged Gull",
+      "scientificName": "Larus michahellis",
+      "family": "Gulls, Terns, and Skimmers",
+      "exclude": false,
+      "feral": false,
+      "note": null,
+      "goingbirding": {
+        "name": "Yellow-legged Gull",
+        "id": 307,
+        "url": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=307"
+      },
+      "ebird": {
+        "name": "Yellow-legged Gull",
+        "speciesCode": "yelgul1",
+        "url": "https://ebird.org/species/yelgul1"
+      }
+    }
+  ]
+}

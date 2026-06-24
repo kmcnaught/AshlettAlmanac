@@ -1,0 +1,2430 @@
+{
+  "meta": {
+    "source": "ebird.org",
+    "generated": "2026-06-24T13:10:30Z",
+    "hotspots": [
+      {
+        "locId": "L12499113",
+        "name": "New Forest NP — Ashlett Green and Creek",
+        "url": "https://ebird.org/hotspot/L12499113",
+        "speciesCount": 115
+      },
+      {
+        "locId": "L2719654",
+        "name": "Calshot Marshes LNR",
+        "url": "https://ebird.org/hotspot/L2719654",
+        "speciesCount": 154
+      },
+      {
+        "locId": "L28743923",
+        "name": "Calshot Spit",
+        "url": "https://ebird.org/hotspot/L28743923",
+        "speciesCount": 149
+      }
+    ],
+    "totalSpecies": 173
+  },
+  "species": [
+    {
+      "speciesCode": "arcter",
+      "commonName": "Arctic Tern",
+      "scientificName": "Sterna paradisaea",
+      "family": "Gulls, Terns, and Skimmers",
+      "url": "https://ebird.org/species/arcter",
+      "hotspots": [
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "banswa",
+      "commonName": "Bank Swallow",
+      "scientificName": "Riparia riparia",
+      "family": "Swallows",
+      "url": "https://ebird.org/species/banswa",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "bargoo",
+      "commonName": "Barnacle Goose",
+      "scientificName": "Branta leucopsis",
+      "family": "Ducks, Geese, and Waterfowl",
+      "url": "https://ebird.org/species/bargoo",
+      "hotspots": [
+        "L2719654"
+      ]
+    },
+    {
+      "speciesCode": "barswa",
+      "commonName": "Barn Swallow",
+      "scientificName": "Hirundo rustica",
+      "family": "Swallows",
+      "url": "https://ebird.org/species/barswa",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "batgod",
+      "commonName": "Bar-tailed Godwit",
+      "scientificName": "Limosa lapponica",
+      "family": "Sandpipers and Allies",
+      "url": "https://ebird.org/species/batgod",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "bkbplo",
+      "commonName": "Black-bellied Plover",
+      "scientificName": "Pluvialis squatarola",
+      "family": "Plovers and Lapwings",
+      "url": "https://ebird.org/species/bkbplo",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "bkhgul",
+      "commonName": "Black-headed Gull",
+      "scientificName": "Chroicocephalus ridibundus",
+      "family": "Gulls, Terns, and Skimmers",
+      "url": "https://ebird.org/species/bkhgul",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "bklkit",
+      "commonName": "Black-legged Kittiwake",
+      "scientificName": "Rissa tridactyla",
+      "family": "Gulls, Terns, and Skimmers",
+      "url": "https://ebird.org/species/bklkit",
+      "hotspots": [
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "bktgod",
+      "commonName": "Black-tailed Godwit",
+      "scientificName": "Limosa limosa",
+      "family": "Sandpipers and Allies",
+      "url": "https://ebird.org/species/bktgod",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "blackc1",
+      "commonName": "Eurasian Blackcap",
+      "scientificName": "Sylvia atricapilla",
+      "family": "Sylviid Warblers and Allies",
+      "url": "https://ebird.org/species/blackc1",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "blared1",
+      "commonName": "Black Redstart",
+      "scientificName": "Phoenicurus ochruros",
+      "family": "Old World Flycatchers",
+      "url": "https://ebird.org/species/blared1",
+      "hotspots": [
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "blksco1",
+      "commonName": "Common Scoter",
+      "scientificName": "Melanitta nigra",
+      "family": "Ducks, Geese, and Waterfowl",
+      "url": "https://ebird.org/species/blksco1",
+      "hotspots": [
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "blkswa",
+      "commonName": "Black Swan",
+      "scientificName": "Cygnus atratus",
+      "family": "Ducks, Geese, and Waterfowl",
+      "url": "https://ebird.org/species/blkswa",
+      "hotspots": [
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "blkter",
+      "commonName": "Black Tern",
+      "scientificName": "Chlidonias niger",
+      "family": "Gulls, Terns, and Skimmers",
+      "url": "https://ebird.org/species/blkter",
+      "hotspots": [
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "blutit",
+      "commonName": "Eurasian Blue Tit",
+      "scientificName": "Cyanistes caeruleus",
+      "family": "Tits, Chickadees, and Titmice",
+      "url": "https://ebird.org/species/blutit",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "brant",
+      "commonName": "Brant",
+      "scientificName": "Branta bernicla",
+      "family": "Ducks, Geese, and Waterfowl",
+      "url": "https://ebird.org/species/brant",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "cangoo",
+      "commonName": "Canada Goose",
+      "scientificName": "Branta canadensis",
+      "family": "Ducks, Geese, and Waterfowl",
+      "url": "https://ebird.org/species/cangoo",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "carcro1",
+      "commonName": "Carrion Crow",
+      "scientificName": "Corvus corone",
+      "family": "Crows, Jays, and Magpies",
+      "url": "https://ebird.org/species/carcro1",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "cetwar1",
+      "commonName": "Cetti's Warbler",
+      "scientificName": "Cettia cetti",
+      "family": "Bush Warblers and Allies",
+      "url": "https://ebird.org/species/cetwar1",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "coatit2",
+      "commonName": "Coal Tit",
+      "scientificName": "Periparus ater",
+      "family": "Tits, Chickadees, and Titmice",
+      "url": "https://ebird.org/species/coatit2",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "cogwar1",
+      "commonName": "Common Grasshopper Warbler",
+      "scientificName": "Locustella naevia",
+      "family": "Grassbirds and Allies",
+      "url": "https://ebird.org/species/cogwar1",
+      "hotspots": [
+        "L2719654"
+      ]
+    },
+    {
+      "speciesCode": "combuz1",
+      "commonName": "Common Buzzard",
+      "scientificName": "Buteo buteo",
+      "family": "Hawks, Eagles, and Kites",
+      "url": "https://ebird.org/species/combuz1",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "comcha",
+      "commonName": "Common Chaffinch",
+      "scientificName": "Fringilla coelebs",
+      "family": "Finches, Euphonias, and Allies",
+      "url": "https://ebird.org/species/comcha",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "comchi1",
+      "commonName": "Common Chiffchaff",
+      "scientificName": "Phylloscopus collybita",
+      "family": "Leaf Warblers",
+      "url": "https://ebird.org/species/comchi1",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "comcuc",
+      "commonName": "Common Cuckoo",
+      "scientificName": "Cuculus canorus",
+      "family": "Cuckoos",
+      "url": "https://ebird.org/species/comcuc",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "comeid",
+      "commonName": "Common Eider",
+      "scientificName": "Somateria mollissima",
+      "family": "Ducks, Geese, and Waterfowl",
+      "url": "https://ebird.org/species/comeid",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "comgre",
+      "commonName": "Common Greenshank",
+      "scientificName": "Tringa nebularia",
+      "family": "Sandpipers and Allies",
+      "url": "https://ebird.org/species/comgre",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "comhom1",
+      "commonName": "Western House-Martin",
+      "scientificName": "Delichon urbicum",
+      "family": "Swallows",
+      "url": "https://ebird.org/species/comhom1",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "comkin1",
+      "commonName": "Common Kingfisher",
+      "scientificName": "Alcedo atthis",
+      "family": "Kingfishers",
+      "url": "https://ebird.org/species/comkin1",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "comloo",
+      "commonName": "Common Loon",
+      "scientificName": "Gavia immer",
+      "family": "Loons",
+      "url": "https://ebird.org/species/comloo",
+      "hotspots": [
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "commer",
+      "commonName": "Common Merganser",
+      "scientificName": "Mergus merganser",
+      "family": "Ducks, Geese, and Waterfowl",
+      "url": "https://ebird.org/species/commer",
+      "hotspots": [
+        "L2719654"
+      ]
+    },
+    {
+      "speciesCode": "commoo3",
+      "commonName": "Eurasian Moorhen",
+      "scientificName": "Gallinula chloropus",
+      "family": "Rails, Gallinules, and Coots",
+      "url": "https://ebird.org/species/commoo3",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "commur",
+      "commonName": "Common Murre",
+      "scientificName": "Uria aalge",
+      "family": "Auks, Murres, and Puffins",
+      "url": "https://ebird.org/species/commur",
+      "hotspots": [
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "comnig1",
+      "commonName": "Common Nightingale",
+      "scientificName": "Luscinia megarhynchos",
+      "family": "Old World Flycatchers",
+      "url": "https://ebird.org/species/comnig1",
+      "hotspots": [
+        "L2719654"
+      ]
+    },
+    {
+      "speciesCode": "comrav",
+      "commonName": "Common Raven",
+      "scientificName": "Corvus corax",
+      "family": "Crows, Jays, and Magpies",
+      "url": "https://ebird.org/species/comrav",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "comred1",
+      "commonName": "Common Redshank",
+      "scientificName": "Tringa totanus",
+      "family": "Sandpipers and Allies",
+      "url": "https://ebird.org/species/comred1",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "comred2",
+      "commonName": "Common Redstart",
+      "scientificName": "Phoenicurus phoenicurus",
+      "family": "Old World Flycatchers",
+      "url": "https://ebird.org/species/comred2",
+      "hotspots": [
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "comsan",
+      "commonName": "Common Sandpiper",
+      "scientificName": "Actitis hypoleucos",
+      "family": "Sandpipers and Allies",
+      "url": "https://ebird.org/species/comsan",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "comshe",
+      "commonName": "Common Shelduck",
+      "scientificName": "Tadorna tadorna",
+      "family": "Ducks, Geese, and Waterfowl",
+      "url": "https://ebird.org/species/comshe",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "comsni",
+      "commonName": "Common Snipe",
+      "scientificName": "Gallinago gallinago",
+      "family": "Sandpipers and Allies",
+      "url": "https://ebird.org/species/comsni",
+      "hotspots": [
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "comswi",
+      "commonName": "Common Swift",
+      "scientificName": "Apus apus",
+      "family": "Swifts",
+      "url": "https://ebird.org/species/comswi",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "comter",
+      "commonName": "Common Tern",
+      "scientificName": "Sterna hirundo",
+      "family": "Gulls, Terns, and Skimmers",
+      "url": "https://ebird.org/species/comter",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "corplo",
+      "commonName": "Common Ringed Plover",
+      "scientificName": "Charadrius hiaticula",
+      "family": "Plovers and Lapwings",
+      "url": "https://ebird.org/species/corplo",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "cowpig1",
+      "commonName": "Common Wood-Pigeon",
+      "scientificName": "Columba palumbus",
+      "family": "Pigeons and Doves",
+      "url": "https://ebird.org/species/cowpig1",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "cursan",
+      "commonName": "Curlew Sandpiper",
+      "scientificName": "Calidris ferruginea",
+      "family": "Sandpipers and Allies",
+      "url": "https://ebird.org/species/cursan",
+      "hotspots": [
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "dunlin",
+      "commonName": "Dunlin",
+      "scientificName": "Calidris alpina",
+      "family": "Sandpipers and Allies",
+      "url": "https://ebird.org/species/dunlin",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "dunnoc1",
+      "commonName": "Dunnock",
+      "scientificName": "Prunella modularis",
+      "family": "Accentors",
+      "url": "https://ebird.org/species/dunnoc1",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "eargre",
+      "commonName": "Eared Grebe",
+      "scientificName": "Podiceps nigricollis",
+      "family": "Grebes",
+      "url": "https://ebird.org/species/eargre",
+      "hotspots": [
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "eaywag1",
+      "commonName": "Western Yellow Wagtail",
+      "scientificName": "Motacilla flava",
+      "family": "Wagtails and Pipits",
+      "url": "https://ebird.org/species/eaywag1",
+      "hotspots": [
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "egygoo",
+      "commonName": "Egyptian Goose",
+      "scientificName": "Alopochen aegyptiaca",
+      "family": "Ducks, Geese, and Waterfowl",
+      "url": "https://ebird.org/species/egygoo",
+      "hotspots": [
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "eucdov",
+      "commonName": "Eurasian Collared-Dove",
+      "scientificName": "Streptopelia decaocto",
+      "family": "Pigeons and Doves",
+      "url": "https://ebird.org/species/eucdov",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "eugplo",
+      "commonName": "European Golden-Plover",
+      "scientificName": "Pluvialis apricaria",
+      "family": "Plovers and Lapwings",
+      "url": "https://ebird.org/species/eugplo",
+      "hotspots": [
+        "L2719654"
+      ]
+    },
+    {
+      "speciesCode": "eugwoo2",
+      "commonName": "Eurasian Green Woodpecker",
+      "scientificName": "Picus viridis",
+      "family": "Woodpeckers",
+      "url": "https://ebird.org/species/eugwoo2",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "euhgul1",
+      "commonName": "European Herring Gull",
+      "scientificName": "Larus argentatus",
+      "family": "Gulls, Terns, and Skimmers",
+      "url": "https://ebird.org/species/euhgul1",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "eurbla",
+      "commonName": "Eurasian Blackbird",
+      "scientificName": "Turdus merula",
+      "family": "Thrushes and Allies",
+      "url": "https://ebird.org/species/eurbla",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "eurbul",
+      "commonName": "Eurasian Bullfinch",
+      "scientificName": "Pyrrhula pyrrhula",
+      "family": "Finches, Euphonias, and Allies",
+      "url": "https://ebird.org/species/eurbul",
+      "hotspots": [
+        "L12499113",
+        "L2719654"
+      ]
+    },
+    {
+      "speciesCode": "eurcoo",
+      "commonName": "Eurasian Coot",
+      "scientificName": "Fulica atra",
+      "family": "Rails, Gallinules, and Coots",
+      "url": "https://ebird.org/species/eurcoo",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "eurcur",
+      "commonName": "Eurasian Curlew",
+      "scientificName": "Numenius arquata",
+      "family": "Sandpipers and Allies",
+      "url": "https://ebird.org/species/eurcur",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "eurgol",
+      "commonName": "European Goldfinch",
+      "scientificName": "Carduelis carduelis",
+      "family": "Finches, Euphonias, and Allies",
+      "url": "https://ebird.org/species/eurgol",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "eurgre1",
+      "commonName": "European Greenfinch",
+      "scientificName": "Chloris chloris",
+      "family": "Finches, Euphonias, and Allies",
+      "url": "https://ebird.org/species/eurgre1",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "eurhob",
+      "commonName": "Eurasian Hobby",
+      "scientificName": "Falco subbuteo",
+      "family": "Falcons and Caracaras",
+      "url": "https://ebird.org/species/eurhob",
+      "hotspots": [
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "eurjac",
+      "commonName": "Eurasian Jackdaw",
+      "scientificName": "Coloeus monedula",
+      "family": "Crows, Jays, and Magpies",
+      "url": "https://ebird.org/species/eurjac",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "eurjay1",
+      "commonName": "Eurasian Jay",
+      "scientificName": "Garrulus glandarius",
+      "family": "Crows, Jays, and Magpies",
+      "url": "https://ebird.org/species/eurjay1",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "eurkes",
+      "commonName": "Eurasian Kestrel",
+      "scientificName": "Falco tinnunculus",
+      "family": "Falcons and Caracaras",
+      "url": "https://ebird.org/species/eurkes",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "eurlin1",
+      "commonName": "Eurasian Linnet",
+      "scientificName": "Linaria cannabina",
+      "family": "Finches, Euphonias, and Allies",
+      "url": "https://ebird.org/species/eurlin1",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "eurmag1",
+      "commonName": "Eurasian Magpie",
+      "scientificName": "Pica pica",
+      "family": "Crows, Jays, and Magpies",
+      "url": "https://ebird.org/species/eurmag1",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "eurnut2",
+      "commonName": "Eurasian Nuthatch",
+      "scientificName": "Sitta europaea",
+      "family": "Nuthatches",
+      "url": "https://ebird.org/species/eurnut2",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "euroys1",
+      "commonName": "Eurasian Oystercatcher",
+      "scientificName": "Haematopus ostralegus",
+      "family": "Oystercatchers",
+      "url": "https://ebird.org/species/euroys1",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "eurrob1",
+      "commonName": "European Robin",
+      "scientificName": "Erithacus rubecula",
+      "family": "Old World Flycatchers",
+      "url": "https://ebird.org/species/eurrob1",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "eursha1",
+      "commonName": "European Shag",
+      "scientificName": "Gulosus aristotelis",
+      "family": "Cormorants and Shags",
+      "url": "https://ebird.org/species/eursha1",
+      "hotspots": [
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "eursis",
+      "commonName": "Eurasian Siskin",
+      "scientificName": "Spinus spinus",
+      "family": "Finches, Euphonias, and Allies",
+      "url": "https://ebird.org/species/eursis",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "eurspa1",
+      "commonName": "Eurasian Sparrowhawk",
+      "scientificName": "Accipiter nisus",
+      "family": "Hawks, Eagles, and Kites",
+      "url": "https://ebird.org/species/eurspa1",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "eurspo1",
+      "commonName": "Eurasian Spoonbill",
+      "scientificName": "Platalea leucorodia",
+      "family": "Ibises and Spoonbills",
+      "url": "https://ebird.org/species/eurspo1",
+      "hotspots": [
+        "L2719654"
+      ]
+    },
+    {
+      "speciesCode": "eursta",
+      "commonName": "European Starling",
+      "scientificName": "Sturnus vulgaris",
+      "family": "Starlings",
+      "url": "https://ebird.org/species/eursta",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "eurtre1",
+      "commonName": "Eurasian Treecreeper",
+      "scientificName": "Certhia familiaris",
+      "family": "Treecreepers",
+      "url": "https://ebird.org/species/eurtre1",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "eurwar1",
+      "commonName": "Common Reed Warbler",
+      "scientificName": "Acrocephalus scirpaceus",
+      "family": "Reed Warblers and Allies",
+      "url": "https://ebird.org/species/eurwar1",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "eurwig",
+      "commonName": "Eurasian Wigeon",
+      "scientificName": "Mareca penelope",
+      "family": "Ducks, Geese, and Waterfowl",
+      "url": "https://ebird.org/species/eurwig",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "eurwoo",
+      "commonName": "Eurasian Woodcock",
+      "scientificName": "Scolopax rusticola",
+      "family": "Sandpipers and Allies",
+      "url": "https://ebird.org/species/eurwoo",
+      "hotspots": [
+        "L2719654"
+      ]
+    },
+    {
+      "speciesCode": "fieldf",
+      "commonName": "Fieldfare",
+      "scientificName": "Turdus pilaris",
+      "family": "Thrushes and Allies",
+      "url": "https://ebird.org/species/fieldf",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "firecr1",
+      "commonName": "Common Firecrest",
+      "scientificName": "Regulus ignicapilla",
+      "family": "Kinglets",
+      "url": "https://ebird.org/species/firecr1",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "gadwal",
+      "commonName": "Gadwall",
+      "scientificName": "Mareca strepera",
+      "family": "Ducks, Geese, and Waterfowl",
+      "url": "https://ebird.org/species/gadwal",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "garwar1",
+      "commonName": "Garden Warbler",
+      "scientificName": "Sylvia borin",
+      "family": "Sylviid Warblers and Allies",
+      "url": "https://ebird.org/species/garwar1",
+      "hotspots": [
+        "L12499113",
+        "L2719654"
+      ]
+    },
+    {
+      "speciesCode": "gbbgul",
+      "commonName": "Great Black-backed Gull",
+      "scientificName": "Larus marinus",
+      "family": "Gulls, Terns, and Skimmers",
+      "url": "https://ebird.org/species/gbbgul",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "gnwtea",
+      "commonName": "Green-winged Teal",
+      "scientificName": "Anas crecca",
+      "family": "Ducks, Geese, and Waterfowl",
+      "url": "https://ebird.org/species/gnwtea",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "goldcr1",
+      "commonName": "Goldcrest",
+      "scientificName": "Regulus regulus",
+      "family": "Kinglets",
+      "url": "https://ebird.org/species/goldcr1",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "gragoo",
+      "commonName": "Graylag Goose",
+      "scientificName": "Anser anser",
+      "family": "Ducks, Geese, and Waterfowl",
+      "url": "https://ebird.org/species/gragoo",
+      "hotspots": [
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "graher1",
+      "commonName": "Gray Heron",
+      "scientificName": "Ardea cinerea",
+      "family": "Herons, Egrets, and Bitterns",
+      "url": "https://ebird.org/species/graher1",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "grcgre1",
+      "commonName": "Great Crested Grebe",
+      "scientificName": "Podiceps cristatus",
+      "family": "Grebes",
+      "url": "https://ebird.org/species/grcgre1",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "grecor",
+      "commonName": "Great Cormorant",
+      "scientificName": "Phalacrocorax carbo",
+      "family": "Cormorants and Shags",
+      "url": "https://ebird.org/species/grecor",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "greegr",
+      "commonName": "Great Egret",
+      "scientificName": "Ardea alba",
+      "family": "Herons, Egrets, and Bitterns",
+      "url": "https://ebird.org/species/greegr",
+      "hotspots": [
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "greshe",
+      "commonName": "Great Shearwater",
+      "scientificName": "Ardenna gravis",
+      "family": "Shearwaters and Petrels",
+      "url": "https://ebird.org/species/greshe",
+      "hotspots": [
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "gresku1",
+      "commonName": "Great Skua",
+      "scientificName": "Stercorarius skua",
+      "family": "Skuas and Jaegers",
+      "url": "https://ebird.org/species/gresku1",
+      "hotspots": [
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "gretit1",
+      "commonName": "Great Tit",
+      "scientificName": "Parus major",
+      "family": "Tits, Chickadees, and Titmice",
+      "url": "https://ebird.org/species/gretit1",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "grewhi1",
+      "commonName": "Greater Whitethroat",
+      "scientificName": "Curruca communis",
+      "family": "Sylviid Warblers and Allies",
+      "url": "https://ebird.org/species/grewhi1",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "grswoo",
+      "commonName": "Great Spotted Woodpecker",
+      "scientificName": "Dendrocopos major",
+      "family": "Woodpeckers",
+      "url": "https://ebird.org/species/grswoo",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "grtgra",
+      "commonName": "Great-tailed Grackle",
+      "scientificName": "Quiscalus mexicanus",
+      "family": "Troupials and Allies",
+      "url": "https://ebird.org/species/grtgra",
+      "hotspots": [
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "grywag",
+      "commonName": "Gray Wagtail",
+      "scientificName": "Motacilla cinerea",
+      "family": "Wagtails and Pipits",
+      "url": "https://ebird.org/species/grywag",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "hoopoe",
+      "commonName": "Common Hoopoe",
+      "scientificName": "Upupa epops",
+      "family": "Hoopoes",
+      "url": "https://ebird.org/species/hoopoe",
+      "hotspots": [
+        "L2719654"
+      ]
+    },
+    {
+      "speciesCode": "horgre",
+      "commonName": "Horned Grebe",
+      "scientificName": "Podiceps auritus",
+      "family": "Grebes",
+      "url": "https://ebird.org/species/horgre",
+      "hotspots": [
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "houspa",
+      "commonName": "House Sparrow",
+      "scientificName": "Passer domesticus",
+      "family": "Old World Sparrows",
+      "url": "https://ebird.org/species/houspa",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "lbbgul",
+      "commonName": "Lesser Black-backed Gull",
+      "scientificName": "Larus fuscus",
+      "family": "Gulls, Terns, and Skimmers",
+      "url": "https://ebird.org/species/lbbgul",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "lcspet",
+      "commonName": "Leach's Storm-Petrel",
+      "scientificName": "Hydrobates leucorhous",
+      "family": "Northern Storm-Petrels",
+      "url": "https://ebird.org/species/lcspet",
+      "hotspots": [
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "leswhi4",
+      "commonName": "Lesser Whitethroat",
+      "scientificName": "Curruca curruca",
+      "family": "Sylviid Warblers and Allies",
+      "url": "https://ebird.org/species/leswhi4",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "lirplo",
+      "commonName": "Little Ringed Plover",
+      "scientificName": "Thinornis dubius",
+      "family": "Plovers and Lapwings",
+      "url": "https://ebird.org/species/lirplo",
+      "hotspots": [
+        "L12499113",
+        "L2719654"
+      ]
+    },
+    {
+      "speciesCode": "litegr",
+      "commonName": "Little Egret",
+      "scientificName": "Egretta garzetta",
+      "family": "Herons, Egrets, and Bitterns",
+      "url": "https://ebird.org/species/litegr",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "litgre1",
+      "commonName": "Little Grebe",
+      "scientificName": "Tachybaptus ruficollis",
+      "family": "Grebes",
+      "url": "https://ebird.org/species/litgre1",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "litgul",
+      "commonName": "Little Gull",
+      "scientificName": "Hydrocoloeus minutus",
+      "family": "Gulls, Terns, and Skimmers",
+      "url": "https://ebird.org/species/litgul",
+      "hotspots": [
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "litter1",
+      "commonName": "Little Tern",
+      "scientificName": "Sternula albifrons",
+      "family": "Gulls, Terns, and Skimmers",
+      "url": "https://ebird.org/species/litter1",
+      "hotspots": [
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "lotduc",
+      "commonName": "Long-tailed Duck",
+      "scientificName": "Clangula hyemalis",
+      "family": "Ducks, Geese, and Waterfowl",
+      "url": "https://ebird.org/species/lotduc",
+      "hotspots": [
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "lottit1",
+      "commonName": "Long-tailed Tit",
+      "scientificName": "Aegithalos caudatus",
+      "family": "Long-tailed Tits",
+      "url": "https://ebird.org/species/lottit1",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "mallar3",
+      "commonName": "Mallard",
+      "scientificName": "Anas platyrhynchos",
+      "family": "Ducks, Geese, and Waterfowl",
+      "url": "https://ebird.org/species/mallar3",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "martit2",
+      "commonName": "Marsh Tit",
+      "scientificName": "Poecile palustris",
+      "family": "Tits, Chickadees, and Titmice",
+      "url": "https://ebird.org/species/martit2",
+      "hotspots": [
+        "L12499113",
+        "L2719654"
+      ]
+    },
+    {
+      "speciesCode": "meapip1",
+      "commonName": "Meadow Pipit",
+      "scientificName": "Anthus pratensis",
+      "family": "Wagtails and Pipits",
+      "url": "https://ebird.org/species/meapip1",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "medgul1",
+      "commonName": "Mediterranean Gull",
+      "scientificName": "Ichthyaetus melanocephalus",
+      "family": "Gulls, Terns, and Skimmers",
+      "url": "https://ebird.org/species/medgul1",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "merlin",
+      "commonName": "Merlin",
+      "scientificName": "Falco columbarius",
+      "family": "Falcons and Caracaras",
+      "url": "https://ebird.org/species/merlin",
+      "hotspots": [
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "mewgul",
+      "commonName": "Common Gull",
+      "scientificName": "Larus canus",
+      "family": "Gulls, Terns, and Skimmers",
+      "url": "https://ebird.org/species/mewgul",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "misthr1",
+      "commonName": "Mistle Thrush",
+      "scientificName": "Turdus viscivorus",
+      "family": "Thrushes and Allies",
+      "url": "https://ebird.org/species/misthr1",
+      "hotspots": [
+        "L12499113",
+        "L2719654"
+      ]
+    },
+    {
+      "speciesCode": "mutswa",
+      "commonName": "Mute Swan",
+      "scientificName": "Cygnus olor",
+      "family": "Ducks, Geese, and Waterfowl",
+      "url": "https://ebird.org/species/mutswa",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "norgan",
+      "commonName": "Northern Gannet",
+      "scientificName": "Morus bassanus",
+      "family": "Boobies and Gannets",
+      "url": "https://ebird.org/species/norgan",
+      "hotspots": [
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "norhar1",
+      "commonName": "Hen Harrier",
+      "scientificName": "Circus cyaneus",
+      "family": "Hawks, Eagles, and Kites",
+      "url": "https://ebird.org/species/norhar1",
+      "hotspots": [
+        "L2719654"
+      ]
+    },
+    {
+      "speciesCode": "norlap",
+      "commonName": "Northern Lapwing",
+      "scientificName": "Vanellus vanellus",
+      "family": "Plovers and Lapwings",
+      "url": "https://ebird.org/species/norlap",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "norpin",
+      "commonName": "Northern Pintail",
+      "scientificName": "Anas acuta",
+      "family": "Ducks, Geese, and Waterfowl",
+      "url": "https://ebird.org/species/norpin",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "norsho",
+      "commonName": "Northern Shoveler",
+      "scientificName": "Spatula clypeata",
+      "family": "Ducks, Geese, and Waterfowl",
+      "url": "https://ebird.org/species/norsho",
+      "hotspots": [
+        "L12499113",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "norwhe",
+      "commonName": "Northern Wheatear",
+      "scientificName": "Oenanthe oenanthe",
+      "family": "Old World Flycatchers",
+      "url": "https://ebird.org/species/norwhe",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "osprey",
+      "commonName": "Osprey",
+      "scientificName": "Pandion haliaetus",
+      "family": "Osprey",
+      "url": "https://ebird.org/species/osprey",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "parjae",
+      "commonName": "Parasitic Jaeger",
+      "scientificName": "Stercorarius parasiticus",
+      "family": "Skuas and Jaegers",
+      "url": "https://ebird.org/species/parjae",
+      "hotspots": [
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "perfal",
+      "commonName": "Peregrine Falcon",
+      "scientificName": "Falco peregrinus",
+      "family": "Falcons and Caracaras",
+      "url": "https://ebird.org/species/perfal",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "razorb",
+      "commonName": "Razorbill",
+      "scientificName": "Alca torda",
+      "family": "Auks, Murres, and Puffins",
+      "url": "https://ebird.org/species/razorb",
+      "hotspots": [
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "rebmer",
+      "commonName": "Red-breasted Merganser",
+      "scientificName": "Mergus serrator",
+      "family": "Ducks, Geese, and Waterfowl",
+      "url": "https://ebird.org/species/rebmer",
+      "hotspots": [
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "redcro",
+      "commonName": "Red Crossbill",
+      "scientificName": "Loxia curvirostra",
+      "family": "Finches, Euphonias, and Allies",
+      "url": "https://ebird.org/species/redcro",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "redkit1",
+      "commonName": "Red Kite",
+      "scientificName": "Milvus milvus",
+      "family": "Hawks, Eagles, and Kites",
+      "url": "https://ebird.org/species/redkit1",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "redkno",
+      "commonName": "Red Knot",
+      "scientificName": "Calidris canutus",
+      "family": "Sandpipers and Allies",
+      "url": "https://ebird.org/species/redkno",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "redpol1",
+      "commonName": "Redpoll",
+      "scientificName": "Acanthis flammea",
+      "family": "Finches, Euphonias, and Allies",
+      "url": "https://ebird.org/species/redpol1",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "redwin",
+      "commonName": "Redwing",
+      "scientificName": "Turdus iliacus",
+      "family": "Thrushes and Allies",
+      "url": "https://ebird.org/species/redwin",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "reebun",
+      "commonName": "Reed Bunting",
+      "scientificName": "Emberiza schoeniclus",
+      "family": "Old World Buntings",
+      "url": "https://ebird.org/species/reebun",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "relpar1",
+      "commonName": "Red-legged Partridge",
+      "scientificName": "Alectoris rufa",
+      "family": "Pheasants, Grouse, and Allies",
+      "url": "https://ebird.org/species/relpar1",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "rengre",
+      "commonName": "Red-necked Grebe",
+      "scientificName": "Podiceps grisegena",
+      "family": "Grebes",
+      "url": "https://ebird.org/species/rengre",
+      "hotspots": [
+        "L2719654"
+      ]
+    },
+    {
+      "speciesCode": "retloo",
+      "commonName": "Red-throated Loon",
+      "scientificName": "Gavia stellata",
+      "family": "Loons",
+      "url": "https://ebird.org/species/retloo",
+      "hotspots": [
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "rinphe1",
+      "commonName": "Ring-necked Pheasant",
+      "scientificName": "Phasianus colchicus",
+      "family": "Pheasants, Grouse, and Allies",
+      "url": "https://ebird.org/species/rinphe1",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "rocpig",
+      "commonName": "Rock Pigeon",
+      "scientificName": "Columba livia",
+      "family": "Pigeons and Doves",
+      "url": "https://ebird.org/species/rocpig",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "rocpip1",
+      "commonName": "Rock Pipit",
+      "scientificName": "Anthus petrosus",
+      "family": "Wagtails and Pipits",
+      "url": "https://ebird.org/species/rocpip1",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "rook1",
+      "commonName": "Rook",
+      "scientificName": "Corvus frugilegus",
+      "family": "Crows, Jays, and Magpies",
+      "url": "https://ebird.org/species/rook1",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "rossta2",
+      "commonName": "Rosy Starling",
+      "scientificName": "Pastor roseus",
+      "family": "Starlings",
+      "url": "https://ebird.org/species/rossta2",
+      "hotspots": [
+        "L2719654"
+      ]
+    },
+    {
+      "speciesCode": "roster",
+      "commonName": "Roseate Tern",
+      "scientificName": "Sterna dougallii",
+      "family": "Gulls, Terns, and Skimmers",
+      "url": "https://ebird.org/species/roster",
+      "hotspots": [
+        "L2719654"
+      ]
+    },
+    {
+      "speciesCode": "rudtur",
+      "commonName": "Ruddy Turnstone",
+      "scientificName": "Arenaria interpres",
+      "family": "Sandpipers and Allies",
+      "url": "https://ebird.org/species/rudtur",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "ruff",
+      "commonName": "Ruff",
+      "scientificName": "Calidris pugnax",
+      "family": "Sandpipers and Allies",
+      "url": "https://ebird.org/species/ruff",
+      "hotspots": [
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "sander",
+      "commonName": "Sanderling",
+      "scientificName": "Calidris alba",
+      "family": "Sandpipers and Allies",
+      "url": "https://ebird.org/species/sander",
+      "hotspots": [
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "santer1",
+      "commonName": "Sandwich Tern",
+      "scientificName": "Thalasseus sandvicensis",
+      "family": "Gulls, Terns, and Skimmers",
+      "url": "https://ebird.org/species/santer1",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "sedwar1",
+      "commonName": "Sedge Warbler",
+      "scientificName": "Acrocephalus schoenobaenus",
+      "family": "Reed Warblers and Allies",
+      "url": "https://ebird.org/species/sedwar1",
+      "hotspots": [
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "skylar",
+      "commonName": "Eurasian Skylark",
+      "scientificName": "Alauda arvensis",
+      "family": "Larks",
+      "url": "https://ebird.org/species/skylar",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "snobun",
+      "commonName": "Snow Bunting",
+      "scientificName": "Plectrophenax nivalis",
+      "family": "Longspurs and Snow Buntings",
+      "url": "https://ebird.org/species/snobun",
+      "hotspots": [
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "sonthr1",
+      "commonName": "Song Thrush",
+      "scientificName": "Turdus philomelos",
+      "family": "Thrushes and Allies",
+      "url": "https://ebird.org/species/sonthr1",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "spaspa1",
+      "commonName": "Spanish Sparrow",
+      "scientificName": "Passer hispaniolensis",
+      "family": "Old World Sparrows",
+      "url": "https://ebird.org/species/spaspa1",
+      "hotspots": [
+        "L2719654"
+      ]
+    },
+    {
+      "speciesCode": "spofly1",
+      "commonName": "Spotted Flycatcher",
+      "scientificName": "Muscicapa striata",
+      "family": "Old World Flycatchers",
+      "url": "https://ebird.org/species/spofly1",
+      "hotspots": [
+        "L12499113",
+        "L2719654"
+      ]
+    },
+    {
+      "speciesCode": "stodov1",
+      "commonName": "Stock Dove",
+      "scientificName": "Columba oenas",
+      "family": "Pigeons and Doves",
+      "url": "https://ebird.org/species/stodov1",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "stonec4",
+      "commonName": "European Stonechat",
+      "scientificName": "Saxicola rubicola",
+      "family": "Old World Flycatchers",
+      "url": "https://ebird.org/species/stonec4",
+      "hotspots": [
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "tawowl1",
+      "commonName": "Tawny Owl",
+      "scientificName": "Strix aluco",
+      "family": "Owls",
+      "url": "https://ebird.org/species/tawowl1",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "trepip",
+      "commonName": "Tree Pipit",
+      "scientificName": "Anthus trivialis",
+      "family": "Wagtails and Pipits",
+      "url": "https://ebird.org/species/trepip",
+      "hotspots": [
+        "L2719654"
+      ]
+    },
+    {
+      "speciesCode": "tufduc",
+      "commonName": "Tufted Duck",
+      "scientificName": "Aythya fuligula",
+      "family": "Ducks, Geese, and Waterfowl",
+      "url": "https://ebird.org/species/tufduc",
+      "hotspots": [
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "watpip1",
+      "commonName": "Water Pipit",
+      "scientificName": "Anthus spinoletta",
+      "family": "Wagtails and Pipits",
+      "url": "https://ebird.org/species/watpip1",
+      "hotspots": [
+        "L2719654"
+      ]
+    },
+    {
+      "speciesCode": "watrai1",
+      "commonName": "Water Rail",
+      "scientificName": "Rallus aquaticus",
+      "family": "Rails, Gallinules, and Coots",
+      "url": "https://ebird.org/species/watrai1",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "webowl1",
+      "commonName": "Western Barn Owl",
+      "scientificName": "Tyto alba",
+      "family": "Barn-Owls",
+      "url": "https://ebird.org/species/webowl1",
+      "hotspots": [
+        "L2719654"
+      ]
+    },
+    {
+      "speciesCode": "wemhar1",
+      "commonName": "Western Marsh Harrier",
+      "scientificName": "Circus aeruginosus",
+      "family": "Hawks, Eagles, and Kites",
+      "url": "https://ebird.org/species/wemhar1",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "whimbr5",
+      "commonName": "Eurasian Whimbrel",
+      "scientificName": "Numenius phaeopus",
+      "family": "Sandpipers and Allies",
+      "url": "https://ebird.org/species/whimbr5",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "whinch1",
+      "commonName": "Whinchat",
+      "scientificName": "Saxicola rubetra",
+      "family": "Old World Flycatchers",
+      "url": "https://ebird.org/species/whinch1",
+      "hotspots": [
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "whiwag",
+      "commonName": "White Wagtail",
+      "scientificName": "Motacilla alba",
+      "family": "Wagtails and Pipits",
+      "url": "https://ebird.org/species/whiwag",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "whteag",
+      "commonName": "White-tailed Eagle",
+      "scientificName": "Haliaeetus albicilla",
+      "family": "Hawks, Eagles, and Kites",
+      "url": "https://ebird.org/species/whteag",
+      "hotspots": [
+        "L12499113",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "whwter",
+      "commonName": "White-winged Tern",
+      "scientificName": "Chlidonias leucopterus",
+      "family": "Gulls, Terns, and Skimmers",
+      "url": "https://ebird.org/species/whwter",
+      "hotspots": [
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "winwre4",
+      "commonName": "Eurasian Wren",
+      "scientificName": "Troglodytes troglodytes",
+      "family": "Wrens",
+      "url": "https://ebird.org/species/winwre4",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "wlwwar",
+      "commonName": "Willow Warbler",
+      "scientificName": "Phylloscopus trochilus",
+      "family": "Leaf Warblers",
+      "url": "https://ebird.org/species/wlwwar",
+      "hotspots": [
+        "L12499113",
+        "L2719654",
+        "L28743923"
+      ]
+    },
+    {
+      "speciesCode": "woolar1",
+      "commonName": "Wood Lark",
+      "scientificName": "Lullula arborea",
+      "family": "Larks",
+      "url": "https://ebird.org/species/woolar1",
+      "hotspots": [
+        "L2719654"
+      ]
+    },
+    {
+      "speciesCode": "yelgul1",
+      "commonName": "Yellow-legged Gull",
+      "scientificName": "Larus michahellis",
+      "family": "Gulls, Terns, and Skimmers",
+      "url": "https://ebird.org/species/yelgul1",
+      "hotspots": [
+        "L12499113"
+      ]
+    },
+    {
+      "speciesCode": "yellow2",
+      "commonName": "Yellowhammer",
+      "scientificName": "Emberiza citrinella",
+      "family": "Old World Buntings",
+      "url": "https://ebird.org/species/yellow2",
+      "hotspots": [
+        "L28743923"
+      ]
+    }
+  ],
+  "byHotspot": {
+    "L12499113": [
+      "brant",
+      "cangoo",
+      "mutswa",
+      "comshe",
+      "norsho",
+      "gadwal",
+      "eurwig",
+      "mallar3",
+      "norpin",
+      "gnwtea",
+      "comeid",
+      "rinphe1",
+      "relpar1",
+      "rocpig",
+      "stodov1",
+      "cowpig1",
+      "eucdov",
+      "comcuc",
+      "comswi",
+      "watrai1",
+      "commoo3",
+      "eurcoo",
+      "euroys1",
+      "bkbplo",
+      "corplo",
+      "lirplo",
+      "norlap",
+      "whimbr5",
+      "eurcur",
+      "batgod",
+      "bktgod",
+      "comsan",
+      "comred1",
+      "comgre",
+      "rudtur",
+      "redkno",
+      "dunlin",
+      "bkhgul",
+      "medgul1",
+      "mewgul",
+      "euhgul1",
+      "yelgul1",
+      "gbbgul",
+      "lbbgul",
+      "comter",
+      "santer1",
+      "litgre1",
+      "grcgre1",
+      "grecor",
+      "litegr",
+      "graher1",
+      "osprey",
+      "eurspa1",
+      "wemhar1",
+      "redkit1",
+      "whteag",
+      "combuz1",
+      "tawowl1",
+      "comkin1",
+      "grswoo",
+      "eugwoo2",
+      "eurkes",
+      "perfal",
+      "eurjay1",
+      "eurmag1",
+      "eurjac",
+      "rook1",
+      "carcro1",
+      "comrav",
+      "coatit2",
+      "martit2",
+      "blutit",
+      "gretit1",
+      "skylar",
+      "eurwar1",
+      "banswa",
+      "barswa",
+      "comhom1",
+      "wlwwar",
+      "comchi1",
+      "cetwar1",
+      "lottit1",
+      "blackc1",
+      "garwar1",
+      "leswhi4",
+      "grewhi1",
+      "goldcr1",
+      "firecr1",
+      "eurnut2",
+      "eurtre1",
+      "winwre4",
+      "eursta",
+      "misthr1",
+      "sonthr1",
+      "redwin",
+      "eurbla",
+      "fieldf",
+      "spofly1",
+      "eurrob1",
+      "norwhe",
+      "dunnoc1",
+      "houspa",
+      "grywag",
+      "whiwag",
+      "meapip1",
+      "rocpip1",
+      "comcha",
+      "eurbul",
+      "eurgre1",
+      "eurlin1",
+      "redpol1",
+      "redcro",
+      "eurgol",
+      "eursis",
+      "reebun"
+    ],
+    "L2719654": [
+      "gragoo",
+      "brant",
+      "bargoo",
+      "cangoo",
+      "mutswa",
+      "egygoo",
+      "comshe",
+      "gadwal",
+      "eurwig",
+      "mallar3",
+      "norpin",
+      "gnwtea",
+      "comeid",
+      "lotduc",
+      "commer",
+      "rebmer",
+      "rinphe1",
+      "relpar1",
+      "rocpig",
+      "stodov1",
+      "cowpig1",
+      "eucdov",
+      "comcuc",
+      "comswi",
+      "watrai1",
+      "commoo3",
+      "eurcoo",
+      "euroys1",
+      "bkbplo",
+      "eugplo",
+      "corplo",
+      "lirplo",
+      "norlap",
+      "whimbr5",
+      "eurcur",
+      "batgod",
+      "bktgod",
+      "eurwoo",
+      "comsni",
+      "comsan",
+      "comred1",
+      "comgre",
+      "rudtur",
+      "redkno",
+      "sander",
+      "dunlin",
+      "razorb",
+      "commur",
+      "litgul",
+      "bklkit",
+      "bkhgul",
+      "medgul1",
+      "mewgul",
+      "euhgul1",
+      "gbbgul",
+      "lbbgul",
+      "blkter",
+      "comter",
+      "roster",
+      "santer1",
+      "litgre1",
+      "horgre",
+      "rengre",
+      "grcgre1",
+      "eargre",
+      "retloo",
+      "comloo",
+      "grecor",
+      "eursha1",
+      "eurspo1",
+      "litegr",
+      "graher1",
+      "osprey",
+      "eurspa1",
+      "wemhar1",
+      "norhar1",
+      "redkit1",
+      "combuz1",
+      "webowl1",
+      "tawowl1",
+      "hoopoe",
+      "comkin1",
+      "grswoo",
+      "eugwoo2",
+      "eurkes",
+      "merlin",
+      "eurhob",
+      "perfal",
+      "eurjay1",
+      "eurmag1",
+      "eurjac",
+      "rook1",
+      "carcro1",
+      "comrav",
+      "coatit2",
+      "martit2",
+      "blutit",
+      "gretit1",
+      "woolar1",
+      "skylar",
+      "sedwar1",
+      "eurwar1",
+      "cogwar1",
+      "banswa",
+      "barswa",
+      "comhom1",
+      "wlwwar",
+      "comchi1",
+      "cetwar1",
+      "lottit1",
+      "blackc1",
+      "garwar1",
+      "leswhi4",
+      "grewhi1",
+      "goldcr1",
+      "firecr1",
+      "eurnut2",
+      "eurtre1",
+      "winwre4",
+      "eursta",
+      "rossta2",
+      "misthr1",
+      "sonthr1",
+      "redwin",
+      "eurbla",
+      "fieldf",
+      "spofly1",
+      "eurrob1",
+      "comnig1",
+      "comred2",
+      "blared1",
+      "whinch1",
+      "stonec4",
+      "norwhe",
+      "dunnoc1",
+      "houspa",
+      "spaspa1",
+      "grywag",
+      "eaywag1",
+      "whiwag",
+      "meapip1",
+      "trepip",
+      "watpip1",
+      "rocpip1",
+      "comcha",
+      "eurbul",
+      "eurgre1",
+      "eurlin1",
+      "redpol1",
+      "redcro",
+      "eurgol",
+      "eursis",
+      "snobun",
+      "reebun"
+    ],
+    "L28743923": [
+      "gragoo",
+      "brant",
+      "cangoo",
+      "mutswa",
+      "blkswa",
+      "egygoo",
+      "comshe",
+      "norsho",
+      "gadwal",
+      "eurwig",
+      "mallar3",
+      "norpin",
+      "gnwtea",
+      "tufduc",
+      "comeid",
+      "blksco1",
+      "lotduc",
+      "rebmer",
+      "rinphe1",
+      "relpar1",
+      "rocpig",
+      "stodov1",
+      "cowpig1",
+      "eucdov",
+      "comcuc",
+      "comswi",
+      "watrai1",
+      "commoo3",
+      "eurcoo",
+      "euroys1",
+      "bkbplo",
+      "corplo",
+      "norlap",
+      "whimbr5",
+      "eurcur",
+      "batgod",
+      "bktgod",
+      "comsni",
+      "comsan",
+      "comred1",
+      "comgre",
+      "rudtur",
+      "redkno",
+      "ruff",
+      "cursan",
+      "sander",
+      "dunlin",
+      "parjae",
+      "gresku1",
+      "razorb",
+      "commur",
+      "litgul",
+      "bklkit",
+      "bkhgul",
+      "medgul1",
+      "mewgul",
+      "euhgul1",
+      "gbbgul",
+      "lbbgul",
+      "litter1",
+      "blkter",
+      "whwter",
+      "arcter",
+      "comter",
+      "santer1",
+      "litgre1",
+      "horgre",
+      "grcgre1",
+      "eargre",
+      "retloo",
+      "comloo",
+      "lcspet",
+      "greshe",
+      "norgan",
+      "grecor",
+      "eursha1",
+      "litegr",
+      "greegr",
+      "graher1",
+      "osprey",
+      "eurspa1",
+      "wemhar1",
+      "redkit1",
+      "whteag",
+      "combuz1",
+      "tawowl1",
+      "comkin1",
+      "grswoo",
+      "eugwoo2",
+      "eurkes",
+      "merlin",
+      "eurhob",
+      "perfal",
+      "eurjay1",
+      "eurmag1",
+      "eurjac",
+      "rook1",
+      "carcro1",
+      "comrav",
+      "coatit2",
+      "blutit",
+      "gretit1",
+      "skylar",
+      "sedwar1",
+      "eurwar1",
+      "banswa",
+      "barswa",
+      "comhom1",
+      "wlwwar",
+      "comchi1",
+      "cetwar1",
+      "lottit1",
+      "blackc1",
+      "leswhi4",
+      "grewhi1",
+      "goldcr1",
+      "firecr1",
+      "eurnut2",
+      "eurtre1",
+      "winwre4",
+      "eursta",
+      "sonthr1",
+      "redwin",
+      "eurbla",
+      "fieldf",
+      "eurrob1",
+      "comred2",
+      "blared1",
+      "whinch1",
+      "stonec4",
+      "norwhe",
+      "dunnoc1",
+      "houspa",
+      "grywag",
+      "eaywag1",
+      "whiwag",
+      "meapip1",
+      "rocpip1",
+      "comcha",
+      "eurgre1",
+      "eurlin1",
+      "redpol1",
+      "redcro",
+      "eurgol",
+      "eursis",
+      "snobun",
+      "yellow2",
+      "reebun",
+      "grtgra"
+    ]
+  }
+}

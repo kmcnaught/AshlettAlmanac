@@ -102,6 +102,10 @@
     border-top:1px solid var(--rule);}
   .marsh .eyebrow{font-size:11px;letter-spacing:2.4px;text-transform:uppercase;color:var(--ink-soft);font-variant:small-caps;display:block;margin-bottom:5px;}
   .marsh em{color:var(--ink);font-style:italic;}
+  .marsh .species{color:var(--ink);font-weight:500;}
+  .marsh .species a{color:inherit;text-decoration:none;border-bottom:1px solid var(--line);}
+  .marsh .species a:hover{border-bottom-color:var(--ink-soft);}
+  .marsh .cite{font-size:12.5px;color:var(--ink-soft);opacity:.8;display:block;margin-top:3px;}
 
   .row{display:flex;border-top:1px solid var(--rule);}
   .cell{flex:1;padding:14px 16px;}
@@ -190,7 +194,7 @@
       <p class="sample-note">Reference: <a href="https://www.tidetimes.org.uk/calshot-castle-tide-times" target="_blank" rel="noopener">Calshot Castle tide times →</a></p>
     </section>
 
-    <p class="marsh"><span class="eyebrow">In the saltmarsh now</span><span id="marsh"></span></p>
+    <div class="marsh"><span class="eyebrow" id="marsh-eyebrow">In the saltmarsh now</span><div id="marsh"></div></div>
 
     <div class="row">
       <div class="cell">
@@ -1325,6 +1329,393 @@ const MARSH = [
 const NUGGET = "The cord-grass lining the creek, <em>Spartina anglica</em>, first arose right here in Southampton Water around the 1870s. From here it spread to estuaries the world over.";
 
 /* ============================================================
+   WILDLIFE PICKER — runtime data-driven replacement for MARSH[]/NUGGET.
+   See scripts/{scrape_goingbirding,scrape_inaturalist,compute_seasonality,
+   build_species_notes,fetch_species_descriptions}.py for the upstream pipeline.
+   Loads six JSON files at boot; if any critical one fails to fetch (file://,
+   offline, fetch blocked) the MARSH[] fallback above takes over.
+
+   The pick logic, condensed:
+     1. Build pool: records-based stable species (n>=3 with at least one note),
+        bedrock plants (NVC saltmarsh community), bedrock animals (intertidal
+        + saltmarsh specialists), drop feral.
+     2. For each candidate score = season_match × rarity_sweet × usage_decay.
+        - season_match: wrapped-Gaussian density at this week (records) or
+          month-membership (bedrock).
+        - rarity_sweet: bell over localRarity peaked at 0.4 (avoids Marsh
+          Harrier AND vagrants; targets the mid-uncommon sweet spot).
+        - usage_decay: 0.05 + 0.95 × (1 - exp(-Δ/halflife)) from wildlifeSeen
+          localStorage. Recently-shown species recover smoothly.
+     3. Pick group by target distribution (birds 0.55 / plants 0.20 / insects
+        0.10 / others 0.15), then species within group, both weighted-random
+        with a date-seeded RNG (same date = same pick on refresh).
+     4. Framing per species type drives eyebrow + leadLine; observer quotes
+        carry their attribution as caption; bedrock species fall back to
+        Wikipedia summary (via species_descriptions.json).
+   ============================================================ */
+const WILDLIFE_TARGET = {birds: 0.55, plants: 0.20, insects: 0.10, others: 0.15};
+const WILDLIFE_DECAY_HALFLIFE = 21;  // days — bumped from 14 to space repeats further
+const WILDLIFE_SEEN_KEY = "wildlifeSeen";
+const N_BINS = 52;
+const MONTH_NAMES = ["January","February","March","April","May","June",
+                    "July","August","September","October","November","December"];
+const WARBLER_SET = new Set([
+  "Cetti's Warbler","Common Reed Warbler","Sedge Warbler","Common Chiffchaff",
+  "Willow Warbler","Eurasian Blackcap","Garden Warbler","Lesser Whitethroat",
+  "Greater Whitethroat","Dartford Warbler","Common Firecrest",
+  "Common Grasshopper Warbler"
+]);
+
+async function loadWildlifeJSON(path){
+  try{
+    const r = await fetch(path, {cache:"no-store"});
+    if(!r.ok) return null;
+    return await r.json();
+  }catch(e){ return null; }
+}
+
+async function loadWildlife(){
+  const [seasonality, notes, canonical, bedrockPlants, bedrockAnimals, descriptions, goingbirding, inat] = await Promise.all([
+    loadWildlifeJSON("data/seasonality.json"),
+    loadWildlifeJSON("data/species_notes.json"),
+    loadWildlifeJSON("data/species_canonical.json"),
+    loadWildlifeJSON("data/saltmarsh_bedrock.json"),
+    loadWildlifeJSON("data/saltmarsh_bedrock_animals.json"),
+    loadWildlifeJSON("data/species_descriptions.json"),
+    loadWildlifeJSON("data/goingbirding_birds.json"),
+    loadWildlifeJSON("data/inaturalist_obs.json"),
+  ]);
+  // Need at least seasonality + bedrock + descriptions to run the picker.
+  if(!seasonality || !canonical || !bedrockPlants || !bedrockAnimals) return null;
+  const pool = buildWildlifePool({seasonality, notes, canonical, bedrockPlants, bedrockAnimals, descriptions: descriptions || {byCanonical:{}}, goingbirding: goingbirding || {records:[]}, inat: inat || {records:[]}});
+  return {pool};
+}
+
+// ---- pool builder ----
+function buildWildlifePool({seasonality, notes, canonical, bedrockPlants, bedrockAnimals, descriptions, goingbirding, inat}){
+  const feralSet = new Set((canonical.species || []).filter(s => s.feral).map(s => s.canonical));
+  const gbNameToCanon = {};
+  (canonical.species || []).forEach(s => { if(!s.exclude) gbNameToCanon[s.goingbirding.name] = s.canonical; });
+
+  const daysByCanonical = {};
+  (goingbirding.records || []).forEach(r => {
+    const c = gbNameToCanon[r.species];
+    if(c && !feralSet.has(c)) (daysByCanonical[c] = daysByCanonical[c] || []).push(doyFromISO(r.iso));
+  });
+  (inat.records || []).forEach(o => {
+    const c = o.commonName || o.scientificName;
+    if(c && o.observed_on) (daysByCanonical[c] = daysByCanonical[c] || []).push(doyFromISO(o.observed_on));
+  });
+
+  const notesByCanonical = {};
+  ((notes && notes.species) || []).forEach(s => notesByCanonical[s.canonical] = s);
+  const descsByCanonical = (descriptions && descriptions.byCanonical) || {};
+
+  const pool = {};
+  (seasonality.species || []).forEach(s => {
+    if(feralSet.has(s.canonical)) return;
+    if(!s.stable) return;
+    const ne = notesByCanonical[s.canonical];
+    if(!ne || !ne.notes || !ne.notes.length) return;
+    pool[s.canonical] = {
+      source:"records", canonical:s.canonical, scientificName:s.scientificName,
+      iconicTaxon:s.iconicTaxon, peakinessAdj:s.peakinessAdj, localRarity:s.localRarity,
+      links:s.links || {}, notesEntry:ne,
+      days:daysByCanonical[s.canonical] || [],
+      description:descsByCanonical[s.canonical] || null
+    };
+  });
+  (bedrockPlants.species || []).forEach(s => {
+    if(pool[s.canonical]) return;
+    pool[s.canonical] = {
+      source:"bedrock-plant", canonical:s.canonical, scientificName:s.scientificName,
+      iconicTaxon:"Plantae", peakinessAdj:null, localRarity:null,
+      links:s.links || {}, plantZone:s.zone, season:s.season || {},
+      bedrockNote:(s.notes || [])[0] || null,
+      description:descsByCanonical[s.canonical] || null
+    };
+  });
+  (bedrockAnimals.species || []).forEach(s => {
+    if(pool[s.canonical]) return;
+    pool[s.canonical] = {
+      source:"bedrock-animal", canonical:s.canonical, scientificName:s.scientificName,
+      iconicTaxon:s.iconicTaxon || "Animalia", peakinessAdj:null, localRarity:null,
+      links:s.links || {}, animalZone:s.ecologyZone, season:s.season || {},
+      bedrockNote:(s.notes || [])[0] || null,
+      description:descsByCanonical[s.canonical] || null
+    };
+  });
+  return pool;
+}
+
+// ---- circular / smoothing math ----
+function doyFromISO(iso){ const [y,m,d] = iso.split("-").map(Number); const dt = new Date(y,m-1,d); const start = new Date(y,0,0); return Math.floor((dt - start)/86400000); }
+function doyFromDate(d){ const s = new Date(d.getFullYear(),0,0); return Math.floor((d - s)/86400000); }
+function weekBinDOY(doy){ return Math.min(N_BINS-1, Math.floor((doy-1) * N_BINS / 365)); }
+function circDist(i, j, n){ const d = Math.abs(i-j); return Math.min(d, n-d); }
+
+function wrappedGaussianKernel(sigma){
+  const k = []; let sum = 0;
+  for(let i=0; i<N_BINS; i++){ const v = Math.exp(-0.5 * Math.pow(circDist(0,i,N_BINS)/sigma, 2)); k.push(v); sum += v; }
+  return k.map(x => x/sum);
+}
+const WILDLIFE_KERNEL = wrappedGaussianKernel(1.0);
+
+function smoothAtWeek(days, targetWeek){
+  if(!days || !days.length) return 0;
+  const bins = new Array(N_BINS).fill(0);
+  for(const d of days) bins[weekBinDOY(d)] += 1;
+  const sm = new Array(N_BINS).fill(0);
+  for(let i=0; i<N_BINS; i++){
+    let a = 0;
+    for(let j=0; j<N_BINS; j++) a += bins[j] * WILDLIFE_KERNEL[((i-j) % N_BINS + N_BINS) % N_BINS];
+    sm[i] = a;
+  }
+  let mx = 0; for(const v of sm) if(v > mx) mx = v;
+  return mx > 0 ? sm[targetWeek] / mx : 0;
+}
+
+// ---- scoring + selection ----
+function raritySweet(rarity){
+  if(rarity == null) return 1.0;
+  return Math.exp(-Math.pow((rarity - 0.4)/0.25, 2));
+}
+function readWildlifeSeen(){
+  try{ return JSON.parse(localStorage.getItem(WILDLIFE_SEEN_KEY) || "{}"); }catch(e){ return {}; }
+}
+function writeWildlifeSeen(s){
+  try{ localStorage.setItem(WILDLIFE_SEEN_KEY, JSON.stringify(s)); }catch(e){}
+}
+function usageDecay(canonical, history, today, halflife){
+  const last = history[canonical];
+  if(!last) return 1.0;
+  const lastDate = new Date(last + "T12:00:00");
+  const delta = Math.max(0, Math.floor((today - lastDate)/86400000));
+  return 0.05 + 0.95 * (1 - Math.exp(-delta/halflife));
+}
+
+function seasonMatchWildlife(c, targetMonth, targetWeek){
+  if(c.source === "records") return smoothAtWeek(c.days, targetWeek);
+  const s = c.season || {};
+  if(c.source === "bedrock-plant"){
+    if((s.flowering || []).includes(targetMonth)) return 1.0;
+    if((s.visible || []).includes(targetMonth)) return 0.4;
+    return 0;
+  }
+  if(c.source === "bedrock-animal"){
+    if((s.active || []).includes(targetMonth)) return 1.0;
+    return 0;
+  }
+  return 0;
+}
+
+function groupForWildlife(c){
+  const m = {Aves:"birds", Plantae:"plants", Insecta:"insects"};
+  return m[c.iconicTaxon] || "others";
+}
+
+// Mulberry32 PRNG seeded from an ISO date string.
+function hashSeedISO(iso){
+  let h = 2166136261;
+  for(let i=0; i<iso.length; i++){ h ^= iso.charCodeAt(i); h = Math.imul(h, 16777619); }
+  return h >>> 0;
+}
+function mulberry32(seed){
+  return function(){
+    let t = seed += 0x6D2B79F5;
+    t = Math.imul(t ^ (t >>> 15), t | 1);
+    t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+function weightedRandom(items, weights, rng){
+  let total = 0; for(const w of weights) total += w;
+  if(total <= 0) return items[Math.floor(rng() * items.length)];
+  let r = rng() * total;
+  for(let i=0; i<items.length; i++){ r -= weights[i]; if(r <= 0) return items[i]; }
+  return items[items.length-1];
+}
+
+function pickWildlife(pool, dayDate, history){
+  const iso = dayDate.getFullYear()+"-"+pad(dayDate.getMonth()+1)+"-"+pad(dayDate.getDate());
+  const targetDoy = doyFromDate(dayDate);
+  const targetMonth = dayDate.getMonth() + 1;
+  const targetWeek = weekBinDOY(targetDoy);
+
+  const byGroup = {birds:[], plants:[], insects:[], others:[]};
+  for(const c of Object.values(pool)) byGroup[groupForWildlife(c)].push(c);
+
+  const groupsWithOptions = {};
+  for(const g of Object.keys(byGroup)){
+    const scored = [];
+    for(const c of byGroup[g]){
+      const sMatch = seasonMatchWildlife(c, targetMonth, targetWeek);
+      if(sMatch <= 0.01) continue;
+      const rarity = raritySweet(c.localRarity);
+      const decay = usageDecay(c.canonical, history, dayDate, WILDLIFE_DECAY_HALFLIFE);
+      const score = sMatch * rarity * decay;
+      if(score > 0) scored.push({c, score});
+    }
+    if(scored.length) groupsWithOptions[g] = scored;
+  }
+  if(!Object.keys(groupsWithOptions).length) return null;
+
+  const rng = mulberry32(hashSeedISO(iso));
+  const groups = Object.keys(groupsWithOptions);
+  const gWeights = groups.map(g => WILDLIFE_TARGET[g] || 0);
+  const gSum = gWeights.reduce((a,b)=>a+b, 0);
+  const finalGW = gSum === 0 ? groups.map(()=>1) : gWeights;
+  const chosenGroup = weightedRandom(groups, finalGW, rng);
+  const scored = groupsWithOptions[chosenGroup];
+  const chosen = weightedRandom(scored.map(s=>s.c), scored.map(s=>s.score), rng);
+  return chosen;
+}
+
+// ---- framing / eyebrow / lead line ----
+function pickFramingWildlife(c, targetMonth){
+  if(c.source === "records") return "record-anchored";
+  const s = c.season || {};
+  if(c.source === "bedrock-plant"){
+    return (s.flowering || []).includes(targetMonth) ? "seasonal-anchored" : "seasonal-anchored";
+    // bedrock plants stay seasonal-anchored when visible (the off-peak case)
+    // — never year-round, per the design notes.
+  }
+  if(c.source === "bedrock-animal"){
+    return (s.active || []).includes(targetMonth) ? "seasonal-anchored" : "year-round";
+  }
+  return "year-round";
+}
+
+function makeEyebrowWildlife(c, framing, targetMonth){
+  const iconic = c.iconicTaxon;
+  const pz = c.plantZone, az = c.animalZone;
+  const peakiness = c.peakinessAdj || 0;
+  const monthName = MONTH_NAMES[targetMonth - 1];
+
+  if(framing === "record-anchored"){
+    if(peakiness > 0.20) return "Passing through around now";
+    if(iconic === "Aves" && WARBLER_SET.has(c.canonical)) return "Listen for at the creek now";
+    if(iconic === "Aves") return "Look for at the creek now";
+    if(iconic === "Mammalia") return "On the water";
+    return "At the creek now";
+  }
+  if(framing === "seasonal-anchored"){
+    if(iconic === "Plantae"){
+      if(pz === "lower-marsh") return "On the lower marsh now";
+      if(pz === "mid-marsh") return "In the saltmarsh now";
+      if(pz === "upper-marsh") return "At the upper edge now";
+      if(pz === "strandline") return "Along the strandline now";
+      return "In flower in " + monthName;
+    }
+    if(iconic === "Insecta") return "On the wing in " + monthName;
+    if(az === "open-water") return "On the water now";
+    if(az === "strandline") return "Above the tideline now";
+    if(az === "mudflat") return "On the mud now";
+    if(az === "creek-channel") return "In the channel now";
+    if(az === "intertidal-hard") return "On the breakwater now";
+    if(az === "saltmarsh-surface") return "In the saltmarsh in " + monthName;
+    return "In " + monthName;
+  }
+  // year-round
+  if(az === "open-water") return "On the water";
+  if(az === "mudflat") return "On the mud at low water";
+  if(az === "creek-channel") return "In the channel";
+  if(az === "intertidal-hard") return "On the breakwater";
+  if(az === "strandline") return "At the tideline";
+  return "At the creek";
+}
+
+function trimSummary(s, sentences){
+  if(!s) return "";
+  // Mask abbreviation periods (Latin name abbrevs like 'T. bengalensis' in tern
+  // summaries; common honorifics) so they don't get treated as sentence ends.
+  const PH = "\x00";
+  const masked = s.replace(
+    /\b(?:[A-Z]|Mt|St|Mr|Mrs|Ms|Dr|Prof|Jr|Sr|ssp|subsp|var|cf|nr|aff)\.(\s)/g,
+    function(m){ return m.replace(".", PH); }
+  );
+  const parts = masked.match(/[^.!?]+[.!?]+(?=\s+[A-Z]|\s*$)/g);
+  if(!parts) return s.trim().replace(/\x00/g, ".");
+  return parts.map(function(p){ return p.trim(); }).slice(0, sentences).join(" ").replace(/\x00/g, ".").trim();
+}
+
+const NOTE_PRIORITY_WILDLIFE = {
+  "record-anchored": ["auto-observer","manual","auto-bimodal"],
+  "seasonal-anchored": ["manual","auto-observer","auto-bimodal"],
+  "year-round": ["manual"],
+};
+
+function pickLeadWildlife(c, framing){
+  // Bedrock species: bedrock note wins; fall back to summary if missing.
+  if(c.source === "bedrock-plant" || c.source === "bedrock-animal"){
+    const text = c.bedrockNote || trimSummary((c.description||{}).wikipediaSummary, 2);
+    return {leadLine: text, caption: null};
+  }
+  // Records-based: try priority list, then fall back to Wikipedia summary.
+  const ne = c.notesEntry;
+  if(ne && ne.notes){
+    for(const src of (NOTE_PRIORITY_WILDLIFE[framing] || ["manual"])){
+      for(const n of ne.notes){
+        if(n.source === src){
+          if(src === "auto-observer"){
+            // Split body and attribution at the last " — ".
+            const idx = n.text.lastIndexOf(" — ");
+            if(idx > 0){
+              const body = n.text.slice(0, idx).trim();
+              const cite = n.text.slice(idx + 3).replace(/\.$/, "").trim();
+              return {leadLine: body, caption: cite};
+            }
+          }
+          return {leadLine: n.text, caption: null};
+        }
+      }
+    }
+  }
+  // No good note — surface the Wikipedia first sentence(s).
+  return {leadLine: trimSummary((c.description||{}).wikipediaSummary, 2), caption: null};
+}
+
+function renderMarshSlot(pick, dayDate, dIdx, dayMonth){
+  const eyebrowEl = document.getElementById("marsh-eyebrow");
+  const bodyEl = document.getElementById("marsh");
+  if(!bodyEl) return;
+
+  // History nugget — every 9th day-of-year takes over the slot, as before.
+  if(dIdx % 9 === 0){
+    if(eyebrowEl) eyebrowEl.textContent = "A note from the creek";
+    bodyEl.innerHTML = NUGGET;
+    return;
+  }
+  if(pick){
+    const targetMonth = dayDate.getMonth() + 1;
+    const framing = pickFramingWildlife(pick, targetMonth);
+    const eyebrow = makeEyebrowWildlife(pick, framing, targetMonth);
+    const {leadLine, caption} = pickLeadWildlife(pick, framing);
+    const link = (pick.links && (pick.links.ebird || pick.links.inat || pick.links.wikipedia || pick.links.goingbirding || pick.links.ukmoths)) || ((pick.description||{}).inatUrl) || null;
+
+    if(eyebrowEl) eyebrowEl.textContent = eyebrow;
+    const sciName = pick.scientificName ? ' <em>' + pick.scientificName + '</em>' : "";
+    const speciesHtml = link
+      ? '<a href="' + link + '" target="_blank" rel="noopener">' + pick.canonical + '</a>' + sciName
+      : pick.canonical + sciName;
+    const captionHtml = caption ? '<span class="cite">— ' + caption + '</span>' : "";
+    bodyEl.innerHTML = '<span class="species">' + speciesHtml + '</span>. ' + (leadLine || "") + captionHtml;
+
+    // Record the show — but only for today, so navigating future days does not pollute history.
+    const dayIso = dayDate.getFullYear() + "-" + pad(dayDate.getMonth()+1) + "-" + pad(dayDate.getDate());
+    if(dayIso === todayISO){
+      const history = readWildlifeSeen();
+      history[pick.canonical] = dayIso;
+      writeWildlifeSeen(history);
+    }
+    return;
+  }
+  // Fallback: static MARSH array (offline, file://, or fetch blocked).
+  if(eyebrowEl) eyebrowEl.textContent = "In the saltmarsh now";
+  bodyEl.innerHTML = MARSH[dayMonth];
+}
+
+/* ============================================================
    helpers
    ============================================================ */
 const pad=n=>String(n).padStart(2,"0");
@@ -1439,6 +1830,7 @@ let selectedISO = readLastViewed() || todayISO;
 (async function(){
 const TIDE_TABLE = await loadTideTable();
 const VERSES = await loadVerses();
+const WILDLIFE = await loadWildlife();
 
 // Today-anchored signals — the verse picker runs once at boot against these,
 // so navigating to a future day does not change which verse is showing.
@@ -1689,8 +2081,11 @@ function renderDay(iso){
   })(document.getElementById("moonglyph"));
   renderChartMoonIcon(illum, waxing);
 
-  // --- marsh line (wildlife with an occasional history nugget) ---
-  document.getElementById("marsh").innerHTML = (dIdx%9===0) ? NUGGET : MARSH[dayMonth];
+  // --- marsh line: data-driven picker, with NUGGET rotation + MARSH[] fallback ---
+  const wildlifePick = (WILDLIFE && WILDLIFE.pool)
+    ? pickWildlife(WILDLIFE.pool, dayDate, readWildlifeSeen())
+    : null;
+  renderMarshSlot(wildlifePick, dayDate, dIdx, dayMonth);
 
   // --- light line (sun/moon — tide-independent, render even without predictions) ---
   (function(){

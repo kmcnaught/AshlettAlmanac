@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "purpose": "iNaturalist taxonIds to skip when picking a wildlife line. Research-grade only means 2+ observers agreed on the ID — it does NOT filter for wild vs escaped/feral. Anything in this list is a real record but biologically uninformative for the almanac's 'in the saltmarsh now' framing.",
+    "matchBy": "taxonId"
+  },
+  "excludedTaxa": [
+    {
+      "taxonId": 9607,
+      "scientificName": "Quiscalus mexicanus",
+      "commonName": "Great-tailed Grackle",
+      "taxonUrl": "https://www.inaturalist.org/taxa/9607",
+      "reason": "Native to Americas. All 6 records are a single escaped/aviary bird in a Holbury residential garden (Southbourne Avenue / Holbury Drove Shops). Same bird as goingbirding's 'BOAT-TAILED GRACKLE'."
+    }
+  ]
+}

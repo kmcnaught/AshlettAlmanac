@@ -1,0 +1,253 @@
+{
+  "_meta": {
+    "purpose": "Curated bedrock list of plants characteristic of Solent saltmarsh — independent of iNaturalist coverage. Picker can draw from this pool any time of year regardless of whether anyone has recently logged them, since these species ARE the saltmarsh by definition.",
+    "reference": "Rodwell, J.S. (1995) British Plant Communities Vol 5: Maritime communities. UK National Vegetation Classification saltmarsh communities SM1–SM28.",
+    "referenceUrl": "https://hub.jncc.gov.uk/assets/8e8b4a32-69ab-4ce8-b69b-72c43cf2f7d6",
+    "habitatBackstop": "JNCC UK BAP Priority Habitat: Coastal Saltmarsh — https://jncc.gov.uk/our-work/uk-bap-priority-habitats/",
+    "monthsAre": "1=January .. 12=December. 'flowering' = months in flower; 'visible' = months the plant is recognisable in the marsh (perennials are mostly all year).",
+    "zones": "lower-marsh (pioneer / regularly tidally inundated), mid-marsh (twice-daily flooded), upper-marsh (only flooded by spring/storm tides), strandline (drift line above HW)",
+    "linksNote": "Wikipedia URLs are predictable from Genus_species; iNat URLs are search-based. BSBI Plant Atlas URLs use scrambled IDs — to add per-species, fetch from https://plantatlas2020.org or via https://bsbi.org/taxa search."
+  },
+  "species": [
+    {
+      "canonical": "Glasswort",
+      "scientificName": "Salicornia europaea",
+      "iconicTaxon": "Plantae",
+      "nvc": ["SM7", "SM8"],
+      "zone": "lower-marsh",
+      "season": {"flowering": [8, 9], "visible": [4, 5, 6, 7, 8, 9, 10, 11], "peakLabel": "early September"},
+      "notes": [
+        "Salt-adapted annual of bare mud near the lowest tides — bright green in summer, glowing red after autumn frosts before dying back to reveal the marsh's bare bones in winter."
+      ],
+      "links": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Salicornia_europaea",
+        "inat": "https://www.inaturalist.org/taxa/search?q=Salicornia+europaea"
+      }
+    },
+    {
+      "canonical": "Common Cord-grass",
+      "scientificName": "Spartina anglica",
+      "iconicTaxon": "Plantae",
+      "nvc": ["SM6"],
+      "zone": "lower-marsh",
+      "season": {"flowering": [7, 8, 9, 10], "visible": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "peakLabel": "late August"},
+      "notes": [
+        "The cord-grass that defines the lower-marsh edge — coarse tussocks of stiff grey-green leaves. The hybrid arose right here in Southampton Water in the 1870s and was deliberately spread worldwide for coastal stabilisation; in retreat since the 1950s die-back."
+      ],
+      "links": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Spartina_anglica",
+        "inat": "https://www.inaturalist.org/taxa/search?q=Spartina+anglica"
+      }
+    },
+    {
+      "canonical": "Annual Sea-blite",
+      "scientificName": "Suaeda maritima",
+      "iconicTaxon": "Plantae",
+      "nvc": ["SM10", "SM11"],
+      "zone": "lower-marsh",
+      "season": {"flowering": [8, 9, 10], "visible": [5, 6, 7, 8, 9, 10, 11], "peakLabel": "mid September"},
+      "notes": [
+        "Soft fleshy mat-former among the glasswort — green for most of summer, turning crimson and purple in autumn alongside the rest of the lower marsh."
+      ],
+      "links": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Suaeda_maritima",
+        "inat": "https://www.inaturalist.org/taxa/search?q=Suaeda+maritima"
+      }
+    },
+    {
+      "canonical": "Common Saltmarsh-grass",
+      "scientificName": "Puccinellia maritima",
+      "iconicTaxon": "Plantae",
+      "nvc": ["SM13"],
+      "zone": "mid-marsh",
+      "season": {"flowering": [6, 7, 8], "visible": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "peakLabel": "mid July"},
+      "notes": [
+        "The dominant grass of the mid-marsh sward — a tough, salt-tolerant turf that forms the floor of a healthy marsh and binds the surface against scour."
+      ],
+      "links": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Puccinellia_maritima",
+        "inat": "https://www.inaturalist.org/taxa/search?q=Puccinellia+maritima"
+      }
+    },
+    {
+      "canonical": "Sea Purslane",
+      "scientificName": "Atriplex portulacoides",
+      "iconicTaxon": "Plantae",
+      "nvc": ["SM14"],
+      "zone": "mid-marsh",
+      "season": {"flowering": [7, 8, 9], "visible": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "peakLabel": "mid August"},
+      "notes": [
+        "Silvery, mat-forming sub-shrub of mid-marsh creek edges — lines the channel banks so densely that the saltings can look silver-grey across the middle of summer."
+      ],
+      "links": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Atriplex_portulacoides",
+        "inat": "https://www.inaturalist.org/taxa/search?q=Atriplex+portulacoides"
+      }
+    },
+    {
+      "canonical": "Common Sea-lavender",
+      "scientificName": "Limonium vulgare",
+      "iconicTaxon": "Plantae",
+      "nvc": ["SM13", "SM14"],
+      "zone": "mid-marsh",
+      "season": {"flowering": [7, 8], "visible": [4, 5, 6, 7, 8, 9, 10], "peakLabel": "late July"},
+      "notes": [
+        "Lays a mauve haze across the mid-marsh in July and August. Not actually a lavender — flowers are tiny but the cumulative purple wash is the colour of high summer here."
+      ],
+      "links": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Limonium_vulgare",
+        "inat": "https://www.inaturalist.org/taxa/search?q=Limonium+vulgare"
+      }
+    },
+    {
+      "canonical": "Sea Aster",
+      "scientificName": "Tripolium pannonicum",
+      "iconicTaxon": "Plantae",
+      "nvc": ["SM10", "SM13"],
+      "zone": "mid-marsh",
+      "season": {"flowering": [7, 8, 9, 10], "visible": [4, 5, 6, 7, 8, 9, 10, 11], "peakLabel": "early September"},
+      "notes": [
+        "Mauve daisy of mid-marsh, flowering July to October — often the last colour of the marsh year, holding on after the sea-lavender has gone over. Older books call it Aster tripolium."
+      ],
+      "links": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Tripolium_pannonicum",
+        "inat": "https://www.inaturalist.org/taxa/search?q=Tripolium+pannonicum"
+      }
+    },
+    {
+      "canonical": "Sea Plantain",
+      "scientificName": "Plantago maritima",
+      "iconicTaxon": "Plantae",
+      "nvc": ["SM13", "SM16"],
+      "zone": "mid-marsh",
+      "season": {"flowering": [6, 7, 8], "visible": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "peakLabel": "mid July"},
+      "notes": [
+        "Tough, fleshy-leaved plantain of mid and upper marsh — narrow ribbed leaves in a basal rosette, a small green spike of flowers in summer."
+      ],
+      "links": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Plantago_maritima",
+        "inat": "https://www.inaturalist.org/taxa/search?q=Plantago+maritima"
+      }
+    },
+    {
+      "canonical": "Sea Arrowgrass",
+      "scientificName": "Triglochin maritima",
+      "iconicTaxon": "Plantae",
+      "nvc": ["SM13", "SM16"],
+      "zone": "mid-marsh",
+      "season": {"flowering": [6, 7, 8], "visible": [4, 5, 6, 7, 8, 9, 10], "peakLabel": "early July"},
+      "notes": [
+        "Slender spike of small green flowers above arrow-narrow leaves — easy to miss in the sward unless you're looking down through it."
+      ],
+      "links": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Triglochin_maritima",
+        "inat": "https://www.inaturalist.org/taxa/search?q=Triglochin+maritima"
+      }
+    },
+    {
+      "canonical": "Greater Sea-spurrey",
+      "scientificName": "Spergularia media",
+      "iconicTaxon": "Plantae",
+      "nvc": ["SM13"],
+      "zone": "mid-marsh",
+      "season": {"flowering": [6, 7, 8, 9], "visible": [4, 5, 6, 7, 8, 9, 10], "peakLabel": "late July"},
+      "notes": [
+        "Tiny pink five-petalled flowers among the mid-marsh grasses, open only in sun — close to invisible on a dull day."
+      ],
+      "links": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Spergularia_media",
+        "inat": "https://www.inaturalist.org/taxa/search?q=Spergularia+media"
+      }
+    },
+    {
+      "canonical": "Sea Milkwort",
+      "scientificName": "Lysimachia maritima",
+      "iconicTaxon": "Plantae",
+      "nvc": ["SM13", "SM16"],
+      "zone": "mid-marsh",
+      "season": {"flowering": [5, 6, 7, 8, 9], "visible": [4, 5, 6, 7, 8, 9, 10], "peakLabel": "early July"},
+      "notes": [
+        "Low creeper of mid to upper marsh with small pink-and-white flowers in the leaf-axils — overlooked between the tussocks. Older books call it Glaux maritima."
+      ],
+      "links": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Lysimachia_maritima",
+        "inat": "https://www.inaturalist.org/taxa/search?q=Lysimachia+maritima"
+      }
+    },
+    {
+      "canonical": "English Scurvygrass",
+      "scientificName": "Cochlearia anglica",
+      "iconicTaxon": "Plantae",
+      "nvc": ["SM10", "SM13"],
+      "zone": "mid-marsh",
+      "season": {"flowering": [4, 5, 6, 7], "visible": [2, 3, 4, 5, 6, 7, 8], "peakLabel": "mid May"},
+      "notes": [
+        "One of the first plants to flower on the marsh — small white four-petalled flowers from April. Sailors used to chew the leaves against scurvy on the long voyages out of Southampton."
+      ],
+      "links": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Cochlearia_anglica",
+        "inat": "https://www.inaturalist.org/taxa/search?q=Cochlearia+anglica"
+      }
+    },
+    {
+      "canonical": "Sea Rush",
+      "scientificName": "Juncus maritimus",
+      "iconicTaxon": "Plantae",
+      "nvc": ["SM18"],
+      "zone": "upper-marsh",
+      "season": {"flowering": [6, 7, 8], "visible": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "peakLabel": "mid July"},
+      "notes": [
+        "Tall, sharp-pointed rush forming dark green stands at the upper-marsh edge — its zone marks roughly where most spring tides reach."
+      ],
+      "links": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Juncus_maritimus",
+        "inat": "https://www.inaturalist.org/taxa/search?q=Juncus+maritimus"
+      }
+    },
+    {
+      "canonical": "Sea Couch",
+      "scientificName": "Elytrigia atherica",
+      "iconicTaxon": "Plantae",
+      "nvc": ["SM24", "SM28"],
+      "zone": "upper-marsh",
+      "season": {"flowering": [6, 7, 8], "visible": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "peakLabel": "early July"},
+      "notes": [
+        "Coarse blue-green grass marking the highest reach of the tide — the boundary between marsh and dry land. Often abbreviated 'sea couch' in older floras; some books still use Elymus athericus."
+      ],
+      "links": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Elymus_athericus",
+        "inat": "https://www.inaturalist.org/taxa/search?q=Elytrigia+atherica"
+      }
+    },
+    {
+      "canonical": "Sea Beet",
+      "scientificName": "Beta vulgaris subsp. maritima",
+      "iconicTaxon": "Plantae",
+      "nvc": ["SM28"],
+      "zone": "strandline",
+      "season": {"flowering": [7, 8, 9], "visible": [4, 5, 6, 7, 8, 9, 10, 11], "peakLabel": "mid August"},
+      "notes": [
+        "The wild ancestor of beetroot, growing along the drift line — glossy dark green leaves and a long spike of small green flowers in summer."
+      ],
+      "links": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Beta_vulgaris_subsp._maritima",
+        "inat": "https://www.inaturalist.org/taxa/search?q=Beta+vulgaris+maritima"
+      }
+    },
+    {
+      "canonical": "Spear-leaved Orache",
+      "scientificName": "Atriplex prostrata",
+      "iconicTaxon": "Plantae",
+      "nvc": ["SM28"],
+      "zone": "strandline",
+      "season": {"flowering": [7, 8, 9, 10], "visible": [5, 6, 7, 8, 9, 10, 11], "peakLabel": "late August"},
+      "notes": [
+        "Sprawling annual of the strandline among tide-cast wrack — green to bronze with distinctive arrow-shaped leaves."
+      ],
+      "links": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Atriplex_prostrata",
+        "inat": "https://www.inaturalist.org/taxa/search?q=Atriplex+prostrata"
+      }
+    }
+  ]
+}

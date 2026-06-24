@@ -1,0 +1,3026 @@
+{
+  "_meta": {
+    "generated": "2026-06-24T15:04:15Z",
+    "speciesWithNotes": 100,
+    "manualNotesCount": 7,
+    "notesBySource": {
+      "auto-seasonality": 92,
+      "auto-window": 91,
+      "manual": 7,
+      "auto-observer": 39,
+      "auto-bimodal": 13
+    }
+  },
+  "species": [
+    {
+      "canonical": "Common Cuckoo",
+      "scientificName": "Cuculus canorus",
+      "iconicTaxon": "Aves",
+      "n": 9,
+      "peakinessAdj": 0.3185,
+      "peakWeekLabel": "late May",
+      "minWindowDays": 28,
+      "bimodal": false,
+      "peakCount": 1,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=56",
+        "ebird": "https://ebird.org/species/comcuc",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "spring-passage",
+          "text": "Tight spring passage moment"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records in a 4-week window around late May (n=9)."
+        },
+        {
+          "source": "manual",
+          "category": "tidbit",
+          "text": "Only here for a few weeks of spring — late May is essentially the entire UK calling window."
+        }
+      ]
+    },
+    {
+      "canonical": "Eurasian Curlew",
+      "scientificName": "Numenius arquata",
+      "iconicTaxon": "Aves",
+      "n": 32,
+      "peakinessAdj": 0.2517,
+      "peakWeekLabel": "late June",
+      "minWindowDays": 63,
+      "bimodal": false,
+      "peakCount": 1,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=57",
+        "ebird": "https://ebird.org/species/eurcur",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "summer-presence",
+          "text": "Summer presence — breeding-season window"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records in a 2-month window around late June (n=32)."
+        },
+        {
+          "source": "manual",
+          "category": "tidbit",
+          "text": "Roosts in numbers near Calshot swingbridge at low tide — 25 birds counted on a single tide."
+        }
+      ]
+    },
+    {
+      "canonical": "Little Ringed Plover",
+      "scientificName": "Thinornis dubius",
+      "iconicTaxon": "Aves",
+      "n": 11,
+      "peakinessAdj": 0.2309,
+      "peakWeekLabel": "early July",
+      "minWindowDays": 82,
+      "bimodal": false,
+      "peakCount": 1,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=147",
+        "ebird": "https://ebird.org/species/lirplo",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "summer-presence",
+          "text": "Summer presence — breeding-season window"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records in a 3-month window around early July (n=11)."
+        },
+        {
+          "source": "auto-observer",
+          "category": "observer-first-observation",
+          "text": "\"Flew over woods, my first Ashlett record\" — J G Ross, Ashlett Creek 2026-04-04."
+        },
+        {
+          "source": "manual",
+          "category": "tidbit",
+          "text": "Freshwater-edge breeder that turns up on Ashlett's drying mud in passage — listen for the 'cree-ah' flight call."
+        }
+      ]
+    },
+    {
+      "canonical": "Dark-bellied Brent Goose",
+      "scientificName": "Branta bernicla",
+      "iconicTaxon": "Aves",
+      "n": 29,
+      "peakinessAdj": 0.2143,
+      "peakWeekLabel": "early May",
+      "minWindowDays": 109,
+      "bimodal": false,
+      "peakCount": 1,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=650",
+        "ebird": "https://ebird.org/species/brant",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "spring-arrival",
+          "text": "Spring arrival or early breeder"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records across about 4 months around early May (n=29)."
+        },
+        {
+          "source": "manual",
+          "category": "tidbit",
+          "text": "Wintering birds reach the Solent from the Taymyr Peninsula in Arctic Siberia, ~3,000 miles. About a tenth of the world population winters along this shore."
+        }
+      ]
+    },
+    {
+      "canonical": "Eurasian Whimbrel",
+      "scientificName": "Numenius phaeopus",
+      "iconicTaxon": "Aves",
+      "n": 57,
+      "peakinessAdj": 0.2033,
+      "peakWeekLabel": "mid April",
+      "minWindowDays": 111,
+      "bimodal": true,
+      "peakCount": 2,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=284",
+        "ebird": "https://ebird.org/species/whimbr5",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "bimodal-passage",
+          "text": "Two-pulse passage — peaks in spring and autumn"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records across about 4 months around mid April (n=57)."
+        },
+        {
+          "source": "auto-bimodal",
+          "category": "bimodal",
+          "text": "Two-pulse passage: peaks in mid April and mid July."
+        },
+        {
+          "source": "manual",
+          "category": "tidbit",
+          "text": "Seven-note flight whistle — the giveaway. Heads up Southampton Water in passage in April, and again as scattered birds in July and August."
+        }
+      ]
+    },
+    {
+      "canonical": "Common Kingfisher",
+      "scientificName": "Alcedo atthis",
+      "iconicTaxon": "Aves",
+      "n": 45,
+      "peakinessAdj": 0.0971,
+      "peakWeekLabel": "mid August",
+      "minWindowDays": 187,
+      "bimodal": false,
+      "peakCount": 2,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=126",
+        "ebird": "https://ebird.org/species/comkin1",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "year-round",
+          "text": "Effectively year-round at the creek"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records across about 6 months around mid August (n=45)."
+        },
+        {
+          "source": "manual",
+          "category": "tidbit",
+          "text": "Year-round at the creek but most visible in late summer when juveniles disperse along the freshwater feed."
+        }
+      ]
+    },
+    {
+      "canonical": "Cetti's Warbler",
+      "scientificName": "Cettia cetti",
+      "iconicTaxon": "Aves",
+      "n": 34,
+      "peakinessAdj": 0.0578,
+      "peakWeekLabel": "mid April",
+      "minWindowDays": 215,
+      "bimodal": false,
+      "peakCount": 1,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=38",
+        "ebird": "https://ebird.org/species/cetwar1",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "year-round",
+          "text": "Effectively year-round at the creek"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records across about 7 months around mid April (n=34)."
+        },
+        {
+          "source": "manual",
+          "category": "tidbit",
+          "text": "Year-round skulker in dense creek-side cover; you almost never see it, but the explosive song carries across the saltmarsh from April onwards."
+        }
+      ]
+    },
+    {
+      "canonical": "Eurasian Wigeon",
+      "scientificName": "Mareca penelope",
+      "iconicTaxon": "Aves",
+      "n": 10,
+      "peakinessAdj": 0.3079,
+      "peakWeekLabel": "mid March",
+      "minWindowDays": 12,
+      "bimodal": false,
+      "peakCount": 1,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=292",
+        "ebird": "https://ebird.org/species/eurwig",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "spring-passage",
+          "text": "Tight spring passage moment"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records in a 2-week window around mid March (n=10)."
+        },
+        {
+          "source": "auto-observer",
+          "category": "observer-first-observation",
+          "text": "\"fem. First returning, feeding on low tide\" — J G Ross, Calshot 2025-09-05."
+        }
+      ]
+    },
+    {
+      "canonical": "Northern Shoveler",
+      "scientificName": "Spatula clypeata",
+      "iconicTaxon": "Aves",
+      "n": 5,
+      "peakinessAdj": 0.3069,
+      "peakWeekLabel": "early January",
+      "minWindowDays": 5,
+      "bimodal": false,
+      "peakCount": 1,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=244",
+        "ebird": "https://ebird.org/species/norsho",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "winter-visitor",
+          "text": "Winter visitor"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records in a 2-week window around early January (n=5)."
+        }
+      ]
+    },
+    {
+      "canonical": "Little Gull",
+      "scientificName": "Hydrocoloeus minutus",
+      "iconicTaxon": "Aves",
+      "n": 7,
+      "peakinessAdj": 0.3051,
+      "peakWeekLabel": "late January",
+      "minWindowDays": 8,
+      "bimodal": false,
+      "peakCount": 1,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=145",
+        "ebird": "https://ebird.org/species/litgul",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "winter-visitor",
+          "text": "Winter visitor"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records in a 2-week window around late January (n=7)."
+        },
+        {
+          "source": "auto-observer",
+          "category": "observer-first-observation",
+          "text": "\"2 adults on shoreline in front of sailing club. There was a first winter yesterday so at least 3 in area\" — J G Ross, Calshot Spit 2026-01-26."
+        }
+      ]
+    },
+    {
+      "canonical": "Osprey",
+      "scientificName": "Pandion haliaetus",
+      "iconicTaxon": "Aves",
+      "n": 30,
+      "peakinessAdj": 0.3017,
+      "peakWeekLabel": "mid August",
+      "minWindowDays": 46,
+      "bimodal": false,
+      "peakCount": 1,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=177",
+        "ebird": "https://ebird.org/species/osprey",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "autumn-presence",
+          "text": "Autumn presence — passage or arrival of winterers"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records in a 2-month window around mid August (n=30)."
+        }
+      ]
+    },
+    {
+      "canonical": "Barn Swallow",
+      "scientificName": "Hirundo rustica",
+      "iconicTaxon": "Aves",
+      "n": 7,
+      "peakinessAdj": 0.3007,
+      "peakWeekLabel": "mid October",
+      "minWindowDays": 8,
+      "bimodal": false,
+      "peakCount": 1,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=264",
+        "ebird": "https://ebird.org/species/barswa",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "autumn-passage",
+          "text": "Tight autumn passage moment"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records in a 2-week window around mid October (n=7)."
+        }
+      ]
+    },
+    {
+      "canonical": "Black-headed Gull",
+      "scientificName": "Chroicocephalus ridibundus",
+      "iconicTaxon": "Aves",
+      "n": 4,
+      "peakinessAdj": 0.2848,
+      "peakWeekLabel": "early August",
+      "minWindowDays": 1,
+      "bimodal": false,
+      "peakCount": 0,
+      "links": {
+        "goingbirding": null,
+        "ebird": null,
+        "inat": "https://www.inaturalist.org/taxa/144510"
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "autumn-passage",
+          "text": "Tight autumn passage moment"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records in a 2-week window around early August (n=4)."
+        }
+      ]
+    },
+    {
+      "canonical": "European Herring Gull",
+      "scientificName": "Larus argentatus",
+      "iconicTaxon": "Aves",
+      "n": 4,
+      "peakinessAdj": 0.2848,
+      "peakWeekLabel": "early August",
+      "minWindowDays": 1,
+      "bimodal": false,
+      "peakCount": 0,
+      "links": {
+        "goingbirding": null,
+        "ebird": null,
+        "inat": "https://www.inaturalist.org/taxa/204533"
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "autumn-passage",
+          "text": "Tight autumn passage moment"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records in a 2-week window around early August (n=4)."
+        }
+      ]
+    },
+    {
+      "canonical": "Greater Whitethroat",
+      "scientificName": "Curruca communis",
+      "iconicTaxon": "Aves",
+      "n": 15,
+      "peakinessAdj": 0.2792,
+      "peakWeekLabel": "mid April",
+      "minWindowDays": 139,
+      "bimodal": true,
+      "peakCount": 2,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=289",
+        "ebird": "https://ebird.org/species/grewhi1",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "bimodal-passage",
+          "text": "Two-pulse passage — peaks in spring and autumn"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records across about 5 months around mid April (n=15)."
+        },
+        {
+          "source": "auto-bimodal",
+          "category": "bimodal",
+          "text": "Two-pulse passage: peaks in mid April and late August."
+        }
+      ]
+    },
+    {
+      "canonical": "Western Yellow Wagtail",
+      "scientificName": "Motacilla flava",
+      "iconicTaxon": "Aves",
+      "n": 6,
+      "peakinessAdj": 0.275,
+      "peakWeekLabel": "late August",
+      "minWindowDays": 13,
+      "bimodal": false,
+      "peakCount": 1,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=304",
+        "ebird": "https://ebird.org/species/eaywag1",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "autumn-passage",
+          "text": "Tight autumn passage moment"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records in a 2-week window around late August (n=6)."
+        }
+      ]
+    },
+    {
+      "canonical": "Common Redstart",
+      "scientificName": "Phoenicurus phoenicurus",
+      "iconicTaxon": "Aves",
+      "n": 4,
+      "peakinessAdj": 0.2621,
+      "peakWeekLabel": "mid August",
+      "minWindowDays": 12,
+      "bimodal": false,
+      "peakCount": 1,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=209",
+        "ebird": "https://ebird.org/species/comred2",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "autumn-passage",
+          "text": "Tight autumn passage moment"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records in a 2-week window around mid August (n=4)."
+        }
+      ]
+    },
+    {
+      "canonical": "Dartford Warbler",
+      "scientificName": "Curruca undata",
+      "iconicTaxon": "Aves",
+      "n": 7,
+      "peakinessAdj": 0.2585,
+      "peakWeekLabel": "late January",
+      "minWindowDays": 30,
+      "bimodal": false,
+      "peakCount": 1,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=59",
+        "ebird": null,
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "winter-visitor",
+          "text": "Winter visitor"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records in a 4-week window around late January (n=7)."
+        }
+      ]
+    },
+    {
+      "canonical": "Lesser Whitethroat",
+      "scientificName": "Curruca curruca",
+      "iconicTaxon": "Aves",
+      "n": 18,
+      "peakinessAdj": 0.2554,
+      "peakWeekLabel": "early May",
+      "minWindowDays": 102,
+      "bimodal": true,
+      "peakCount": 2,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=136",
+        "ebird": "https://ebird.org/species/leswhi4",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "bimodal-passage",
+          "text": "Two-pulse passage — peaks in spring and autumn"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records across about 3 months around early May (n=18)."
+        },
+        {
+          "source": "auto-bimodal",
+          "category": "bimodal",
+          "text": "Two-pulse passage: peaks in early May and mid August."
+        }
+      ]
+    },
+    {
+      "canonical": "Great Cormorant",
+      "scientificName": "Phalacrocorax carbo",
+      "iconicTaxon": "Aves",
+      "n": 7,
+      "peakinessAdj": 0.2524,
+      "peakWeekLabel": "early August",
+      "minWindowDays": 24,
+      "bimodal": false,
+      "peakCount": 1,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=51",
+        "ebird": "https://ebird.org/species/grecor",
+        "inat": "https://www.inaturalist.org/taxa/4270"
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "autumn-passage",
+          "text": "Tight autumn passage moment"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records in a 3-week window around early August (n=7)."
+        }
+      ]
+    },
+    {
+      "canonical": "Slavonian Grebe",
+      "scientificName": "Podiceps auritus",
+      "iconicTaxon": "Aves",
+      "n": 12,
+      "peakinessAdj": 0.2497,
+      "peakWeekLabel": "mid March",
+      "minWindowDays": 43,
+      "bimodal": false,
+      "peakCount": 1,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=247",
+        "ebird": "https://ebird.org/species/horgre",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "spring-passage",
+          "text": "Tight spring passage moment"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records in a 1-month window around mid March (n=12)."
+        }
+      ]
+    },
+    {
+      "canonical": "European Green Crab",
+      "scientificName": "Carcinus maenas",
+      "iconicTaxon": "Animalia",
+      "n": 3,
+      "peakinessAdj": 0.2403,
+      "peakWeekLabel": "mid May",
+      "minWindowDays": 1,
+      "bimodal": false,
+      "peakCount": 0,
+      "links": {
+        "goingbirding": null,
+        "ebird": null,
+        "inat": "https://www.inaturalist.org/taxa/52523"
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "spring-passage",
+          "text": "Tight spring passage moment"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records in a 2-week window around mid May (n=3)."
+        }
+      ]
+    },
+    {
+      "canonical": "Red Kite",
+      "scientificName": "Milvus milvus",
+      "iconicTaxon": "Aves",
+      "n": 11,
+      "peakinessAdj": 0.2396,
+      "peakWeekLabel": "late March",
+      "minWindowDays": 54,
+      "bimodal": false,
+      "peakCount": 1,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=199",
+        "ebird": "https://ebird.org/species/redkit1",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "spring-arrival",
+          "text": "Spring arrival or early breeder"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records in a 2-month window around late March (n=11)."
+        },
+        {
+          "source": "auto-observer",
+          "category": "observer-first-observation",
+          "text": "\"Circled briefly, my first Ashlett record\" — J G Ross, Ashlett Creek 2026-03-19."
+        }
+      ]
+    },
+    {
+      "canonical": "Northern Wheatear",
+      "scientificName": "Oenanthe oenanthe",
+      "iconicTaxon": "Aves",
+      "n": 8,
+      "peakinessAdj": 0.2345,
+      "peakWeekLabel": "mid April",
+      "minWindowDays": 156,
+      "bimodal": true,
+      "peakCount": 2,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=283",
+        "ebird": "https://ebird.org/species/norwhe",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "bimodal-passage",
+          "text": "Two-pulse passage — peaks in spring and autumn"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records across about 5 months around mid April (n=8)."
+        },
+        {
+          "source": "auto-bimodal",
+          "category": "bimodal",
+          "text": "Two-pulse passage: peaks in mid April and late August."
+        }
+      ]
+    },
+    {
+      "canonical": "Redwing",
+      "scientificName": "Turdus iliacus",
+      "iconicTaxon": "Aves",
+      "n": 5,
+      "peakinessAdj": 0.2322,
+      "peakWeekLabel": "mid March",
+      "minWindowDays": 17,
+      "bimodal": false,
+      "peakCount": 1,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=212",
+        "ebird": "https://ebird.org/species/redwin",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "spring-passage",
+          "text": "Tight spring passage moment"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records in a 2-week window around mid March (n=5)."
+        }
+      ]
+    },
+    {
+      "canonical": "Red-throated Diver",
+      "scientificName": "Gavia stellata",
+      "iconicTaxon": "Aves",
+      "n": 3,
+      "peakinessAdj": 0.2308,
+      "peakWeekLabel": "early November",
+      "minWindowDays": 4,
+      "bimodal": false,
+      "peakCount": 1,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=210",
+        "ebird": "https://ebird.org/species/retloo",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "late-autumn",
+          "text": "Late-autumn arrival of winterers"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records in a 2-week window around early November (n=3)."
+        }
+      ]
+    },
+    {
+      "canonical": "Little Grebe",
+      "scientificName": "Tachybaptus ruficollis",
+      "iconicTaxon": "Aves",
+      "n": 11,
+      "peakinessAdj": 0.2304,
+      "peakWeekLabel": "late December",
+      "minWindowDays": 103,
+      "bimodal": true,
+      "peakCount": 2,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=144",
+        "ebird": "https://ebird.org/species/litgre1",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "bimodal-passage",
+          "text": "Two-pulse passage — peaks in spring and autumn"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records across about 3 months around late December (n=11)."
+        },
+        {
+          "source": "auto-bimodal",
+          "category": "bimodal",
+          "text": "Two-pulse passage: peaks in late March and late December."
+        },
+        {
+          "source": "auto-observer",
+          "category": "observer-first-observation",
+          "text": "\"This used to be common on this mill pond. I have counts of over twenty in the early part of the century but this is the first here this year\" — J G Ross, Ashlett Mill Pond 2025-12-10."
+        }
+      ]
+    },
+    {
+      "canonical": "Red Crossbill",
+      "scientificName": "Loxia curvirostra",
+      "iconicTaxon": "Aves",
+      "n": 8,
+      "peakinessAdj": 0.2272,
+      "peakWeekLabel": "late July",
+      "minWindowDays": 39,
+      "bimodal": false,
+      "peakCount": 1,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=55",
+        "ebird": "https://ebird.org/species/redcro",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "summer-presence",
+          "text": "Summer presence — breeding-season window"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records in a 1-month window around late July (n=8)."
+        },
+        {
+          "source": "auto-observer",
+          "category": "observer-irruption",
+          "text": "\"On pines next to sailing club. Seems to be an influx of them\" — J G Ross, Ashlett Creek 2025-06-24."
+        }
+      ]
+    },
+    {
+      "canonical": "Common Swift",
+      "scientificName": "Apus apus",
+      "iconicTaxon": "Aves",
+      "n": 7,
+      "peakinessAdj": 0.226,
+      "peakWeekLabel": "mid June",
+      "minWindowDays": 56,
+      "bimodal": false,
+      "peakCount": 1,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=265",
+        "ebird": "https://ebird.org/species/comswi",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "summer-presence",
+          "text": "Summer presence — breeding-season window"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records in a 2-month window around mid June (n=7)."
+        }
+      ]
+    },
+    {
+      "canonical": "Great Northern Diver",
+      "scientificName": "Gavia immer",
+      "iconicTaxon": "Aves",
+      "n": 20,
+      "peakinessAdj": 0.2251,
+      "peakWeekLabel": "mid December",
+      "minWindowDays": 75,
+      "bimodal": false,
+      "peakCount": 2,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=91",
+        "ebird": "https://ebird.org/species/comloo",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "winter-visitor",
+          "text": "Winter visitor"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records in a 2-month window around mid December (n=20)."
+        }
+      ]
+    },
+    {
+      "canonical": "Whinchat",
+      "scientificName": "Saxicola rubetra",
+      "iconicTaxon": "Aves",
+      "n": 4,
+      "peakinessAdj": 0.2216,
+      "peakWeekLabel": "late August",
+      "minWindowDays": 111,
+      "bimodal": false,
+      "peakCount": 1,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=285",
+        "ebird": "https://ebird.org/species/whinch1",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "autumn-presence",
+          "text": "Autumn presence — passage or arrival of winterers"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records across about 4 months around late August (n=4)."
+        }
+      ]
+    },
+    {
+      "canonical": "Cinnabar moth",
+      "scientificName": "Tyria jacobaeae",
+      "iconicTaxon": "Insecta",
+      "n": 3,
+      "peakinessAdj": 0.2162,
+      "peakWeekLabel": "late June",
+      "minWindowDays": 15,
+      "bimodal": false,
+      "peakCount": 0,
+      "links": {
+        "goingbirding": null,
+        "ebird": null,
+        "inat": "https://www.inaturalist.org/taxa/51781"
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "summer-presence",
+          "text": "Summer presence — breeding-season window"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records in a 2-week window around late June (n=3)."
+        }
+      ]
+    },
+    {
+      "canonical": "Eurasian Blackcap",
+      "scientificName": "Sylvia atricapilla",
+      "iconicTaxon": "Aves",
+      "n": 13,
+      "peakinessAdj": 0.2158,
+      "peakWeekLabel": "late August",
+      "minWindowDays": 198,
+      "bimodal": false,
+      "peakCount": 1,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=19",
+        "ebird": "https://ebird.org/species/blackc1",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "autumn-presence",
+          "text": "Autumn presence — passage or arrival of winterers"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records across about 7 months around late August (n=13)."
+        }
+      ]
+    },
+    {
+      "canonical": "Common Sandpiper",
+      "scientificName": "Actitis hypoleucos",
+      "iconicTaxon": "Aves",
+      "n": 12,
+      "peakinessAdj": 0.212,
+      "peakWeekLabel": "late July",
+      "minWindowDays": 64,
+      "bimodal": false,
+      "peakCount": 1,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=47",
+        "ebird": "https://ebird.org/species/comsan",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "summer-presence",
+          "text": "Summer presence — breeding-season window"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records in a 2-month window around late July (n=12)."
+        }
+      ]
+    },
+    {
+      "canonical": "Sanderling",
+      "scientificName": "Calidris alba",
+      "iconicTaxon": "Aves",
+      "n": 21,
+      "peakinessAdj": 0.2119,
+      "peakWeekLabel": "late January",
+      "minWindowDays": 75,
+      "bimodal": false,
+      "peakCount": 1,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=232",
+        "ebird": "https://ebird.org/species/sander",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "winter-visitor",
+          "text": "Winter visitor"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records in a 2-month window around late January (n=21)."
+        }
+      ]
+    },
+    {
+      "canonical": "Fly Agaric",
+      "scientificName": "Amanita muscaria",
+      "iconicTaxon": "Fungi",
+      "n": 3,
+      "peakinessAdj": 0.2113,
+      "peakWeekLabel": "early October",
+      "minWindowDays": 14,
+      "bimodal": false,
+      "peakCount": 0,
+      "links": {
+        "goingbirding": null,
+        "ebird": null,
+        "inat": "https://www.inaturalist.org/taxa/48715"
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "autumn-passage",
+          "text": "Tight autumn passage moment"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records in a 2-week window around early October (n=3)."
+        }
+      ]
+    },
+    {
+      "canonical": "Common Snipe",
+      "scientificName": "Gallinago gallinago",
+      "iconicTaxon": "Aves",
+      "n": 10,
+      "peakinessAdj": 0.2107,
+      "peakWeekLabel": "late January",
+      "minWindowDays": 62,
+      "bimodal": false,
+      "peakCount": 1,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=249",
+        "ebird": "https://ebird.org/species/comsni",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "winter-visitor",
+          "text": "Winter visitor"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records in a 2-month window around late January (n=10)."
+        },
+        {
+          "source": "auto-observer",
+          "category": "observer-first-observation",
+          "text": "\"My first here this winter!\" — J G Ross, Calshot 2025-12-26."
+        }
+      ]
+    },
+    {
+      "canonical": "Willow Warbler",
+      "scientificName": "Phylloscopus trochilus",
+      "iconicTaxon": "Aves",
+      "n": 8,
+      "peakinessAdj": 0.208,
+      "peakWeekLabel": "early April",
+      "minWindowDays": 148,
+      "bimodal": true,
+      "peakCount": 2,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=294",
+        "ebird": "https://ebird.org/species/wlwwar",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "bimodal-passage",
+          "text": "Two-pulse passage — peaks in spring and autumn"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records across about 5 months around early April (n=8)."
+        },
+        {
+          "source": "auto-bimodal",
+          "category": "bimodal",
+          "text": "Two-pulse passage: peaks in early April and late August."
+        }
+      ]
+    },
+    {
+      "canonical": "Eurasian Teal",
+      "scientificName": "Anas crecca",
+      "iconicTaxon": "Aves",
+      "n": 5,
+      "peakinessAdj": 0.2038,
+      "peakWeekLabel": "early March",
+      "minWindowDays": 24,
+      "bimodal": false,
+      "peakCount": 1,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=268",
+        "ebird": "https://ebird.org/species/gnwtea",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "spring-passage",
+          "text": "Tight spring passage moment"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records in a 3-week window around early March (n=5)."
+        }
+      ]
+    },
+    {
+      "canonical": "Water Rail",
+      "scientificName": "Rallus aquaticus",
+      "iconicTaxon": "Aves",
+      "n": 15,
+      "peakinessAdj": 0.1987,
+      "peakWeekLabel": "late January",
+      "minWindowDays": 121,
+      "bimodal": true,
+      "peakCount": 2,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=281",
+        "ebird": "https://ebird.org/species/watrai1",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "bimodal-passage",
+          "text": "Two-pulse passage — peaks in spring and autumn"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records across about 4 months around late January (n=15)."
+        },
+        {
+          "source": "auto-bimodal",
+          "category": "bimodal",
+          "text": "Two-pulse passage: peaks in late January and late September."
+        }
+      ]
+    },
+    {
+      "canonical": "Eurasian Oystercatcher",
+      "scientificName": "Haematopus ostralegus",
+      "iconicTaxon": "Aves",
+      "n": 12,
+      "peakinessAdj": 0.1899,
+      "peakWeekLabel": "mid August",
+      "minWindowDays": 77,
+      "bimodal": false,
+      "peakCount": 1,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=178",
+        "ebird": "https://ebird.org/species/euroys1",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "autumn-presence",
+          "text": "Autumn presence — passage or arrival of winterers"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records in a 3-month window around mid August (n=12)."
+        }
+      ]
+    },
+    {
+      "canonical": "Common Reed Warbler",
+      "scientificName": "Acrocephalus scirpaceus",
+      "iconicTaxon": "Aves",
+      "n": 9,
+      "peakinessAdj": 0.1873,
+      "peakWeekLabel": "mid April",
+      "minWindowDays": 75,
+      "bimodal": false,
+      "peakCount": 2,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=214",
+        "ebird": "https://ebird.org/species/eurwar1",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "spring-arrival",
+          "text": "Spring arrival or early breeder"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records in a 2-month window around mid April (n=9)."
+        },
+        {
+          "source": "auto-observer",
+          "category": "observer-first-observation",
+          "text": "\"3 singing. Never heard 3 singing here before\" — J G Ross, Ashlett Creek 2026-06-22."
+        }
+      ]
+    },
+    {
+      "canonical": "Fieldfare",
+      "scientificName": "Turdus pilaris",
+      "iconicTaxon": "Aves",
+      "n": 4,
+      "peakinessAdj": 0.1873,
+      "peakWeekLabel": "late December",
+      "minWindowDays": 53,
+      "bimodal": false,
+      "peakCount": 1,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=69",
+        "ebird": "https://ebird.org/species/fieldf",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "winter-visitor",
+          "text": "Winter visitor"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records in a 2-month window around late December (n=4)."
+        },
+        {
+          "source": "auto-observer",
+          "category": "observer-irruption",
+          "text": "\"A flock of about 100 over reed beds, and an uncountable flock of redwing, must be a big local influx\" — J G Ross, Calshot 2025-12-21."
+        }
+      ]
+    },
+    {
+      "canonical": "Common Starling",
+      "scientificName": "Sturnus vulgaris",
+      "iconicTaxon": "Aves",
+      "n": 6,
+      "peakinessAdj": 0.187,
+      "peakWeekLabel": "late August",
+      "minWindowDays": 52,
+      "bimodal": false,
+      "peakCount": 1,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=260",
+        "ebird": "https://ebird.org/species/eursta",
+        "inat": "https://www.inaturalist.org/taxa/14850"
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "autumn-presence",
+          "text": "Autumn presence — passage or arrival of winterers"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records in a 2-month window around late August (n=6)."
+        }
+      ]
+    },
+    {
+      "canonical": "Eurasian Spoonbill",
+      "scientificName": "Platalea leucorodia",
+      "iconicTaxon": "Aves",
+      "n": 2,
+      "peakinessAdj": 0.1831,
+      "peakWeekLabel": "early January",
+      "minWindowDays": null,
+      "bimodal": false,
+      "peakCount": 0,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=255",
+        "ebird": "https://ebird.org/species/eurspo1",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-observer",
+          "category": "observer-first-observation",
+          "text": "\"My first record at Calshot. Flew onto low tide by power station outfall at 12:15, and they were by the end of the spit at 13:15\" — J G Ross, Calshot 2026-01-14."
+        }
+      ]
+    },
+    {
+      "canonical": "Sedge Warbler",
+      "scientificName": "Acrocephalus schoenobaenus",
+      "iconicTaxon": "Aves",
+      "n": 10,
+      "peakinessAdj": 0.1829,
+      "peakWeekLabel": "mid April",
+      "minWindowDays": 91,
+      "bimodal": false,
+      "peakCount": 1,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=236",
+        "ebird": "https://ebird.org/species/sedwar1",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "spring-arrival",
+          "text": "Spring arrival or early breeder"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records across about 3 months around mid April (n=10)."
+        },
+        {
+          "source": "auto-observer",
+          "category": "observer-irruption",
+          "text": "\"After the initial influx in April there has only been 1 regular singer always in the same place\" — J G Ross, Calshot 2025-07-06."
+        }
+      ]
+    },
+    {
+      "canonical": "Eurasian Skylark",
+      "scientificName": "Alauda arvensis",
+      "iconicTaxon": "Aves",
+      "n": 8,
+      "peakinessAdj": 0.1823,
+      "peakWeekLabel": "mid December",
+      "minWindowDays": 92,
+      "bimodal": false,
+      "peakCount": 2,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=246",
+        "ebird": "https://ebird.org/species/skylar",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "winter-visitor",
+          "text": "Winter visitor"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records across about 3 months around mid December (n=8)."
+        },
+        {
+          "source": "auto-observer",
+          "category": "observer-first-observation",
+          "text": "\"Close to power station outfall channel. Used to be regular in winter in this area, but first here for a few year\" — J G Ross, Calshot 2025-12-28."
+        }
+      ]
+    },
+    {
+      "canonical": "Western House-Martin",
+      "scientificName": "Delichon urbicum",
+      "iconicTaxon": "Aves",
+      "n": 6,
+      "peakinessAdj": 0.1823,
+      "peakWeekLabel": "mid April",
+      "minWindowDays": 149,
+      "bimodal": false,
+      "peakCount": 1,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=116",
+        "ebird": "https://ebird.org/species/comhom1",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "spring-arrival",
+          "text": "Spring arrival or early breeder"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records across about 5 months around mid April (n=6)."
+        },
+        {
+          "source": "auto-observer",
+          "category": "observer-first-observation",
+          "text": "\"Remarkably first on patch since my earliest ever on 29th March\" — J G Ross, Calshot 2025-08-31."
+        }
+      ]
+    },
+    {
+      "canonical": "Painted Lady",
+      "scientificName": "Vanessa cardui",
+      "iconicTaxon": "Insecta",
+      "n": 3,
+      "peakinessAdj": 0.1816,
+      "peakWeekLabel": "early June",
+      "minWindowDays": 31,
+      "bimodal": false,
+      "peakCount": 0,
+      "links": {
+        "goingbirding": null,
+        "ebird": null,
+        "inat": "https://www.inaturalist.org/taxa/48548"
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "summer-presence",
+          "text": "Summer presence — breeding-season window"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records in a 4-week window around early June (n=3)."
+        }
+      ]
+    },
+    {
+      "canonical": "Spotted Longhorn Beetle",
+      "scientificName": "Rutpela maculata",
+      "iconicTaxon": "Insecta",
+      "n": 3,
+      "peakinessAdj": 0.1816,
+      "peakWeekLabel": "mid June",
+      "minWindowDays": 28,
+      "bimodal": false,
+      "peakCount": 0,
+      "links": {
+        "goingbirding": null,
+        "ebird": null,
+        "inat": "https://www.inaturalist.org/taxa/62321"
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "summer-presence",
+          "text": "Summer presence — breeding-season window"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records in a 4-week window around mid June (n=3)."
+        }
+      ]
+    },
+    {
+      "canonical": "Knopper Gall Wasp",
+      "scientificName": "Andricus quercuscalicis",
+      "iconicTaxon": "Insecta",
+      "n": 3,
+      "peakinessAdj": 0.1799,
+      "peakWeekLabel": "late July",
+      "minWindowDays": 64,
+      "bimodal": false,
+      "peakCount": 0,
+      "links": {
+        "goingbirding": null,
+        "ebird": null,
+        "inat": "https://www.inaturalist.org/taxa/127732"
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "wide-ranging",
+          "text": "Present most of the year with a soft seasonal peak"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records in a 2-month window around late July (n=3)."
+        }
+      ]
+    },
+    {
+      "canonical": "Northern Pintail",
+      "scientificName": "Anas acuta",
+      "iconicTaxon": "Aves",
+      "n": 20,
+      "peakinessAdj": 0.1766,
+      "peakWeekLabel": "early January",
+      "minWindowDays": 90,
+      "bimodal": false,
+      "peakCount": 1,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=190",
+        "ebird": "https://ebird.org/species/norpin",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "wide-ranging",
+          "text": "Present most of the year with a soft seasonal peak"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records in a 3-month window around early January (n=20)."
+        },
+        {
+          "source": "auto-observer",
+          "category": "observer-phenology",
+          "text": "\"Starting to arrive as the tide dropped\" — J G Ross, Calshot 2025-12-21."
+        }
+      ]
+    },
+    {
+      "canonical": "Dunlin",
+      "scientificName": "Calidris alpina",
+      "iconicTaxon": "Aves",
+      "n": 11,
+      "peakinessAdj": 0.1761,
+      "peakWeekLabel": "early August",
+      "minWindowDays": 149,
+      "bimodal": true,
+      "peakCount": 2,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=62",
+        "ebird": "https://ebird.org/species/dunlin",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "bimodal-passage",
+          "text": "Two-pulse passage — peaks in spring and autumn"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records across about 5 months around early August (n=11)."
+        },
+        {
+          "source": "auto-bimodal",
+          "category": "bimodal",
+          "text": "Two-pulse passage: peaks in late March and early August."
+        }
+      ]
+    },
+    {
+      "canonical": "Sand Martin",
+      "scientificName": "Riparia riparia",
+      "iconicTaxon": "Aves",
+      "n": 11,
+      "peakinessAdj": 0.171,
+      "peakWeekLabel": "late May",
+      "minWindowDays": 73,
+      "bimodal": false,
+      "peakCount": 2,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=231",
+        "ebird": "https://ebird.org/species/banswa",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "wide-ranging",
+          "text": "Present most of the year with a soft seasonal peak"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records in a 2-month window around late May (n=11)."
+        }
+      ]
+    },
+    {
+      "canonical": "European Shag",
+      "scientificName": "Gulosus aristotelis",
+      "iconicTaxon": "Aves",
+      "n": 5,
+      "peakinessAdj": 0.1699,
+      "peakWeekLabel": "early August",
+      "minWindowDays": 172,
+      "bimodal": true,
+      "peakCount": 2,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=238",
+        "ebird": "https://ebird.org/species/eursha1",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "bimodal-passage",
+          "text": "Two-pulse passage — peaks in spring and autumn"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records across about 6 months around early August (n=5)."
+        },
+        {
+          "source": "auto-bimodal",
+          "category": "bimodal",
+          "text": "Two-pulse passage: peaks in late January and early August."
+        },
+        {
+          "source": "auto-observer",
+          "category": "observer-breeding",
+          "text": "\"juv. Probably same bird I reported Friday\" — J G Ross, Calshot Spit 2025-08-11."
+        },
+        {
+          "source": "auto-observer",
+          "category": "observer-first-observation",
+          "text": "\"juv. My first Shag of the year, ooh matron! At least first i've positively identified, I seem to have a problem with these\" — J G Ross, Calshot Spit 2025-08-08."
+        }
+      ]
+    },
+    {
+      "canonical": "Common Ringed Plover",
+      "scientificName": "Charadrius hiaticula",
+      "iconicTaxon": "Aves",
+      "n": 21,
+      "peakinessAdj": 0.168,
+      "peakWeekLabel": "late August",
+      "minWindowDays": 113,
+      "bimodal": false,
+      "peakCount": 1,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=218",
+        "ebird": "https://ebird.org/species/corplo",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "wide-ranging",
+          "text": "Present most of the year with a soft seasonal peak"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records across about 4 months around late August (n=21)."
+        },
+        {
+          "source": "auto-observer",
+          "category": "observer-first-observation",
+          "text": "\"First I have recorded at Ashlett\" — J G Ross, Ashlett Creek 2025-07-10."
+        },
+        {
+          "source": "auto-observer",
+          "category": "observer-breeding",
+          "text": "\"Including pair with 2 young by power station channel\" — J G Ross, Calshot 2025-07-26."
+        }
+      ]
+    },
+    {
+      "canonical": "Common Chiffchaff",
+      "scientificName": "Phylloscopus collybita",
+      "iconicTaxon": "Aves",
+      "n": 26,
+      "peakinessAdj": 0.166,
+      "peakWeekLabel": "late February",
+      "minWindowDays": 116,
+      "bimodal": false,
+      "peakCount": 1,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=40",
+        "ebird": "https://ebird.org/species/comchi1",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "wide-ranging",
+          "text": "Present most of the year with a soft seasonal peak"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records across about 4 months around late February (n=26)."
+        },
+        {
+          "source": "auto-observer",
+          "category": "observer-first-observation",
+          "text": "\"First one I've heard chiffchaffing\" — J G Ross, Calshot 2026-02-23."
+        }
+      ]
+    },
+    {
+      "canonical": "White-tailed Eagle",
+      "scientificName": "Haliaeetus albicilla",
+      "iconicTaxon": "Aves",
+      "n": 8,
+      "peakinessAdj": 0.164,
+      "peakWeekLabel": "early February",
+      "minWindowDays": 149,
+      "bimodal": false,
+      "peakCount": 1,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=288",
+        "ebird": "https://ebird.org/species/whteag",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "wide-ranging",
+          "text": "Present most of the year with a soft seasonal peak"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records across about 5 months around early February (n=8)."
+        }
+      ]
+    },
+    {
+      "canonical": "Marmalade Hover Fly",
+      "scientificName": "Episyrphus balteatus",
+      "iconicTaxon": "Insecta",
+      "n": 3,
+      "peakinessAdj": 0.1625,
+      "peakWeekLabel": "early June",
+      "minWindowDays": 37,
+      "bimodal": false,
+      "peakCount": 0,
+      "links": {
+        "goingbirding": null,
+        "ebird": null,
+        "inat": "https://www.inaturalist.org/taxa/52482"
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "wide-ranging",
+          "text": "Present most of the year with a soft seasonal peak"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records in a 1-month window around early June (n=3)."
+        }
+      ]
+    },
+    {
+      "canonical": "Northern Gannet",
+      "scientificName": "Morus bassanus",
+      "iconicTaxon": "Aves",
+      "n": 4,
+      "peakinessAdj": 0.1619,
+      "peakWeekLabel": "mid July",
+      "minWindowDays": 95,
+      "bimodal": false,
+      "peakCount": 2,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=73",
+        "ebird": "https://ebird.org/species/norgan",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "wide-ranging",
+          "text": "Present most of the year with a soft seasonal peak"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records across about 3 months around mid July (n=4)."
+        }
+      ]
+    },
+    {
+      "canonical": "Yellow-legged Gull",
+      "scientificName": "Larus michahellis",
+      "iconicTaxon": "Aves",
+      "n": 4,
+      "peakinessAdj": 0.1618,
+      "peakWeekLabel": "mid July",
+      "minWindowDays": 112,
+      "bimodal": true,
+      "peakCount": 2,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=307",
+        "ebird": "https://ebird.org/species/yelgul1",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "bimodal-passage",
+          "text": "Two-pulse passage — peaks in spring and autumn"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records across about 4 months around mid July (n=4)."
+        },
+        {
+          "source": "auto-bimodal",
+          "category": "bimodal",
+          "text": "Two-pulse passage: peaks in early April and mid July."
+        },
+        {
+          "source": "auto-observer",
+          "category": "observer-first-observation",
+          "text": "\"ad. Stood next to a common Herring gull, nice comparison. My first on this patch\" — J G Ross, Ashlett Mill Pond 2025-07-18."
+        }
+      ]
+    },
+    {
+      "canonical": "Lesser Redpoll",
+      "scientificName": "Acanthis cabaret",
+      "iconicTaxon": "Aves",
+      "n": 14,
+      "peakinessAdj": 0.1616,
+      "peakWeekLabel": "mid January",
+      "minWindowDays": 131,
+      "bimodal": true,
+      "peakCount": 2,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=134",
+        "ebird": null,
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "bimodal-passage",
+          "text": "Two-pulse passage — peaks in spring and autumn"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records across about 4 months around mid January (n=14)."
+        },
+        {
+          "source": "auto-bimodal",
+          "category": "bimodal",
+          "text": "Two-pulse passage: peaks in mid January and mid October."
+        }
+      ]
+    },
+    {
+      "canonical": "Red-legged Partridge",
+      "scientificName": "Alectoris rufa",
+      "iconicTaxon": "Aves",
+      "n": 6,
+      "peakinessAdj": 0.1615,
+      "peakWeekLabel": "early January",
+      "minWindowDays": 88,
+      "bimodal": false,
+      "peakCount": 1,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=204",
+        "ebird": "https://ebird.org/species/relpar1",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "wide-ranging",
+          "text": "Present most of the year with a soft seasonal peak"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records in a 3-month window around early January (n=6)."
+        },
+        {
+          "source": "auto-observer",
+          "category": "observer-first-observation",
+          "text": "\"My first for many years in here. Private site. No public acce\" — J G Ross, Fawley Refinery 2026-01-02."
+        }
+      ]
+    },
+    {
+      "canonical": "Gadwall",
+      "scientificName": "Mareca strepera",
+      "iconicTaxon": "Aves",
+      "n": 13,
+      "peakinessAdj": 0.1611,
+      "peakWeekLabel": "early January",
+      "minWindowDays": 119,
+      "bimodal": true,
+      "peakCount": 2,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=72",
+        "ebird": "https://ebird.org/species/gadwal",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "bimodal-passage",
+          "text": "Two-pulse passage — peaks in spring and autumn"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records across about 4 months around early January (n=13)."
+        },
+        {
+          "source": "auto-bimodal",
+          "category": "bimodal",
+          "text": "Two-pulse passage: peaks in early January and mid April."
+        }
+      ]
+    },
+    {
+      "canonical": "Red Knot",
+      "scientificName": "Calidris canutus",
+      "iconicTaxon": "Aves",
+      "n": 3,
+      "peakinessAdj": 0.1589,
+      "peakWeekLabel": "late August",
+      "minWindowDays": 59,
+      "bimodal": false,
+      "peakCount": 1,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=128",
+        "ebird": "https://ebird.org/species/redkno",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "wide-ranging",
+          "text": "Present most of the year with a soft seasonal peak"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records in a 2-month window around late August (n=3)."
+        }
+      ]
+    },
+    {
+      "canonical": "Little Egret",
+      "scientificName": "Egretta garzetta",
+      "iconicTaxon": "Aves",
+      "n": 36,
+      "peakinessAdj": 0.1577,
+      "peakWeekLabel": "mid August",
+      "minWindowDays": 120,
+      "bimodal": false,
+      "peakCount": 1,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=143",
+        "ebird": "https://ebird.org/species/litegr",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "wide-ranging",
+          "text": "Present most of the year with a soft seasonal peak"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records across about 4 months around mid August (n=36)."
+        }
+      ]
+    },
+    {
+      "canonical": "Reed Bunting",
+      "scientificName": "Emberiza schoeniclus",
+      "iconicTaxon": "Aves",
+      "n": 15,
+      "peakinessAdj": 0.1555,
+      "peakWeekLabel": "early January",
+      "minWindowDays": 118,
+      "bimodal": true,
+      "peakCount": 2,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=213",
+        "ebird": "https://ebird.org/species/reebun",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "bimodal-passage",
+          "text": "Two-pulse passage — peaks in spring and autumn"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records across about 4 months around early January (n=15)."
+        },
+        {
+          "source": "auto-bimodal",
+          "category": "bimodal",
+          "text": "Two-pulse passage: peaks in early January and late March."
+        }
+      ]
+    },
+    {
+      "canonical": "Common Gull",
+      "scientificName": "Larus canus",
+      "iconicTaxon": "Aves",
+      "n": 10,
+      "peakinessAdj": 0.1553,
+      "peakWeekLabel": "late March",
+      "minWindowDays": 146,
+      "bimodal": false,
+      "peakCount": 1,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=45",
+        "ebird": "https://ebird.org/species/mewgul",
+        "inat": "https://www.inaturalist.org/taxa/4356"
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "wide-ranging",
+          "text": "Present most of the year with a soft seasonal peak"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records across about 5 months around late March (n=10)."
+        },
+        {
+          "source": "auto-observer",
+          "category": "observer-first-observation",
+          "text": "\"My first returning bird\" — J G Ross, Calshot 2025-07-06."
+        }
+      ]
+    },
+    {
+      "canonical": "Common Buzzard",
+      "scientificName": "Buteo buteo",
+      "iconicTaxon": "Aves",
+      "n": 3,
+      "peakinessAdj": 0.1466,
+      "peakWeekLabel": "mid March",
+      "minWindowDays": 98,
+      "bimodal": false,
+      "peakCount": 2,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=44",
+        "ebird": "https://ebird.org/species/combuz1",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "wide-ranging",
+          "text": "Present most of the year with a soft seasonal peak"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records across about 3 months around mid March (n=3)."
+        }
+      ]
+    },
+    {
+      "canonical": "Pacific Oyster",
+      "scientificName": "Magallana gigas",
+      "iconicTaxon": "Mollusca",
+      "n": 3,
+      "peakinessAdj": 0.1466,
+      "peakWeekLabel": "early October",
+      "minWindowDays": 182,
+      "bimodal": false,
+      "peakCount": 0,
+      "links": {
+        "goingbirding": null,
+        "ebird": null,
+        "inat": "https://www.inaturalist.org/taxa/605992"
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "wide-ranging",
+          "text": "Present most of the year with a soft seasonal peak"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records across about 6 months around early October (n=3)."
+        }
+      ]
+    },
+    {
+      "canonical": "Northern Lapwing",
+      "scientificName": "Vanellus vanellus",
+      "iconicTaxon": "Aves",
+      "n": 2,
+      "peakinessAdj": 0.145,
+      "peakWeekLabel": "late September",
+      "minWindowDays": null,
+      "bimodal": false,
+      "peakCount": 0,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=130",
+        "ebird": "https://ebird.org/species/norlap",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-observer",
+          "category": "observer-first-observation",
+          "text": "\"In mixed wader flock. I can't believe how rare this is in the Calshot/ Ashlett area. First of the year on this patch\" — J G Ross, Ashlett Creek 2025-10-18."
+        }
+      ]
+    },
+    {
+      "canonical": "Eurasian Siskin",
+      "scientificName": "Spinus spinus",
+      "iconicTaxon": "Aves",
+      "n": 12,
+      "peakinessAdj": 0.1445,
+      "peakWeekLabel": "late July",
+      "minWindowDays": 213,
+      "bimodal": false,
+      "peakCount": 2,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=245",
+        "ebird": "https://ebird.org/species/eursis",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "wide-ranging",
+          "text": "Present most of the year with a soft seasonal peak"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records across about 7 months around late July (n=12)."
+        }
+      ]
+    },
+    {
+      "canonical": "Peregrine Falcon",
+      "scientificName": "Falco peregrinus",
+      "iconicTaxon": "Aves",
+      "n": 17,
+      "peakinessAdj": 0.1379,
+      "peakWeekLabel": "mid August",
+      "minWindowDays": 163,
+      "bimodal": false,
+      "peakCount": 1,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=184",
+        "ebird": "https://ebird.org/species/perfal",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "wide-ranging",
+          "text": "Present most of the year with a soft seasonal peak"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records across about 5 months around mid August (n=17)."
+        },
+        {
+          "source": "auto-observer",
+          "category": "observer-breeding",
+          "text": "\"Pair with juvenile around remaining power station building\" — J G Ross, Calshot 2025-09-05."
+        }
+      ]
+    },
+    {
+      "canonical": "Tree Pipit",
+      "scientificName": "Anthus trivialis",
+      "iconicTaxon": "Aves",
+      "n": 2,
+      "peakinessAdj": 0.1374,
+      "peakWeekLabel": "early April",
+      "minWindowDays": null,
+      "bimodal": false,
+      "peakCount": 0,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=271",
+        "ebird": "https://ebird.org/species/trepip",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-observer",
+          "category": "observer-first-observation",
+          "text": "\"Flyover, calling. My first Calshot record\" — J G Ross, Calshot 2026-04-07."
+        }
+      ]
+    },
+    {
+      "canonical": "Bar-tailed Godwit",
+      "scientificName": "Limosa lapponica",
+      "iconicTaxon": "Aves",
+      "n": 37,
+      "peakinessAdj": 0.1366,
+      "peakWeekLabel": "late March",
+      "minWindowDays": 130,
+      "bimodal": false,
+      "peakCount": 2,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=10",
+        "ebird": "https://ebird.org/species/batgod",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "wide-ranging",
+          "text": "Present most of the year with a soft seasonal peak"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records across about 4 months around late March (n=37)."
+        }
+      ]
+    },
+    {
+      "canonical": "Banded Centipede",
+      "scientificName": "Lithobius variegatus",
+      "iconicTaxon": "Animalia",
+      "n": 3,
+      "peakinessAdj": 0.1361,
+      "peakWeekLabel": "early June",
+      "minWindowDays": 184,
+      "bimodal": false,
+      "peakCount": 0,
+      "links": {
+        "goingbirding": null,
+        "ebird": null,
+        "inat": "https://www.inaturalist.org/taxa/342427"
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "wide-ranging",
+          "text": "Present most of the year with a soft seasonal peak"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records across about 6 months around early June (n=3)."
+        }
+      ]
+    },
+    {
+      "canonical": "Woodlark",
+      "scientificName": "Lullula arborea",
+      "iconicTaxon": "Aves",
+      "n": 2,
+      "peakinessAdj": 0.133,
+      "peakWeekLabel": "late January",
+      "minWindowDays": null,
+      "bimodal": false,
+      "peakCount": 0,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=300",
+        "ebird": "https://ebird.org/species/woolar1",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-observer",
+          "category": "observer-first-observation",
+          "text": "\"My first patch record. 3 flying over power station ground\" — J G Ross, Calshot 2025-10-12."
+        }
+      ]
+    },
+    {
+      "canonical": "European Stonechat",
+      "scientificName": "Saxicola rubicola",
+      "iconicTaxon": "Aves",
+      "n": 13,
+      "peakinessAdj": 0.1295,
+      "peakWeekLabel": "late August",
+      "minWindowDays": 149,
+      "bimodal": false,
+      "peakCount": 2,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=262",
+        "ebird": "https://ebird.org/species/stonec4",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "wide-ranging",
+          "text": "Present most of the year with a soft seasonal peak"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records across about 5 months around late August (n=13)."
+        },
+        {
+          "source": "auto-observer",
+          "category": "observer-breeding",
+          "text": "\"1 juvenile\" — J G Ross, Calshot 2025-07-27."
+        },
+        {
+          "source": "auto-observer",
+          "category": "observer-irruption",
+          "text": "\"Usual Autumn influx in reed bed opposite beach hut\" — J G Ross, Calshot 2025-10-12."
+        }
+      ]
+    },
+    {
+      "canonical": "Common Tern",
+      "scientificName": "Sterna hirundo",
+      "iconicTaxon": "Aves",
+      "n": 4,
+      "peakinessAdj": 0.1291,
+      "peakWeekLabel": "mid April",
+      "minWindowDays": 165,
+      "bimodal": false,
+      "peakCount": 3,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=49",
+        "ebird": "https://ebird.org/species/comter",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "wide-ranging",
+          "text": "Present most of the year with a soft seasonal peak"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records across about 5 months around mid April (n=4)."
+        },
+        {
+          "source": "auto-observer",
+          "category": "observer-breeding",
+          "text": "\"Juvenile\" — J G Ross, Calshot Spit 2025-09-28."
+        }
+      ]
+    },
+    {
+      "canonical": "Rock Pipit",
+      "scientificName": "Anthus petrosus",
+      "iconicTaxon": "Aves",
+      "n": 15,
+      "peakinessAdj": 0.1221,
+      "peakWeekLabel": "early November",
+      "minWindowDays": 124,
+      "bimodal": false,
+      "peakCount": 2,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=222",
+        "ebird": "https://ebird.org/species/rocpip1",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "wide-ranging",
+          "text": "Present most of the year with a soft seasonal peak"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records across about 4 months around early November (n=15)."
+        }
+      ]
+    },
+    {
+      "canonical": "Common Redshank",
+      "scientificName": "Tringa totanus",
+      "iconicTaxon": "Aves",
+      "n": 27,
+      "peakinessAdj": 0.1216,
+      "peakWeekLabel": "late March",
+      "minWindowDays": 156,
+      "bimodal": false,
+      "peakCount": 2,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=208",
+        "ebird": "https://ebird.org/species/comred1",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "wide-ranging",
+          "text": "Present most of the year with a soft seasonal peak"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records across about 5 months around late March (n=27)."
+        }
+      ]
+    },
+    {
+      "canonical": "Lesser Black-backed Gull",
+      "scientificName": "Larus fuscus",
+      "iconicTaxon": "Aves",
+      "n": 7,
+      "peakinessAdj": 0.1191,
+      "peakWeekLabel": "early August",
+      "minWindowDays": 173,
+      "bimodal": false,
+      "peakCount": 3,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=133",
+        "ebird": "https://ebird.org/species/lbbgul",
+        "inat": "https://www.inaturalist.org/taxa/4381"
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "wide-ranging",
+          "text": "Present most of the year with a soft seasonal peak"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records across about 6 months around early August (n=7)."
+        }
+      ]
+    },
+    {
+      "canonical": "Arctic Skua",
+      "scientificName": "Stercorarius parasiticus",
+      "iconicTaxon": "Aves",
+      "n": 1,
+      "peakinessAdj": 0.1068,
+      "peakWeekLabel": "early June",
+      "minWindowDays": null,
+      "bimodal": false,
+      "peakCount": 0,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=4",
+        "ebird": "https://ebird.org/species/parjae",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-observer",
+          "category": "observer-first-observation",
+          "text": "\"Chasing terns around ' Calshot spit ' buoy. Finally a first Hampshire record for me!\" — J G Ross, Calshot Spit 2026-06-08."
+        }
+      ]
+    },
+    {
+      "canonical": "Black Swan",
+      "scientificName": "Cygnus atratus",
+      "iconicTaxon": "Aves",
+      "n": 1,
+      "peakinessAdj": 0.1068,
+      "peakWeekLabel": "early August",
+      "minWindowDays": null,
+      "bimodal": false,
+      "peakCount": 0,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=644",
+        "ebird": "https://ebird.org/species/blkswa",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-observer",
+          "category": "observer-phenology",
+          "text": "\"Freshly arrived from Australia!\" — J G Ross, Calshot Spit 2025-08-12."
+        }
+      ]
+    },
+    {
+      "canonical": "Common Guillemot",
+      "scientificName": "Uria aalge",
+      "iconicTaxon": "Aves",
+      "n": 1,
+      "peakinessAdj": 0.1068,
+      "peakWeekLabel": "early January",
+      "minWindowDays": null,
+      "bimodal": false,
+      "peakCount": 0,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=108",
+        "ebird": "https://ebird.org/species/commur",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-observer",
+          "category": "observer-first-observation",
+          "text": "\"Tideline corpse on north side of spit behind sailing club. A shame as never seen a live one here\" — J William, Calshot Spit 2026-01-10."
+        }
+      ]
+    },
+    {
+      "canonical": "Goosander",
+      "scientificName": "Mergus merganser",
+      "iconicTaxon": "Aves",
+      "n": 1,
+      "peakinessAdj": 0.1068,
+      "peakWeekLabel": "late October",
+      "minWindowDays": null,
+      "bimodal": false,
+      "peakCount": 0,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=84",
+        "ebird": "https://ebird.org/species/commer",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-observer",
+          "category": "observer-first-observation",
+          "text": "\"male. Landed on the sea between the spit and marsh for about thirty seconds, then flew up Southampton water, my first patch record\" — J G Ross, Calshot 2025-10-26."
+        }
+      ]
+    },
+    {
+      "canonical": "Tawny Owl",
+      "scientificName": "Strix aluco",
+      "iconicTaxon": "Aves",
+      "n": 7,
+      "peakinessAdj": 0.1047,
+      "peakWeekLabel": "late February",
+      "minWindowDays": 150,
+      "bimodal": false,
+      "peakCount": 3,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=266",
+        "ebird": "https://ebird.org/species/tawowl1",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "wide-ranging",
+          "text": "Present most of the year with a soft seasonal peak"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records across about 5 months around late February (n=7)."
+        }
+      ]
+    },
+    {
+      "canonical": "Common Raven",
+      "scientificName": "Corvus corax",
+      "iconicTaxon": "Aves",
+      "n": 24,
+      "peakinessAdj": 0.1017,
+      "peakWeekLabel": "late March",
+      "minWindowDays": 231,
+      "bimodal": false,
+      "peakCount": 2,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=197",
+        "ebird": "https://ebird.org/species/comrav",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "wide-ranging",
+          "text": "Present most of the year with a soft seasonal peak"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records across about 8 months around late March (n=24)."
+        }
+      ]
+    },
+    {
+      "canonical": "Eurasian Sparrowhawk",
+      "scientificName": "Accipiter nisus",
+      "iconicTaxon": "Aves",
+      "n": 17,
+      "peakinessAdj": 0.0955,
+      "peakWeekLabel": "early January",
+      "minWindowDays": 199,
+      "bimodal": false,
+      "peakCount": 2,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=254",
+        "ebird": "https://ebird.org/species/eurspa1",
+        "inat": "https://www.inaturalist.org/taxa/5106"
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "year-round",
+          "text": "Effectively year-round at the creek"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records across about 7 months around early January (n=17)."
+        },
+        {
+          "source": "auto-observer",
+          "category": "observer-first-observation",
+          "text": "\"First on patch this year!\" — J G Ross, Ashlett Creek 2025-07-04."
+        }
+      ]
+    },
+    {
+      "canonical": "Sandwich Tern",
+      "scientificName": "Thalasseus sandvicensis",
+      "iconicTaxon": "Aves",
+      "n": 18,
+      "peakinessAdj": 0.0915,
+      "peakWeekLabel": "mid October",
+      "minWindowDays": 200,
+      "bimodal": false,
+      "peakCount": 4,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=233",
+        "ebird": "https://ebird.org/species/santer1",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "year-round",
+          "text": "Effectively year-round at the creek"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records across about 7 months around mid October (n=18)."
+        }
+      ]
+    },
+    {
+      "canonical": "Mediterranean Gull",
+      "scientificName": "Ichthyaetus melanocephalus",
+      "iconicTaxon": "Aves",
+      "n": 36,
+      "peakinessAdj": 0.0875,
+      "peakWeekLabel": "early July",
+      "minWindowDays": 225,
+      "bimodal": false,
+      "peakCount": 4,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=163",
+        "ebird": "https://ebird.org/species/medgul1",
+        "inat": "https://www.inaturalist.org/taxa/144517"
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "year-round",
+          "text": "Effectively year-round at the creek"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records across about 7 months around early July (n=36)."
+        }
+      ]
+    },
+    {
+      "canonical": "Grey Wagtail",
+      "scientificName": "Motacilla cinerea",
+      "iconicTaxon": "Aves",
+      "n": 30,
+      "peakinessAdj": 0.0831,
+      "peakWeekLabel": "late March",
+      "minWindowDays": 174,
+      "bimodal": false,
+      "peakCount": 2,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=106",
+        "ebird": "https://ebird.org/species/grywag",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "year-round",
+          "text": "Effectively year-round at the creek"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records across about 6 months around late March (n=30)."
+        },
+        {
+          "source": "auto-observer",
+          "category": "observer-breeding",
+          "text": "\"Pair breeding by stream\" — J G Ross, Ashlett Creek 2026-06-22."
+        }
+      ]
+    },
+    {
+      "canonical": "Common Firecrest",
+      "scientificName": "Regulus ignicapilla",
+      "iconicTaxon": "Aves",
+      "n": 45,
+      "peakinessAdj": 0.0777,
+      "peakWeekLabel": "mid February",
+      "minWindowDays": 203,
+      "bimodal": false,
+      "peakCount": 2,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=70",
+        "ebird": "https://ebird.org/species/firecr1",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "year-round",
+          "text": "Effectively year-round at the creek"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records across about 7 months around mid February (n=45)."
+        },
+        {
+          "source": "auto-observer",
+          "category": "observer-breeding",
+          "text": "\"Including 3 fledged birds being fed by adult\" — J G Ross, Ashlett Creek 2026-05-17."
+        }
+      ]
+    },
+    {
+      "canonical": "Common Shelduck",
+      "scientificName": "Tadorna tadorna",
+      "iconicTaxon": "Aves",
+      "n": 41,
+      "peakinessAdj": 0.0752,
+      "peakWeekLabel": "mid June",
+      "minWindowDays": 192,
+      "bimodal": false,
+      "peakCount": 3,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=240",
+        "ebird": "https://ebird.org/species/comshe",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "year-round",
+          "text": "Effectively year-round at the creek"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records across about 6 months around mid June (n=41)."
+        },
+        {
+          "source": "auto-observer",
+          "category": "observer-breeding",
+          "text": "\"1ad + 6 juv. Fawley Shore ...viewed from Ensign Way/Hamble Cliff. Private site. No public acce\" — I R Watts, Fawley Refinery 2025-07-11."
+        }
+      ]
+    },
+    {
+      "canonical": "Common Greenshank",
+      "scientificName": "Tringa nebularia",
+      "iconicTaxon": "Aves",
+      "n": 62,
+      "peakinessAdj": 0.0738,
+      "peakWeekLabel": "late March",
+      "minWindowDays": 235,
+      "bimodal": false,
+      "peakCount": 3,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=100",
+        "ebird": "https://ebird.org/species/comgre",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "year-round",
+          "text": "Effectively year-round at the creek"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records across about 8 months around late March (n=62)."
+        }
+      ]
+    },
+    {
+      "canonical": "Ruddy Turnstone",
+      "scientificName": "Arenaria interpres",
+      "iconicTaxon": "Aves",
+      "n": 17,
+      "peakinessAdj": 0.0649,
+      "peakWeekLabel": "mid March",
+      "minWindowDays": 240,
+      "bimodal": false,
+      "peakCount": 3,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=275",
+        "ebird": "https://ebird.org/species/rudtur",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "year-round",
+          "text": "Effectively year-round at the creek"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records across about 8 months around mid March (n=17)."
+        }
+      ]
+    },
+    {
+      "canonical": "Grey Plover",
+      "scientificName": "Pluvialis squatarola",
+      "iconicTaxon": "Aves",
+      "n": 35,
+      "peakinessAdj": 0.0638,
+      "peakWeekLabel": "late March",
+      "minWindowDays": 191,
+      "bimodal": false,
+      "peakCount": 2,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=105",
+        "ebird": "https://ebird.org/species/bkbplo",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "year-round",
+          "text": "Effectively year-round at the creek"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records across about 6 months around late March (n=35)."
+        }
+      ]
+    },
+    {
+      "canonical": "Black-tailed Godwit",
+      "scientificName": "Limosa limosa",
+      "iconicTaxon": "Aves",
+      "n": 53,
+      "peakinessAdj": 0.0598,
+      "peakWeekLabel": "early August",
+      "minWindowDays": 255,
+      "bimodal": false,
+      "peakCount": 3,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=22",
+        "ebird": "https://ebird.org/species/bktgod",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "year-round",
+          "text": "Effectively year-round at the creek"
+        },
+        {
+          "source": "auto-observer",
+          "category": "observer-first-observation",
+          "text": "\"First retur\" — J G Ross, Calshot Spit 2025-07-10."
+        }
+      ]
+    },
+    {
+      "canonical": "Western Marsh Harrier",
+      "scientificName": "Circus aeruginosus",
+      "iconicTaxon": "Aves",
+      "n": 69,
+      "peakinessAdj": 0.0444,
+      "peakWeekLabel": "mid December",
+      "minWindowDays": 209,
+      "bimodal": false,
+      "peakCount": 3,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=158",
+        "ebird": "https://ebird.org/species/wemhar1",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "year-round",
+          "text": "Effectively year-round at the creek"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records across about 7 months around mid December (n=69)."
+        },
+        {
+          "source": "auto-observer",
+          "category": "observer-resident-pair",
+          "text": "\"Possibly 3, one was circling with 5 Buzzards and the usual pair were in the reed bed\" — J G Ross, Calshot 2026-01-28."
+        }
+      ]
+    },
+    {
+      "canonical": "Great Crested Grebe",
+      "scientificName": "Podiceps cristatus",
+      "iconicTaxon": "Aves",
+      "n": 54,
+      "peakinessAdj": 0.0253,
+      "peakWeekLabel": "mid July",
+      "minWindowDays": 242,
+      "bimodal": false,
+      "peakCount": 3,
+      "links": {
+        "goingbirding": "https://www.goingbirding.co.uk/hants/species.aspx?species_id=89",
+        "ebird": "https://ebird.org/species/grcgre1",
+        "inat": null
+      },
+      "notes": [
+        {
+          "source": "auto-seasonality",
+          "category": "year-round",
+          "text": "Effectively year-round at the creek"
+        },
+        {
+          "source": "auto-window",
+          "category": "window",
+          "text": "4 in 5 records across about 8 months around mid July (n=54)."
+        }
+      ]
+    }
+  ]
+}
