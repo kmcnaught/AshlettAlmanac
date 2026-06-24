@@ -48,7 +48,7 @@
   .datenav:disabled{opacity:.22;cursor:default;}
   .date-today{appearance:none;background:rgba(246,242,230,.14);border:1px solid rgba(246,242,230,.32);
     color:#f6f2e6;font-family:inherit;font-size:10.5px;letter-spacing:1.6px;text-transform:uppercase;
-    padding:3px 10px;border-radius:11px;cursor:pointer;margin-left:6px;font-variant:small-caps;
+    padding:3px 10px;border-radius:11px;cursor:pointer;margin-left:auto;font-variant:small-caps;
     transition:background .15s ease;display:none;}
   .date-today:hover{background:rgba(246,242,230,.26);}
   .datebar.off-today .date-today{display:inline-block;}
@@ -82,10 +82,13 @@
   .wx-strip i.wind::after{content:"";position:absolute;left:50%;top:15px;width:8px;height:1px;transform:translateX(-50%);background:repeating-linear-gradient(90deg,rgba(32,48,47,.55) 0 1px,transparent 1px 2px);}
   .extremes{display:flex;flex-direction:column;gap:3px;margin:8px 2px 2px;font-size:13.5px;color:var(--ink-soft);}
   .extremes .lbl{font-variant:small-caps;letter-spacing:.4px;}
-  .axis{position:relative;height:14px;margin:2px 0 0;font-size:10.5px;color:var(--ink-soft);letter-spacing:.3px;}
+  .axis{position:relative;height:14px;margin:7px 0 0;font-size:10.5px;color:var(--ink-soft);letter-spacing:.3px;}
   .axis span{position:absolute;transform:translateX(-50%);white-space:nowrap;}
+  .axis span::before{content:"";position:absolute;bottom:100%;margin-bottom:1px;left:50%;width:1px;height:4px;background:currentColor;opacity:.55;}
   .axis span.start{left:0;transform:none;}
+  .axis span.start::before{left:0;}
   .axis span.end{left:auto;right:0;transform:none;}
+  .axis span.end::before{left:auto;right:0;}
   .legend{display:flex;flex-wrap:wrap;gap:5px 14px;margin:10px 2px 2px;font-size:11.5px;color:var(--ink-soft);align-items:center;}
   .legend span{display:inline-flex;align-items:center;}
   .legend i{display:inline-block;width:12px;height:11px;border-radius:3px;margin-right:5px;}
@@ -123,7 +126,7 @@
           <button class="datenav" id="date-prev" type="button" aria-label="Previous day">‹</button>
           <p class="date" id="date">—</p>
           <button class="datenav" id="date-next" type="button" aria-label="Next day">›</button>
-          <button class="date-today" id="date-today" type="button" aria-label="Back to today">Today</button>
+          <button class="date-today" id="date-today" type="button" aria-label="Jump to today">Jump to today</button>
         </div>
       </div>
     </div>
