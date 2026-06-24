@@ -12,10 +12,14 @@ date heading on each response and skip mismatches. The dated URL for *today*
 itself serves the "current day" landing page with no date heading at all —
 we accept that page only when the requested date is today.
 
-Args: --start YYYY-MM-DD --end YYYY-MM-DD [--out FILE]
+Args: --start YYYY-MM-DD --end YYYY-MM-DD [--out FILE] [--merge]
 Example:
     python scripts/scrape_calshot_tides.py --start 2026-06-20 --end 2026-06-26 \\
-        --out tides.json
+        --out tides.json --merge
+
+--merge: read --out first and update only the scraped keys. Use this in the
+daily cron so yesterday's entry (and any manually-added PDF-future days outside
+the scraper's 7-day window) survive each run.
 """
 import argparse
 import json
@@ -78,6 +82,8 @@ def main():
     p.add_argument("--start", required=True, help="YYYY-MM-DD")
     p.add_argument("--end", required=True, help="YYYY-MM-DD inclusive")
     p.add_argument("--out", help="write JSON here instead of stdout")
+    p.add_argument("--merge", action="store_true",
+                   help="when --out exists, update only scraped keys instead of overwriting")
     p.add_argument("--delay", type=float, default=0.5, help="seconds between requests")
     args = p.parse_args()
 
@@ -99,11 +105,22 @@ def main():
         d += timedelta(days=1)
         time.sleep(args.delay)
 
-    payload = json.dumps(out, indent=2)
+    if args.out and args.merge:
+        try:
+            with open(args.out) as f:
+                final = json.load(f)
+        except FileNotFoundError:
+            final = {}
+        final.update(out)
+    else:
+        final = out
+
+    # sort_keys so the file stays date-ordered and produces stable diffs
+    payload = json.dumps(final, indent=2, sort_keys=True)
     if args.out:
         with open(args.out, "w") as f:
             f.write(payload)
-        print(f"# wrote {args.out} ({len(out)} day(s))", file=sys.stderr)
+        print(f"# wrote {args.out} ({len(out)} scraped, {len(final)} total)", file=sys.stderr)
     else:
         print(payload)
 

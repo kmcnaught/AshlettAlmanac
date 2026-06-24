@@ -28,12 +28,16 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Scrape today + 6 days
+      - name: Scrape yesterday + today + 6 days
+        # Yesterday is included so the page can reach across midnight when a
+        # high-water pair straddles the day boundary (paddleWindows uses exFull).
+        # --merge preserves any PDF-future days outside the scraper's 7-day window.
         run: |
           python3 scripts/scrape_calshot_tides.py \
-            --start "$(date -I)" \
+            --start "$(date -I -d '-1 day')" \
             --end   "$(date -I -d '+6 days')" \
-            --out   tides.json
+            --out   tides.json \
+            --merge
 
       - name: Commit if changed
         run: |

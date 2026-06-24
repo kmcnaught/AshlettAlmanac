@@ -13,13 +13,23 @@ if (scripts.length < 2) { console.error('expected 2 <script> tags, got', scripts
 const els = {};
 function el(id) {
   if (!els[id]) {
-    els[id] = {
-      id, _text: '', _html: '', style: {},
+    const node = {
+      id, _text: '', _html: '', style: {}, disabled: false,
+      _classes: new Set(),
+      addEventListener() {},
+      removeEventListener() {},
       get textContent() { return this._text; },
       set textContent(v) { this._text = v; },
       get innerHTML() { return this._html; },
       set innerHTML(v) { this._html = v; },
     };
+    node.classList = {
+      add: (c) => node._classes.add(c),
+      remove: (c) => node._classes.delete(c),
+      contains: (c) => node._classes.has(c),
+      toggle: (c) => { if (node._classes.has(c)) node._classes.delete(c); else node._classes.add(c); },
+    };
+    els[id] = node;
   }
   return els[id];
 }
@@ -72,8 +82,8 @@ setTimeout(() => {
   console.log('fetch calls:', fetchCalls);
   const checks = [
     ['date',        t => t.length > 0],
-    ['tide-window', t => /float|fills|low/i.test(t)],
-    ['extremes',    t => /High|Low/.test(t)],
+    ['tide-window', t => /paddle/i.test(t)],
+    ['extremes',    t => /high|low/i.test(t)],
     ['light',       t => t.length > 0],
     ['verse-line',  t => t.length > 0],
     ['marsh',       t => t.length > 0],
@@ -88,5 +98,29 @@ setTimeout(() => {
     console.log((pass ? 'PASS' : 'FAIL'), id + ':', JSON.stringify(v.slice(0, 80)));
     if (!pass) failed++;
   }
+
+  // Navigation: jump to today + 1, assert date label changes and verse stays put.
+  const almanac = globalThis.__almanac;
+  if (!almanac) {
+    console.log('FAIL navigation: __almanac seam missing');
+    failed++;
+  } else {
+    const dateBefore = els['date']._text;
+    const verseBefore = els['verse-line']._text;
+    const [y, m, d] = almanac.todayISO.split('-').map(Number);
+    const tomorrow = new Date(y, m - 1, d, 12);
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    const tomorrowISO = `${tomorrow.getFullYear()}-${String(tomorrow.getMonth()+1).padStart(2,'0')}-${String(tomorrow.getDate()).padStart(2,'0')}`;
+    almanac.go(tomorrowISO);
+    const dateAfter = els['date']._text;
+    const verseAfter = els['verse-line']._text;
+    const dateChanged = dateBefore !== dateAfter;
+    const verseSame = verseBefore === verseAfter && verseAfter.length > 0;
+    console.log((dateChanged ? 'PASS' : 'FAIL'), 'nav date changed:', JSON.stringify(dateBefore), '→', JSON.stringify(dateAfter));
+    console.log((verseSame ? 'PASS' : 'FAIL'), 'nav verse pinned:', JSON.stringify(verseAfter.slice(0, 60)));
+    if (!dateChanged) failed++;
+    if (!verseSame) failed++;
+  }
+
   process.exit(failed ? 1 : 0);
 }, 100);

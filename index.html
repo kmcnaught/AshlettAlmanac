@@ -38,7 +38,20 @@
   .place{position:absolute;left:0;right:0;bottom:0;padding:16px 22px 14px;
     background:linear-gradient(to top,rgba(20,30,28,.55),transparent);color:#f6f2e6;}
   .place h1{margin:0;font-weight:600;font-size:25px;letter-spacing:.3px;text-shadow:0 1px 6px rgba(0,0,0,.45);}
-  .place .date{margin:2px 0 0;font-size:13.5px;letter-spacing:1.6px;text-transform:uppercase;opacity:.9;font-variant:small-caps;}
+  .place .date{margin:0;font-size:13.5px;letter-spacing:1.6px;text-transform:uppercase;opacity:.9;font-variant:small-caps;}
+  .datebar{display:flex;align-items:center;gap:4px;margin:2px 0 0;flex-wrap:wrap;}
+  .datebar .date{flex:0 0 auto;}
+  .datenav{appearance:none;background:transparent;border:none;color:#f6f2e6;
+    font-family:inherit;font-size:20px;line-height:1;padding:0 6px;cursor:pointer;opacity:.75;
+    transition:opacity .15s ease;-webkit-tap-highlight-color:transparent;}
+  .datenav:hover{opacity:1;}
+  .datenav:disabled{opacity:.22;cursor:default;}
+  .date-today{appearance:none;background:rgba(246,242,230,.14);border:1px solid rgba(246,242,230,.32);
+    color:#f6f2e6;font-family:inherit;font-size:10.5px;letter-spacing:1.6px;text-transform:uppercase;
+    padding:3px 10px;border-radius:11px;cursor:pointer;margin-left:6px;font-variant:small-caps;
+    transition:background .15s ease;display:none;}
+  .date-today:hover{background:rgba(246,242,230,.26);}
+  .datebar.off-today .date-today{display:inline-block;}
 
   .headline{padding:20px 24px 16px;text-align:center;border-bottom:1px solid var(--rule);}
   .headline p{margin:0;font-size:19.5px;line-height:1.45;font-style:italic;color:var(--ink);font-weight:500;}
@@ -62,12 +75,13 @@
   .curve-body{flex:1;min-width:0;}
   .curve-wrap{position:relative;}
   .curve-wrap .hi-label,.curve-wrap .lo-label{position:absolute;right:4px;font-size:10.5px;color:var(--ink-soft);transform:translateY(-50%);pointer-events:none;font-variant-numeric:tabular-nums;background:rgba(245,240,230,0.7);padding:0 4px;border-radius:2px;letter-spacing:.2px;}
-  .wx-strip{display:flex;height:20px;margin:4px 0 0;align-items:center;}
-  .wx-strip i{flex:1;display:flex;align-items:center;justify-content:center;}
+  .wx-strip{display:flex;margin:4px 0 0;align-items:flex-start;}
+  .wx-strip i{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;font-style:normal;position:relative;}
   .wx-strip i svg{width:15px;height:15px;display:block;}
-  .wx-strip i.wind{position:relative;}
-  .wx-strip i.wind::after{content:"";position:absolute;left:50%;bottom:-1px;width:8px;height:1px;transform:translateX(-50%);background:repeating-linear-gradient(90deg,rgba(32,48,47,.55) 0 1px,transparent 1px 2px);}
-  .extremes{display:flex;flex-wrap:wrap;gap:6px 16px;margin:8px 2px 2px;font-size:13.5px;color:var(--ink-soft);}
+  .wx-strip i .temp{font-size:9.5px;line-height:1;color:var(--ink-soft);font-variant-numeric:tabular-nums;margin-top:3px;}
+  .wx-strip i.wind::after{content:"";position:absolute;left:50%;top:15px;width:8px;height:1px;transform:translateX(-50%);background:repeating-linear-gradient(90deg,rgba(32,48,47,.55) 0 1px,transparent 1px 2px);}
+  .extremes{display:flex;flex-direction:column;gap:3px;margin:8px 2px 2px;font-size:13.5px;color:var(--ink-soft);}
+  .extremes .lbl{font-variant:small-caps;letter-spacing:.4px;}
   .axis{position:relative;height:14px;margin:2px 0 0;font-size:10.5px;color:var(--ink-soft);letter-spacing:.3px;}
   .axis span{position:absolute;transform:translateX(-50%);white-space:nowrap;}
   .axis span.start{left:0;transform:none;}
@@ -76,7 +90,6 @@
   .legend span{display:inline-flex;align-items:center;}
   .legend i{display:inline-block;width:12px;height:11px;border-radius:3px;margin-right:5px;}
   .legend i.ln{height:0;border-top:2px solid #1d3d43;border-radius:0;}
-  .legend i.thr{height:0;border-top:2px dashed #9a7b3a;border-radius:0;}
   .extremes span b{color:var(--ink);font-variant-numeric:tabular-nums;}
   .light{font-size:13px;color:var(--ink-soft);margin:6px 2px 2px;font-variant-numeric:tabular-nums;letter-spacing:.2px;}
   .light .g{opacity:.75;}
@@ -104,7 +117,15 @@
   <main class="card">
     <div class="sky sky-fade" id="sky">
       <div class="water-band"></div><div class="shimmer"></div>
-      <div class="place"><h1>Ashlett Creek</h1><p class="date" id="date">—</p></div>
+      <div class="place">
+        <h1>Ashlett Creek</h1>
+        <div class="datebar" id="datebar">
+          <button class="datenav" id="date-prev" type="button" aria-label="Previous day">‹</button>
+          <p class="date" id="date">—</p>
+          <button class="datenav" id="date-next" type="button" aria-label="Next day">›</button>
+          <button class="date-today" id="date-today" type="button" aria-label="Back to today">Today</button>
+        </div>
+      </div>
     </div>
 
     <div class="headline">
@@ -156,10 +177,9 @@
       </div>
       <div class="legend">
         <span><i class="ln"></i>tide height</span>
-        <span><i style="background:#3a7c83;opacity:.55"></i>creek floats</span>
+        <span><i style="background:#3a7c83;opacity:.55"></i>paddleable</span>
         <span><i style="background:#caa84e"></i>sun up</span>
         <span><i style="background:#5d7d8e"></i>moon up</span>
-        <span><i class="thr"></i>float level</span>
       </div>
       <div class="extremes" id="extremes"></div>
       <div class="light" id="light"></div>
@@ -1185,8 +1205,7 @@
    CONFIG
    ============================================================ */
 const CONFIG = {
-  lat: 50.812, lon: -1.333, tz:"Europe/London",
-  floatThreshold: 2.4   // metres (chart datum) at which the creek floats a kayak — TUNE THIS
+  lat: 50.812, lon: -1.333, tz:"Europe/London"
 };
 
 /* ============================================================
@@ -1197,28 +1216,17 @@ const CONFIG = {
    Per-day flag:
      abridged:true  — only principal extrema (2H+2L); shows a footnote
                       noting the secondary Solent highs are unavailable.
-   (`verified` is still read by the scraper but no longer toggles a warning —
-   the page just shows the Calshot tide-times reference link permanently.)
    ============================================================ */
-// Inlined fallback so the page still renders if tides.json is unreachable
-// (offline, file:// open, scraper down). Real per-date entries come from
-// tides.json — fetched at runtime by loadTideTable() below.
-const TIDE_FALLBACK = {
-  "__sample__": { verified:false, extrema:[
-    {t:"01:10", h:0.9, type:"LW"}, {t:"06:20", h:4.3, type:"HW"},
-    {t:"08:10", h:3.9, type:"LW"}, {t:"09:40", h:4.4, type:"HW"},
-    {t:"14:05", h:1.1, type:"LW"}, {t:"18:45", h:4.2, type:"HW"},
-    {t:"20:30", h:3.8, type:"LW"}, {t:"22:00", h:4.3, type:"HW"}
-  ]}
-};
+// Real per-date entries come from tides.json — fetched at runtime by
+// loadTideTable(). If the fetch fails or a requested day isn't present,
+// the page renders a "predictions not available" state rather than fake data.
 async function loadTideTable(){
   try{
     const r = await fetch('tides.json', {cache:'no-store'});
-    if(!r.ok) return TIDE_FALLBACK;
-    const data = await r.json();
-    return Object.assign({}, TIDE_FALLBACK, data);
+    if(!r.ok) return {};
+    return await r.json();
   }catch(e){
-    return TIDE_FALLBACK;
+    return {};
   }
 }
 
@@ -1332,279 +1340,123 @@ function heightAt(hour,ex){
   }
   return ex[ex.length-1].h;
 }
-function openWindows(ex,thr){const out=[];let s=null;
-  for(let h=0;h<=24;h+=1/12){const o=heightAt(h,ex)>=thr;if(o&&s===null)s=h;if(!o&&s!==null){out.push([s,h]);s=null;}}
-  if(s!==null)out.push([s,24]);return out;}
+// Paddleable window per the recipient's rule: an hour before the first HW of a
+// cycle to an hour after the last HW of that cycle. Southampton's double HW shows
+// as 2 (sometimes 4) HW extrema/day; consecutive HWs within ~3.5h are one cycle.
+function paddleWindows(ex){
+  const hws=ex.filter(e=>e.type==="HW").slice().sort((a,b)=>a.t-b.t);
+  if(!hws.length)return[];
+  const groups=[[hws[0]]];
+  for(let i=1;i<hws.length;i++){
+    const prev=groups[groups.length-1];
+    if(hws[i].t - prev[prev.length-1].t <= 3.5) prev.push(hws[i]);
+    else groups.push([hws[i]]);
+  }
+  return groups.map(g=>[Math.max(0,g[0].t-1),Math.min(24,g[g.length-1].t+1)])
+               .filter(w=>w[1]>w[0]);
+}
+// Contextual label for an hour-of-day (decimal). Bands chosen so the
+// Solent's double HW around dawn lands in "early morning" and a midday LW
+// around 11:53 reads as "midday".
+function timeOfDayLabel(h){
+  if(h<5)  return "late night";
+  if(h<9)  return "early morning";
+  if(h<11) return "morning";
+  if(h<13) return "midday";
+  if(h<18) return "afternoon";
+  if(h<20) return "evening";
+  if(h<23) return "late evening";
+  return "late night";
+}
+function fmtTimeRange(t1,t2){
+  const s1=fmtClock(t1), s2=fmtClock(t2);
+  const ap1=s1.slice(-2), ap2=s2.slice(-2);
+  return ap1===ap2 ? s1.slice(0,-2)+"–"+s2 : s1+"–"+s2;
+}
+// Group HWs into Solent double-HW pairs (≤3.5h apart) and list LWs.
+// Returns rows ordered by time, each with {label, timeStr, heightStr}.
+function tideRows(ex){
+  const hws=ex.filter(e=>e.type==="HW").slice().sort((a,b)=>a.t-b.t);
+  const lws=ex.filter(e=>e.type==="LW").slice().sort((a,b)=>a.t-b.t);
+  const rows=[];
+  for(let i=0;i<hws.length;){
+    const a=hws[i], b=hws[i+1];
+    if(b && b.t-a.t<=3.5){
+      const mid=(a.t+b.t)/2;
+      const peak=Math.max(a.h,b.h);
+      rows.push({sort:mid, label:cap(timeOfDayLabel(mid))+" high", timeStr:fmtTimeRange(a.t,b.t), heightStr:peak.toFixed(1)+"m"});
+      i+=2;
+    } else {
+      rows.push({sort:a.t, label:cap(timeOfDayLabel(a.t))+" high", timeStr:fmtClock(a.t), heightStr:a.h.toFixed(1)+"m"});
+      i++;
+    }
+  }
+  lws.forEach(e=>rows.push({sort:e.t, label:cap(timeOfDayLabel(e.t))+" low", timeStr:fmtClock(e.t), heightStr:e.h.toFixed(1)+"m"}));
+  rows.sort((a,b)=>a.sort-b.sort);
+  return rows;
+}
+function cap(s){return s.charAt(0).toUpperCase()+s.slice(1);}
 
 /* ============================================================
    compute (all offline-safe)
    ============================================================ */
-const now=new Date();
-const iso=now.toISOString().slice(0,10);
-const month=now.getMonth();
-const monthName=now.toLocaleString("en-GB",{month:"long"});
-const dayIdx=Math.floor((now-new Date(now.getFullYear(),0,0))/864e5);
-document.getElementById("date").textContent=now.toLocaleDateString("en-GB",{weekday:"long",day:"numeric",month:"long"});
+const now = new Date();
+function isoFromDate(d){ return d.getFullYear()+"-"+pad(d.getMonth()+1)+"-"+pad(d.getDate()); }
+function dateFromISO(iso){ const [y,m,d]=iso.split("-").map(Number); return new Date(y, m-1, d, 12, 0, 0); }
+function addDaysISO(iso, n){ const d=dateFromISO(iso); d.setDate(d.getDate()+n); return isoFromDate(d); }
+function dayIdxOf(d){ return Math.floor((d - new Date(d.getFullYear(),0,0))/864e5); }
+function dayOffsetISO(iso, base){ return Math.round((dateFromISO(iso) - dateFromISO(base))/864e5); }
 
-// --- sun & moon via SunCalc ---
-const sun=SunCalc.getTimes(now,CONFIG.lat,CONFIG.lon);
-const mIll=SunCalc.getMoonIllumination(now);
-const mTimes=SunCalc.getMoonTimes(now,CONFIG.lat,CONFIG.lon);
-const sunriseH=hod(sun.sunrise), sunsetH=hod(sun.sunset);
-const moonriseH=hod(mTimes.rise), moonsetH=hod(mTimes.set);
-const illum=mIll.fraction, phase=mIll.phase, waxing=phase<0.5;
-const nearFull=Math.abs(phase-0.5)<0.06;
-let moonName;
-if(phase<.03||phase>.97)moonName="New moon";
-else if(phase<.22)moonName="Waxing crescent";
-else if(phase<.28)moonName="First quarter";
-else if(phase<.47)moonName="Waxing gibbous";
-else if(phase<.53)moonName="Full moon";
-else if(phase<.72)moonName="Waning gibbous";
-else if(phase<.78)moonName="Last quarter";
-else moonName="Waning crescent";
+const todayISO = isoFromDate(now);
+const RANGE_WINDOW = 7;  // today + 6 days; matches the scraper's upstream window
+const NAV_BOUND_LAST = addDaysISO(todayISO, RANGE_WINDOW - 1);
 
-document.getElementById("moon-name").textContent=moonName;
-document.getElementById("moon-sub").textContent=Math.round(illum*100)+"% lit";
-(function(g){const lit=Math.round(illum*100);
-  g.style.background=waxing
-    ?`linear-gradient(90deg, var(--ink) ${100-lit}%, var(--moon) ${100-lit}%)`
-    :`linear-gradient(90deg, var(--moon) ${lit}%, var(--ink) ${lit}%)`;})(document.getElementById("moonglyph"));
-
-// --- marsh line (wildlife, with an occasional history nugget) ---
-document.getElementById("marsh").innerHTML = (dayIdx%9===0) ? NUGGET : MARSH[month];
+// `lastViewed` remembers the selected date for the same calendar day. On a fresh
+// day the picker defaults back to today — so the recipient always sees today's
+// almanac when opening the page each morning.
+function readLastViewed(){
+  try{
+    const raw = localStorage.getItem("lastViewed");
+    if(!raw) return null;
+    const o = JSON.parse(raw);
+    if(o && o.on === todayISO && o.date <= NAV_BOUND_LAST) return o.date;
+  }catch(e){}
+  return null;
+}
+function writeLastViewed(iso){
+  try{ localStorage.setItem("lastViewed", JSON.stringify({date: iso, on: todayISO})); }
+  catch(e){}
+}
+let selectedISO = readLastViewed() || todayISO;
 
 // --- tides + everything that depends on them (verse pick, curve, headline, weather) ---
-// Wrapped in an async IIFE so we can await loadTideTable(). Sun/moon/marsh above
-// are already rendered synchronously. Verse helpers live inside this IIFE because
-// they close over `range` (computed from the loaded tide data).
+// Wrapped in an async IIFE so we can await loadTideTable() / loadVerses() / loadWeather().
+// renderDay(iso) re-renders the page for the selected day. The verse is anchored to
+// TODAY's signals and does not re-pick on navigation — see pickVerse() below.
 (async function(){
 const TIDE_TABLE = await loadTideTable();
-const tideKey=TIDE_TABLE[iso]?iso:"__sample__";
-const tide=TIDE_TABLE[tideKey];
-const ex=tide.extrema.map(e=>({...e,t:toHours(e.t)}));
-// Extend with the previous day's last extremum and the next day's first so the
-// cosine interpolation has anchor points either side of midnight — otherwise
-// heightAt() flatlines for the hours before ex[0].t and after ex[last].t.
-function isoOffset(days){const d=new Date(now);d.setDate(d.getDate()+days);return d.toISOString().slice(0,10);}
-const yData=TIDE_TABLE[isoOffset(-1)], tData=TIDE_TABLE[isoOffset(1)];
-const exFull=[...ex];
-if(yData && yData.extrema && yData.extrema.length){
-  const last=yData.extrema[yData.extrema.length-1];
-  exFull.unshift({...last,t:toHours(last.t)-24});
-}
-if(tData && tData.extrema && tData.extrema.length){
-  const first=tData.extrema[0];
-  exFull.push({...first,t:toHours(first.t)+24});
-}
-const thr=CONFIG.floatThreshold;
-const windows=openWindows(exFull,thr);
-const dayHigh=Math.max(...ex.map(e=>e.h)), dayLow=Math.min(...ex.map(e=>e.h)), range=dayHigh-dayLow;
-if(tide.abridged)document.getElementById("abridged-note").style.display="block";
-
-// --- verse of the day: chosen to fit the day's signals ---
-// VERSES is async-loaded (verses.json with inline fallback). The picker
-// scores entries against the day's reasons in priority order; among the
-// matching pool it prefers the least-recently-shown (tracked in localStorage,
-// `verseSeen` key). Within the chosen entry, the line with the most overlap
-// with all of today's signals wins — so a multi-line poem can show its
-// "high tide" line on spring days and its "winter" line on cold days.
 const VERSES = await loadVerses();
 
-function todaySignals(weather){
-  const s = new Set();
-  if(nearFull) s.add("moon");
-  else if(phase<.04 || phase>.96) s.add("night");
-  if(weather){
-    if(weather.kind==="rain") s.add("rain");
-    if(weather.kind==="fog") s.add("mist");
-    if(weather.kind==="clear") s.add("sun");
-    if(weather.wind>=22) s.add("wind");
-  }
-  if(range>4.2) s.add("tide");
-  else if(range<2.6) s.add("water");
-  s.add(SEASON_TAG[month]);
-  const h = now.getHours();
-  if(h>=5 && h<8) s.add("dawn");
-  else if(h>=18 && h<21) s.add("evening");
-  if(h>=21 || h<5) s.add("night");
-  return s;
-}
+// Today-anchored signals — the verse picker runs once at boot against these,
+// so navigating to a future day does not change which verse is showing.
+// todayTide may be null if today's predictions weren't available; the verse
+// picker then scores against moon/season/weather only (no tide-range signal).
+const todayTide = TIDE_TABLE[todayISO] || null;
+const todayHs = todayTide ? todayTide.extrema.map(e => e.h) : null;
+const todayRange = todayHs ? Math.max(...todayHs) - Math.min(...todayHs) : null;
+const todayMoonIll = SunCalc.getMoonIllumination(now);
+const todayPhase = todayMoonIll.phase;
+const todayNearFull = Math.abs(todayPhase - 0.5) < 0.06;
+const todayMonth = now.getMonth();
+const todayMonthName = now.toLocaleString("en-GB", {month: "long"});
+const todayDayIdx = dayIdxOf(now);
+const VERSE_DAYKEY = now.getFullYear()*1000 + todayDayIdx;
 
-function pickLine(v, signals){
-  let best = v.lines[0], bestScore = -1;
-  for(const l of v.lines){
-    const score = (l.tags||[]).filter(t => signals.has(t)).length;
-    if(score > bestScore){ best = l; bestScore = score; }
-  }
-  return best;
-}
-
-function renderVerse(v, line, label){
-  document.getElementById("verse-eyebrow").textContent = (v.isProse ? "A passage " : "A verse ") + label;
-  document.getElementById("verse-line").textContent = "“" + line.text + "”";
-  let by;
-  if(v.isProse){
-    by = "from <em>" + v.title + "</em> by " + v.poet + " · <a href='" + v.url + "' target='_blank' rel='noopener'>read more →</a>";
-  } else {
-    const year = v.year ? " (" + v.year + ")" : "";
-    by = v.poet + year + " · <a href='" + v.url + "' target='_blank' rel='noopener'>read the full poem →</a>";
-  }
-  document.getElementById("verse-by").innerHTML = by;
-}
-
-function activeReasons(weather){
-  const r = [];
-  if(nearFull) r.push({tag:"moon", label:"for the full moon"});
-  else if(phase<.04 || phase>.96) r.push({tag:"night", label:"for the new-moon dark"});
-  if(weather){
-    if(weather.kind==="rain") r.push({tag:"rain", label:"for the rain"});
-    else if(weather.wind>=22) r.push({tag:"wind", label:"for a blowy day"});
-    else if(weather.kind==="fog") r.push({tag:"mist", label:"for the mist"});
-  }
-  if(range>4.2) r.push({tag:"tide", label:"for the spring tide"});
-  else if(range<2.6) r.push({tag:"water", label:"for the quiet neap"});
-  if(weather && weather.kind==="clear" && weather.wind<14) r.push({tag:"sun", label:"for a bright, still day"});
-  r.push({tag:SEASON_TAG[month], label:"for "+monthName});
-  return r;
-}
-
-function readSeen(){
-  try{ return JSON.parse(localStorage.getItem("verseSeen") || "{}"); }
-  catch(e){ return {}; }
-}
-function writeSeen(s){
-  try{ localStorage.setItem("verseSeen", JSON.stringify(s)); }
-  catch(e){ /* private mode, quota, no storage — ignore */ }
-}
-function readHeadlineSeen(){
-  try{ return JSON.parse(localStorage.getItem("headlineSeen") || "{}"); }
-  catch(e){ return {}; }
-}
-function writeHeadlineSeen(s){
-  try{ localStorage.setItem("headlineSeen", JSON.stringify(s)); }
-  catch(e){ /* ignore */ }
-}
-
-function pickVerse(weather){
-  const reasons = activeReasons(weather);
-  const signals = todaySignals(weather);
-  const seen = readSeen();
-  const dayKey = now.getFullYear()*1000 + dayIdx;
-  // Stable across reloads: once a verse has been picked today, keep it.
-  // The line within the verse can still refine as weather/time signals shift.
-  const todayId = Object.keys(seen).find(id => seen[id] === dayKey);
-  if(todayId){
-    const v = VERSES.find(x => x.id === todayId);
-    if(v){
-      const re = reasons.find(r => v.tags && v.tags.includes(r.tag));
-      renderVerse(v, pickLine(v, signals), re ? re.label : "for today");
-      return;
-    }
-  }
-  for(const re of reasons){
-    const pool = VERSES.filter(v => v.tags && v.tags.includes(re.tag));
-    if(!pool.length) continue;
-    // least-recently-shown; deterministic tiebreak by id so the same condition
-    // on the same day always lands on the same verse (avoids flicker between
-    // the offline pick and the weather-refined pick).
-    pool.sort((a,b) => ((seen[a.id]??-1) - (seen[b.id]??-1)) || (a.id<b.id?-1:1));
-    const v = pool[0];
-    const line = pickLine(v, signals);
-    renderVerse(v, line, re.label);
-    seen[v.id] = dayKey;
-    writeSeen(seen);
-    return;
-  }
-  // fallback — shouldn't fire, every SEASON_TAG value has matches
-  const v = VERSES[dayKey % VERSES.length];
-  renderVerse(v, v.lines[0], "for today");
-}
-pickVerse(null);  // first pick from moon/tide/season; weather refines it below
-
-// up-intervals within [0,24] for an arbitrary rise/set pair
-function upIntervals(riseH,setH,alwaysUp,alwaysDown){
-  if(alwaysUp)return[[0,24]];
-  if(alwaysDown)return[];
-  if(riseH!=null&&setH!=null)return riseH<setH?[[riseH,setH]]:[[0,setH],[riseH,24]];
-  if(riseH!=null)return[[riseH,24]];
-  if(setH!=null)return[[0,setH]];
-  return[];
-}
-function moonUpIntervals(){return upIntervals(moonriseH,moonsetH,mTimes.alwaysUp,mTimes.alwaysDown);}
-function sunUpIntervals(){return upIntervals(sunriseH,sunsetH,sun.alwaysUp,sun.alwaysDown);}
-
-// phase-shaped icon for the chart's moon glyph (sliver / quarter / gibbous / full)
-(function renderChartMoonIcon(){
-  const el=document.getElementById("chart-moon-icon");if(!el)return;
-  const r=6.4, color="#5d7d8e";
-  if(illum>=0.99){el.innerHTML=`<circle r="${r}" fill="${color}"/>`;return;}
-  if(illum<=0.01){el.innerHTML=`<circle r="${r}" fill="none" stroke="${color}" stroke-width="0.9"/>`;return;}
-  const rx=Math.abs(2*illum-1)*r;
-  const outerSweep=waxing?1:0;
-  const innerSweep=waxing?(illum<0.5?1:0):(illum<0.5?0:1);
-  const path=`M 0 ${-r} A ${r} ${r} 0 0 ${outerSweep} 0 ${r} A ${rx.toFixed(2)} ${r} 0 0 ${innerSweep} 0 ${-r} Z`;
-  el.innerHTML=
-    `<circle r="${r}" fill="none" stroke="${color}" stroke-width="0.6" opacity="0.5"/>`+
-    `<path d="${path}" fill="${color}"/>`;
-})();
-
-// --- draw curve ---
-(function(){
-  const W=400,H=122,top=14,bot=106;
-  const hMax=Math.max(dayHigh,thr)+0.4, hMin=Math.min(dayLow,0)-0.2;
-  const x=h=>h/24*W, y=v=>bot-(v-hMin)/(hMax-hMin)*(bot-top);
-  let path="",fill="M0 "+bot;
-  for(let h=0;h<=24;h+=1/12){const vv=heightAt(h,exFull);path+=(h===0?"M":"L")+x(h).toFixed(1)+" "+y(vv).toFixed(1)+" ";fill+="L"+x(h).toFixed(1)+" "+y(vv).toFixed(1)+" ";}
-  fill+="L"+W+" "+bot+" Z";
-  // open-window bands (creek floats — the only background band now)
-  let bands="";windows.forEach(w=>{bands+=`<rect x="${x(w[0]).toFixed(1)}" y="${top}" width="${(x(w[1])-x(w[0])).toFixed(1)}" height="${bot-top}" fill="#3a7c83" opacity="0.16"/>`;});
-  // sun-up bar along the top
-  let sunbar="";sunUpIntervals().forEach(w=>{sunbar+=`<rect x="${x(w[0]).toFixed(1)}" y="2" width="${(x(w[1])-x(w[0])).toFixed(1)}" height="5" rx="2.5" fill="#caa84e" opacity="0.85"/>`;});
-  // moon-up bar along the bottom
-  let moonbar="";moonUpIntervals().forEach(w=>{moonbar+=`<rect x="${x(w[0]).toFixed(1)}" y="115" width="${(x(w[1])-x(w[0])).toFixed(1)}" height="5" rx="2.5" fill="#5d7d8e" opacity="0.85"/>`;});
-  const nowH=now.getHours()+now.getMinutes()/60, nx=x(nowH).toFixed(1), ny=y(heightAt(nowH,exFull)).toFixed(1);
-  // extremum dots — anchor points the cosine interpolation runs through, so the curve reads as data + interp not a hand-drawn squiggle
-  let extremaDots="";ex.forEach(e=>{extremaDots+=`<circle cx="${x(e.t).toFixed(1)}" cy="${y(e.h).toFixed(1)}" r="2.8" fill="#efe7d6" stroke="#1d3d43" stroke-width="1.4"/>`;});
-  document.getElementById("curve").innerHTML=
-    bands+
-    `<path d="${fill}" fill="#2f5a60" opacity="0.16"/>`+
-    `<line x1="0" y1="${y(thr).toFixed(1)}" x2="${W}" y2="${y(thr).toFixed(1)}" stroke="#9a7b3a" stroke-width="1" stroke-dasharray="4 4" opacity="0.7"/>`+
-    `<path d="${path}" fill="none" stroke="#1d3d43" stroke-width="2.4" stroke-linecap="round"/>`+
-    extremaDots+
-    sunbar+moonbar+
-    `<line x1="${nx}" y1="${top}" x2="${nx}" y2="${bot}" stroke="#20302f" stroke-width="1" opacity="0.35"/>`+
-    `<circle cx="${nx}" cy="${ny}" r="3.6" fill="#1d3d43"/>`;
-  // height labels overlaid on the right edge at the y-positions of dayHigh / dayLow.
-  // Use viewBox y/total to position as a percentage since the SVG stretches to fill curve-wrap.
-  const hi=document.getElementById("high-label"), lo=document.getElementById("low-label");
-  hi.textContent=`↑ ${dayHigh.toFixed(1)} m`;
-  hi.style.top=`${(y(dayHigh)/122)*100}%`;
-  lo.textContent=`↓ ${dayLow.toFixed(1)} m`;
-  lo.style.top=`${(y(dayLow)/122)*100}%`;
-})();
-
-// --- tide window sentence + extremes + light line ---
-(function(){
-  const daylit=windows.filter(w=>w[1]>6&&w[0]<21.5);
-  const el=document.getElementById("tide-window");
-  if(daylit.length){
-    const parts=daylit.map(w=>`<b>${fmtClock(Math.max(w[0],6))}–${fmtClock(Math.min(w[1],21.5))}</b>`).join(" and ");
-    el.innerHTML=`Creek floats ${parts}.`;
-  }else if(windows.length){el.innerHTML=`Creek fills after dark today.`;}
-  else{el.innerHTML=`Creek stays low today.`;}
-  document.getElementById("extremes").innerHTML=ex.map(e=>`<span>${e.type==="HW"?"High":"Low"} <b>${fmtClock(e.t)}</b> · <b>${e.h.toFixed(1)}m</b></span>`).join("");
-
-  let moonStr;
-  if(mTimes.alwaysUp)moonStr="up all night";
-  else if(mTimes.alwaysDown)moonStr="below the horizon";
-  else moonStr=[moonriseH!=null?"↑ "+fmtClock(moonriseH):null, moonsetH!=null?"↓ "+fmtClock(moonsetH):null].filter(Boolean).join("  ")||"—";
-  document.getElementById("light").innerHTML=
-    `<span class="g">☀</span> ${fmtClock(sunriseH)} – ${fmtClock(sunsetH)} &nbsp;·&nbsp; <span class="g">☾</span> ${moonStr}`;
-})();
+let WEATHER = null;
+let weatherState = "pending";   // pending → ok → fail
 
 /* ============================================================
-   WEATHER + scene + headline
+   WEATHER constants — WMO code map, sky-scene gradients, hourly glyphs
    ============================================================ */
 const WMO={0:["Clear","clear"],1:["Mostly clear","clear"],2:["Partly cloudy","cloud"],3:["Overcast","cloud"],
   45:["Mist","fog"],48:["Freezing fog","fog"],51:["Light drizzle","rain"],53:["Drizzle","rain"],55:["Heavy drizzle","rain"],
@@ -1642,30 +1494,442 @@ const SCENE={
     "radial-gradient(ellipse 100% 32% at 50% 0%, rgba(0,0,0,0.45), transparent 70%),"+
     "linear-gradient(180deg, #161e26 0%, #232c34 55%, #2a3338 100%)",
 };
-function scene(kind,isDay){
-  const variant=kind+(isDay?"-day":"-night");
+function scene(kind, isDay){
+  const variant = kind + (isDay ? "-day" : "-night");
   document.getElementById("sky").style.background = SCENE[variant] || SCENE["cloud-day"];
 }
 
-function buildHeadline(d){
+function wxSymbol(kind, isDay){
+  if(kind==="clear" && isDay){
+    return `<svg viewBox="-8 -8 16 16"><circle r="2.8" fill="#caa84e"/><g stroke="#caa84e" stroke-width="0.9" stroke-linecap="round"><line x1="0" y1="-6.5" x2="0" y2="-4.5"/><line x1="0" y1="4.5" x2="0" y2="6.5"/><line x1="-6.5" y1="0" x2="-4.5" y2="0"/><line x1="4.5" y1="0" x2="6.5" y2="0"/><line x1="-4.6" y1="-4.6" x2="-3.2" y2="-3.2"/><line x1="3.2" y1="3.2" x2="4.6" y2="4.6"/><line x1="-4.6" y1="4.6" x2="-3.2" y2="3.2"/><line x1="3.2" y1="-3.2" x2="4.6" y2="-4.6"/></g></svg>`;
+  }
+  if(kind==="clear"){
+    return `<svg viewBox="-8 -8 16 16"><path d="M 2.5 -5.5 A 5.5 5.5 0 1 0 2.5 5.5 A 4 5.5 0 1 1 2.5 -5.5 Z" fill="#5d7d8e"/></svg>`;
+  }
+  if(kind==="cloud"){
+    const fill = isDay ? "#7a8580" : "#5d6b72";
+    return `<svg viewBox="-8 -8 16 16"><path d="M -5 3 Q -7 3 -7 1 Q -7 -1 -5 -1 Q -5 -3.5 -2 -3.5 Q 2 -4.5 3 -1 Q 6 -1 6 1 Q 6 3 4 3 Z" fill="${fill}" opacity="0.85"/></svg>`;
+  }
+  if(kind==="fog"){
+    return `<svg viewBox="-8 -8 16 16"><g stroke="#7a8580" stroke-width="1.1" stroke-linecap="round" fill="none"><path d="M -6 -3 Q -3 -4.2 0 -3 T 6 -3"/><path d="M -6 0 Q -3 -1.2 0 0 T 6 0"/><path d="M -6 3 Q -3 1.8 0 3 T 6 3"/></g></svg>`;
+  }
+  return `<svg viewBox="-8 -8 16 16"><path d="M -5 -1 Q -7 -1 -7 -3 Q -7 -5 -5 -5 Q -5 -7 -2 -7 Q 2 -8 3 -5 Q 6 -5 6 -3 Q 6 -1 4 -1 Z" fill="#4a5a57" opacity="0.85"/><g stroke="#3a5a60" stroke-width="1.1" stroke-linecap="round"><line x1="-3" y1="1.5" x2="-4" y2="4.5"/><line x1="0" y1="1.5" x2="-1" y2="4.5"/><line x1="3" y1="1.5" x2="2" y2="4.5"/></g></svg>`;
+}
+
+/* ============================================================
+   VERSE PICKER — anchored to TODAY's signals; runs once at boot
+   ============================================================
+   VERSES is async-loaded (verses.json with inline fallback). The picker scores
+   entries against today's reasons in priority order; among the matching pool it
+   prefers the least-recently-shown (tracked in localStorage `verseSeen`). The
+   verse stays put as the user navigates dates — only weather refining today's
+   line may swap it; future-day navigation never touches the verse.
+   ============================================================ */
+function todaySignals(weather){
+  const s = new Set();
+  if(todayNearFull) s.add("moon");
+  else if(todayPhase<.04 || todayPhase>.96) s.add("night");
+  if(weather){
+    if(weather.kind==="rain") s.add("rain");
+    if(weather.kind==="fog") s.add("mist");
+    if(weather.kind==="clear") s.add("sun");
+    if(weather.wind>=22) s.add("wind");
+  }
+  if(todayRange != null){
+    if(todayRange>4.2) s.add("tide");
+    else if(todayRange<2.6) s.add("water");
+  }
+  s.add(SEASON_TAG[todayMonth]);
+  const h = now.getHours();
+  if(h>=5 && h<8) s.add("dawn");
+  else if(h>=18 && h<21) s.add("evening");
+  if(h>=21 || h<5) s.add("night");
+  return s;
+}
+
+function activeReasons(weather){
+  const r = [];
+  if(todayNearFull) r.push({tag:"moon", label:"for the full moon"});
+  else if(todayPhase<.04 || todayPhase>.96) r.push({tag:"night", label:"for the new-moon dark"});
+  if(weather){
+    if(weather.kind==="rain") r.push({tag:"rain", label:"for the rain"});
+    else if(weather.wind>=22) r.push({tag:"wind", label:"for a blowy day"});
+    else if(weather.kind==="fog") r.push({tag:"mist", label:"for the mist"});
+  }
+  if(todayRange != null){
+    if(todayRange>4.2) r.push({tag:"tide", label:"for the spring tide"});
+    else if(todayRange<2.6) r.push({tag:"water", label:"for the quiet neap"});
+  }
+  if(weather && weather.kind==="clear" && weather.wind<14) r.push({tag:"sun", label:"for a bright, still day"});
+  r.push({tag:SEASON_TAG[todayMonth], label:"for "+todayMonthName});
+  return r;
+}
+
+function pickLine(v, signals){
+  let best = v.lines[0], bestScore = -1;
+  for(const l of v.lines){
+    const score = (l.tags||[]).filter(t => signals.has(t)).length;
+    if(score > bestScore){ best = l; bestScore = score; }
+  }
+  return best;
+}
+
+function renderVerse(v, line, label){
+  document.getElementById("verse-eyebrow").textContent = (v.isProse ? "A passage " : "A verse ") + label;
+  document.getElementById("verse-line").textContent = "“" + line.text + "”";
+  let by;
+  if(v.isProse){
+    by = "from <em>" + v.title + "</em> by " + v.poet + " · <a href='" + v.url + "' target='_blank' rel='noopener'>read more →</a>";
+  } else {
+    const year = v.year ? " (" + v.year + ")" : "";
+    by = v.poet + year + " · <a href='" + v.url + "' target='_blank' rel='noopener'>read the full poem →</a>";
+  }
+  document.getElementById("verse-by").innerHTML = by;
+}
+
+function readSeen(){ try{ return JSON.parse(localStorage.getItem("verseSeen") || "{}"); }catch(e){ return {}; } }
+function writeSeen(s){ try{ localStorage.setItem("verseSeen", JSON.stringify(s)); }catch(e){} }
+function readHeadlineSeen(){ try{ return JSON.parse(localStorage.getItem("headlineSeen") || "{}"); }catch(e){ return {}; } }
+function writeHeadlineSeen(s){ try{ localStorage.setItem("headlineSeen", JSON.stringify(s)); }catch(e){} }
+
+function pickVerse(weather){
+  const reasons = activeReasons(weather);
+  const signals = todaySignals(weather);
+  const seen = readSeen();
+  // Stable across reloads: once a verse has been picked today, keep it.
+  // The line within the verse can still refine as weather/time signals shift.
+  const todayId = Object.keys(seen).find(id => seen[id] === VERSE_DAYKEY);
+  if(todayId){
+    const v = VERSES.find(x => x.id === todayId);
+    if(v){
+      const re = reasons.find(r => v.tags && v.tags.includes(r.tag));
+      renderVerse(v, pickLine(v, signals), re ? re.label : "for today");
+      return;
+    }
+  }
+  for(const re of reasons){
+    const pool = VERSES.filter(v => v.tags && v.tags.includes(re.tag));
+    if(!pool.length) continue;
+    pool.sort((a,b) => ((seen[a.id]??-1) - (seen[b.id]??-1)) || (a.id<b.id?-1:1));
+    const v = pool[0];
+    const line = pickLine(v, signals);
+    renderVerse(v, line, re.label);
+    seen[v.id] = VERSE_DAYKEY;
+    writeSeen(seen);
+    return;
+  }
+  const v = VERSES[VERSE_DAYKEY % VERSES.length];
+  renderVerse(v, v.lines[0], "for today");
+}
+
+/* ============================================================
+   PER-DAY RENDERING — everything except the verse re-renders here
+   ============================================================ */
+function upIntervals(riseH, setH, alwaysUp, alwaysDown){
+  if(alwaysUp) return [[0,24]];
+  if(alwaysDown) return [];
+  if(riseH!=null && setH!=null) return riseH<setH ? [[riseH,setH]] : [[0,setH],[riseH,24]];
+  if(riseH!=null) return [[riseH,24]];
+  if(setH!=null) return [[0,setH]];
+  return [];
+}
+
+function renderChartMoonIcon(illum, waxing){
+  const el = document.getElementById("chart-moon-icon"); if(!el) return;
+  const r = 6.4, color = "#5d7d8e";
+  if(illum>=0.99){ el.innerHTML = `<circle r="${r}" fill="${color}"/>`; return; }
+  if(illum<=0.01){ el.innerHTML = `<circle r="${r}" fill="none" stroke="${color}" stroke-width="0.9"/>`; return; }
+  const rx = Math.abs(2*illum-1)*r;
+  const outerSweep = waxing ? 1 : 0;
+  const innerSweep = waxing ? (illum<0.5 ? 1 : 0) : (illum<0.5 ? 0 : 1);
+  const path = `M 0 ${-r} A ${r} ${r} 0 0 ${outerSweep} 0 ${r} A ${rx.toFixed(2)} ${r} 0 0 ${innerSweep} 0 ${-r} Z`;
+  el.innerHTML =
+    `<circle r="${r}" fill="none" stroke="${color}" stroke-width="0.6" opacity="0.5"/>`+
+    `<path d="${path}" fill="${color}"/>`;
+}
+
+function renderDay(iso){
+  const isToday = iso === todayISO;
+  const dayDate = dateFromISO(iso);
+  const dayMonth = dayDate.getMonth();
+  const dIdx = dayIdxOf(dayDate);
+
+  // --- date label ---
+  document.getElementById("date").textContent =
+    dayDate.toLocaleDateString("en-GB", {weekday:"long", day:"numeric", month:"long"});
+
+  // --- sun/moon for the selected day ---
+  const sun = SunCalc.getTimes(dayDate, CONFIG.lat, CONFIG.lon);
+  const mIll = SunCalc.getMoonIllumination(dayDate);
+  const mTimes = SunCalc.getMoonTimes(dayDate, CONFIG.lat, CONFIG.lon);
+  const sunriseH = hod(sun.sunrise), sunsetH = hod(sun.sunset);
+  const moonriseH = hod(mTimes.rise), moonsetH = hod(mTimes.set);
+  const illum = mIll.fraction, phase = mIll.phase, waxing = phase < 0.5;
+  const nearFull = Math.abs(phase - 0.5) < 0.06;
+
+  let moonName;
+  if(phase<.03 || phase>.97) moonName = "New moon";
+  else if(phase<.22) moonName = "Waxing crescent";
+  else if(phase<.28) moonName = "First quarter";
+  else if(phase<.47) moonName = "Waxing gibbous";
+  else if(phase<.53) moonName = "Full moon";
+  else if(phase<.72) moonName = "Waning gibbous";
+  else if(phase<.78) moonName = "Last quarter";
+  else moonName = "Waning crescent";
+
+  document.getElementById("moon-name").textContent = moonName;
+  document.getElementById("moon-sub").textContent = Math.round(illum*100)+"% lit";
+  (function(g){ const lit = Math.round(illum*100);
+    g.style.background = waxing
+      ? `linear-gradient(90deg, var(--ink) ${100-lit}%, var(--moon) ${100-lit}%)`
+      : `linear-gradient(90deg, var(--moon) ${lit}%, var(--ink) ${lit}%)`;
+  })(document.getElementById("moonglyph"));
+  renderChartMoonIcon(illum, waxing);
+
+  // --- marsh line (wildlife with an occasional history nugget) ---
+  document.getElementById("marsh").innerHTML = (dIdx%9===0) ? NUGGET : MARSH[dayMonth];
+
+  // --- light line (sun/moon — tide-independent, render even without predictions) ---
+  (function(){
+    let moonStr;
+    if(mTimes.alwaysUp) moonStr = "up all night";
+    else if(mTimes.alwaysDown) moonStr = "below the horizon";
+    else moonStr = [moonriseH!=null ? "↑ "+fmtClock(moonriseH) : null, moonsetH!=null ? "↓ "+fmtClock(moonsetH) : null].filter(Boolean).join("  ") || "—";
+    document.getElementById("light").innerHTML =
+      `<span class="g">☀</span> ${fmtClock(sunriseH)} – ${fmtClock(sunsetH)} &nbsp;·&nbsp; <span class="g">☾</span> ${moonStr}`;
+  })();
+
+  // --- tide data for the day ---
+  const tide = TIDE_TABLE[iso];
+  if(!tide){
+    document.getElementById("tide-window").textContent = "Tide predictions not available for this day.";
+    document.getElementById("extremes").innerHTML = "";
+    document.getElementById("curve").innerHTML = "";
+    document.getElementById("high-label").textContent = "";
+    document.getElementById("low-label").textContent = "";
+    document.getElementById("abridged-note").style.display = "none";
+    renderWeatherFor(iso, null);
+    updateNavUI();
+    return;
+  }
+  const ex = tide.extrema.map(e => ({...e, t: toHours(e.t)}));
+  // Anchor points either side of midnight so cosine interpolation doesn't flatline.
+  const yData = TIDE_TABLE[addDaysISO(iso, -1)], tData = TIDE_TABLE[addDaysISO(iso, 1)];
+  const exFull = [...ex];
+  if(yData && yData.extrema && yData.extrema.length){
+    const last = yData.extrema[yData.extrema.length-1];
+    exFull.unshift({...last, t: toHours(last.t) - 24});
+  }
+  if(tData && tData.extrema && tData.extrema.length){
+    const first = tData.extrema[0];
+    exFull.push({...first, t: toHours(first.t) + 24});
+  }
+  // exFull (not ex) so cross-midnight HW pairs are grouped via the neighbouring
+  // day's last/first HW — otherwise the chart shows a phantom gap around midnight.
+  const windows = paddleWindows(exFull);
+  const dayHigh = Math.max(...ex.map(e => e.h));
+  const dayLow = Math.min(...ex.map(e => e.h));
+  const range = dayHigh - dayLow;
+  document.getElementById("abridged-note").style.display = tide.abridged ? "block" : "none";
+
+  const sunUp = upIntervals(sunriseH, sunsetH, sun.alwaysUp, sun.alwaysDown);
+  const moonUp = upIntervals(moonriseH, moonsetH, mTimes.alwaysUp, mTimes.alwaysDown);
+
+  // --- tide curve ---
+  (function(){
+    const W=400, H=122, top=14, bot=106;
+    const hMax = dayHigh + 0.4, hMin = Math.min(dayLow, 0) - 0.2;
+    const x = h => h/24*W, y = v => bot - (v-hMin)/(hMax-hMin)*(bot-top);
+    let path = "", fill = "M0 " + bot;
+    for(let h=0; h<=24; h+=1/12){
+      const vv = heightAt(h, exFull);
+      path += (h===0 ? "M" : "L") + x(h).toFixed(1) + " " + y(vv).toFixed(1) + " ";
+      fill += "L" + x(h).toFixed(1) + " " + y(vv).toFixed(1) + " ";
+    }
+    fill += "L"+W+" "+bot+" Z";
+    let bands = "";   windows.forEach(w => { bands  += `<rect x="${x(w[0]).toFixed(1)}" y="${top}" width="${(x(w[1])-x(w[0])).toFixed(1)}" height="${bot-top}" fill="#3a7c83" opacity="0.16"/>`; });
+    let sunbar = "";  sunUp.forEach(w =>  { sunbar += `<rect x="${x(w[0]).toFixed(1)}" y="2" width="${(x(w[1])-x(w[0])).toFixed(1)}" height="5" rx="2.5" fill="#caa84e" opacity="0.85"/>`; });
+    let moonbar = ""; moonUp.forEach(w => { moonbar+= `<rect x="${x(w[0]).toFixed(1)}" y="115" width="${(x(w[1])-x(w[0])).toFixed(1)}" height="5" rx="2.5" fill="#5d7d8e" opacity="0.85"/>`; });
+    let extremaDots = ""; ex.forEach(e => { extremaDots += `<circle cx="${x(e.t).toFixed(1)}" cy="${y(e.h).toFixed(1)}" r="2.8" fill="#efe7d6" stroke="#1d3d43" stroke-width="1.4"/>`; });
+    // The "now" indicator is meaningful only on today's curve.
+    let nowMarker = "";
+    if(isToday){
+      const nowH = now.getHours() + now.getMinutes()/60;
+      const nx = x(nowH).toFixed(1), ny = y(heightAt(nowH, exFull)).toFixed(1);
+      nowMarker = `<line x1="${nx}" y1="${top}" x2="${nx}" y2="${bot}" stroke="#20302f" stroke-width="1" opacity="0.35"/>`+
+                  `<circle cx="${nx}" cy="${ny}" r="3.6" fill="#1d3d43"/>`;
+    }
+    document.getElementById("curve").innerHTML =
+      bands +
+      `<path d="${fill}" fill="#2f5a60" opacity="0.16"/>` +
+      `<path d="${path}" fill="none" stroke="#1d3d43" stroke-width="2.4" stroke-linecap="round"/>` +
+      extremaDots +
+      sunbar + moonbar +
+      nowMarker;
+    const hi = document.getElementById("high-label"), lo = document.getElementById("low-label");
+    hi.textContent = `${dayHigh.toFixed(1)} m`;
+    hi.style.top = `${(y(dayHigh)/122)*100}%`;
+    lo.textContent = `${dayLow.toFixed(1)} m`;
+    lo.style.top = `${(y(dayLow)/122)*100}%`;
+  })();
+
+  // --- tide window sentence + extremes + light line ---
+  (function(){
+    const daylit = windows.filter(w => w[1]>6 && w[0]<21.5);
+    const el = document.getElementById("tide-window");
+    if(daylit.length){
+      const parts = daylit.map(w => `<b>${fmtClock(Math.max(w[0],6))}–${fmtClock(Math.min(w[1],21.5))}</b>`).join(" and ");
+      el.innerHTML = `Paddleable ${parts}.`;
+    } else if(windows.length){
+      el.innerHTML = `Paddleable after dark.`;
+    } else {
+      el.innerHTML = `No paddle window.`;
+    }
+    document.getElementById("extremes").innerHTML = tideRows(ex).map(r =>
+      `<span><span class="lbl">${r.label}:</span> <b>${r.timeStr}</b> · <b>${r.heightStr}</b></span>`
+    ).join("");
+  })();
+
+  // --- weather + scene + headline (uses cached WEATHER, falls back to placeholders) ---
+  renderWeatherFor(iso, {ex, windows, range, dayHigh, dayLow, sunriseH, sunsetH, moonUp, nearFull, moonriseH});
+
+  updateNavUI();
+}
+
+function renderWeatherFor(iso, ctx){
+  const isToday = iso === todayISO;
+  const wText = ctx ? document.getElementById("tide-window").textContent : "";
+
+  function setHeadline(h, s){
+    document.getElementById("headline").textContent = h;
+    document.getElementById("subline").textContent = s;
+  }
+  function noTideHeadline(sub){
+    setHeadline("Tide predictions not available for this day.", sub || "Sun, moon and weather below.");
+  }
+  function placeholderHeadline(){
+    if(!ctx){ noTideHeadline(""); return; }
+    const h = buildHeadline(iso, {wind:8, kind:"cloud", isDay:true, dryToday:true, wetAhead:false, precipToday:0, windowText:wText}, ctx);
+    setHeadline(h.h, h.s);
+  }
+
+  if(weatherState === "pending"){
+    scene("cloud", true);
+    document.getElementById("wx-temp").textContent = "—";
+    document.getElementById("wx-desc").textContent = "";
+    document.getElementById("wx-strip").innerHTML = "";
+    document.getElementById("err").style.display = "none";
+    placeholderHeadline();
+    return;
+  }
+
+  if(weatherState === "fail" || !WEATHER){
+    scene("cloud", true);
+    document.getElementById("wx-temp").textContent = "—";
+    document.getElementById("wx-desc").textContent = "weather offline";
+    document.getElementById("wx-strip").innerHTML = "";
+    document.getElementById("err").style.display = "block";
+    document.getElementById("err").textContent = "Couldn't reach the weather service. Tide, sun and moon only.";
+    placeholderHeadline();
+    return;
+  }
+
+  document.getElementById("err").style.display = "none";
+  const offset = dayOffsetISO(iso, todayISO);
+  const hourly = WEATHER.hourly;
+  const daily = WEATHER.daily;
+
+  let temp, code, wind, isDay;
+  if(isToday && WEATHER.current){
+    const c = WEATHER.current;
+    temp = c.temperature_2m; code = c.weather_code; wind = c.wind_speed_10m; isDay = c.is_day === 1;
+  } else {
+    const start = hourly.time.findIndex(s => s.startsWith(iso));
+    if(start < 0){
+      scene("cloud", true);
+      document.getElementById("wx-temp").textContent = "—";
+      document.getElementById("wx-desc").textContent = "no forecast yet";
+      document.getElementById("wx-strip").innerHTML = "";
+      placeholderHeadline();
+      return;
+    }
+    // Representative slice for a forecast day — midday'ish (13:00).
+    const midIdx = Math.min(start + 13, hourly.time.length - 1);
+    temp = hourly.temperature_2m ? hourly.temperature_2m[midIdx] : null;
+    code = hourly.weather_code[midIdx];
+    wind = hourly.wind_speed_10m[midIdx];
+    isDay = hourly.is_day[midIdx] === 1;
+  }
+  const kind = (WMO[code]||["—","cloud"])[1];
+  const label = (WMO[code]||["—"])[0];
+
+  document.getElementById("wx-temp").textContent = temp != null ? Math.round(temp)+"°" : "—";
+  document.getElementById("wx-desc").textContent = isToday
+    ? `${label} · ${Math.round(wind)} km/h wind`
+    : `${label} · ${Math.round(wind)} km/h wind · midday`;
+  scene(kind, isDay);
+  renderWxStripFor(iso);
+
+  const ps = (daily && daily.precipitation_sum) || [];
+  const precipToday = ps[offset] != null ? ps[offset] : 0;
+  const precipTomorrow = ps[offset+1] != null ? ps[offset+1] : 0;
+  const precipDayAfter = ps[offset+2] != null ? ps[offset+2] : 0;
+  const dryToday = precipToday < 1;
+  const wetAhead = precipTomorrow >= 2 && precipDayAfter >= 2;
+
+  if(!ctx){
+    noTideHeadline(`${label} · ${Math.round(wind)} km/h wind`);
+    return;
+  }
+  const h = buildHeadline(iso, {wind, kind, isDay, dryToday, wetAhead, precipToday, windowText: wText}, ctx);
+  setHeadline(h.h, h.s);
+}
+
+function renderWxStripFor(iso){
+  if(!WEATHER || !WEATHER.hourly){ document.getElementById("wx-strip").innerHTML = ""; return; }
+  const hourly = WEATHER.hourly;
+  const t = hourly.time, codes = hourly.weather_code, winds = hourly.wind_speed_10m, days = hourly.is_day, temps = hourly.temperature_2m;
+  const start = t.findIndex(s => s.startsWith(iso));
+  if(start < 0){ document.getElementById("wx-strip").innerHTML = ""; return; }
+  let html = "";
+  for(let blk = 0; blk < 12; blk++){
+    const h = start + blk*2 + 1;   // middle of the 2-hour block
+    if(h >= t.length) break;
+    const code = codes[h], kind = (WMO[code]||["—","cloud"])[1], isDay = days[h] === 1, wind = winds[h];
+    const label = (WMO[code]||["—"])[0];
+    const temp = temps ? temps[h] : null;
+    const tempTxt = temp!=null ? `, ${Math.round(temp)}°` : "";
+    const tt = `${pad(blk*2)}:00–${pad(blk*2+2)}:00 · ${label}${tempTxt}${wind>=18 ? `, ${Math.round(wind)} km/h wind` : ""}`;
+    const tempHTML = temp!=null ? `<span class="temp">${Math.round(temp)}°</span>` : "";
+    html += `<i title="${tt}" class="${wind>=18 ? "wind" : ""}">${wxSymbol(kind, isDay)}${tempHTML}</i>`;
+  }
+  document.getElementById("wx-strip").innerHTML = html;
+}
+
+function buildHeadline(iso, d, ctx){
+  // Only burn the headline rotation when viewing today. Previewing future days
+  // uses a deterministic first-option pick, so navigating doesn't perturb the
+  // recipient's daily rotation.
+  const isToday = iso === todayISO;
   const seen = readHeadlineSeen();
-  const dayKey = now.getFullYear()*1000 + dayIdx;
   function pickFrom(branchId, pool){
-    const sorted = pool.map((p,i)=>({p, key:`${branchId}:${i}`}))
-                       .sort((a,b)=>((seen[a.key]??-1) - (seen[b.key]??-1)));
+    if(!isToday) return pool[0];
+    const sorted = pool.map((p, i) => ({p, key:`${branchId}:${i}`}))
+                       .sort((a, b) => ((seen[a.key]??-1) - (seen[b.key]??-1)));
     const winner = sorted[0];
-    seen[winner.key] = dayKey;
+    seen[winner.key] = VERSE_DAYKEY;
     writeHeadlineSeen(seen);
     return winner.p;
   }
   const wt = d.windowText || "";
+  const {ex, windows, range, dayHigh, dayLow, sunriseH, sunsetH, moonUp, nearFull, moonriseH} = ctx;
 
   // 1. Full moon over an evening HW
-  const eveningHWs = ex.filter(e=>e.type==="HW" && e.t>17.5 && e.t<22.5);
+  const eveningHWs = ex.filter(e => e.type==="HW" && e.t>17.5 && e.t<22.5);
   const eveningHW = eveningHWs[0];
-  const moonUpAtHW = eveningHW && moonUpIntervals().some(w=>eveningHW.t>=w[0]&&eveningHW.t<=w[1]);
+  const moonUpAtHW = eveningHW && moonUp.some(w => eveningHW.t>=w[0] && eveningHW.t<=w[1]);
   if(nearFull && (d.kind==="clear"||d.kind==="cloud") && eveningHW && moonUpAtHW){
-    const eveTimes = eveningHWs.map(e=>fmtClock(e.t)).join(" and ");
+    const eveTimes = eveningHWs.map(e => fmtClock(e.t)).join(" and ");
     return pickFrom("fullmoon",[
       {h:`Full moon tonight. High water in the evening, ${eveTimes}.`, s:`Moonrise ${fmtClock(moonriseH)}.`},
       {h:`Full moon over the evening tide.`, s:`High water ${eveTimes}. Moonrise ${fmtClock(moonriseH)}.`},
@@ -1726,39 +1990,39 @@ function buildHeadline(d){
       {h:`Big water today. ${dayHigh.toFixed(1)} m at the top.`, s:wt}
     ]);
   }
-  // 9. Dawn HW under fair weather (Southampton double HW means there may be two highs in this window)
-  const dawnHWs = ex.filter(e=>e.type==="HW" && e.t>=sunriseH-0.5 && e.t<=sunriseH+2);
+  // 9. Dawn HW under fair weather
+  const dawnHWs = ex.filter(e => e.type==="HW" && e.t>=sunriseH-0.5 && e.t<=sunriseH+2);
   if(dawnHWs.length && (d.kind==="clear"||d.kind==="cloud") && d.wind<18){
-    const dawnTimes = dawnHWs.map(e=>fmtClock(e.t)).join(" and ");
+    const dawnTimes = dawnHWs.map(e => fmtClock(e.t)).join(" and ");
     return pickFrom("dawnhw",[
       {h:`High water at first light, ${dawnTimes}.`, s:wt},
       {h:`Tide on top through the dawn.`, s:`${dawnTimes}, ${dayHigh.toFixed(1)} m at the highest.`},
       {h:`Dawn brings high water. ${dawnTimes}.`, s:wt}
     ]);
   }
-  // 10. Sunset HW under fair weather (skip if full-moon branch could fire — caught above)
-  const sunsetHWs = ex.filter(e=>e.type==="HW" && e.t>=sunsetH-1.5 && e.t<=sunsetH+0.5);
+  // 10. Sunset HW under fair weather
+  const sunsetHWs = ex.filter(e => e.type==="HW" && e.t>=sunsetH-1.5 && e.t<=sunsetH+0.5);
   if(sunsetHWs.length && (d.kind==="clear"||d.kind==="cloud") && d.wind<18){
-    const sunsetTimes = sunsetHWs.map(e=>fmtClock(e.t)).join(" and ");
+    const sunsetTimes = sunsetHWs.map(e => fmtClock(e.t)).join(" and ");
     return pickFrom("sunsethw",[
       {h:`High water as the sun gets low, ${sunsetTimes}.`, s:wt},
       {h:`Tide tops at dusk.`, s:`${sunsetTimes}. Sun down ${fmtClock(sunsetH)}.`},
       {h:`Tide on top through the evening.`, s:`${sunsetTimes}, ${dayHigh.toFixed(1)} m at the highest.`}
     ]);
   }
-  // 11. Float window exists but falls outside daylight
-  const daylightWindows = windows.filter(w=>w[1]>sunriseH && w[0]<sunsetH);
+  // 11. Paddle window outside daylight
+  const daylightWindows = windows.filter(w => w[1]>sunriseH && w[0]<sunsetH);
   if(windows.length && !daylightWindows.length){
     return pickFrom("nightonly",[
-      {h:`Water in the dark today.`, s:`Creek fills after sunset.`},
-      {h:`Night-tide only.`, s:`Float window outside daylight.`}
+      {h:`Water in the dark today.`, s:`High water after sunset.`},
+      {h:`Night-tide only.`, s:`Paddle window outside daylight.`}
     ]);
   }
-  // 12. Tide never reaches float threshold
+  // 12. No paddle window at all
   if(!windows.length){
     return pickFrom("low",[
-      {h:`Tide stays low. Top of ${dayHigh.toFixed(1)} m.`, s:``},
-      {h:`No float window today. ${dayHigh.toFixed(1)} m at the high.`, s:``}
+      {h:`No paddle window today. Top of ${dayHigh.toFixed(1)} m.`, s:``},
+      {h:`No paddle window today. ${dayHigh.toFixed(1)} m at the high.`, s:``}
     ]);
   }
   // 13. Neap tide
@@ -1783,67 +2047,73 @@ function buildHeadline(d){
   ]);
 }
 
-// hourly weather strip — a weather symbol per 2-hour block, aligned under the tide curve
-function wxSymbol(kind, isDay){
-  if(kind==="clear" && isDay){
-    return `<svg viewBox="-8 -8 16 16"><circle r="2.8" fill="#caa84e"/><g stroke="#caa84e" stroke-width="0.9" stroke-linecap="round"><line x1="0" y1="-6.5" x2="0" y2="-4.5"/><line x1="0" y1="4.5" x2="0" y2="6.5"/><line x1="-6.5" y1="0" x2="-4.5" y2="0"/><line x1="4.5" y1="0" x2="6.5" y2="0"/><line x1="-4.6" y1="-4.6" x2="-3.2" y2="-3.2"/><line x1="3.2" y1="3.2" x2="4.6" y2="4.6"/><line x1="-4.6" y1="4.6" x2="-3.2" y2="3.2"/><line x1="3.2" y1="-3.2" x2="4.6" y2="-4.6"/></g></svg>`;
+async function loadWeather(){
+  const url = `https://api.open-meteo.com/v1/forecast?latitude=${CONFIG.lat}&longitude=${CONFIG.lon}`
+    + `&current=temperature_2m,weather_code,wind_speed_10m,is_day`
+    + `&hourly=temperature_2m,weather_code,wind_speed_10m,is_day`
+    + `&daily=precipitation_sum&forecast_days=${RANGE_WINDOW}&timezone=${encodeURIComponent(CONFIG.tz)}`;
+  try{
+    WEATHER = await (await fetch(url)).json();
+    weatherState = "ok";
+  }catch(e){
+    WEATHER = null;
+    weatherState = "fail";
   }
-  if(kind==="clear"){
-    return `<svg viewBox="-8 -8 16 16"><path d="M 2.5 -5.5 A 5.5 5.5 0 1 0 2.5 5.5 A 4 5.5 0 1 1 2.5 -5.5 Z" fill="#5d7d8e"/></svg>`;
-  }
-  if(kind==="cloud"){
-    const fill = isDay ? "#7a8580" : "#5d6b72";
-    return `<svg viewBox="-8 -8 16 16"><path d="M -5 3 Q -7 3 -7 1 Q -7 -1 -5 -1 Q -5 -3.5 -2 -3.5 Q 2 -4.5 3 -1 Q 6 -1 6 1 Q 6 3 4 3 Z" fill="${fill}" opacity="0.85"/></svg>`;
-  }
-  if(kind==="fog"){
-    return `<svg viewBox="-8 -8 16 16"><g stroke="#7a8580" stroke-width="1.1" stroke-linecap="round" fill="none"><path d="M -6 -3 Q -3 -4.2 0 -3 T 6 -3"/><path d="M -6 0 Q -3 -1.2 0 0 T 6 0"/><path d="M -6 3 Q -3 1.8 0 3 T 6 3"/></g></svg>`;
-  }
-  // rain
-  return `<svg viewBox="-8 -8 16 16"><path d="M -5 -1 Q -7 -1 -7 -3 Q -7 -5 -5 -5 Q -5 -7 -2 -7 Q 2 -8 3 -5 Q 6 -5 6 -3 Q 6 -1 4 -1 Z" fill="#4a5a57" opacity="0.85"/><g stroke="#3a5a60" stroke-width="1.1" stroke-linecap="round"><line x1="-3" y1="1.5" x2="-4" y2="4.5"/><line x1="0" y1="1.5" x2="-1" y2="4.5"/><line x1="3" y1="1.5" x2="2" y2="4.5"/></g></svg>`;
-}
-function renderWxStrip(hourly){
-  const t=hourly.time, codes=hourly.weather_code, winds=hourly.wind_speed_10m, days=hourly.is_day;
-  // today's 24 entries — slice by matching the iso date prefix in case forecast_days returned more
-  const start=t.findIndex(s=>s.startsWith(iso)); if(start<0) return;
-  let html="";
-  for(let blk=0; blk<12; blk++){
-    const h=start + blk*2 + 1;  // middle of the 2-hour block
-    if(h>=t.length) break;
-    const code=codes[h], kind=(WMO[code]||["—","cloud"])[1], isDay=days[h]===1, wind=winds[h];
-    const label=(WMO[code]||["—"])[0];
-    const tt=`${pad(blk*2)}:00–${pad(blk*2+2)}:00 · ${label}${wind>=18?`, ${Math.round(wind)} km/h wind`:""}`;
-    html+=`<i title="${tt}" class="${wind>=18?"wind":""}">${wxSymbol(kind, isDay)}</i>`;
-  }
-  document.getElementById("wx-strip").innerHTML=html;
 }
 
-async function loadWeather(){
-  const url=`https://api.open-meteo.com/v1/forecast?latitude=${CONFIG.lat}&longitude=${CONFIG.lon}`
-    +`&current=temperature_2m,weather_code,wind_speed_10m,is_day`
-    +`&hourly=weather_code,wind_speed_10m,is_day`
-    +`&daily=precipitation_sum&forecast_days=5&timezone=${encodeURIComponent(CONFIG.tz)}`;
-  const wText=document.getElementById("tide-window").textContent;
-  try{
-    const j=await(await fetch(url)).json();const c=j.current;
-    const code=c.weather_code,kind=(WMO[code]||["—","cloud"])[1],isDay=c.is_day===1;
-    document.getElementById("wx-temp").textContent=Math.round(c.temperature_2m)+"°";
-    document.getElementById("wx-desc").textContent=(WMO[code]||["—"])[0]+" · "+Math.round(c.wind_speed_10m)+" km/h wind";
-    scene(kind,isDay);
-    if(j.hourly) renderWxStrip(j.hourly);
-    pickVerse({kind, wind:c.wind_speed_10m});
-    const p=j.daily.precipitation_sum;
-    const h=buildHeadline({wind:c.wind_speed_10m,kind,isDay,dryToday:p[0]<1,wetAhead:(p[1]>=2&&p[2]>=2),precipToday:p[0],windowText:wText});
-    document.getElementById("headline").textContent=h.h;document.getElementById("subline").textContent=h.s;
-  }catch(e){
-    scene("cloud",true);
-    document.getElementById("wx-temp").textContent="—";document.getElementById("wx-desc").textContent="weather offline";
-    const h=buildHeadline({wind:8,kind:"cloud",isDay:true,dryToday:true,wetAhead:false,precipToday:0,windowText:wText});
-    document.getElementById("headline").textContent=h.h;document.getElementById("subline").textContent=h.s;
-    document.getElementById("err").style.display="block";
-    document.getElementById("err").textContent="Couldn't reach the weather service. Tide, sun and moon only.";
+/* ============================================================
+   NAVIGATION — chevrons + Today pill, bounded to today + 6
+   ============================================================ */
+function updateNavUI(){
+  const offset = dayOffsetISO(selectedISO, todayISO);
+  const prev = document.getElementById("date-prev");
+  const next = document.getElementById("date-next");
+  const bar = document.getElementById("datebar");
+  if(prev) prev.disabled = offset <= 0;
+  if(next) next.disabled = offset >= RANGE_WINDOW - 1;
+  if(bar && bar.classList){
+    if(offset === 0) bar.classList.remove("off-today");
+    else bar.classList.add("off-today");
   }
 }
-loadWeather();
+
+function go(iso){
+  if(iso < todayISO) iso = todayISO;
+  if(iso > NAV_BOUND_LAST) iso = NAV_BOUND_LAST;
+  selectedISO = iso;
+  writeLastViewed(iso);
+  renderDay(iso);
+}
+
+function wireNav(){
+  const prev = document.getElementById("date-prev");
+  const next = document.getElementById("date-next");
+  const today = document.getElementById("date-today");
+  if(prev && prev.addEventListener) prev.addEventListener("click", () => go(addDaysISO(selectedISO, -1)));
+  if(next && next.addEventListener) next.addEventListener("click", () => go(addDaysISO(selectedISO, 1)));
+  if(today && today.addEventListener) today.addEventListener("click", () => go(todayISO));
+}
+
+// --- boot ---
+renderDay(selectedISO);          // offline render: sun/moon/tide/marsh/curve/window/placeholder weather
+pickVerse(null);                 // first verse pick based on today's moon/tide/season
+wireNav();
+await loadWeather();
+renderDay(selectedISO);          // re-render with weather: scene, wx-strip, headline
+if(weatherState === "ok" && WEATHER && WEATHER.current){
+  const c = WEATHER.current;
+  pickVerse({kind:(WMO[c.weather_code]||["—","cloud"])[1], wind: c.wind_speed_10m});
+}
+
+// Test seam — lets the headless smoke test drive navigation without clicking.
+if(typeof globalThis !== "undefined"){
+  globalThis.__almanac = {
+    go: iso => go(iso),
+    todayISO,
+    boundLast: NAV_BOUND_LAST,
+    selectedISO: () => selectedISO,
+  };
+}
 })();  // end async tide+weather IIFE
 </script>
 </body>
