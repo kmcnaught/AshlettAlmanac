@@ -26,19 +26,6 @@
     "tags": ["water", "evening", "bird", "quiet", "folk"]
   },
   {
-    "id": "arnold-dover-beach",
-    "title": "Dover Beach",
-    "poet": "Matthew Arnold",
-    "year": 1888,
-    "url": "https://en.wikisource.org/wiki/Dover_Beach",
-    "lines": [
-      {"text": "The sea is calm to-night.", "tags": ["sea", "night", "quiet"]},
-      {"text": "The tide is full, the moon lies fair", "tags": ["tide", "moon"]},
-      {"text": "Upon the straits; on the French coast, the light", "tags": ["sea", "evening"]}
-    ],
-    "tags": ["sea", "tide", "moon", "night", "evening", "quiet"]
-  },
-  {
     "id": "tennyson-crossing-bar",
     "title": "Crossing the Bar",
     "poet": "Alfred, Lord Tennyson",
@@ -51,19 +38,6 @@
       {"text": "Twilight and evening bell,", "tags": ["evening", "night"]}
     ],
     "tags": ["evening", "tide", "sea", "water", "sky", "quiet", "night"]
-  },
-  {
-    "id": "tennyson-break",
-    "title": "Break, Break, Break",
-    "poet": "Alfred, Lord Tennyson",
-    "year": 1892,
-    "url": "https://poets.org/poem/break-break-break",
-    "lines": [
-      {"text": "Break, break, break,", "tags": ["sea", "wind"]},
-      {"text": "On thy cold gray stones, O Sea!", "tags": ["sea", "winter"]},
-      {"text": "And the stately ships go on", "tags": ["sea"]}
-    ],
-    "tags": ["sea", "wind", "winter", "water"]
   },
   {
     "id": "yeats-wandering-aengus",
@@ -209,19 +183,6 @@
     "tags": ["sea", "flora", "wind", "quiet"]
   },
   {
-    "id": "kingsley-sands-dee",
-    "title": "The Sands of Dee",
-    "poet": "Charles Kingsley",
-    "year": 1875,
-    "url": "https://en.wikisource.org/wiki/The_Sands_of_Dee",
-    "lines": [
-      {"text": "The western tide crept up along the sand,", "tags": ["tide", "sea"]},
-      {"text": "And o'er and o'er the sand,", "tags": ["tide", "marsh"]},
-      {"text": "The rolling mist came down and hid the land;", "tags": ["mist", "sea"]}
-    ],
-    "tags": ["tide", "sea", "mist", "folk", "marsh"]
-  },
-  {
     "id": "masefield-sea-fever",
     "title": "Sea-Fever",
     "poet": "John Masefield",
@@ -233,32 +194,6 @@
       {"text": "And a grey mist on the sea's face, and a grey dawn breaking.", "tags": ["mist", "dawn", "sea"]}
     ],
     "tags": ["sea", "tide", "mist", "dawn", "wind"]
-  },
-  {
-    "id": "larkin-sad-steps",
-    "title": "Sad Steps",
-    "poet": "Philip Larkin",
-    "year": 1985,
-    "url": "https://www.poetryfoundation.org/poems/48418/sad-steps",
-    "lines": [
-      {"text": "I part thick curtains, and am startled by", "tags": ["night", "moon"]},
-      {"text": "The rapid clouds, the moon's cleanliness.", "tags": ["moon", "sky", "wind"]},
-      {"text": "One shivers slightly, looking up there.", "tags": ["moon", "night", "winter"]}
-    ],
-    "tags": ["moon", "night", "sky", "wind", "winter", "quiet"]
-  },
-  {
-    "id": "plath-moon-yew",
-    "title": "The Moon and the Yew Tree",
-    "poet": "Sylvia Plath",
-    "year": 1963,
-    "url": "https://www.poetryfoundation.org/poems/58441/the-moon-and-the-yew-tree-56d23ccfed82f",
-    "lines": [
-      {"text": "This is the light of the mind, cold and planetary.", "tags": ["moon", "winter", "night"]},
-      {"text": "The moon is no door. It is a face in its own right,", "tags": ["moon", "night"]},
-      {"text": "The moon is my mother. She is not sweet like Mary.", "tags": ["moon", "folk"]}
-    ],
-    "tags": ["moon", "night", "winter", "quiet", "folk"]
   },
   {
     "id": "hopkins-moonrise",
@@ -443,19 +378,6 @@
     "tags": ["winter", "evening", "night", "water", "quiet"]
   },
   {
-    "id": "thomas-rain",
-    "title": "Rain",
-    "poet": "Edward Thomas",
-    "year": 1917,
-    "url": "https://en.wikisource.org/wiki/Page:Poems_(Edward_Thomas,_1917).djvu/60",
-    "lines": [
-      {"text": "Rain, midnight rain, nothing but the wild rain", "tags": ["rain", "night"]},
-      {"text": "On this bleak hut, and solitude, and me", "tags": ["rain", "quiet"]},
-      {"text": "Blessed are the dead that the rain rains upon", "tags": ["rain"]}
-    ],
-    "tags": ["rain", "night", "quiet"]
-  },
-  {
     "id": "sandburg-fog",
     "title": "Fog",
     "poet": "Carl Sandburg",
@@ -545,19 +467,6 @@
       {"text": "And a green chill upon the heat", "tags": ["summer", "wind"]}
     ],
     "tags": ["wind", "summer"]
-  },
-  {
-    "id": "whitman-patroling-barnegat",
-    "title": "Patroling Barnegat",
-    "poet": "Walt Whitman",
-    "year": 1892,
-    "url": "https://en.wikisource.org/wiki/Leaves_of_Grass_(1882)/Sea-Drift/Patroling_Barnegat",
-    "lines": [
-      {"text": "Wild, wild the storm, and the sea high running,", "tags": ["wind", "sea"]},
-      {"text": "Steady the roar of the gale, with incessant undertone muttering,", "tags": ["wind"]},
-      {"text": "Waves, air, midnight, their savagest trinity lashing,", "tags": ["wind", "sea", "night"]}
-    ],
-    "tags": ["wind", "sea", "night"]
   },
   {
     "id": "whitman-after-sea-ship",
@@ -675,19 +584,6 @@
       {"text": "Beneath bald hills of sand", "tags": ["wind", "marsh"]}
     ],
     "tags": ["wind", "marsh", "folk", "sea"]
-  },
-  {
-    "id": "paterson-rain",
-    "title": "Rain",
-    "poet": "Don Paterson",
-    "year": null,
-    "url": "https://www.scottishpoetrylibrary.org.uk/poem/rain-2/",
-    "lines": [
-      {"text": "I love all films that start with rain:", "tags": ["rain"]},
-      {"text": "rain, braiding a windowpane", "tags": ["rain", "quiet"]},
-      {"text": "we rose up from the falling waters", "tags": ["rain", "water"]}
-    ],
-    "tags": ["rain", "water", "quiet"]
   },
   {
     "id": "hardy-darkling-thrush",
@@ -1019,18 +915,6 @@
     "tags": ["summer", "flora", "sun", "quiet"]
   },
   {
-    "id": "teasdale-soft-rains",
-    "title": "There Will Come Soft Rains",
-    "poet": "Sara Teasdale",
-    "year": 1933,
-    "url": "https://poets.org/poem/there-will-come-soft-rains",
-    "lines": [
-      {"text": "There will come soft rains and the smell of the ground,", "tags": ["rain", "spring"]},
-      {"text": "And swallows circling with their shimmering sound;", "tags": ["bird", "spring", "migration"]}
-    ],
-    "tags": ["rain", "spring", "bird", "migration"]
-  },
-  {
     "id": "mew-sea-love",
     "title": "Sea Love",
     "poet": "Charlotte Mew",
@@ -1042,19 +926,6 @@
       {"text": "Wi' the moon's old glim on the grey, wet sand;", "tags": ["moon", "sea", "night"]}
     ],
     "tags": ["tide", "sea", "summer", "moon", "folk"]
-  },
-  {
-    "id": "millay-low-tide",
-    "title": "Low-Tide",
-    "poet": "Edna St. Vincent Millay",
-    "year": 1950,
-    "url": "https://poets.org/poem/low-tide",
-    "lines": [
-      {"text": "These wet rocks where the tide has been,", "tags": ["tide", "water"]},
-      {"text": "Will show again when the tide is high", "tags": ["tide"]},
-      {"text": "The bottom of the sea once more.", "tags": ["sea", "marsh"]}
-    ],
-    "tags": ["tide", "sea", "water", "marsh"]
   },
   {
     "id": "millay-afternoon-hill",
@@ -1120,18 +991,6 @@
     "tags": ["migration", "folk", "night"]
   },
   {
-    "id": "dunmore-wild-strawberries",
-    "title": "Wild Strawberries",
-    "poet": "Helen Dunmore",
-    "year": 2017,
-    "url": "https://poetryarchive.org/poem/wild-strawberries/",
-    "lines": [
-      {"text": "a dark handful, sweet-edged,", "tags": ["summer", "flora"]},
-      {"text": "I lipped at your palm —", "tags": ["summer", "quiet"]}
-    ],
-    "tags": ["summer", "flora", "quiet"]
-  },
-  {
     "id": "berry-birmingham-roller",
     "title": "Birmingham Roller",
     "poet": "Liz Berry",
@@ -1143,18 +1002,6 @@
       {"text": "rolling back up like a babby's yo-yo", "tags": ["bird", "sky"]}
     ],
     "tags": ["bird", "folk", "sky"]
-  },
-  {
-    "id": "robertson-roane-head",
-    "title": "At Roane Head",
-    "poet": "Robin Robertson",
-    "year": null,
-    "url": "https://www.lrb.co.uk/the-paper/v30/n16/robin-robertson/at-roane-head",
-    "lines": [
-      {"text": "You'd know her house by the drawn blinds —", "tags": ["folk", "quiet"]},
-      {"text": "by the cormorants pitched on the boundary wall,", "tags": ["bird", "sea"]}
-    ],
-    "tags": ["sea", "folk", "bird"]
   },
   {
     "id": "clare-autumn-birds",
@@ -1259,19 +1106,6 @@
     "tags": ["bird", "wader", "water", "folk", "quiet"]
   },
   {
-    "id": "marvell-mowers-song",
-    "title": "The Mower's Song",
-    "poet": "Andrew Marvell",
-    "year": 1678,
-    "url": "https://en.wikisource.org/wiki/The_Mower's_Song",
-    "lines": [
-      {"text": "My mind was once the true survey", "tags": ["summer", "quiet"]},
-      {"text": "Of all these meadows fresh and gay,", "tags": ["summer", "flora"]},
-      {"text": "And in the greenness of the grass", "tags": ["summer", "flora"]}
-    ],
-    "tags": ["flora", "summer", "quiet"]
-  },
-  {
     "id": "blunt-sea-lavender",
     "title": "Sea-Lavender",
     "poet": "Wilfrid Scawen Blunt",
@@ -1309,18 +1143,6 @@
     "tags": ["flora", "summer", "quiet", "sun"]
   },
   {
-    "id": "rossetti-goblin-market",
-    "title": "Goblin Market",
-    "poet": "Christina Rossetti",
-    "year": 1894,
-    "url": "https://poets.org/poem/goblin-market",
-    "lines": [
-      {"text": "Evening by evening", "tags": ["evening", "folk"]},
-      {"text": "Among the brookside rushes,", "tags": ["river", "flora", "evening"]}
-    ],
-    "tags": ["flora", "evening", "water", "folk"]
-  },
-  {
     "id": "masefield-cargoes",
     "title": "Cargoes",
     "poet": "John Masefield",
@@ -1346,19 +1168,6 @@
     "tags": ["sea", "dawn", "bird", "folk"]
   },
   {
-    "id": "kipling-harp-song",
-    "title": "Harp Song of the Dane Women",
-    "poet": "Rudyard Kipling",
-    "year": 1936,
-    "url": "https://www.poetryfoundation.org/poems/47691/harp-song-of-the-dane-women",
-    "lines": [
-      {"text": "What is a woman that you forsake her,", "tags": ["folk"]},
-      {"text": "And the hearth-fire and the home-acre,", "tags": ["folk"]},
-      {"text": "To go with the old grey Widow-maker?", "tags": ["sea", "wind", "folk"]}
-    ],
-    "tags": ["sea", "folk", "wind"]
-  },
-  {
     "id": "yeats-fisherman",
     "title": "The Fisherman",
     "poet": "W. B. Yeats",
@@ -1370,31 +1179,6 @@
       {"text": "At dawn to cast his flies,", "tags": ["dawn", "fish"]}
     ],
     "tags": ["dawn", "quiet", "folk", "fish"]
-  },
-  {
-    "id": "newbolt-drakes-drum",
-    "title": "Drake's Drum",
-    "poet": "Henry Newbolt",
-    "year": 1938,
-    "url": "https://rpo.library.utoronto.ca/content/drakes-drum",
-    "lines": [
-      {"text": "Drake he's in his hammock an' a thousand mile away,", "tags": ["sea", "folk"]},
-      {"text": "An' dreamin' arl the time o' Plymouth Hoe.", "tags": ["sea", "folk"]}
-    ],
-    "tags": ["sea", "folk"]
-  },
-  {
-    "id": "anon-sir-patrick-spens",
-    "title": "Sir Patrick Spens",
-    "poet": "Anonymous",
-    "year": 1700,
-    "url": "https://en.wikisource.org/wiki/Oxford_Book_of_English_Verse_1250-1900/Sir_Patrick_Spens",
-    "lines": [
-      {"text": "The king sits in Dunfermline town", "tags": ["folk"]},
-      {"text": "Drinking the blude-red wine;", "tags": ["folk"]},
-      {"text": "'O whare will I get a skeely skipper", "tags": ["sea", "folk"]}
-    ],
-    "tags": ["sea", "folk", "winter"]
   },
   {
     "id": "cunningham-wet-sheet",
@@ -1460,32 +1244,6 @@
       {"text": "In wind, swept our hearts clean", "tags": ["wind", "quiet"]}
     ],
     "tags": ["sky", "wind", "bird", "river", "quiet", "dawn"]
-  },
-  {
-    "id": "lorca-romance-sonambulo",
-    "title": "Romance Sonámbulo",
-    "poet": "Federico García Lorca",
-    "year": 1936,
-    "url": "https://poets.org/poem/romance-sonambulo",
-    "lines": [
-      {"text": "Green, how I want you green.", "tags": ["folk"]},
-      {"text": "Green wind. Green branches.", "tags": ["wind", "folk"]},
-      {"text": "The ship out on the sea", "tags": ["sea"]}
-    ],
-    "tags": ["sea", "wind", "moon", "folk"]
-  },
-  {
-    "id": "cavafy-ithaka",
-    "title": "Ithaka",
-    "poet": "Constantine P. Cavafy",
-    "year": 1933,
-    "url": "https://www.onassis.org/initiatives/cavafy-archive/the-canon/ithaka",
-    "lines": [
-      {"text": "As you set out for Ithaka", "tags": ["sea", "migration"]},
-      {"text": "hope the voyage is a long one,", "tags": ["migration"]},
-      {"text": "full of adventure, full of discovery.", "tags": ["migration"]}
-    ],
-    "tags": ["sea", "summer", "migration", "folk"]
   },
   {
     "id": "cavafy-morning-sea",
@@ -1683,19 +1441,6 @@
     "tags": ["quiet", "evening"]
   },
   {
-    "id": "akhmatova-wild-honey",
-    "title": "Wild Honey",
-    "poet": "Anna Akhmatova",
-    "year": 1966,
-    "url": "https://modernpoetryintranslation.com/poem/wild-honey/",
-    "lines": [
-      {"text": "Wild honey smells like freedom,", "tags": ["summer", "flora"]},
-      {"text": "dust — like a ray of sun.", "tags": ["sun", "summer"]},
-      {"text": "Honeysuckle smells like water,", "tags": ["water", "summer", "flora"]}
-    ],
-    "tags": ["summer", "sun", "water", "flora"]
-  },
-  {
     "id": "amichai-room-by-sea",
     "title": "A Room by the Sea",
     "poet": "Yehuda Amichai",
@@ -1706,19 +1451,6 @@
       {"text": "And suddenly a seawind feels me", "tags": ["sea", "wind"]}
     ],
     "tags": ["sea", "wind", "quiet"]
-  },
-  {
-    "id": "amichai-summer-or-ending",
-    "title": "Summer Or Its Ending",
-    "poet": "Yehuda Amichai",
-    "year": 2000,
-    "url": "https://modernpoetryintranslation.com/poem/summer-or-its-ending/",
-    "lines": [
-      {"text": "It was a summer", "tags": ["summer"]},
-      {"text": "or its ending.", "tags": ["summer", "autumn"]},
-      {"text": "because of the printed flowers on its cloth.", "tags": ["flora", "summer"]}
-    ],
-    "tags": ["summer", "autumn", "flora", "quiet"]
   },
   {
     "id": "arshi-song",
@@ -1760,19 +1492,6 @@
     "tags": ["sea", "moon", "night", "tide"]
   },
   {
-    "id": "heraud-river",
-    "title": "The River",
-    "poet": "Javier Heraud",
-    "year": 1963,
-    "url": "https://modernpoetryintranslation.com/poem/the-river-2/",
-    "lines": [
-      {"text": "I am a river, going down over wide stones,", "tags": ["river", "water"]},
-      {"text": "my path drawn by the wind.", "tags": ["river", "wind"]},
-      {"text": "The trees around me are shrouded with rain.", "tags": ["rain", "river"]}
-    ],
-    "tags": ["river", "rain", "wind", "migration", "water"]
-  },
-  {
     "id": "ko-un-spring-days",
     "title": "Spring days are passing",
     "poet": "Ko Un",
@@ -1796,32 +1515,6 @@
       {"text": "An utterly cold place", "tags": ["winter", "quiet"]}
     ],
     "tags": ["winter", "quiet"]
-  },
-  {
-    "id": "saunders-porthpean",
-    "title": "Porthpean",
-    "poet": "Tim Saunders",
-    "year": null,
-    "url": "https://modernpoetryintranslation.com/poem/porthpean/",
-    "lines": [
-      {"text": "the echoing voice of the ocean's waves", "tags": ["sea"]},
-      {"text": "the whispers of the sea in the time of dusk", "tags": ["sea", "evening"]},
-      {"text": "flowing tide gives perfect voice", "tags": ["tide"]}
-    ],
-    "tags": ["sea", "tide", "evening"]
-  },
-  {
-    "id": "anon-dear-fahimeh",
-    "title": "Dear Fahimeh",
-    "poet": "Anonymous",
-    "year": null,
-    "url": "https://modernpoetryintranslation.com/poem/dear-fahimeh/",
-    "lines": [
-      {"text": "In the long sea-silence,", "tags": ["sea", "quiet"]},
-      {"text": "a wave lifts, oars clip at the water.", "tags": ["sea", "water"]},
-      {"text": "A young fisherman bringing his boat to land,", "tags": ["sea", "fish"]}
-    ],
-    "tags": ["sea", "water", "quiet", "fish"]
   },
   {
     "id": "williamson-tarka-glasswort-pools",
@@ -1945,7 +1638,7 @@
     "title": "The Peregrine",
     "poet": "J. A. Baker",
     "year": 1987,
-    "url": "https://litres.com/book/j-a-baker/the-peregrine-50th-anniversary-edition-63175445/read/",
+    "url": "https://www.idler.co.uk/article/book-of-the-week-the-peregrine/",
     "isProse": true,
     "source": "The Peregrine, 1967",
     "lines": [
