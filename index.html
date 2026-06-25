@@ -1356,6 +1356,10 @@ const NUGGET = "The cord-grass lining the creek, <em>Spartina anglica</em>, firs
 const WILDLIFE_TARGET = {birds: 0.55, plants: 0.20, insects: 0.10, others: 0.15};
 const WILDLIFE_DECAY_HALFLIFE = 21;  // days — bumped from 14 to space repeats further
 const WILDLIFE_SEEN_KEY = "wildlifeSeen";
+// auto-observer quotes carry a dated sighting; only use them when the date is
+// within this many days of the displayed day-of-year (year ignored). Otherwise
+// an off-season dated record undermines the "now"-flavoured eyebrow.
+const OBSERVER_QUOTE_DOY_WINDOW = 21;
 const N_BINS = 52;
 const MONTH_NAMES = ["January","February","March","April","May","June",
                     "July","August","September","October","November","December"];
@@ -1645,7 +1649,7 @@ const NOTE_PRIORITY_WILDLIFE = {
   "year-round": ["manual"],
 };
 
-function pickLeadWildlife(c, framing){
+function pickLeadWildlife(c, framing, dayDate){
   // Bedrock species: bedrock note wins; fall back to summary if missing.
   if(c.source === "bedrock-plant" || c.source === "bedrock-animal"){
     const text = c.bedrockNote || trimSummary((c.description||{}).wikipediaSummary, 2);
@@ -1654,20 +1658,31 @@ function pickLeadWildlife(c, framing){
   // Records-based: try priority list, then fall back to Wikipedia summary.
   const ne = c.notesEntry;
   if(ne && ne.notes){
+    const targetDoy = dayDate ? doyFromDate(dayDate) : null;
     for(const src of (NOTE_PRIORITY_WILDLIFE[framing] || ["manual"])){
       for(const n of ne.notes){
-        if(n.source === src){
-          if(src === "auto-observer"){
-            // Split body and attribution at the last " — ".
-            const idx = n.text.lastIndexOf(" — ");
-            if(idx > 0){
-              const body = n.text.slice(0, idx).trim();
-              const cite = n.text.slice(idx + 3).replace(/\.$/, "").trim();
-              return {leadLine: body, caption: cite};
+        if(n.source !== src) continue;
+        if(src === "auto-observer"){
+          // Skip the dated quote if its day-of-year is too far from today;
+          // an off-season record undermines the "now"-flavoured eyebrow.
+          if(targetDoy != null){
+            const m = n.text.match(/(\d{4})-(\d{2})-(\d{2})/);
+            if(m){
+              const noteDoy = doyFromDate(new Date(+m[1], +m[2]-1, +m[3]));
+              const d = Math.abs(noteDoy - targetDoy);
+              const wrapped = Math.min(d, 365 - d);
+              if(wrapped > OBSERVER_QUOTE_DOY_WINDOW) continue;
             }
           }
-          return {leadLine: n.text, caption: null};
+          // Split body and attribution at the last " — ".
+          const idx = n.text.lastIndexOf(" — ");
+          if(idx > 0){
+            const body = n.text.slice(0, idx).trim();
+            const cite = n.text.slice(idx + 3).replace(/\.$/, "").trim();
+            return {leadLine: body, caption: cite};
+          }
         }
+        return {leadLine: n.text, caption: null};
       }
     }
   }
@@ -1690,7 +1705,7 @@ function renderMarshSlot(pick, dayDate, dIdx, dayMonth){
     const targetMonth = dayDate.getMonth() + 1;
     const framing = pickFramingWildlife(pick, targetMonth);
     const eyebrow = makeEyebrowWildlife(pick, framing, targetMonth);
-    const {leadLine, caption} = pickLeadWildlife(pick, framing);
+    const {leadLine, caption} = pickLeadWildlife(pick, framing, dayDate);
     const link = (pick.links && (pick.links.ebird || pick.links.inat || pick.links.wikipedia || pick.links.goingbirding || pick.links.ukmoths)) || ((pick.description||{}).inatUrl) || null;
 
     if(eyebrowEl) eyebrowEl.textContent = eyebrow;
